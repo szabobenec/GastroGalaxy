@@ -1,0 +1,103 @@
+:root {
+    --raisinBlack: rgb(21, 25, 42);
+    --mauve: rgb(211, 166, 240);
+    --iris: rgb(95, 82, 201);
+    --mint: rgb(89, 201, 165);
+    --vistaBlue: rgb(152, 166, 212);
+
+    --bgColor: light-dark(var(--mauve), var(--raisinBlack));
+    --invertedBgColor: light-dark(var(--raisinBlack), var(--mauve));
+    --textColor: light-dark(var(--raisinBlack), white);
+    --secondaryClrs: light-dark(var(--mint), var(--iris));
+}
+
+html {
+    color-scheme: light dark;
+}
+
+* {
+    font-family: system-ui;
+}
+
+body {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    margin: 0;
+}
+
+body {
+    --dot-bg: var(--bgColor);
+    --dot-color: var(--invertedBgColor);
+    --dot-size: 3px;
+    --dot-space: 30px;
+    background: linear-gradient(
+                90deg,
+                var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+                transparent 1%
+            )
+            center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
+            center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+header {
+    background-color: var(--raisinBlack);
+    color: white;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0%;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.headerStart {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 20px;
+}
+
+.headerLogo {
+    height: 100%;
+    width: auto;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+}
+
+.headerEnd {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+
+footer {
+    background-color: var(--raisinBlack);
+    color: white;
+    height: 108px;
+    width: 100%;
+}
+
+.mainDiv {
+    margin: 5px;
+}
+
+#div1 {
+    background-color: var(--secondaryClrs);
+}
+
+.formsDiv,
+.innerFormsDiv {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+}

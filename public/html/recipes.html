@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Receptek</title>
+        <link rel="stylesheet" href="../css/recipes.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerStart">
+                <a href="http://127.0.0.1:3000/" class="headerLogo"
+                    ><img href src="../images/logo.png" alt="logo" title="logo" class="headerLogo"
+                /></a>
+                <a href="http://127.0.0.1:3000/" class="links">Főoldal</a>
+                <a href="http://127.0.0.1:3000/recipes/" class="links">Receptek</a>
+                <a href="http://127.0.0.1:3000/recipeoftheday/" class="links">A nap receptje</a>
+                <a href="http://127.0.0.1:3000/connection/" class="links">Kapcsolat</a>
+            </div>
+            <div class="headerEnd">
+                <select id="themeSelector">
+                    <option value="light">Világos</option>
+                    <option value="dark">Sötét</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="mainDiv">
+            <h1>Receptek</h1>
+            <h2>Keressen recepteket hozzávalók alapján!</h2>
+
+            <div class="formsDiv" id="formsDiv">
+                <form id="innerForms">
+                    <div id="formDiv0">
+                        <label for="hozzavalok">Hozzávalók:</label><br />
+                        <select name="hozzavalok" id="hozzavalok">
+                            <option value="zero">Choose!</option>
+                        </select>
+                    </div>
+                </form>
+                <input type="button" value="+" id="addBtn" />
+            </div>
+
+            <input type="button" value="Search" name="search" id="search" />
+            <div id="div1"></div>
+        </div>
+
+        <footer>
+            <div class="footerStart"></div>
+            <div class="footerEnd"></div>
+        </footer>
+
+        <script src="../javascript/recipes.js"></script>
+    </body>
+</html>

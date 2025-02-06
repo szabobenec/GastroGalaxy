@@ -1,0 +1,45 @@
+{
+    "receptek": [
+        {
+            "tipus": "főétel",
+            "nev": "Krémes fokhagymás tészta",
+            "nehezseg": 2,
+            "adag": 3,
+            "hozzavalok": [
+                { "olivaolaj": "2 teáskanál" },
+                { "fokhagyma": "4 gerezd, apróra vágva" },
+                { "vaj": "2 evőkanál" },
+                { "víz": "~750 ml" },
+                { "bors": "0.5 teáskanál (fekete őrölt)" },
+                { "só": "0.25 teáskanál" },
+                { "tészta": "250 g" },
+                { "parmezán sajt": "100 g" },
+                { "tejszín": "200 ml" },
+                { "petrezselyem": "1.5 evőkanál" }
+            ],
+            "elkeszites": "Melegítsünk olívaolajat egy közepes serpenyőben közepes lángon. Adjuk hozzá a fokhagymát, és keverjük, amíg illatos nem lesz, 1-2 percig. Adjuk hozzá a vajat, és folyamatosan kevergetve olvasszuk meg.\nÖntsük hozzá a vizet; adjunk hozzá borsot és sót. Forraljuk fel. Adjuk hozzá a spagettit (vagy a választott tésztát), és időnként megkeverve főzzük, amíg puha, de harapható nem lesz, kb. 12 percig. Adjunk hozzá még vizet, ha a tészta elkezd ragadni a serpenyőhöz.\nAdjuk hozzá a parmezán sajtot, a tejszínt és a petrezselymet, és keverjük össze, amíg alaposan össze nem áll. Azonnal tálaljuk.",
+            "ajanlas": "",
+            "forras": "https://www.allrecipes.com/recipe/269500/creamy-garlic-pasta/"
+        },
+        {
+            "tipus": "főétel",
+            "nev": "Sült feta tészta",
+            "nehezseg": 3,
+            "adag": 4,
+            "hozzavalok": [
+                { "tészta": "350 g" },
+                { "víz": "~700 ml" },
+                { "feta sajt": "1 tömb (~250 g)" },
+                { "cseresznyeparadicsom": "0.5 l" },
+                { "olivaolaj": "1 evőkanál" },
+                { "só": "0.5 teáskanál" },
+                { "bors": "0.25 teáskanál (fekete őrölt)" },
+                { "fokhagyma": "2 gerezd, apróra vágva" },
+                { "bazsalikom": "25 g" }
+            ],
+            "elkeszites": "A folyamat egyszerű, és ez az, ami szerintünk ezt a receptet olyan nagyszerűvé teszi! A következőkre lesz szükségünk:\n1. Melegítsük elő a sütőt 200 °C-ra.\n2. Tegyük a fetatömböt a tepsibe. - helyezzük a feta sajtblokkot a tál közepére.\n3. Adjuk hozzá a tésztát és a vizet - tegyük a száraztésztát a sütőtálba (a feta tömb körül), öntsük rá a vizet a nyers tésztára, és óvatosan keverjük össze a tésztát és a vizet (ügyelve arra, hogy a tészta ne kerüljön a feta alá vagy tetejére), hogy az összes tészta elmerüljön a folyadékban.\n4. Adjuk hozzá a cseresznyeparadicsomot, az EVOO-t, sót és borsot - szórjuk a cseresznyeparadicsomot a tészta tetejére, és locsoljunk meg mindent az EVOO-val, sóval és borssal.\n5. Szorosan lefedjük + sütjük - a tepsit a lehető legszorosabban lefedjük fóliával, és 400 fokon 40 percig sütjük.\n6. Adjuk hozzá a fokhagymát és a bazsalikomot + keverjük össze - miután befejeztük a sütést, vegyük le a fóliát, adjuk hozzá a felaprított fokhagymát és a friss bazsalikomot, és keverjünk össze mindent, amíg jól össze nem keveredik.\nTálalja és élvezze!",
+            "ajanlas": "",
+            "forras": "https://fedandfit.com/feta-pasta/"
+        }
+    ]
+}
