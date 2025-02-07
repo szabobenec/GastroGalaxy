@@ -25,7 +25,6 @@ const MakeArray = (data) => {
         div1.appendChild(p);
         p.innerHTML = item.nev;
     }
-    console.log(data);
 
     let hozzavalok = [];
     for (let item of data) {
@@ -44,7 +43,6 @@ const MakeArray = (data) => {
         }
     }
     FillSelect(hozzavalok);
-    document.getElementById('search').addEventListener('click', SearchRecipe);
 };
 
 const FillSelect = (data) => {
@@ -53,11 +51,13 @@ const FillSelect = (data) => {
         const option = document.createElement('option');
         select.appendChild(option);
         option.innerHTML = item;
+        option.value = item;
     }
     const plusBtn = document.getElementById('addBtn');
     plusBtn.addEventListener('click', () => {
         AddNewForm(data);
     });
+    document.getElementById('search').addEventListener('click', SearchRecipe);
 };
 
 const AddNewForm = (data) => {
@@ -81,6 +81,7 @@ const AddNewForm = (data) => {
         div.appendChild(select);
         select.name = 'hozzavalok';
         select.id = 'hozzavalok';
+        select.setAttribute('class', 'hozzavalok');
 
         const option0 = document.createElement('option');
         select.appendChild(option0);
@@ -90,6 +91,7 @@ const AddNewForm = (data) => {
             const option = document.createElement('option');
             select.appendChild(option);
             option.innerHTML = item;
+            option.value = item;
         }
 
         const button = document.createElement('input');
@@ -108,6 +110,26 @@ const RemoveForm = (div) => {
     innerForms.removeChild(div);
 };
 
-const SearchRecipe = () => {
-    console.log('searching');
+const SearchRecipe = async () => {
+    try {
+        const data = (await getAPI('/api/getallrecept')).receptek;
+        console.log(data);
+        const selects = Array.from(document.getElementsByClassName('hozzavalok'));
+        let values = [];
+        for (let item of selects) {
+            values.push(item.value);
+        }
+        console.log(values);
+        let counter = 0;
+        let keresett = [];
+        for (let item of data) {
+            for (let item2 of item.hozzavalok) {
+                for (let item3 in item2) {
+                    // console.log(item3);
+                }
+            }
+        }
+    } catch (error) {
+        console.error(error);
+    }
 };
