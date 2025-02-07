@@ -22,7 +22,7 @@
             "forras": "https://www.allrecipes.com/recipe/269500/creamy-garlic-pasta/"
         },
         {
-            "tipus": "főétel",
+            "tipus": "vacsora",
             "nev": "Sült feta tészta",
             "ido": 40,
             "adag": 4,
@@ -63,7 +63,7 @@
             "forras": "https://streetkitchen.hu/hust-hussal/borsos-csirketokany/"
         },
         {
-            "tipus": "főétel",
+            "tipus": "desszert",
             "nev": "Túrós pite",
             "ido": 65,
             "adag": 8,
@@ -81,7 +81,32 @@
             "elkeszites": "A túrós pite elkészítéséhez összekeverjük a lisztet, a cukrot és a sütőport, majd belemorzsoljuk a hideg vajat.Hozzáadjuk a tejfölt és a tojássárgákat, és gyors mozdulatokkal összekeverjük, összegyúrjuk a tésztát, majd folpackba csomagolva a hűtőbe tesszük, és hagyjuk pihenni. Ez idő alatt elkészítjük a túrós tölteléket.A töltelékhez összekeverjük a túrót, a tojássárgáját, a cukrot, a vaníliás cukrot, a lisztet és a citrom lereszelt héját és a mazsolát. A tojásfehérjét kemény habbá verjük, és a túrós masszába keverjük.Tepsibe terítjük a tészta 2/3-ad részét kinyújtva (nem kell túl vastagon), ezen elegyengetjük a túrós tölteléket. A tetejét négyzetrácsosan befedjük a maradék tésztával (vagy ráborítjuk vékonyra van nyújtva).Megszurkáljuk, és 170 fokra előmelegített sütőben 35-40 percig sütjük. Még forrón megszórjuk porcukorral.",
             "ajanlas": "",
             "forras": "https://www.mindmegette.hu/recept/turos-pite-ii"
+        },
+        {
+            "tipus": "leves",
+            "nev": "Zöldségleves tortillachipsszel",
+            "ido": 45,
+            "adag": 5,
+            "hozzavalok": [
+                { "olivaolaj": "2 evőkanál" },
+                { "vöröshagyma": "1 fej(~120g)" },
+                { "fokhagyma": "4 gerezd" },
+                { "kömény": "0.25-0.5 teáskanál (őrölt római)" },
+                { "chilipor": "2-3 teáskanál" },
+                { "sárgarépa": "1 db, felkarikázva" },
+                { "burgonya": "1 db, felkockázva" },
+                { "paradicsom": "35 dkg, kockákra vágva" },
+                { "cukkini": "1 db, felkockázva" },
+                { "káposzta": "0.25 fej, csíkokra szelve" },
+                { "víz": "1 l" },
+                { "kukorica": "1 db" },
+                { "zöldbab": "10 db" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" }
+            ],
+            "elkeszites": "Az olajat vastag aljú serpenyőben vagy fazékban felforrósítjuk. Beledobjuk a vöröshagymát a fokhagymával együtt, és néhány perc alatt üvegesre pároljuk. Meghintjük a római köménnyel és chiliporral. Hozzákeverjük a felaprított sárgarépát, burgonyát, paradicsomot, cukkinit meg káposztát, és időnként megkeverve 2 percig pirítjuk. Felöntjük vízzel. Fedő alatt, közepes lángon, 20 perc alatt puhára főzzük a zöldségeket. Ha szükségesnek látjuk, kevés vizet öntünk hozzá, belekeverjük a kukoricát és a zöldbabot, majd további 5-10 perc alatt a babot is puhára pároljuk. Sóval, borssal ízesítjük, nem feledkezve meg arról, hogy a tortillachips is sós. Mélytányérba merjük, és apróra vágott friss korianderzöldet hintünk a tetejére. Kevés salsát kanalazunk a tetejére, és egy marék tortillachipset kínálunk mellé.",
+            "ajanlas": "",
+            "forras": "Szakácskönyv Mexikói Konyha, több mint 100 fontosabb recept, 8. oldal"
         }
-        
     ]
 }
