@@ -117,18 +117,34 @@ const SearchRecipe = async () => {
         const selects = Array.from(document.getElementsByClassName('hozzavalok'));
         let values = [];
         for (let item of selects) {
-            values.push(item.value);
-        }
-        console.log(values);
-        let counter = 0;
-        let keresett = [];
-        for (let item of data) {
-            for (let item2 of item.hozzavalok) {
-                for (let item3 in item2) {
-                    // console.log(item3);
-                }
+            if (!values.includes(item.value)) {
+                values.push(item.value);
             }
         }
+        console.log(values);
+        // let counter = 0;
+        let keresett = [];
+        let keresett2 = [];
+
+        for (let item of data) {
+            let counter = 0;
+            for (let item2 of item.hozzavalok) {
+                for (let item3 in item2) {
+                    for (let hozzavalo of values) {
+                        if (!keresett.includes(item) && item3 === hozzavalo) {
+                            counter++;
+                        }
+                    }
+                }
+            }
+            if (counter == values.length) {
+                keresett.push(item);
+            } else if (values.length > 2 && counter == values.length - 1) {
+                keresett2.push(item);
+            }
+        }
+        console.log(keresett);
+        console.log(keresett2);
     } catch (error) {
         console.error(error);
     }
