@@ -95,7 +95,7 @@ footer {
 
 .StoreInfo
 {
-    width: 1800px;
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -130,7 +130,7 @@ footer {
     height: 100px;
     display: flex;
     flex-direction: column;
-    background-color: mediumturquoise;
+    background-color: #98a6d4;
     border-radius: 10px;
 }
 
@@ -148,21 +148,37 @@ p
 .contact
 {
     width: 100%;
-    background-color: #374243;
-    color: mediumseagreen;
-    height: 300px;
+    background-color: #5f52c9;
+    color: #59c9a5;
     display: flex;
     flex-direction: row;
     align-items: end;
     justify-content: center;
     padding: 20px 0;
+    gap: 20px;
 }
 
 .contact-message
 {
+    
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: right;
+}
+.contact-message-main
+{
     display: flex;
     flex-direction: column;
 }
+.contact-message-sending
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .contact-text
 {
     
@@ -180,4 +196,19 @@ h3
 h4
 {
     line-height: 0;
+}
+
+textarea
+{
+    height: 150px;
+    width: 200px;
+}
+.contact-alt
+{
+    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-right: 20px;
 }
