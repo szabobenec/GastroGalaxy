@@ -32,14 +32,10 @@ body {
     --dot-color: var(--secondaryClrs);
     --dot-size: 2px;
     --dot-space: 15px;
-    background: linear-gradient(
-                90deg,
-                var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-                transparent 1%
-            )
-            center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
-            center / var(--dot-space) var(--dot-space),
+    background: linear-gradient(90deg,
+            var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+            transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         var(--dot-color);
 }
 
@@ -93,8 +89,7 @@ footer {
 
 
 
-.StoreInfo
-{
+.StoreInfo {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -103,8 +98,8 @@ footer {
     gap: 50px;
     margin: auto;
 }
-.StoreInfo-card
-{
+
+.StoreInfo-card {
     width: 15%;
     display: flex;
     flex-direction: column;
@@ -113,10 +108,17 @@ footer {
     background-color: #293132;
     border-radius: 10px;
     padding: 20px 0;
+    position: relative;
+}
+.grow {
+    transition: all 0.2s ease-in-out;
 }
 
-.StoreInfo-content
-{
+.grow:hover {
+    transform: scale(1.1);
+}
+
+.StoreInfo-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,8 +126,7 @@ footer {
     text-align: center;
 }
 
-.StoreInfo-svg
-{
+.StoreInfo-svg {
     width: 100px;
     height: 100px;
     display: flex;
@@ -134,19 +135,16 @@ footer {
     border-radius: 10px;
 }
 
-svg
-{
+svg {
     width: 100%;
     height: 100%;
 }
 
-p
-{
+p {
     line-height: 0;
 }
 
-.contact
-{
+.contact {
     width: 100%;
     background-color: #5f52c9;
     color: #59c9a5;
@@ -158,54 +156,49 @@ p
     gap: 20px;
 }
 
-.contact-message
-{
-    
+.contact-message {
+
     width: 20%;
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: right;
 }
-.contact-message-main
-{
+
+.contact-message-main {
     display: flex;
     flex-direction: column;
 }
-.contact-message-sending
-{
+
+.contact-message-sending {
     display: flex;
     flex-direction: column;
 }
 
 
-.contact-text
-{
-    
+.contact-text {
+
     width: 30%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-h3
-{
+h3 {
     line-height: 0;
 }
 
-h4
-{
+h4 {
     line-height: 0;
 }
 
-textarea
-{
+textarea {
     height: 150px;
     width: 200px;
 }
-.contact-alt
-{
-    
+
+.contact-alt {
+
     width: 50%;
     display: flex;
     flex-direction: column;
