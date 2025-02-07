@@ -1,101 +1,147 @@
 <!DOCTYPE html>
 <html lang="HU">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Gastro Galaxy</title>
-        <link rel="stylesheet" href="../css/main.css" />
-        <link rel="icon" type="image/x-icon" href="../images/mascot.png">
-    </head>
-    <body>
-        <header>
-            <div class="headerStart">
-                <a href="http://127.0.0.1:3000/" class="headerLogo"
-                    ><img href src="../images/logo.png" alt="logo" title="logo" class="headerLogo"
-                /></a>
-                <a href="http://127.0.0.1:3000/" class="links mainPageLink">Főoldal</a>
-                <a href="http://127.0.0.1:3000/recipes/" class="links">Receptek</a>
-                <a href="http://127.0.0.1:3000/recipeoftheday/" class="links">A nap receptje</a>
-                <a href="http://127.0.0.1:3000/connection/" class="links">Kapcsolat</a>
-            </div>
-            <div class="headerEnd">
-                <select id="themeSelector">
-                    <option value="light">Világos</option>
-                    <option value="dark">Sötét</option>
-                </select>
-            </div>
-        </header>
 
-        <div class="introDiv">
-            <img src="../images/background.png" alt="" class="introImg" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gastro Galaxy</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" type="image/x-icon" href="../images/mascot.png">
+</head>
+
+<body>
+    <header>
+        <div class="headerStart">
+            <a href="http://127.0.0.1:3000/" class="headerLogo"><img href src="../images/logo.png" alt="logo"
+                    title="logo" class="headerLogo" /></a>
+            <a href="http://127.0.0.1:3000/" class="links mainPageLink">Főoldal</a>
+            <a href="http://127.0.0.1:3000/recipes/" class="links">Receptek</a>
+            <a href="http://127.0.0.1:3000/recipeoftheday/" class="links">A nap receptje</a>
+            <a href="http://127.0.0.1:3000/connection/" class="links">Kapcsolat</a>
+        </div>
+        <div class="headerEnd">
+            <select id="themeSelector">
+                <option value="light">Világos</option>
+                <option value="dark">Sötét</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="introDiv">
+        <img src="../images/background.png" alt="" class="introImg" />
+    </div>
+
+    <div class="intro">
+        <div class="introStart">
+            <img src="../images/logo.png" alt="" class="introImg2" />
+            <img src="../images/logoTitle.png" alt="" class="introImg3" />
         </div>
 
-        <div class="intro">
-            <div class="introStart">
-                <img src="../images/logo.png" alt="" class="introImg2" />
-                <img src="../images/logoTitle.png" alt="" class="introImg3" />
-            </div>
-
-            <div class="introEnd">
-                <h1 class="introCim">Üdvözöl a Gasztró Galaxis!</h1>
-                <div class="introSzovegOut">
-                    <p class="introSzoveg">
-                        Üdvözöljük a Gasztró Galaxisban, ahol izgalmas kulináris kalandok várnak!
-                        Fedezze fel a klasszikus receptektől az innovatív kreációkig terjedő
-                        ízvilágot, minden szintű szakács számára. A különböző konyhák és
-                        lépésről-lépésre útmutatók segítségével a főzés élvezetes kalanddá válik. A
-                        Gasztró Galaxis mindent tartalmaz, ami az étel iránti szenvedély
-                        felkeltéséhez szükséges. Készen áll, hogy elinduljon az ízek világába? A
-                        következő étel már csak egy kattintásnyira van!
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="mainDiv">
-            <div class="cardsDiv">
-                <div class="card1 grow">
-                    <h2>Recept keresése</h2>
-                    <p>
-                        Válassz recepteket hozzávalók alapján! Ez a funkció lehetővé teszi számodra,
-                        hogy az otthonodban lévő alapanyagok alapján válassz receptet. Csak meg kell
-                        adnod, milyen hozzávalóid vannak, és a rendszer ajánl neked különböző
-                        étkezési ötleteket. Így könnyen készíthetsz ételt anélkül, hogy külön
-                        bevásárlást kellene tartanod, és minimalizálhatod a pazarlást.
-                    </p>
-                </div>
-
-                <div class="card2 grow">
-                    <h2>A nap receptje</h2>
-                    <p>
-                        minden nap egy új recepttel lep meg téged, hogy inspiráljon a napi
-                        étkezéseidhez. Minden nap egy-egy új ínycsiklandó ételt kínál, amit gyorsan
-                        elkészíthetsz, vagy akár egy hétvégi különlegességként is megpróbálhatsz.
-                    </p>
-                </div>
-
-                <div class="card3 grow">
-                    <h2>Rólunk</h2>
-                    <p>
-                        Ha szeretnél többet tudni rólunk, itt megtalálod az elérhetőségeinket és
-                        minden fontos információt, hogy kapcsolatba léphess velünk.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <div class="footerStart">
-                <p>Copyright © 2025 SZGYB - All rights reserved</p>
-                <p>
-                    Bármiféle kárért, elsózott, túlfűszerezett ételekért, leégett konyhákért
-                    felelősséget nem vállalunk!
+        <div class="introEnd">
+            <h1 class="introCim">Üdvözöl a Gasztró Galaxis!</h1>
+            <div class="introSzovegOut">
+                <p class="introSzoveg">
+                    Üdvözöljük a Gasztró Galaxisban, ahol izgalmas kulináris kalandok várnak!
+                    Fedezze fel a klasszikus receptektől az innovatív kreációkig terjedő
+                    ízvilágot, minden szintű szakács számára. A különböző konyhák és
+                    lépésről-lépésre útmutatók segítségével a főzés élvezetes kalanddá válik. A
+                    Gasztró Galaxis mindent tartalmaz, ami az étel iránti szenvedély
+                    felkeltéséhez szükséges. Készen áll, hogy elinduljon az ízek világába? A
+                    következő étel már csak egy kattintásnyira van!
                 </p>
             </div>
-            <div class="footerEnd"></div>
-        </footer>
+        </div>
+    </div>
 
-        <script src="../javascript/main.js"></script>
-    </body>
+    <div class="mainDiv">
+        <div class="cardsDiv">
+            <div class="card1 grow">
+                <a class="titleLink" href="http://127.0.0.1:3000/recipes/">
+                    <div class="cardTitle">
+                        <h2>Recept keresése</h2>
+                        <svg width="33px" height="33px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
+                                stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </a>
+                <p>
+                    Válassz recepteket hozzávalók alapján! Ez a funkció lehetővé teszi számodra,
+                    hogy az otthonodban lévő alapanyagok alapján válassz receptet. Csak meg kell
+                    adnod, milyen hozzávalóid vannak, és a rendszer ajánl neked különböző
+                    étkezési ötleteket. Így könnyen készíthetsz ételt anélkül, hogy külön
+                    bevásárlást kellene tartanod, és minimalizálhatod a pazarlást.
+                </p>
+            </div>
+
+            <div class="card2 grow">
+                <a class="titleLink" href="http://127.0.0.1:3000/recipeoftheday/">
+                    <div class="cardTitle">
+                        <h2>A nap receptje</h2>
+                        <svg width="33px" height="33px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
+                                stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </a>
+                <p>
+                    minden nap egy új recepttel lep meg téged, hogy inspiráljon a napi
+                    étkezéseidhez. Minden nap egy-egy új ínycsiklandó ételt kínál, amit gyorsan
+                    elkészíthetsz, vagy akár egy hétvégi különlegességként is megpróbálhatsz.
+                </p>
+            </div>
+
+            <div class="card3 grow">
+                <a class="titleLink" href="http://127.0.0.1:3000/connection/">
+                    <div class="cardTitle">
+                        <h2>Rólunk</h2>
+                        <svg width="33px" height="33px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
+                                stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </a>
+                <p>
+                    Ha szeretnél többet tudni rólunk, itt megtalálod az elérhetőségeinket és
+                    minden fontos információt, hogy kapcsolatba léphess velünk.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="RecipeLoadDiv">
+        <input type="button" value="RECEPTEK BETÖLTÉSE">
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footerStart">
+            <p>Copyright © 2025 SZGYB - All rights reserved</p>
+            <p>
+                Bármiféle kárért, elsózott, túlfűszerezett ételekért, leégett konyhákért
+                felelősséget nem vállalunk!
+            </p>
+        </div>
+        <div class="footerEnd"></div>
+    </footer>
+
+    <script src="../javascript/main.js"></script>
+</body>
+
 </html>
