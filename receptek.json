@@ -3,7 +3,7 @@
         {
             "tipus": "főétel",
             "nev": "Krémes fokhagymás tészta",
-            "nehezseg": 2,
+            "ido": 35,
             "adag": 3,
             "hozzavalok": [
                 { "olivaolaj": "2 teáskanál" },
@@ -24,13 +24,13 @@
         {
             "tipus": "főétel",
             "nev": "Sült feta tészta",
-            "nehezseg": 3,
+            "ido": 40,
             "adag": 4,
             "hozzavalok": [
                 { "tészta": "350 g" },
                 { "víz": "~700 ml" },
                 { "feta sajt": "1 tömb (~250 g)" },
-                { "cseresznyeparadicsom": "0.5 l" },
+                { "paradicsom": "0.5l db (cseresznyeparadicsom)" },
                 { "olivaolaj": "1 evőkanál" },
                 { "só": "0.5 teáskanál" },
                 { "bors": "0.25 teáskanál (fekete őrölt)" },
@@ -40,6 +40,48 @@
             "elkeszites": "A folyamat egyszerű, és ez az, ami szerintünk ezt a receptet olyan nagyszerűvé teszi! A következőkre lesz szükségünk:\n1. Melegítsük elő a sütőt 200 °C-ra.\n2. Tegyük a fetatömböt a tepsibe. - helyezzük a feta sajtblokkot a tál közepére.\n3. Adjuk hozzá a tésztát és a vizet - tegyük a száraztésztát a sütőtálba (a feta tömb körül), öntsük rá a vizet a nyers tésztára, és óvatosan keverjük össze a tésztát és a vizet (ügyelve arra, hogy a tészta ne kerüljön a feta alá vagy tetejére), hogy az összes tészta elmerüljön a folyadékban.\n4. Adjuk hozzá a cseresznyeparadicsomot, az EVOO-t, sót és borsot - szórjuk a cseresznyeparadicsomot a tészta tetejére, és locsoljunk meg mindent az EVOO-val, sóval és borssal.\n5. Szorosan lefedjük + sütjük - a tepsit a lehető legszorosabban lefedjük fóliával, és 400 fokon 40 percig sütjük.\n6. Adjuk hozzá a fokhagymát és a bazsalikomot + keverjük össze - miután befejeztük a sütést, vegyük le a fóliát, adjuk hozzá a felaprított fokhagymát és a friss bazsalikomot, és keverjünk össze mindent, amíg jól össze nem keveredik.\nTálalja és élvezze!",
             "ajanlas": "",
             "forras": "https://fedandfit.com/feta-pasta/"
+        },
+        {
+            "tipus": "főétel",
+            "nev": "Borsós csirketokány",
+            "ido": 25,
+            "adag": 4,
+            "hozzavalok": [
+                { "tészta": "200 g" },
+                { "vöröshagyma": "1 fej(~120g)" },
+                { "fokhagyma": "3 gerezd" },
+                { "csirkemell": "400g" },
+                { "paradicsom": "1 teáskanál (sürítettparadicsom)" },
+                { "só": "csipet" },
+                { "bors": "csipet" },
+                { "tejszin": "300ml (habt)" },
+                { "zöldborsó": "200 g (mirelit)" },
+                { "vaj": "30 g" }
+            ],
+            "elkeszites": "A borsós csirketokány elkészítéséhez a zsírt melegítünk egy serpenyőben. Hozzáadjuk a finomra vágott vöröshagymát és fokhagymát, és közepes hőfokon 5 percig dinszteljük. Hozzáadjuk a kb. 2 cm-es csíkokra vágott csirkemellet. Sózzuk, borsozzuk, és erős hőfokon 2 perc alatt jól lepirítjuk. Mehet hozzá a sűrített paradicsom is, és újabb 1-2 percig pirítjuk. Felöntjük a tejszínnel, hozzáadjuk a borsót, a vajat, és további 6 perc alatt készre főzzük. A szarvacskatésztát kifőzzük a csomagoláson írtak szerint, és ezzel tálaljuk a ragut. ",
+            "ajanlas": "",
+            "forras": "https://streetkitchen.hu/hust-hussal/borsos-csirketokany/"
+        },
+        {
+            "tipus": "főétel",
+            "nev": "Túrós pite",
+            "ido": 65,
+            "adag": 8,
+            "hozzavalok": [
+                { "liszt": "60 dkg" },
+                { "cukor": "30 dkg" },
+                { "sütőpor": "1 csomag" },
+                { "vaj": "30 dkg" },
+                { "tejföl": "1 pohár" },
+                { "tojás": "5db" },
+                { "túró": "50dkg" },
+                { "vanilíás cukor": "1 csomag" },
+                { "citrom": "1db (reszelt héj)" }
+            ],
+            "elkeszites": "A túrós pite elkészítéséhez összekeverjük a lisztet, a cukrot és a sütőport, majd belemorzsoljuk a hideg vajat.Hozzáadjuk a tejfölt és a tojássárgákat, és gyors mozdulatokkal összekeverjük, összegyúrjuk a tésztát, majd folpackba csomagolva a hűtőbe tesszük, és hagyjuk pihenni. Ez idő alatt elkészítjük a túrós tölteléket.A töltelékhez összekeverjük a túrót, a tojássárgáját, a cukrot, a vaníliás cukrot, a lisztet és a citrom lereszelt héját és a mazsolát. A tojásfehérjét kemény habbá verjük, és a túrós masszába keverjük.Tepsibe terítjük a tészta 2/3-ad részét kinyújtva (nem kell túl vastagon), ezen elegyengetjük a túrós tölteléket. A tetejét négyzetrácsosan befedjük a maradék tésztával (vagy ráborítjuk vékonyra van nyújtva).Megszurkáljuk, és 170 fokra előmelegített sütőben 35-40 percig sütjük. Még forrón megszórjuk porcukorral.",
+            "ajanlas": "",
+            "forras": "https://www.mindmegette.hu/recept/turos-pite-ii"
         }
+        
     ]
 }
