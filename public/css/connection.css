@@ -1,14 +1,20 @@
 :root {
-    --raisinBlack: rgb(21, 25, 42);
-    --mauve: rgb(211, 166, 240);
-    --iris: rgb(95, 82, 201);
-    --mint: rgb(89, 201, 165);
-    --vistaBlue: rgb(152, 166, 212);
+    --plum: #9b5094;
+    --mauve: #d3a6f0;
+    --vistaBlue: #98a6d4;
+    --mint: #59c9a5;
+    --gunmetal: #0a2e36;
+    --raisinBlack: #15192a;
+    --darkPurple: #32161f;
+    --iris: #5f52c9;
+    --darkCyan: #3c887e;
+    --nonPhotoBlue: #a6e1fa;
 
-    --bgColor: light-dark(var(--mauve), var(--raisinBlack));
-    --invertedBgColor: light-dark(var(--raisinBlack), var(--mauve));
+    --bgColor: light-dark(var(--nonPhotoBlue), var(--raisinBlack));
+    --secondaryClrs: light-dark(white, var(--iris));
+    --scndClrs: light-dark();
+    --cardClrs: light-dark(var(--mint), var(--iris));
     --textColor: light-dark(var(--raisinBlack), white);
-    --secondaryClrs: light-dark(var(--mint), var(--iris));
 }
 
 html {
@@ -20,16 +26,12 @@ html {
 }
 
 body {
-    background-color: var(--bgColor);
-    color: var(--textColor);
     margin: 0;
-}
 
-body {
     --dot-bg: var(--bgColor);
-    --dot-color: var(--invertedBgColor);
-    --dot-size: 3px;
-    --dot-space: 30px;
+    --dot-color: var(--secondaryClrs);
+    --dot-size: 2px;
+    --dot-space: 15px;
     background: linear-gradient(
                 90deg,
                 var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
@@ -42,8 +44,8 @@ body {
 }
 
 header {
-    background-color: var(--raisinBlack);
-    color: white;
+    background-color: var(--bgColor);
+    color: var(--textColor);
     height: 54px;
     display: flex;
     align-items: center;
@@ -64,13 +66,13 @@ header {
 }
 
 .headerLogo {
-    height: 100%;
+    height: 90%;
     width: auto;
 }
 
 .links {
     text-decoration: none;
-    color: white;
+    color: light-dark(black, white);
 }
 
 .headerEnd {
@@ -81,8 +83,9 @@ header {
 }
 
 footer {
-    background-color: var(--raisinBlack);
-    color: white;
+    background-color: var(--bgColor);
+    color: var(--textColor);
     height: 108px;
     width: 100%;
+    margin-top: 100px;
 }

@@ -10,10 +10,11 @@
     --darkCyan: #3c887e;
     --nonPhotoBlue: #a6e1fa;
 
-    --bgColor: light-dark(var(--mauve), var(--raisinBlack));
-    --invertedBgColor: light-dark(var(--raisinBlack), var(--mauve));
+    --bgColor: light-dark(var(--nonPhotoBlue), var(--raisinBlack));
+    --secondaryClrs: light-dark(white, var(--iris));
+    --scndClrs: light-dark();
+    --cardClrs: light-dark(var(--mint), var(--iris));
     --textColor: light-dark(var(--raisinBlack), white);
-    --secondaryClrs: light-dark(var(--mint), var(--iris));
 }
 
 html {
@@ -25,16 +26,12 @@ html {
 }
 
 body {
-    background-color: var(--bgColor);
-    color: var(--textColor);
     margin: 0;
-}
 
-body {
     --dot-bg: var(--bgColor);
-    --dot-color: var(--invertedBgColor);
-    --dot-size: 3px;
-    --dot-space: 30px;
+    --dot-color: var(--secondaryClrs);
+    --dot-size: 2px;
+    --dot-space: 15px;
     background: linear-gradient(
                 90deg,
                 var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
@@ -46,130 +43,295 @@ body {
         var(--dot-color);
 }
 
-.mainDiv {
-    margin-left: 10px;
-    margin-right: 10px;
+/*? Kis képernyős eszközök */
+@media only screen and (max-width: 992px) {
+    .mainDiv {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    header {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 54px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .headerStart {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        gap: 10px;
+    }
+
+    .headerLogo {
+        height: 90%;
+        width: auto;
+    }
+
+    .links {
+        text-decoration: none;
+        color: light-dark(black, white);
+    }
+
+    .mainPageLink {
+        display: none;
+    }
+
+    .headerEnd {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 10px;
+    }
+
+    .introDiv {
+        width: 100%;
+        height: 200px;
+    }
+
+    .introImg {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        margin-top: 10px;
+    }
+
+    .introStart,
+    .introEnd {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introImg2 {
+        width: 80%;
+        height: auto;
+        border-radius: 35px;
+    }
+
+    .introImg3 {
+        /* width: 80%;
+        height: auto;
+        border-radius: 20px; */
+        display: none;
+    }
+
+    .introCim {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .introSzoveg {
+        color: white;
+        width: 80%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .introSzovegOut {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border: 2px solid white;
+        background-color: var(--raisinBlack);
+    }
+
+    .cardsDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 50px;
+        height: 100%;
+        gap: 25px;
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        width: 80%;
+        height: 350px;
+        background-color: var(--cardClrs);
+        color: var(--textColor);
+        padding: 25px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grow {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .grow:hover {
+        transform: scale(1.2);
+    }
+
+    footer {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 108px;
+        width: 100%;
+        margin-top: 100px;
+    }
 }
 
-header {
-    background-color: var(--raisinBlack);
-    color: white;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
+/*? Nagy képernyős eszközök */
+@media only screen and (min-width: 992px) {
+    .mainDiv {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
-.headerStart {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    gap: 20px;
-}
+    header {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 54px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
 
-.headerLogo {
-    height: 100%;
-    width: auto;
-}
+    .headerStart {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        gap: 20px;
+    }
 
-.links {
-    text-decoration: none;
-    color: white;
-}
+    .headerLogo {
+        height: 90%;
+        width: auto;
+    }
 
-.headerEnd {
-    width: 50%;
-    display: flex;
-    flex-direction: row-reverse;
-    padding-right: 10px;
-}
+    .links {
+        text-decoration: none;
+        color: light-dark(black, white);
+    }
 
-.introDiv {
-    width: 100%;
-    height: 350px;
-}
+    .headerEnd {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 10px;
+    }
 
-.introImg {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
+    .introDiv {
+        width: 100%;
+        height: 350px;
+    }
 
-.intro {
-    display: flex;
-    height: 100%;
-}
+    .introImg {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 
-.introStart,
-.introEnd {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .intro {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        margin-top: 50px;
+    }
 
-.introImg2 {
-    width: 75%;
-    height: auto;
-    border-radius: 10px;
-}
+    .introStart,
+    .introEnd {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.introSzoveg {
-    border: 2px solid var(--textColor);
-    height: 40%;
-    padding: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    text-align: justify;
-}
+    .introImg2 {
+        width: 90%;
+        height: auto;
+        border-radius: 35px;
+    }
 
-.cardsDiv {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    height: 400px;
-}
+    .introImg3 {
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+    }
 
-.card1,
-.card2,
-.card3 {
-    width: 25%;
-    height: 100%;
-    background-color: var(--iris);
-    padding: 15px;
-    border-radius: 20px;
-}
+    .introSzoveg {
+        border: 2px solid white;
+        background-color: var(--raisinBlack);
+        color: white;
+        width: 90%;
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        text-align: justify;
+    }
 
-.grow {
-    transition: all 0.2s ease-in-out;
-}
+    .cardsDiv {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+        height: 400px;
+        color: white;
+    }
 
-.grow:hover {
-    transform: scale(1.2);
-}
+    .card1,
+    .card2,
+    .card3 {
+        width: 20%;
+        height: 100%;
+        background-color: var(--cardClrs);
+        color: var(--textColor);
+        padding: 25px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* .cards2out {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    height: 100%;
-    border: 1px solid white;
-} */
+    .grow {
+        transition: all 0.2s ease-in-out;
+    }
 
-footer {
-    background-color: var(--raisinBlack);
-    color: white;
-    height: 108px;
-    width: 100%;
-    margin-top: 50px;
+    .grow:hover {
+        transform: scale(1.2);
+    }
+
+    footer {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 108px;
+        width: 100%;
+        margin-top: 100px;
+    }
 }

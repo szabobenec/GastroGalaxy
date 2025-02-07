@@ -44,6 +44,7 @@ const MakeArray = (data) => {
         }
     }
     FillSelect(hozzavalok);
+    document.getElementById('search').addEventListener('click', SearchRecipe);
 };
 
 const FillSelect = (data) => {
@@ -60,44 +61,53 @@ const FillSelect = (data) => {
 };
 
 const AddNewForm = (data) => {
-    const innerForms = document.getElementById('innerForms');
-    const div = document.createElement('div');
-    innerForms.appendChild(div);
+    const fomrsDivs = Array.from(document.getElementsByClassName('formsDivs'));
 
-    const label = document.createElement('label');
-    div.appendChild(label);
-    label.for = 'hozzavalok';
-    label.innerHTML = 'Hozzávalók:';
+    if (fomrsDivs.length < 5) {
+        const innerForms = document.getElementById('innerForms');
+        const div = document.createElement('div');
+        innerForms.appendChild(div);
+        div.setAttribute('class', 'formsDivs');
 
-    const br = document.createElement('br');
-    div.appendChild(br);
+        const label = document.createElement('label');
+        div.appendChild(label);
+        label.for = 'hozzavalok';
+        label.innerHTML = 'Hozzávalók:';
 
-    const select = document.createElement('select');
-    div.appendChild(select);
-    select.name = 'hozzavalok';
-    select.id = 'hozzavalok';
+        const br = document.createElement('br');
+        div.appendChild(br);
 
-    const option0 = document.createElement('option');
-    select.appendChild(option0);
-    option0.value = 'zero';
-    option0.innerHTML = 'Choose!';
-    for (let item of data) {
-        const option = document.createElement('option');
-        select.appendChild(option);
-        option.innerHTML = item;
+        const select = document.createElement('select');
+        div.appendChild(select);
+        select.name = 'hozzavalok';
+        select.id = 'hozzavalok';
+
+        const option0 = document.createElement('option');
+        select.appendChild(option0);
+        option0.value = 'zero';
+        option0.innerHTML = 'Choose!';
+        for (let item of data) {
+            const option = document.createElement('option');
+            select.appendChild(option);
+            option.innerHTML = item;
+        }
+
+        const button = document.createElement('input');
+        div.appendChild(button);
+        button.type = 'button';
+        button.value = '-';
+        button.id = 'removeBtn';
+        button.addEventListener('click', () => {
+            RemoveForm(div);
+        });
     }
-
-    const button = document.createElement('input');
-    div.appendChild(button);
-    button.type = 'button';
-    button.value = '-';
-    button.id = 'removeBtn';
-    button.addEventListener('click', () => {
-        RemoveForm(div);
-    });
 };
 
 const RemoveForm = (div) => {
     const innerForms = document.getElementById('innerForms');
     innerForms.removeChild(div);
+};
+
+const SearchRecipe = () => {
+    console.log('searching');
 };
