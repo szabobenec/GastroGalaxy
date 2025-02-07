@@ -86,10 +86,6 @@ header {
     margin: 5px;
 }
 
-.div1 {
-    background-color: var(--secondaryClrs);
-}
-
 .formsDiv {
     display: flex;
     flex-direction: column;
@@ -110,6 +106,44 @@ header {
 #search {
     height: 25px;
     width: 75px;
+}
+
+.receptek {
+    margin: 10px;
+}
+
+.teljes,
+.reszleges {
+    display: none;
+}
+
+.teljesDiv,
+.reszlegesDiv {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    width: 100%;
+    gap: 25px;
+}
+
+.teljesDivs {
+    background-color: var(--cardClrs);
+    color: var(--textColor);
+    width: 20%;
+    height: 250px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.2);
 }
 
 footer {

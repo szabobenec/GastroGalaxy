@@ -19,13 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const MakeArray = (data) => {
-    const div1 = document.getElementById('div1');
-    for (let item of data) {
-        const p = document.createElement('p');
-        div1.appendChild(p);
-        p.innerHTML = item.nev;
-    }
-
     let hozzavalok = [];
     for (let item of data) {
         for (let item2 of item.hozzavalok) {
@@ -143,9 +136,62 @@ const SearchRecipe = async () => {
                 keresett2.push(item);
             }
         }
-        console.log(keresett);
-        console.log(keresett2);
+        fillDiv(keresett, keresett2);
     } catch (error) {
         console.error(error);
+    }
+};
+
+const fillDiv = (array1, array2) => {
+    console.log(array1);
+    console.log(array2);
+    const teljes = document.getElementById('teljes');
+    if (array1.length > 0) {
+        teljes.setAttribute('class', '');
+    }
+    const reszleges = document.getElementById('reszleges');
+    if (array2.length > 0) {
+        reszleges.setAttribute('class', '');
+    }
+
+    const div1 = document.getElementById('teljesDiv');
+    div1.innerHTML = '';
+    for (let item of array1) {
+        const div = document.createElement('div');
+        div1.appendChild(div);
+        div.setAttribute('class', 'teljesDivs');
+        const h3 = document.createElement('h3');
+        div.appendChild(h3);
+        h3.innerHTML = item.nev;
+        const p = document.createElement('p');
+        div.appendChild(p);
+        p.innerHTML = 'Hozzávalók:<br>';
+        p.style.width = '90%';
+        for (let item2 of item.hozzavalok) {
+            for (let hozzavalo in item2) {
+                p.innerHTML += `${hozzavalo}; `;
+            }
+        }
+    }
+
+    const div2 = document.getElementById('reszlegesDiv');
+    div2.innerHTML = '';
+    for (let item of array2) {
+        const div = document.createElement('div');
+        div2.appendChild(div);
+        div.setAttribute('class', 'teljesDivs grow');
+        const h3 = document.createElement('h3');
+        div.appendChild(h3);
+        h3.style.width = '90%';
+        h3.innerHTML = item.nev;
+        const p = document.createElement('p');
+        div.appendChild(p);
+        p.innerHTML = 'Hozzávalók:<br>';
+        p.style.width = '90%';
+        for (let item2 of item.hozzavalok) {
+            for (let hozzavalo in item2) {
+                p.innerHTML += `${hozzavalo}; `;
+            }
+        }
     }
 };
