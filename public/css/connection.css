@@ -171,3 +171,13 @@ p
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+h3
+{
+    line-height: 0;
+}
+
+h4
+{
+    line-height: 0;
+}
