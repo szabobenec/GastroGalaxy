@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Recept</title>
+    <link rel="stylesheet" href="../css/recipefullview.css" />
+    <link rel="icon" type="image/x-icon" href="../images/mascot.png" />
+</head>
+
+<body>
+    <header>
+        <div class="headerStart">
+            <a href="http://127.0.0.1:3000/" class="headerLogo"><img href src="../images/logo.png" alt="logo"
+                    title="logo" class="headerLogo" /></a>
+            <a href="http://127.0.0.1:3000/" class="links">Főoldal</a>
+            <a href="http://127.0.0.1:3000/recipes/" class="links">Receptek</a>
+            <a href="http://127.0.0.1:3000/recipeoftheday/" class="links">A nap receptje</a>
+            <a href="http://127.0.0.1:3000/connection/" class="links">Kapcsolat</a>
+        </div>
+        <div class="headerEnd">
+            <select id="themeSelector">
+                <option value="light">Világos</option>
+                <option value="dark">Sötét</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="mainDiv">
+        <div class="mainDivHeader">
+            <div class="mainDivContent">
+                <h1>[Recept Neve]</h1>
+                <p>elkészítési idő: <span id="ido"></span> perc</p>
+                <p>Mennyiség: <span id="adag"></span> adag</p>
+                <span id="tipus"></span>
+    
+                <div>
+                    <p>Hozávalók:</p>
+                    <div>
+                        <input type="checkbox" id="tészta">
+                        <label for="tészta">350 g tészta</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="víz">
+                        <label for="víz">~700 ml víz</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="feta_sajt">
+                        <label for="feta_sajt">1 tömb (~250 g) feta sajt</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="paradicsom">
+                        <label for="paradicsom">0.5 l db (cseresznyeparadicsom)</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="olivaolaj">
+                        <label for="olivaolaj">1 evőkanál olivaolaj</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="só">
+                        <label for="só">0.5 teáskanál só</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="bors">
+                        <label for="bors">0.25 teáskanál fekete őrölt bors</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="fokhagyma">
+                        <label for="fokhagyma">2 gerezd apróra vágva fokhagyma</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="bazsalikom">
+                        <label for="bazsalikom">25 g bazsalikom</label>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <img src="../images/sultfeta-teszta.jpg" alt="">
+        </div>
+    </div>
+
+    <p>Tápérték: <span id="kaloria"></span> kcal</p>
+
+    <p>Kulcsszavak: </span></p>
+    <span id="keywords"><span class="pEx">pédlda</span><span class="pEx">pédlda</span><span
+            class="pEx">pédlda</span></span>
+
+    <footer>
+        <div class="footerStart"></div>
+        <div class="footerEnd"></div>
+    </footer>
+
+    <script src="../javascript/recipes.js"></script>
+</body>
+
+</html>

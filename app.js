@@ -38,6 +38,10 @@ router.get('/recipeoftheday/', (request, response) => {
 router.get('/connection/', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/connection.html'));
 });
+//? Recept minden adattal együtt:
+/*router.get('/connection/', (request, response) => {
+    response.sendFile(path.join(__dirname + '/public/html/recipefullview.html'));
+});*/
 
 app.use(express.json());
 //! API
