@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Összes recept</title>
+        <link rel="stylesheet" href="../css/allrecipes.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerStart">
+                <a href="http://127.0.0.1:3000/" class="headerLogo"
+                    ><img href src="../images/logo.png" alt="logo" title="logo" class="headerLogo"
+                /></a>
+                <a href="http://127.0.0.1:3000/" class="links">Főoldal</a>
+                <a href="http://127.0.0.1:3000/recipes/" class="links">Receptek</a>
+                <a href="http://127.0.0.1:3000/recipeoftheday/" class="links">A nap receptje</a>
+                <a href="http://127.0.0.1:3000/allrecipes" class="links">Összes recept</a>
+                <a href="http://127.0.0.1:3000/connection/" class="links">Kapcsolat</a>
+            </div>
+            <div class="headerEnd">
+                <select id="themeSelector">
+                    <option value="light">Világos</option>
+                    <option value="dark">Sötét</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="mainDiv">
+            <h2>Összes recept</h2>
+        </div>
+
+        <div id="receptek" class="receptek"></div>
+
+        <footer>
+            <div class="footerStart"></div>
+            <div class="footerEnd"></div>
+        </footer>
+
+        <script src="../javascript/allrecipes.js"></script>
+    </body>
+</html>

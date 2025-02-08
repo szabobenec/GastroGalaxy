@@ -159,7 +159,7 @@ const fillDiv = (array1, array2) => {
     for (let item of array1) {
         const div = document.createElement('div');
         div1.appendChild(div);
-        div.setAttribute('class', 'teljesDivs');
+        div.setAttribute('class', 'teljesDivs grow');
         const h3 = document.createElement('h3');
         div.appendChild(h3);
         h3.innerHTML = item.nev;
