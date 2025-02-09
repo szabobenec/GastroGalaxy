@@ -30,10 +30,13 @@ const postAPI = (url, postObject) => {
     });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    getAPI('/api/getallrecept')
-        .then((response) => MakeArray(response.receptek))
-        .catch((error) => console.log(error));
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const data = (await getAPI('/api/getallrecept')).receptek;
+        MakeArray(data);
+    } catch (error) {
+        console.error(error);
+    }
 });
 
 const MakeArray = (data) => {
