@@ -43,21 +43,20 @@ body {
         var(--dot-color);
 }
 
-.titleLink
-{
+.titleLink {
     text-decoration: none;
     color: white;
 }
 
-/* From Uiverse.io by vk-uiux */ 
+/* From Uiverse.io by vk-uiux */
 .loader {
     position: relative;
     width: 33px;
     height: 33px;
     perspective: 67px;
-  }
-  
-  .loader div {
+}
+
+.loader div {
     width: 100%;
     height: 100%;
     background: #fff;
@@ -65,42 +64,44 @@ body {
     left: 50%;
     transform-origin: left;
     animation: loader 2s infinite;
-  }
-  
-  .loader div:nth-child(1) {
+}
+
+.loader div:nth-child(1) {
     animation-delay: 0.15s;
-  }
-  
-  .loader div:nth-child(2) {
+}
+
+.loader div:nth-child(2) {
     animation-delay: 0.3s;
-  }
-  
-  .loader div:nth-child(3) {
+}
+
+.loader div:nth-child(3) {
     animation-delay: 0.45s;
-  }
-  
-  .loader div:nth-child(4) {
+}
+
+.loader div:nth-child(4) {
     animation-delay: 0.6s;
-  }
-  
-  .loader div:nth-child(5) {
+}
+
+.loader div:nth-child(5) {
     animation-delay: 0.75s;
-  }
-  
-  @keyframes loader {
+}
+
+@keyframes loader {
     0% {
-      transform: rotateY(0deg);
+        transform: rotateY(0deg);
     }
-  
-    50%, 80% {
-      transform: rotateY(-180deg);
+
+    50%,
+    80% {
+        transform: rotateY(-180deg);
     }
-  
-    90%, 100% {
-      opacity: 0;
-      transform: rotateY(-180deg);
+
+    90%,
+    100% {
+        opacity: 0;
+        transform: rotateY(-180deg);
     }
-  }
+}
 
 /*? Kis képernyős eszközök */
 @media only screen and (max-width: 992px) {
@@ -138,7 +139,7 @@ body {
 
     .links {
         text-decoration: none;
-        color: light-dark(black, white);
+        color: var(--textColor);
     }
 
     .mainPageLink {
@@ -293,7 +294,7 @@ body {
 
     .links {
         text-decoration: none;
-        color: light-dark(black, white);
+        color: var(--textColor);
     }
 
     .headerEnd {
@@ -361,7 +362,7 @@ body {
         justify-content: space-evenly;
         margin-top: 50px;
         height: 400px;
-        color: white;
+        color: var(--textColor);
     }
 
     .cardTitle {
@@ -401,9 +402,8 @@ body {
         width: 100%;
         margin-top: 100px;
     }
-    
-    .RecipeLoadDiv
-    {
+
+    .RecipeLoadDiv {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -411,5 +411,4 @@ body {
         justify-content: center;
         padding-top: 150px;
     }
-
 }
