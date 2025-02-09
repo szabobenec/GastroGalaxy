@@ -40,7 +40,7 @@ const FillData = (data) => {
     const receptTipus = document.getElementById('receptTipus');
     receptTipus.innerHTML = data.tipus;
 
-    const receptHozzavalok = document.getElementById('receptHozzavalok');
+    const receptHozzavalok = document.getElementById('hozzavalok');
     for (let item of data.hozzavalok) {
         let hozzavaloNeve = '';
         for (let item2 in item) {
@@ -63,10 +63,17 @@ const FillData = (data) => {
     }
 
     const receptElkeszites = document.getElementById('receptElkeszites');
-    receptElkeszites.innerHTML = data.elkeszites;
+    for (let item of data.elkeszites.split('\n')) {
+        const p = document.createElement('p');
+        receptElkeszites.appendChild(p);
+        p.innerHTML = item;
+    }
 
     const receptForras = document.getElementById('receptForras');
     receptForras.innerHTML = data.forras;
+
+    const receptKep = document.getElementById('receptKep');
+    receptKep.setAttribute('src', `../images/recipes/${data.source}`);
 };
 
 const CrossWords = () => {

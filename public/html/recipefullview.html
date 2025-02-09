@@ -29,29 +29,43 @@
         </header>
 
         <div class="mainDiv">
-            <div class="mainDivHeader">
-                <div class="mainDivContent">
-                    <h1 id="receptNev">[Recept Neve]</h1>
-                    <p>Elkészítési idő: <span id="receptIdo"></span> perc</p>
-                    <p>Mennyiség: <span id="receptAdag"></span> adag</p>
-                    <p>Típus: <span id="receptTipus"></span></p>
+            <div class="receptDiv">
+                <div class="content1">
+                    <div class="receptContent">
+                        <h1 id="receptNev">[Recept Neve]</h1>
+                        <div class="div1">
+                            <p>Elkészítési idő: <span id="receptIdo"></span> perc</p>
+                            <p>Mennyiség: <span id="receptAdag"></span> adag</p>
+                            <p>Típus: <span id="receptTipus"></span></p>
+                        </div>
 
-                    <div id="receptHozzavalok">
-                        <h3>Hozzávalók:</h3>
+                        <div id="receptHozzavalok">
+                            <h2>Hozzávalók:</h2>
+                            <div class="hozzavalok" id="hozzavalok"></div>
+                        </div>
                     </div>
 
-                    <div>
-                        <h3>Elkészítés:</h3>
-                        <p id="receptElkeszites"></p>
+                    <div class="imgDiv">
+                        <img
+                            src="../images/sultfeta-teszta.jpg"
+                            alt=""
+                            id="receptKep"
+                            class="receptKep"
+                        />
+                    </div>
+                </div>
+
+                <div class="content2">
+                    <div class="elkeszites">
+                        <h2>Elkészítés:</h2>
+                        <div id="receptElkeszites"></div>
                     </div>
 
-                    <div>
+                    <div class="forras">
                         <h3>Forrás:</h3>
                         <p id="receptForras"></p>
                     </div>
                 </div>
-
-                <img src="../images/sultfeta-teszta.jpg" alt="" />
             </div>
 
             <!-- fos geci nem mukodik >:c

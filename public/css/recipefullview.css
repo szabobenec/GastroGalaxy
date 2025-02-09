@@ -83,64 +83,68 @@ header {
 }
 
 .mainDiv {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    line-height: 0;
-    margin: auto;
-    padding-top: 20px;
+    margin: 5px;
 }
 
-.mainDivHeader {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-
-    gap: 30px;
-}
-
-.mainDivInstr {
+.receptDiv {
+    margin: 25px;
     display: flex;
     flex-direction: column;
-    white-space: normal;
-    height: fit-content;
+}
+
+.content1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.receptContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div1 {
+    gap: 0px;
+    font-size: 125%;
+}
+
+.hozzavalok {
+    gap: 10px;
+}
+
+.imgDiv {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.receptKep {
+    width: 90%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--textColor);
+}
+
+.elkeszites {
+    display: flex;
+    flex-direction: column;
     width: 80%;
 }
 
-.mainDivContent {
+.forras {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    width: fit-content;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    align-items: center;
+    gap: 15px;
 }
 
-#keywords {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5px;
-    max-width: fit-content;
-    min-height: fit-content;
-}
-.pEx {
-    background-color: #32161f;
-    color: #59c9a5;
-    border: 0.5px solid black;
-    border-radius: 2px;
-
-    width: max-content;
-    height: max-content;
-}
-
-.grow {
+/* .grow {
     transition: all 0.2s ease-in-out;
 }
 
 .grow:hover {
     transform: scale(1.2);
-}
+} */
 
 .crossed {
     text-decoration: line-through;
