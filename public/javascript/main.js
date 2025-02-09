@@ -12,13 +12,24 @@ const getAPI = (url) => {
     });
 };
 
-document.addEventListener('DOMContentLoaded', async () => {
-    const cards = Array.from(document.getElementsByClassName('cards'));
-    for (let item of cards) {
-        item.addEventListener('click', () => {
-            Link(item);
-        });
-    }
-});
+const postAPI = (url, postObject) => {
+    return new Promise((resolve, reject) => {
+        fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(postObject)
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    reject(`Hiba: ${response.statusText} (${response.status})`);
+                }
+                return response.json();
+            })
+            .then((data) => resolve(data))
+            .catch((error) => reject(`Hiba: ${error}`));
+    });
+};
 
-const Link = async (data) => {};
+document.addEventListener('DOMContentLoaded', async () => {
+    console.log('Welcome to Gastro Galaxy!');
+});
