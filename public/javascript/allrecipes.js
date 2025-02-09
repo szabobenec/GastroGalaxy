@@ -30,14 +30,42 @@ const postAPI = (url, postObject) => {
     });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    getAPI('/api/getallrecept')
-        .then((response) => MakeCards(response.receptek))
-        .catch((error) => console.log(error));
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const data = (await getAPI('/api/getallrecept')).receptek;
+        SelectType(data);
+    } catch (error) {
+        console.error(error);
+    }
 });
 
-const MakeCards = (data) => {
-    const receptDiv = document.getElementById('innerReceptek');
+const SelectType = (data) => {
+    let tipusok = { reggeli: [], leves: [], foetel: [], vacsora: [], desszert: [] };
+    for (let item of data) {
+        if (item.tipus === 'reggeli') {
+            tipusok.reggeli.push(item);
+        } else if (item.tipus === 'leves') {
+            tipusok.leves.push(item);
+        } else if (item.tipus === 'főétel') {
+            tipusok.foetel.push(item);
+        } else if (item.tipus === 'vacsora') {
+            tipusok.vacsora.push(item);
+        } else if (item.tipus === 'desszert') {
+            tipusok.desszert.push(item);
+        }
+    }
+    console.log(tipusok);
+    const divs = Array.from(document.getElementsByClassName('innerReceptek'));
+    for (let item of divs) {
+        for (let item2 in tipusok) {
+            if (item2 == item.id) {
+                MakeCards(tipusok[item2], item);
+            }
+        }
+    }
+};
+
+const MakeCards = (data, receptDiv) => {
     for (let item of data) {
         const div = document.createElement('div');
         receptDiv.appendChild(div);
@@ -53,15 +81,6 @@ const MakeCards = (data) => {
         const h3 = document.createElement('h3');
         titleDiv.appendChild(h3);
         h3.innerHTML = item.nev;
-        // const p = document.createElement('p');
-        // div.appendChild(p);
-        // p.innerHTML = 'Hozzávalók:<br>';
-        // p.style.width = '90%';
-        // for (let item2 of item.hozzavalok) {
-        //     for (let hozzavalo in item2) {
-        //         p.innerHTML += `${hozzavalo}; `;
-        //     }
-        // }
 
         const img = document.createElement('img');
         div.appendChild(img);

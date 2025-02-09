@@ -227,9 +227,7 @@ body {
         gap: 25px;
     }
 
-    .card1,
-    .card2,
-    .card3 {
+    .cards {
         width: 80%;
         height: 350px;
         background-color: var(--cardClrs);
@@ -373,9 +371,7 @@ body {
         gap: 10px;
     }
 
-    .card1,
-    .card2,
-    .card3 {
+    .cards {
         width: 20%;
         height: 100%;
         background-color: var(--cardClrs);
