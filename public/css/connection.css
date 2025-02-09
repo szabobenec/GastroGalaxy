@@ -32,10 +32,14 @@ body {
     --dot-color: var(--secondaryClrs);
     --dot-size: 2px;
     --dot-space: 15px;
-    background: linear-gradient(90deg,
-            var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-            transparent 1%) center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    background: linear-gradient(
+                90deg,
+                var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+                transparent 1%
+            )
+            center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
+            center / var(--dot-space) var(--dot-space),
         var(--dot-color);
 }
 
@@ -77,17 +81,6 @@ header {
     flex-direction: row-reverse;
     padding-right: 10px;
 }
-
-
-footer {
-    background-color: var(--bgColor);
-    color: var(--textColor);
-    height: 108px;
-    width: 100%;
-    margin-top: 100px;
-}
-
-
 
 .StoreInfo {
     width: 80%;
@@ -157,7 +150,6 @@ p {
 }
 
 .contact-message {
-
     width: 20%;
     display: flex;
     flex-direction: row;
@@ -175,9 +167,7 @@ p {
     flex-direction: column;
 }
 
-
 .contact-text {
-
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -198,10 +188,20 @@ textarea {
 }
 
 .contact-alt {
-
     width: 50%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding-right: 20px;
+}
+
+footer {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    height: 108px;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
