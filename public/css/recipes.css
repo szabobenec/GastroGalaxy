@@ -112,25 +112,20 @@ header {
     margin: 10px;
 }
 
-.teljes,
-.reszleges {
-    display: none;
-}
-
 .teljesDiv,
 .reszlegesDiv {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    align-items: center;
     width: 100%;
     gap: 25px;
 }
 
-.teljesDivs {
+.receptDivs {
     background-color: var(--cardClrs);
     color: var(--textColor);
-    width: 20%;
-    height: 250px;
+    width: 250px;
+    height: 300px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -144,6 +139,21 @@ header {
 
 .grow:hover {
     transform: scale(1.2);
+}
+
+.littleImg {
+    width: 215px;
+    height: 215px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--textColor);
+}
+
+.titleDiv {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 20%;
 }
 
 .titleLink {

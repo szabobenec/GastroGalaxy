@@ -12,6 +12,24 @@ const getAPI = (url) => {
     });
 };
 
+const postAPI = (url, postObject) => {
+    return new Promise((resolve, reject) => {
+        fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(postObject)
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    reject(`Hiba: ${response.statusText} (${response.status})`);
+                }
+                return response.json();
+            })
+            .then((data) => resolve(data))
+            .catch((error) => reject(`Hiba: ${error}`));
+    });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     getAPI('/api/getallrecept')
         .then((response) => MakeArray(response.receptek))
@@ -73,13 +91,12 @@ const AddNewForm = (data) => {
         const select = document.createElement('select');
         div.appendChild(select);
         select.name = 'hozzavalok';
-        select.id = 'hozzavalok';
         select.setAttribute('class', 'hozzavalok');
 
         const option0 = document.createElement('option');
         select.appendChild(option0);
         option0.value = 'zero';
-        option0.innerHTML = 'Choose!';
+        option0.innerHTML = '-- Válassz hozzávalót! --';
         for (let item of data) {
             const option = document.createElement('option');
             select.appendChild(option);
@@ -106,45 +123,41 @@ const RemoveForm = (div) => {
 const SearchRecipe = async () => {
     try {
         const data = (await getAPI('/api/getallrecept')).receptek;
-        console.log(data);
         const selects = Array.from(document.getElementsByClassName('hozzavalok'));
         let values = [];
         for (let item of selects) {
-            if (!values.includes(item.value)) {
+            if (!values.includes(item.value) && item.value !== 'zero') {
                 values.push(item.value);
             }
         }
-        console.log(values);
-        // let counter = 0;
         let keresett = [];
         let keresett2 = [];
-
-        for (let item of data) {
-            let counter = 0;
-            for (let item2 of item.hozzavalok) {
-                for (let item3 in item2) {
-                    for (let hozzavalo of values) {
-                        if (!keresett.includes(item) && item3 === hozzavalo) {
-                            counter++;
+        if (values.length > 0) {
+            for (let item of data) {
+                let counter = 0;
+                for (let item2 of item.hozzavalok) {
+                    for (let item3 in item2) {
+                        for (let hozzavalo of values) {
+                            if (!keresett.includes(item) && item3 === hozzavalo) {
+                                counter++;
+                            }
                         }
                     }
                 }
+                if (counter == values.length) {
+                    keresett.push(item);
+                } else if (values.length > 2 && counter == values.length - 1) {
+                    keresett2.push(item);
+                }
             }
-            if (counter == values.length) {
-                keresett.push(item);
-            } else if (values.length > 2 && counter == values.length - 1) {
-                keresett2.push(item);
-            }
+            fillDiv(keresett, keresett2);
         }
-        fillDiv(keresett, keresett2);
     } catch (error) {
         console.error(error);
     }
 };
 
 const fillDiv = (array1, array2) => {
-    console.log(array1);
-    console.log(array2);
     const teljes = document.getElementById('teljes');
     if (array1.length > 0) {
         teljes.setAttribute('class', '');
@@ -159,19 +172,23 @@ const fillDiv = (array1, array2) => {
     for (let item of array1) {
         const div = document.createElement('div');
         div1.appendChild(div);
-        div.setAttribute('class', 'teljesDivs grow');
+        div.setAttribute('class', 'receptDivs grow');
+        div.addEventListener('click', () => {
+            SendRecipe(item);
+        });
+
+        const titleDiv = document.createElement('div');
+        div.appendChild(titleDiv);
+        titleDiv.setAttribute('class', 'titleDiv');
+
         const h3 = document.createElement('h3');
-        div.appendChild(h3);
+        titleDiv.appendChild(h3);
         h3.innerHTML = item.nev;
-        const p = document.createElement('p');
-        div.appendChild(p);
-        p.innerHTML = 'Hozzávalók:<br>';
-        p.style.width = '90%';
-        for (let item2 of item.hozzavalok) {
-            for (let hozzavalo in item2) {
-                p.innerHTML += `${hozzavalo}; `;
-            }
-        }
+
+        const img = document.createElement('img');
+        div.appendChild(img);
+        img.setAttribute('src', `../images/recipes/${item.source}`);
+        img.setAttribute('class', 'littleImg');
     }
 
     const div2 = document.getElementById('reszlegesDiv');
@@ -179,19 +196,34 @@ const fillDiv = (array1, array2) => {
     for (let item of array2) {
         const div = document.createElement('div');
         div2.appendChild(div);
-        div.setAttribute('class', 'teljesDivs grow');
+        div.setAttribute('class', 'receptDivs grow');
+        div.addEventListener('click', () => {
+            SendRecipe(item);
+        });
+
+        const titleDiv = document.createElement('div');
+        div.appendChild(titleDiv);
+        titleDiv.setAttribute('class', 'titleDiv');
+
         const h3 = document.createElement('h3');
-        div.appendChild(h3);
+        titleDiv.appendChild(h3);
         h3.style.width = '90%';
         h3.innerHTML = item.nev;
-        const p = document.createElement('p');
-        div.appendChild(p);
-        p.innerHTML = 'Hozzávalók:<br>';
-        p.style.width = '90%';
-        for (let item2 of item.hozzavalok) {
-            for (let hozzavalo in item2) {
-                p.innerHTML += `${hozzavalo}; `;
-            }
-        }
+
+        const img = document.createElement('img');
+        div.appendChild(img);
+        img.setAttribute('src', `../images/recipes/${item.source}`);
+        img.setAttribute('class', 'littleImg');
+    }
+};
+
+const SendRecipe = async (data) => {
+    try {
+        const postObject = { recept: data.nev };
+        const message = await postAPI('/api/recept', postObject);
+        console.log(message);
+        document.location.href = '/recipefullview';
+    } catch (error) {
+        console.error(error);
     }
 };
