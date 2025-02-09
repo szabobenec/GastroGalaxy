@@ -71,11 +71,12 @@ const FillData = (data) => {
         div.appendChild(input);
         input.type = 'checkbox';
         input.id = hozzavaloNeve;
+        input.setAttribute('class', 'hozzavaloListInputs');
         const label = document.createElement('label');
         div.appendChild(label);
         label.for = hozzavaloNeve;
         label.innerHTML = `${hozzavaloNeve}: ${item[hozzavaloNeve]}`;
-        label.setAttribute('class', 'receptListLabel');
+        label.setAttribute('class', 'receptListLabel hozzavaloListLabels');
 
         input.addEventListener('change', CrossWords);
     }
@@ -98,9 +99,9 @@ const CrossWords = () => {
     const receptLista = Array.from(document.getElementsByClassName('receptList'));
     for (let item of receptLista) {
         if (item.firstChild.checked) {
-            item.lastChild.setAttribute('class', 'receptListLabel crossed');
+            item.lastChild.setAttribute('class', 'receptListLabel hozzavaloListLabels crossed');
         } else {
-            item.lastChild.setAttribute('class', 'receptListLabel');
+            item.lastChild.setAttribute('class', 'receptListLabel hozzavaloListLabels');
         }
     }
 };

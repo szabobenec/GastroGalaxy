@@ -25,7 +25,7 @@ html {
     font-family: system-ui;
 }
 
-.unselectable{
+.unselectable {
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -51,181 +51,374 @@ body {
         var(--dot-color);
 }
 
-header {
-    background-color: var(--bgColor);
-    color: var(--textColor);
-    height: 54px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0%;
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-
-.headerStart {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    gap: 20px;
-}
-
-.headerLogo {
-    height: 90%;
-    width: auto;
-}
-
-.links {
-    text-decoration: none;
-    color: light-dark(black, white);
-}
-
-.headerEnd {
-    width: 50%;
-    display: flex;
-    flex-direction: row-reverse;
-    padding-right: 10px;
-}
-
-.mainDiv {
-    margin: 5px;
-}
-
-.receptDiv {
-    margin: 25px;
-    display: flex;
-    flex-direction: column;
-}
-
-.content1 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.receptContent {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-
-.div1 {
-    gap: 0px;
-    font-size: 125%;
-}
-
-.hozzavalok {
-    gap: 10px;
-}
-
-.imgDiv {
-    width: 50%;
-    display: flex;
-    justify-content: end;
-}
-
-.receptKep {
-    width: 90%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid var(--textColor);
-}
-
-.elkeszites {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-}
-
-.forras {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.crossed {
-    text-decoration: line-through;
-}
-
-.tovabbiReceptek {
-    margin: 25px;
-}
-
-.randomReceptek {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 25px;
-}
-
-.randomRecipes {
-    background-color: var(--cardClrs);
-    color: var(--textColor);
-    width: 250px;
-    height: 300px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.grow {
-    transition: all 0.2s ease-in-out;
-}
-
-.grow:hover {
-    transform: scale(1.2);
-}
-
-.littleImg {
-    width: 215px;
-    height: 215px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid var(--textColor);
-}
-
-.titleDiv {
-    display: flex;
-    align-items: center;
-    width: 90%;
-    height: 20%;
-}
-
-.titleLink {
-    text-decoration: none;
-}
-
-.linkTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    color: var(--textColor);
-    text-decoration: none;
-}
-
-footer {
-    background-color: var(--bgColor);
-    color: var(--textColor);
-    height: 108px;
-    width: 100%;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /*? Kis képernyős eszközök */
 @media only screen and (max-width: 992px) {
+    header {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 54px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    .headerStart {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        gap: 20px;
+    }
+
+    .headerLogo {
+        height: 90%;
+        width: auto;
+    }
+
+    .links {
+        text-decoration: none;
+        color: light-dark(black, white);
+    }
+
+    .headerEnd {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 10px;
+    }
+
+    .mainDiv {
+        margin: 5px;
+    }
+
+    .receptDiv {
+        margin: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content1 {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .receptContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #receptNev {
+        align-self: center;
+    }
+
+    .div1 {
+        gap: 0px;
+        font-size: 175%;
+    }
+
+    .hozzavalok {
+        gap: 10px;
+    }
+
+    .imgDiv {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .receptKep {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--textColor);
+    }
+
+    .elkeszites {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .forras {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #receptForras {
+        font-size: 75%;
+    }
+
+    .crossed {
+        text-decoration: line-through;
+    }
+
+    .hozzavaloListInputs {
+        width: 15px;
+        height: 15px;
+    }
+
+    .hozzavaloListLabels {
+        font-size: 150%;
+    }
+
+    .tovabbiReceptek {
+        margin: 25px;
+    }
+
+    .randomReceptek {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .randomRecipes {
+        background-color: var(--cardClrs);
+        color: var(--textColor);
+        width: 300px;
+        height: 350px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grow {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .grow:hover {
+        transform: scale(1.2);
+    }
+
+    .littleImg {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--textColor);
+    }
+
+    .titleDiv {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 20%;
+    }
+
+    .titleLink {
+        text-decoration: none;
+    }
+
+    .linkTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        color: var(--textColor);
+        text-decoration: none;
+    }
+
+    .osszesRecept {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 108px;
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 /*? Nagy képernyős eszközök */
 @media only screen and (min-width: 992px) {
+    header {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 54px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    .headerStart {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        gap: 20px;
+    }
+
+    .headerLogo {
+        height: 90%;
+        width: auto;
+    }
+
+    .links {
+        text-decoration: none;
+        color: light-dark(black, white);
+    }
+
+    .headerEnd {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 10px;
+    }
+
+    .mainDiv {
+        margin: 5px;
+    }
+
+    .receptDiv {
+        margin: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content1 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .receptContent {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div1 {
+        gap: 0px;
+        font-size: 125%;
+    }
+
+    .hozzavalok {
+        gap: 10px;
+    }
+
+    .imgDiv {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .receptKep {
+        width: 90%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--textColor);
+    }
+
+    .elkeszites {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .forras {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .crossed {
+        text-decoration: line-through;
+    }
+
+    .tovabbiReceptek {
+        margin: 25px;
+    }
+
+    .randomReceptek {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .randomRecipes {
+        background-color: var(--cardClrs);
+        color: var(--textColor);
+        width: 250px;
+        height: 300px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grow {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .grow:hover {
+        transform: scale(1.2);
+    }
+
+    .littleImg {
+        width: 215px;
+        height: 215px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--textColor);
+    }
+
+    .titleDiv {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 20%;
+    }
+
+    .titleLink {
+        text-decoration: none;
+    }
+
+    .linkTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        color: var(--textColor);
+        text-decoration: none;
+    }
+
+    footer {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 108px;
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

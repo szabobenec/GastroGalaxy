@@ -25,7 +25,7 @@ html {
     font-family: system-ui;
 }
 
-.unselectable{
+.unselectable {
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -99,6 +99,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 /* From Uiverse.io by ElSombrero2 */
