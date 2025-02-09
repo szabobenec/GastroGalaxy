@@ -25,6 +25,15 @@ html {
     font-family: system-ui;
 }
 
+.unselectable{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
 body {
     margin: 0;
 
