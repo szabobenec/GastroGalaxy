@@ -31,57 +31,23 @@
         <div class="mainDiv">
             <div class="mainDivHeader">
                 <div class="mainDivContent">
-                    <h1>[Recept Neve]</h1>
-                    <p>elkészítési idő: <span id="ido"></span> perc</p>
-                    <p>Mennyiség: <span id="adag"></span> adag</p>
-                    <span id="tipus"></span>
+                    <h1 id="receptNev">[Recept Neve]</h1>
+                    <p>Elkészítési idő: <span id="receptIdo"></span> perc</p>
+                    <p>Mennyiség: <span id="receptAdag"></span> adag</p>
+                    <p>Típus: <span id="receptTipus"></span></p>
+
+                    <div id="receptHozzavalok">
+                        <h3>Hozzávalók:</h3>
+                    </div>
 
                     <div>
-                        <p>Hozávalók:</p>
-                        <div>
-                            <input type="checkbox" id="tészta" />
-                            <label for="tészta">350 g tészta</label>
-                        </div>
+                        <h3>Elkészítés:</h3>
+                        <p id="receptElkeszites"></p>
+                    </div>
 
-                        <div>
-                            <input type="checkbox" id="víz" />
-                            <label for="víz">~700 ml víz</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="feta_sajt" />
-                            <label for="feta_sajt">1 tömb (~250 g) feta sajt</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="paradicsom" />
-                            <label for="paradicsom">0.5 l db (cseresznyeparadicsom)</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="olivaolaj" />
-                            <label for="olivaolaj">1 evőkanál olivaolaj</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="só" />
-                            <label for="só">0.5 teáskanál só</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="bors" />
-                            <label for="bors">0.25 teáskanál fekete őrölt bors</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="fokhagyma" />
-                            <label for="fokhagyma">2 gerezd apróra vágva fokhagyma</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="bazsalikom" />
-                            <label for="bazsalikom">25 g bazsalikom</label>
-                        </div>
+                    <div>
+                        <h3>Forrás:</h3>
+                        <p id="receptForras"></p>
                     </div>
                 </div>
 
@@ -107,6 +73,6 @@
             <div class="footerEnd"></div>
         </footer>
 
-        <script src="../javascript/recipes.js"></script>
+        <script src="../javascript/recipefullview.js"></script>
     </body>
 </html>

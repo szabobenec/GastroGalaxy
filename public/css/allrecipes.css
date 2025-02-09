@@ -87,10 +87,9 @@ header {
 }
 
 .receptek {
-    margin: 10px;
+    margin: 25px;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
     width: 100%;
     gap: 25px;
 }
@@ -113,6 +112,11 @@ header {
 
 .grow:hover {
     transform: scale(1.2);
+}
+
+.receptLink {
+    text-decoration: none;
+    color: var(--textColor);
 }
 
 footer {

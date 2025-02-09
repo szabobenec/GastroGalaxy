@@ -79,6 +79,18 @@ app.get('/api/getrandomrecipe', async (request, response) => {
         console.log(error.message);
     }
 });
+//? Specifikus recept POST - GET:
+let recept = '';
+app.post('/api/recept', (request, response) => {
+    const postBody = request.body;
+
+    recept = postBody.recept;
+    console.log(recept);
+    response.status(200).json({ message: 'Sikeres mentés' });
+});
+app.get('/api/recept', (request, response) => {
+    response.status(200).json({ recept: recept });
+});
 
 //! Server
 app.use(express.static('public'));

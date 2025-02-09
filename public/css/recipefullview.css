@@ -25,7 +25,6 @@ html {
     font-family: system-ui;
 }
 
-
 body {
     margin: 0;
 
@@ -96,11 +95,11 @@ header {
     display: flex;
     flex-direction: row;
     width: fit-content;
-    
+
     gap: 30px;
 }
 
-.mainDivInstr{
+.mainDivInstr {
     display: flex;
     flex-direction: column;
     white-space: normal;
@@ -117,8 +116,7 @@ header {
     overflow-wrap: break-word;
 }
 
-#keywords
-{
+#keywords {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -126,18 +124,15 @@ header {
     max-width: fit-content;
     min-height: fit-content;
 }
-.pEx
-{
+.pEx {
     background-color: #32161f;
     color: #59c9a5;
     border: 0.5px solid black;
     border-radius: 2px;
-    
+
     width: max-content;
     height: max-content;
 }
-
-
 
 .grow {
     transition: all 0.2s ease-in-out;
@@ -145,6 +140,10 @@ header {
 
 .grow:hover {
     transform: scale(1.2);
+}
+
+.crossed {
+    text-decoration: line-through;
 }
 
 footer {
