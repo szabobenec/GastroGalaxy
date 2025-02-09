@@ -89,13 +89,6 @@ app.post('/api/recept', (request, response) => {
 app.get('/api/recept', (request, response) => {
     response.status(200).json({ recept: recept });
 });
-//? Main Page hivatkozások:
-let card = '';
-app.post('/api/cardLink', (request, response) => {
-    card = request.body.card;
-    console.log(card);
-    response.status(200).json({ message: 'Sikeres mentés' });
-});
 
 //! Server
 app.use(express.static('public'));
