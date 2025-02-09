@@ -82,14 +82,19 @@ app.get('/api/getrandomrecipe', async (request, response) => {
 //? Specifikus recept POST - GET:
 let recept = '';
 app.post('/api/recept', (request, response) => {
-    const postBody = request.body;
-
-    recept = postBody.recept;
+    recept = request.body.recept;
     console.log(recept);
     response.status(200).json({ message: 'Sikeres mentés' });
 });
 app.get('/api/recept', (request, response) => {
     response.status(200).json({ recept: recept });
+});
+//? Main Page hivatkozások:
+let card = '';
+app.post('/api/cardLink', (request, response) => {
+    card = request.body.card;
+    console.log(card);
+    response.status(200).json({ message: 'Sikeres mentés' });
 });
 
 //! Server

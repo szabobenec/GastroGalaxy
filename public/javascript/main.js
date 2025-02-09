@@ -12,6 +12,13 @@ const getAPI = (url) => {
     });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Welcome to Gastro Galaxy!');
+document.addEventListener('DOMContentLoaded', async () => {
+    const cards = Array.from(document.getElementsByClassName('cards'));
+    for (let item of cards) {
+        item.addEventListener('click', () => {
+            Link(item);
+        });
+    }
 });
+
+const Link = async (data) => {};
