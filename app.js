@@ -46,6 +46,10 @@ router.get('/recipefullview/', (request, response) => {
 router.get('/allrecipes/', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/allrecipes.html'));
 });
+//? Recept feltöltése:
+router.get('/uploadrecipe', (request, response) => {
+    response.sendFile(path.join(__dirname + '/public/html/uploadrecipe.html'));
+});
 
 app.use(express.json());
 //! API

@@ -1,0 +1,116 @@
+:root {
+    --plum: #9b5094;
+    --mauve: #d3a6f0;
+    --vistaBlue: #98a6d4;
+    --mint: #59c9a5;
+    --gunmetal: #0a2e36;
+    --raisinBlack: #15192a;
+    --darkPurple: #32161f;
+    --iris: #5f52c9;
+    --darkCyan: #3c887e;
+    --nonPhotoBlue: #a6e1fa;
+
+    --bgColor: light-dark(var(--nonPhotoBlue), var(--raisinBlack));
+    --secondaryClrs: light-dark(white, var(--iris));
+    --scndClrs: light-dark();
+    --cardClrs: light-dark(var(--mint), var(--iris));
+    --textColor: light-dark(var(--raisinBlack), white);
+}
+
+html {
+    color-scheme: light dark;
+}
+
+* {
+    font-family: system-ui;
+}
+
+.unselectable {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.innerReceptek img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+    margin: 0;
+
+    --dot-bg: var(--bgColor);
+    --dot-color: var(--secondaryClrs);
+    --dot-size: 2px;
+    --dot-space: 15px;
+    background: linear-gradient(
+                90deg,
+                var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+                transparent 1%
+            )
+            center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
+            center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.mainDiv {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+header {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    height: 54px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0%;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.headerStart {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 20px;
+}
+
+.headerLogo {
+    height: 90%;
+    width: auto;
+}
+
+.links {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.headerEnd {
+    width: 20%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+
+footer {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    height: 108px;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

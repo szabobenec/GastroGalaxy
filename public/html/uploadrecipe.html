@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="HU">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Összes recept</title>
-        <link rel="stylesheet" href="../css/allrecipes.css" />
+        <title>Gastro Galaxy</title>
+        <link rel="stylesheet" href="../css/uploadrecipe.css" />
     </head>
+
     <body>
         <header>
             <div class="headerStart">
@@ -17,7 +19,7 @@
                         title="logo"
                         class="headerLogo unselectable"
                 /></a>
-                <a href="http://127.0.0.1:3000/" class="links">Főoldal</a>
+                <a href="http://127.0.0.1:3000/" class="links mainPageLink">Főoldal</a>
                 <a href="http://127.0.0.1:3000/recipes/" class="links">Receptek</a>
                 <a href="http://127.0.0.1:3000/recipeoftheday/" class="links">A nap receptje</a>
                 <a href="http://127.0.0.1:3000/allrecipes" class="links">Összes recept</a>
@@ -33,20 +35,7 @@
         </header>
 
         <div class="mainDiv">
-            <h1>Összes recept</h1>
-        </div>
-
-        <div id="receptek" class="receptek">
-            <h2>Reggelik:</h2>
-            <div class="innerReceptek" id="reggeli"></div>
-            <h2>Levesek:</h2>
-            <div class="innerReceptek" id="leves"></div>
-            <h2>Főételek:</h2>
-            <div class="innerReceptek" id="foetel"></div>
-            <h2>Vacsorák:</h2>
-            <div class="innerReceptek" id="vacsora"></div>
-            <h2>Desszertek:</h2>
-            <div class="innerReceptek" id="desszert"></div>
+            <h1>Recept feltöltése</h1>
         </div>
 
         <footer>
@@ -57,6 +46,6 @@
             </p>
         </footer>
 
-        <script src="../javascript/allrecipes.js"></script>
+        <script src="../javascript/uploadrecipe.js"></script>
     </body>
 </html>
