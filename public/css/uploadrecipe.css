@@ -103,6 +103,40 @@ header {
     padding-right: 10px;
 }
 
+.adatok {
+    margin: 25px;
+}
+
+.alapAdatok {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.sor {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.forrasok {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.forrasSor {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.forrasSor input {
+    width: 80%;
+}
+
 footer {
     background-color: var(--bgColor);
     color: var(--textColor);
