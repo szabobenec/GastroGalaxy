@@ -33,7 +33,7 @@ html {
     -ms-user-select: none;
 }
 
-.innerReceptek img{
+.innerReceptek img {
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -74,7 +74,7 @@ header {
 
 .headerStart {
     height: 100%;
-    width: 50%;
+    width: 80%;
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -92,7 +92,7 @@ header {
 }
 
 .headerEnd {
-    width: 50%;
+    width: 20%;
     display: flex;
     flex-direction: row-reverse;
     padding-right: 10px;
