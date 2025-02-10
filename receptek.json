@@ -1,6 +1,7 @@
 {
     "receptek": [
         {
+            "id": "1",
             "tipus": "főétel",
             "nev": "Krémes fokhagymás tészta",
             "ido": 35,
@@ -22,6 +23,7 @@
             "forras": "https://www.allrecipes.com/recipe/269500/creamy-garlic-pasta/"
         },
         {
+            "id": "2",
             "tipus": "vacsora",
             "nev": "Sült feta tészta",
             "ido": 40,
@@ -42,6 +44,7 @@
             "forras": "https://fedandfit.com/feta-pasta/"
         },
         {
+            "id": "3",
             "tipus": "főétel",
             "nev": "Borsós csirketokány",
             "ido": 25,
@@ -63,6 +66,7 @@
             "forras": "https://streetkitchen.hu/hust-hussal/borsos-csirketokany/"
         },
         {
+            "id": "4",
             "tipus": "desszert",
             "nev": "Túrós pite",
             "ido": 65,
@@ -84,6 +88,7 @@
             "forras": "https://www.mindmegette.hu/recept/turos-pite-ii"
         },
         {
+            "id": "5",
             "tipus": "leves",
             "nev": "Zöldségleves tortillachipsszel",
             "ido": 45,
@@ -113,6 +118,7 @@
             "forras": "Szakácskönyv Mexikói Konyha, több mint 100 fontosabb recept, 8. oldal (https://bookline.hu/product/home.action?_v=Szakacskonyvtar_Mexikoi_konyha&type=22&id=101359)"
         },
         {
+            "id": "6",
             "tipus": "desszert",
             "nev": "Holland fánk",
             "ido": 50,
