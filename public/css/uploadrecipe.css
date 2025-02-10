@@ -120,6 +120,31 @@ header {
     justify-content: space-between;
 }
 
+.hozzavalokDiv {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+}
+
+/* .outerHozzavalo {
+    width: 100%;
+} */
+
+.hozzavalo {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+
+.hozzavaloSor {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .forrasok {
     display: flex;
     flex-direction: column;
@@ -135,6 +160,12 @@ header {
 
 .forrasSor input {
     width: 80%;
+}
+
+.lepesSor {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
 }
 
 footer {

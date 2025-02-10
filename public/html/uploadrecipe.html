@@ -40,42 +40,64 @@
                 <div class="alapAdatok">
                     <div class="sor">
                         <label for="nev">Recept neve:</label>
-                        <input type="text" id="nev" />
+                        <input type="text" name="nev" id="nev" />
                     </div>
 
                     <div class="sor">
                         <label for="tipus">Típusa:</label>
-                        <input type="text" id="tipus" />
+                        <input type="text" name="tipus" id="tipus" />
                     </div>
 
                     <div class="sor">
                         <label for="ido">Elkészítési idő (perc):</label>
-                        <input type="text" id="ido" />
+                        <input type="text" name="ido" id="ido" />
                     </div>
 
                     <div class="sor">
                         <label for="adag">Adag (fő):</label>
-                        <input type="text" id="adag" />
+                        <input type="text" name="adag" id="adag" />
                     </div>
                 </div>
 
                 <div id="hozzavalok" class="hozzavalok">
                     <h3>Hozzávalók:</h3>
+                    <div class="hozzavalokDiv" id="hozzavalokDiv">
+                        <div id="hozzavalo0" class="hozzavalo">
+                            <div class="hozzavaloSor">
+                                <label for="hozzavaloNev0">Hozzávaló neve:</label>
+                                <input type="text" name="hozzavaloNev0" id="hozzavaloNev0" />
+                            </div>
+                            <div class="hozzavaloSor">
+                                <label for="mennyiseg0">Mennyisége:</label>
+                                <input type="text" name="mennyiseg1" id="mennyiseg0" />
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" name="hozzavaloPlus" id="hozzavaloPlus" value="+" />
                 </div>
 
                 <div id="elkeszites" class="elkeszites">
                     <h3>Elkészítés:</h3>
+                    <div class="elkeszitesDiv" id="elkeszitesDiv">
+                        <div id="elkeszites0" class="lepes">
+                            <div class="lepesSor">
+                                <label for="lepes0">1. lépés:</label>
+                                <textarea name="lepes0" id="lepes0"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" name="elkeszitesPlus" id="elkeszitesPlus" value="+" />
                 </div>
 
                 <div id="forrasok" class="forrasok">
                     <div class="forrasSor">
                         <label for="kepSrc">Kép forrása:</label>
-                        <input type="text" id="kepSrc" />
+                        <input type="text" name="kepSrc" id="kepSrc" />
                     </div>
 
                     <div class="forrasSor">
                         <label for="forras">Forrás:</label>
-                        <input type="text" id="forras" />
+                        <input type="text" name="forras" id="forras" />
                     </div>
                 </div>
             </div>
