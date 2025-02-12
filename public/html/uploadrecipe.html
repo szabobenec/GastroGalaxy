@@ -65,15 +65,32 @@
                         <div id="hozzavalo0" class="hozzavalo">
                             <div class="hozzavaloSor">
                                 <label for="hozzavaloNev0">Hozzávaló neve:</label>
-                                <input type="text" name="hozzavaloNev0" id="hozzavaloNev0" />
+                                <input
+                                    type="text"
+                                    name="hozzavaloNev0"
+                                    id="hozzavaloNev0"
+                                    class="hozzavaloNev"
+                                />
                             </div>
                             <div class="hozzavaloSor">
                                 <label for="mennyiseg0">Mennyisége:</label>
-                                <input type="text" name="mennyiseg1" id="mennyiseg0" />
+                                <input
+                                    type="text"
+                                    name="mennyiseg1"
+                                    id="mennyiseg0"
+                                    class="hozzavaloMennyiseg"
+                                />
                             </div>
                         </div>
                     </div>
-                    <input type="button" name="hozzavaloPlus" id="hozzavaloPlus" value="+" />
+                    <div class="buttons">
+                        <input
+                            type="button"
+                            name="hozzavaloPlus"
+                            id="hozzavaloPlus"
+                            value="Hozzávaló hozzáadása"
+                        />
+                    </div>
                 </div>
 
                 <div id="elkeszites" class="elkeszites">
@@ -82,17 +99,16 @@
                         <div id="elkeszites0" class="lepes">
                             <div class="lepesSor">
                                 <label for="lepes0">1. lépés:</label>
-                                <textarea name="lepes0" id="lepes0"></textarea>
+                                <textarea name="lepes0" id="lepes0" class="textAreas"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="buttons">
-                        <input type="button" name="elkeszitesPlus" id="elkeszitesPlus" value="+" />
                         <input
                             type="button"
-                            name="elkeszitesMinus"
-                            id="elkeszitesMinus"
-                            value="-"
+                            name="elkeszitesPlus"
+                            id="elkeszitesPlus"
+                            value="Lépés hozzáadása"
                         />
                     </div>
                 </div>
@@ -108,6 +124,11 @@
                         <input type="text" name="forras" id="forras" />
                     </div>
                 </div>
+
+                <div class="buttons" id="sendBtn">
+                    <input type="button" name="sendBtn" id="sendBtn" value="Adatok feltöltése" />
+                </div>
+                <input type="file" name="kep" id="kep" />
             </div>
         </div>
 

@@ -34,13 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Welcome to Recipe Uploader!');
     document.getElementById('hozzavaloPlus').addEventListener('click', AddHozzavalo);
     document.getElementById('elkeszitesPlus').addEventListener('click', AddLepes);
+    document.getElementById('sendBtn').addEventListener('click', SendData);
 });
 
 const AddHozzavalo = () => {
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
-    console.log(hozzavalokDiv);
     const hozzavalok = Array.from(document.getElementsByClassName('hozzavalo'));
-    console.log(hozzavalok.length);
 
     if (hozzavalok.length < 50) {
         const hozzavaloDiv = document.createElement('div');
@@ -101,18 +100,19 @@ const RemoveHozzavalo = (div) => {
 
 const AddLepes = () => {
     const elkeszitesDiv = document.getElementById('elkeszitesDiv');
-    console.log(elkeszitesDiv);
     const lepesek = Array.from(document.getElementsByClassName('lepes'));
-    console.log(lepesek);
 
     if (lepesek.length < 10) {
         const lepesDiv = document.createElement('div');
         elkeszitesDiv.appendChild(lepesDiv);
         lepesDiv.id = `elkeszites${lepesek.length}`;
-        lepesDiv.setAttribute('class', 'lepes');
+        lepesDiv.setAttribute('class', 'outerLepes');
+        const innerLepesDiv = document.createElement('div');
+        lepesDiv.appendChild(innerLepesDiv);
+        innerLepesDiv.setAttribute('class', 'lepes');
 
         const lepesSor = document.createElement('div');
-        lepesDiv.appendChild(lepesSor);
+        innerLepesDiv.appendChild(lepesSor);
         lepesSor.setAttribute('class', 'lepesSor');
 
         const label = document.createElement('label');
@@ -123,15 +123,27 @@ const AddLepes = () => {
         lepesSor.appendChild(textArea);
         textArea.name = `lepes${lepesek.length}`;
         textArea.id = `lepes${lepesek.length}`;
+        textArea.setAttribute('class', 'textAreas');
 
-        // <label for="lepes0">1. lépés:</label>
-        // <textarea name="lepes0" id="lepes0"></textarea>
+        const btnDiv = document.createElement('div');
+        lepesDiv.appendChild(btnDiv);
+        btnDiv.setAttribute('class', 'btnDiv');
+        const btn = document.createElement('input');
+        btnDiv.appendChild(btn);
+        btn.type = 'button';
+        btn.id = `minus${lepesek.length}`;
+        btn.value = '-';
+
+        btn.addEventListener('click', () => {
+            RemoveLepes(elkeszitesDiv);
+        });
     }
-    document.getElementById('elkeszitesMinus').addEventListener('click', () => {
-        RemoveLepes(elkeszitesDiv);
-    });
 };
 
 const RemoveLepes = (div) => {
     div.removeChild(div.lastChild);
+};
+
+const SendData = () => {
+    console.log('send');
 };
