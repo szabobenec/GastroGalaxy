@@ -159,6 +159,9 @@ const SendData = (length) => {
     const ido = document.getElementById('ido').value;
     const adag = document.getElementById('adag').value;
     const kepSrc = document.getElementById('kepSrc').value;
+    console.log(kepSrc);
+    const kep = document.getElementById('kep');
+    kep.setAttribute('src', kepSrc);
     const forras = document.getElementById('forras').value;
     if (nev === '' || tipus === '' || ido === '' || adag === '' || kepSrc === '' || forras === '') {
         checker = false;

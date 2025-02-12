@@ -117,14 +117,20 @@
                     <div class="forrasSor">
                         <form action="/receptKep" method="post" enctype="multipart/form-data">
                             <label for="kepSrc">Kép feltöltése:</label>
-                            <input type="file" name="kepSrc" id="kepSrc" accept=".jpg,.jpeg,.png" />
+                            <input
+                                type="file"
+                                name="uploeaded_file"
+                                id="kepSrc"
+                                accept=".jpg,.jpeg,.png"
+                            />
                             <input type="submit" value="Show" />
+                            <img src="" alt="" id="kep" />
                         </form>
                     </div>
 
                     <div class="forrasSor">
                         <label for="forras">Forrás:</label>
-                        <input type="text" name="uploaded_file" id="forras" />
+                        <input type="text" name="forras" id="forras" />
                     </div>
                 </div>
 
