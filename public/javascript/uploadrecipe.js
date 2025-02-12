@@ -183,11 +183,13 @@ const SendData = (length) => {
 
     const textAreas = Array.from(document.getElementsByClassName('textAreas'));
     let lepesek = [];
+    let lepesSzam = 1;
     for (let item of textAreas) {
         if (item.value === '') {
             checker = false;
         }
-        lepesek.push(item.value);
+        lepesek.push(`${lepesSzam}. ${item.value}`);
+        lepesSzam++;
     }
 
     console.log(checker);
