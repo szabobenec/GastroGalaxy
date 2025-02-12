@@ -30,10 +30,16 @@ const postAPI = (url, postObject) => {
     });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     console.log('Welcome to Recipe Uploader!');
     document.getElementById('hozzavaloPlus').addEventListener('click', AddHozzavalo);
     document.getElementById('elkeszitesPlus').addEventListener('click', AddLepes);
+    try {
+        const data = (await getAPI('/api/getallrecept')).receptek.length;
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
     document.getElementById('sendBtn').addEventListener('click', SendData);
 });
 
@@ -78,7 +84,7 @@ const AddHozzavalo = () => {
         textBox2.type = 'text';
         textBox2.name = `mennyisegNev${hozzavalok.length}`;
         textBox2.id = `mennyisegNev${hozzavalok.length}`;
-        textBox1.setAttribute('class', 'hozzavaloMennyiseg');
+        textBox2.setAttribute('class', 'hozzavaloMennyiseg');
 
         const btnDiv = document.createElement('div');
         hozzavaloDiv.appendChild(btnDiv);
@@ -146,4 +152,46 @@ const RemoveLepes = (div) => {
 
 const SendData = () => {
     console.log('send');
+    let checker = true;
+    const nev = document.getElementById('nev').value;
+    const tipus = document.getElementById('tipus').value;
+    const ido = document.getElementById('ido').value;
+    const adag = document.getElementById('adag').value;
+    if (nev === '' || tipus === '' || ido === '' || adag === '') {
+        checker = false;
+    }
+
+    const hozzavaloNev = Array.from(document.getElementsByClassName('hozzavaloNev'));
+    let hozzavalok = [];
+    for (let item of hozzavaloNev) {
+        if (item.value === '') {
+            checker = false;
+        }
+        hozzavalok.push(item.value);
+    }
+    const hozzavaloMennyiseg = Array.from(document.getElementsByClassName('hozzavaloMennyiseg'));
+    let mennyisegek = [];
+    for (let item of hozzavaloMennyiseg) {
+        if (item.value === '') {
+            checker = false;
+        }
+        mennyisegek.push(item.value);
+    }
+
+    const textAreas = Array.from(document.getElementsByClassName('textAreas'));
+    let lepesek = [];
+    for (let item of textAreas) {
+        if (item.value === '') {
+            checker = false;
+        }
+        lepesek.push(item.value);
+    }
+
+    console.log(checker);
+
+    if (checker) {
+        const recept = {};
+    }
+
+    console.log(nev, tipus, ido, adag, hozzavalok, mennyisegek, lepesek);
 };
