@@ -22,6 +22,19 @@ app.use(
     })
 );
 
+//! Képfeltöltés:
+const upload = multer({ destination: 'uploads/' });
+app.post('/upload', upload.single('uploaded_file'), (request, response) => {
+    console.log(request.file, request.body);
+});
+
+// onst upload = multer({ dest: './public/data/uploads/' })
+// app.post('/stats', upload.single('uploaded_file'), function (req, res) {
+//   // req.file is the name of your file in the form above, here 'uploaded_file'
+//   // req.body will hold the text fields, if there were any
+//   console.log(req.file, req.body)
+// });
+
 //! Routing
 //? Főoldal:
 router.get('/', (request, response) => {
