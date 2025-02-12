@@ -36,11 +36,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('elkeszitesPlus').addEventListener('click', AddLepes);
     try {
         const data = (await getAPI('/api/getallrecept')).receptek.length;
-        console.log(data);
+        document.getElementById('sendBtn').addEventListener('click', () => {
+            SendData(data);
+        });
     } catch (error) {
         console.error(error);
     }
-    document.getElementById('sendBtn').addEventListener('click', SendData);
 });
 
 const AddHozzavalo = () => {
@@ -150,14 +151,16 @@ const RemoveLepes = (div) => {
     div.removeChild(div.lastChild);
 };
 
-const SendData = () => {
+const SendData = (length) => {
     console.log('send');
     let checker = true;
     const nev = document.getElementById('nev').value;
     const tipus = document.getElementById('tipus').value;
     const ido = document.getElementById('ido').value;
     const adag = document.getElementById('adag').value;
-    if (nev === '' || tipus === '' || ido === '' || adag === '') {
+    const kepSrc = document.getElementById('kepSrc').value;
+    const forras = document.getElementById('forras').value;
+    if (nev === '' || tipus === '' || ido === '' || adag === '' || kepSrc === '' || forras === '') {
         checker = false;
     }
 
@@ -190,8 +193,30 @@ const SendData = () => {
     console.log(checker);
 
     if (checker) {
-        const recept = {};
-    }
+        let elkeszites = lepesek.join('\n');
+        let hozzavalo = [];
+        for (let i = 0; i < hozzavalok.length; i++) {
+            hozzavalo.push({
+                [hozzavalok[i]]: mennyisegek[i]
+            });
+        }
 
-    console.log(nev, tipus, ido, adag, hozzavalok, mennyisegek, lepesek);
+        const recept = {
+            id: length + 1,
+            tipus: tipus,
+            nev: nev,
+            ido: ido,
+            adag: adag,
+            hozzavalok: hozzavalo,
+            elkeszites: elkeszites,
+            source: kepSrc,
+            forras: forras
+        };
+
+        SendRecept(recept);
+    }
+};
+
+const SendRecept = (recept) => {
+    console.log(recept);
 };
