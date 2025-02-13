@@ -1,3 +1,21 @@
 {
-    "receptek": []
+    "receptek": [
+        {
+            "id": 7,
+            "tipus": "ebéd",
+            "nev": "Hagyományos káposztás tészta",
+            "ido": "45",
+            "adag": "4",
+            "hozzavalok": [
+                { "káposzta": "1kg (fejeskáposzta)" },
+                { "étolaj": "7 dl" },
+                { "só": "ízlésre" },
+                { "bors": "1 teáskanál" },
+                { "tészta": "50 dkg (fodros kockatészta)" }
+            ],
+            "elkeszites": "1. A káposzta külső leveleit eltávolítjuk, majd negyedeljük. A torzsáját kivágjuk és a leveleit felkockázzuk.\n2. Egy nagyobb fazékban olajat hevítünk, erre dobjuk rá a kockázott káposztát, alaposan sózzuk, és folyamatos kevergetés mellett pirítjuk, amíg a káposzta kb. a felére esik össze, közben frissen őrölt borssal megszórjuk.\n3. Amíg pirul a káposzta egy lábasban vizet forralunk kevés olajjal, majd ha felforrt, sózzuk a főzővizet, és puhára főzzük a tésztát. Leszűrjük, és a pirított káposztához keverjük. Frissen tálaljuk.",
+            "source": "hagyomanyosKaposztasTeszta.jpg",
+            "forras": "https://www.mindmegette.hu/recept/hagyomanyos-kaposztas-teszta"
+        }
+    ]
 }

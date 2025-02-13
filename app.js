@@ -21,6 +21,8 @@ app.use(
     })
 );
 
+app.use(express.json());
+
 //! Képfeltöltés:
 //? Kép felöltése:
 const multer = require('multer');
@@ -38,8 +40,22 @@ app.post('/upload', upload.single('uploaded_file'), (request, response) => {
     response.status(200).json({ message: 'Sikeres feltöltés!' });
 });
 //? Recept feltöltése:
-app.post('/api/feltoltes', (request, response) => {
-    const data = JSON.parse;
+app.post('/api/feltoltes', async (request, response) => {
+    try {
+        console.log(request.body);
+        const recept = request.body;
+        console.log(recept);
+        const data = JSON.parse(await readFile('teszt.json'));
+        console.log(data);
+        data.receptek.push(recept);
+        console.log(data);
+        const data2 = await writeFile('teszt.json', JSON.stringify(data));
+        console.log(data2);
+
+        response.status(200).json({ message: data2, data: recept });
+    } catch (error) {
+        response.status(500).json({ message: error });
+    }
 });
 
 //! Routing
@@ -72,7 +88,6 @@ router.get('/uploadrecipe', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/uploadrecipe.html'));
 });
 
-app.use(express.json());
 //! API
 const readFile = (file) => {
     return new Promise((resolve, reject) => {
@@ -85,11 +100,16 @@ const readFile = (file) => {
         });
     });
 };
-// const writeFile = (file) => {
-//     return new Promise((resolve, rejcect) => {
-//         fs.writeFile(file, error);
-//     });
-// };
+const writeFile = (file, text) => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(file, text, 'utf-8', (error) => {
+            if (error) {
+                reject(error);
+            }
+            resolve('Sikeres feltöltés');
+        });
+    });
+};
 //? Összes recept API:
 app.get('/api/getallrecept', async (request, response) => {
     try {

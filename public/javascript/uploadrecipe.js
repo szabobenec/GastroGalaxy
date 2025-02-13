@@ -206,11 +206,11 @@ const SendData = (length) => {
         let source = kepSrc.value.split('\\')[kepSrc.value.split('\\').length - 1];
 
         const recept = {
-            id: length + 1,
+            id: (length + 1) * 1,
             tipus: tipus,
             nev: nev,
-            ido: ido,
-            adag: adag,
+            ido: ido * 1,
+            adag: adag * 1,
             hozzavalok: hozzavalo,
             elkeszites: elkeszites,
             source: source,
@@ -226,6 +226,10 @@ const SendRecept = async (recept) => {
     const uploadForm = document.getElementById('uploadForm');
 
     try {
+        // console.log(JSON.stringify(postObject));
+        const data = await postAPI('/api/feltoltes', recept);
+        console.log(data);
+
         const formData = new FormData(uploadForm);
 
         const response = await fetch('/upload', {
@@ -239,6 +243,8 @@ const SendRecept = async (recept) => {
         } else {
             throw new Error('Upload failed');
         }
+
+        document.location.href = 'uploadrecipe';
     } catch (error) {
         console.error(error);
     }
