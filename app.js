@@ -85,11 +85,11 @@ const readFile = (file) => {
         });
     });
 };
-const writeFile = (file) => {
-    return new Promise((resolve, rejcect) => {
-        fs.writeFile(file, error);
-    });
-};
+// const writeFile = (file) => {
+//     return new Promise((resolve, rejcect) => {
+//         fs.writeFile(file, error);
+//     });
+// };
 //? Összes recept API:
 app.get('/api/getallrecept', async (request, response) => {
     try {
