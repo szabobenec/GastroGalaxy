@@ -205,6 +205,12 @@ header {
     justify-content: space-between;
 }
 
+.forrasForm {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .forrasSor input {
     width: 80%;
 }

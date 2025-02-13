@@ -21,43 +21,6 @@ app.use(
     })
 );
 
-app.use(express.json());
-
-//! Képfeltöltés:
-//? Kép felöltése:
-const multer = require('multer');
-const storage = multer.diskStorage({
-    destination: (request, file, callback) => {
-        callback(null, path.join(__dirname + '/uploads'));
-    },
-    filename: (request, file, callback) => {
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-        callback(null, file.originalname);
-    }
-});
-const upload = multer({ storage: storage });
-app.post('/upload', upload.single('uploaded_file'), (request, response) => {
-    response.status(200).json({ message: 'Sikeres feltöltés!' });
-});
-//? Recept feltöltése:
-app.post('/api/feltoltes', async (request, response) => {
-    try {
-        console.log(request.body);
-        const recept = request.body;
-        console.log(recept);
-        const data = JSON.parse(await readFile('teszt.json'));
-        console.log(data);
-        data.receptek.push(recept);
-        console.log(data);
-        const data2 = await writeFile('teszt.json', JSON.stringify(data));
-        console.log(data2);
-
-        response.status(200).json({ message: data2, data: recept });
-    } catch (error) {
-        response.status(500).json({ message: error });
-    }
-});
-
 //! Routing
 //? Főoldal:
 router.get('/', (request, response) => {
@@ -88,6 +51,7 @@ router.get('/uploadrecipe', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/uploadrecipe.html'));
 });
 
+app.use(express.json());
 //! API
 const readFile = (file) => {
     return new Promise((resolve, reject) => {
@@ -138,6 +102,36 @@ app.post('/api/recept', (request, response) => {
 });
 app.get('/api/recept', (request, response) => {
     response.status(200).json({ recept: recept });
+});
+
+//! Képfeltöltés:
+//? Kép felöltése:
+const multer = require('multer');
+const storage = multer.diskStorage({
+    destination: (request, file, callback) => {
+        callback(null, path.join(__dirname + '/uploads'));
+    },
+    filename: (request, file, callback) => {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+        callback(null, file.originalname);
+    }
+});
+const upload = multer({ storage: storage });
+app.post('/upload', upload.single('uploaded_file'), (request, response) => {
+    response.status(200).json({ message: 'Sikeres feltöltés!' });
+});
+//? Recept feltöltése:
+app.post('/api/feltoltes', async (request, response) => {
+    try {
+        const recept = request.body;
+        const data = JSON.parse(await readFile('receptek.json'));
+        data.receptek.push(recept);
+        const data2 = await writeFile('receptek.json', JSON.stringify(data));
+
+        response.status(200).json({ message: data2, data: recept });
+    } catch (error) {
+        response.status(500).json({ message: error });
+    }
 });
 
 //! Server
