@@ -3,7 +3,6 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const fs = require('fs');
-const multer = require('multer');
 
 const app = express();
 const router = express.Router();
@@ -23,17 +22,25 @@ app.use(
 );
 
 //! Képfeltöltés:
-const upload = multer({ destination: 'uploads/' });
-app.post('/upload', upload.single('uploaded_file'), (request, response) => {
-    console.log(request.file, request.body);
+//? Kép felöltése:
+const multer = require('multer');
+const storage = multer.diskStorage({
+    destination: (request, file, callback) => {
+        callback(null, path.join(__dirname + '/uploads'));
+    },
+    filename: (request, file, callback) => {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+        callback(null, file.originalname);
+    }
 });
-
-// onst upload = multer({ dest: './public/data/uploads/' })
-// app.post('/stats', upload.single('uploaded_file'), function (req, res) {
-//   // req.file is the name of your file in the form above, here 'uploaded_file'
-//   // req.body will hold the text fields, if there were any
-//   console.log(req.file, req.body)
-// });
+const upload = multer({ storage: storage });
+app.post('/upload', upload.single('uploaded_file'), (request, response) => {
+    response.status(200).json({ message: 'Sikeres feltöltés!' });
+});
+//? Recept feltöltése:
+app.post('/api/feltoltes', (request, response) => {
+    const data = JSON.parse;
+});
 
 //! Routing
 //? Főoldal:
@@ -76,6 +83,11 @@ const readFile = (file) => {
                 resolve(data);
             }
         });
+    });
+};
+const writeFile = (file) => {
+    return new Promise((resolve, rejcect) => {
+        fs.writeFile(file, error);
     });
 };
 //? Összes recept API:

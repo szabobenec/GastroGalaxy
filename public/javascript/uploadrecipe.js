@@ -158,10 +158,8 @@ const SendData = (length) => {
     const tipus = document.getElementById('tipus').value;
     const ido = document.getElementById('ido').value;
     const adag = document.getElementById('adag').value;
-    const kepSrc = document.getElementById('kepSrc').value;
+    const kepSrc = document.getElementById('kepSrc');
     console.log(kepSrc);
-    const kep = document.getElementById('kep');
-    kep.setAttribute('src', kepSrc);
     const forras = document.getElementById('forras').value;
     if (nev === '' || tipus === '' || ido === '' || adag === '' || kepSrc === '' || forras === '') {
         checker = false;
@@ -205,6 +203,7 @@ const SendData = (length) => {
                 [hozzavalok[i]]: mennyisegek[i]
             });
         }
+        let source = kepSrc.value.split('\\')[kepSrc.value.split('\\').length - 1];
 
         const recept = {
             id: length + 1,
@@ -214,7 +213,7 @@ const SendData = (length) => {
             adag: adag,
             hozzavalok: hozzavalo,
             elkeszites: elkeszites,
-            source: kepSrc,
+            source: source,
             forras: forras
         };
 
@@ -222,6 +221,25 @@ const SendData = (length) => {
     }
 };
 
-const SendRecept = (recept) => {
+const SendRecept = async (recept) => {
     console.log(recept);
+    const uploadForm = document.getElementById('uploadForm');
+
+    try {
+        const formData = new FormData(uploadForm);
+
+        const response = await fetch('/upload', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            alert(data.message);
+        } else {
+            throw new Error('Upload failed');
+        }
+    } catch (error) {
+        console.error(error);
+    }
 };
