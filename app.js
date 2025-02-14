@@ -109,7 +109,7 @@ app.get('/api/recept', (request, response) => {
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: (request, file, callback) => {
-        callback(null, path.join(__dirname + '/uploads'));
+        callback(null, path.join(__dirname + '/public/images/recipes'));
     },
     filename: (request, file, callback) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);

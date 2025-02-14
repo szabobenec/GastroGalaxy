@@ -40,22 +40,22 @@
                 <div class="alapAdatok">
                     <div class="sor">
                         <label for="nev">Recept neve:</label>
-                        <input type="text" name="nev" id="nev" />
+                        <input type="text" name="nev" id="nev" placeholder="Káposztás tészta" />
                     </div>
 
                     <div class="sor">
                         <label for="tipus">Típusa:</label>
-                        <input type="text" name="tipus" id="tipus" />
+                        <input type="text" name="tipus" id="tipus" placeholder="főétel" />
                     </div>
 
                     <div class="sor">
                         <label for="ido">Elkészítési idő (perc):</label>
-                        <input type="text" name="ido" id="ido" />
+                        <input type="text" name="ido" id="ido" placeholder="45" />
                     </div>
 
                     <div class="sor">
                         <label for="adag">Adag (fő):</label>
-                        <input type="text" name="adag" id="adag" />
+                        <input type="text" name="adag" id="adag" placeholder="4" />
                     </div>
                 </div>
 
@@ -70,6 +70,7 @@
                                     name="hozzavaloNev0"
                                     id="hozzavaloNev0"
                                     class="hozzavaloNev"
+                                    placeholder="pl. káposzta"
                                 />
                             </div>
                             <div class="hozzavaloSor">
@@ -79,6 +80,7 @@
                                     name="mennyiseg1"
                                     id="mennyiseg0"
                                     class="hozzavaloMennyiseg"
+                                    placeholder="pl. 1 kg (fejeskáposzta)"
                                 />
                             </div>
                         </div>
@@ -99,7 +101,12 @@
                         <div id="elkeszites0" class="lepes">
                             <div class="lepesSor">
                                 <label for="lepes0">1. lépés:</label>
-                                <textarea name="lepes0" id="lepes0" class="textAreas"></textarea>
+                                <textarea
+                                    name="lepes0"
+                                    id="lepes0"
+                                    class="textAreas"
+                                    placeholder="Lépés kifejtése"
+                                ></textarea>
                             </div>
                         </div>
                     </div>
@@ -134,7 +141,12 @@
 
                     <div class="forrasSor">
                         <label for="forras">Forrás:</label>
-                        <input type="text" name="forras" id="forras" />
+                        <input
+                            type="text"
+                            name="forras"
+                            id="forras"
+                            placeholder="'https://www.recept.com/valami' vagy 'Könyv teljes neve, recept oldalszáma'"
+                        />
                     </div>
                 </div>
 

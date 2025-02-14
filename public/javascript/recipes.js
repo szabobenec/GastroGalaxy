@@ -56,6 +56,8 @@ const MakeArray = (data) => {
             }
         }
     }
+    hozzavalok.sort((a, b) => a.localeCompare(b));
+    // hozzavalok.sort(Intl.Collator().compare);
     FillSelect(hozzavalok);
 };
 

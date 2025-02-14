@@ -71,6 +71,7 @@ const AddHozzavalo = () => {
         textBox1.name = `hozzavaloNev${hozzavalok.length}`;
         textBox1.id = `hozzavaloNev${hozzavalok.length}`;
         textBox1.setAttribute('class', 'hozzavaloNev');
+        textBox1.setAttribute('placeholder', 'általános név');
 
         const mennyisegSor = document.createElement('div');
         innerHozzavaloDiv.appendChild(mennyisegSor);
@@ -86,6 +87,7 @@ const AddHozzavalo = () => {
         textBox2.name = `mennyisegNev${hozzavalok.length}`;
         textBox2.id = `mennyisegNev${hozzavalok.length}`;
         textBox2.setAttribute('class', 'hozzavaloMennyiseg');
+        textBox2.setAttribute('placeholder', 'mennyiség; specifikálás');
 
         const btnDiv = document.createElement('div');
         hozzavaloDiv.appendChild(btnDiv);
@@ -131,6 +133,7 @@ const AddLepes = () => {
         textArea.name = `lepes${lepesek.length}`;
         textArea.id = `lepes${lepesek.length}`;
         textArea.setAttribute('class', 'textAreas');
+        textArea.setAttribute('placeholder', 'Lépés kifejtése');
 
         const btnDiv = document.createElement('div');
         lepesDiv.appendChild(btnDiv);
