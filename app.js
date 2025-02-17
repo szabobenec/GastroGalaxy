@@ -39,7 +39,7 @@ router.get('/connection/', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/connection.html'));
 });
 //? Recept minden adattal együtt:
-router.get('/recipefullview/', (request, response) => {
+router.get('/recipefullview/:recept', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/recipefullview.html'));
 });
 //? Összes recept:

@@ -144,8 +144,8 @@
             "id": 7,
             "tipus": "főétel",
             "nev": "Hagyományos káposztás tészta",
-            "ido": "45",
-            "adag": "4",
+            "ido": 45,
+            "adag": 4,
             "hozzavalok": [
                 { "káposzta": "1kg (fejeskáposzta)" },
                 { "étolaj": "7 dl" },
@@ -156,6 +156,100 @@
             "elkeszites": "1. A káposzta külső leveleit eltávolítjuk, majd negyedeljük. A torzsáját kivágjuk és a leveleit felkockázzuk.\n2. Egy nagyobb fazékban olajat hevítünk, erre dobjuk rá a kockázott káposztát, alaposan sózzuk, és folyamatos kevergetés mellett pirítjuk, amíg a káposzta kb. a felére esik össze, közben frissen őrölt borssal megszórjuk.\n3. Amíg pirul a káposzta egy lábasban vizet forralunk kevés olajjal, majd ha felforrt, sózzuk a főzővizet, és puhára főzzük a tésztát. Leszűrjük, és a pirított káposztához keverjük. Frissen tálaljuk.",
             "source": "hagyomanyosKaposztasTeszta.jpg",
             "forras": "https://www.mindmegette.hu/recept/hagyomanyos-kaposztas-teszta"
+        },
+        {
+            "id": 8,
+            "tipus": "reggeli",
+            "nev": "Rántotta",
+            "ido": 10,
+            "adag": 1,
+            "hozzavalok": [
+                { "olaj": "0.5 teáskanál" },
+                { "vaj": "1 teáskanál" },
+                { "tojás": "3 db" },
+                { "só": "1 csipet" }
+            ],
+            "elkeszites": "1. Egy serpenyőt közepes lángon melegíteni kezdünk. Beleöntjük az olajat, majd hozzáadjuk a vajat. Amíg a vaj felhabzik, a tojásokat egy keverőtálba öntjük, sózzuk, villával kissé felverjük (nem kell, hogy teljesen elkeveredjen a sárgája a fehérjével).\n2. A keveréket a habzó vajra öntjük, és körkörös mozdulatokkal keverve megsütjük. Ügyeljünk arra, hogy ne süssük szárazra (3 db tojás esetén nagyjából 1-2 perc a sütési idő).\n3. Végül ízlés szerint megszórhatjuk egy kevés őrölt pirospaprikával vagy akár sajttal. Pirítóssal, vagy friss kenyérrel tálaljuk.",
+            "source": "rantotta.jpg",
+            "forras": "https://www.mindmegette.hu/recept/rantotta"
+        },
+        {
+            "id": 9,
+            "tipus": "leves",
+            "nev": "Póréhagyma-krémleves pirítóssal",
+            "ido": 45,
+            "adag": 4,
+            "hozzavalok": [
+                { "vaj": "2 evőkanál" },
+                { "póréhagyma": "2 db" },
+                { "víz": "1 liter" },
+                { "burgonya": "2 db" },
+                { "babérlevél": "1 db" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" },
+                { "tejszín": "4 evőkanál" },
+                { "snidling": "ízlésre" }
+            ],
+            "elkeszites": "1. A vajat egy lábasban megolvasztjuk, és megfuttatjuk benne a megtisztított, apróra vágott póréhagymát. Addig főzzük, míg megpuhul (ez kb. 10 perc).\n2. Felöntjük az alaplével, hozzáadjuk a meghámozott, felkockázott burgonyát és a babérlevelet. Sózzuk, borsozzuk, és felforraljuk, majd közepes lángon kb. 15 percig főzzük, vagy amíg a burgonya teljesen megpuhul.\n3. Lehúzzuk a levest a tűzről, hagyjuk kissé hűlni, majd eltávolítjuk belőle a babérlevelet.\n4. A levest simára turmixoljuk, majd visszatesszük a tűzre. Folyamatos kevergetés mellett hozzáadjuk a tejszínt, és felforraljuk. Ha szükséges, ismét sózzuk, borsozzuk. Ezután lehúzzuk a tűzről, és tányérokba vagy kis tálkákba merve kínáljuk.\n5. Megszórjuk az apróra vágott snidlinggel, és pirított kenyérszeleteket kínálunk mellé.",
+            "source": "porehagymaKremlevesPiritossal.jpg",
+            "forras": "https://www.mindmegette.hu/recept/porehagymakremleves-piritossal"
+        },
+        {
+            "id": 10,
+            "tipus": "főétel",
+            "nev": "Csirke Cordon bleu sonkás rizzsel",
+            "ido": 90,
+            "adag": 6,
+            "hozzavalok": [
+                { "csirkemell": "1.2 kg" },
+                { "sonka": "40 dkg" },
+                { "sajt": "30 dkg" },
+                { "finomliszt": "12 dkg" },
+                { "tojás": "5 db" },
+                { "zsemlemorzsa": "20 dkg" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" },
+                { "olaj": "3 dl (napraforgó olaj)" },
+                { "rizs": "30 dkg" },
+                { "sonka": "10 dkg" },
+                { "vöröshagyma": "1 db (közepes)" },
+                { "vaj": "5 dkg" },
+                { "víz": "3 dl" }
+            ],
+            "elkeszites": "1. Megtisztítjuk, megmossuk, vékony szeletekre vágjuk, majd folpackban kiklopfoljuk a húst. Mindkét oldalát ízlés szerint sózzuk, borsozzuk.\n2. Előkészítjük a (30 dkg) sonkát, lereszeljük a sajtot, majd a hússzeletekre helyezünk 2 szelet sonkát és egy maréknyi sajtot, és szorosan feltekerjük (ha kisebbek a szeletek, akkor érdemes fogpiszkálóval összetűzni, hogy ne nyíljanak szét). Ha kész vagyunk, akkor tálcára helyezzük a roládokat, folpackkal fedjük, majd hűtőben pihentetjük, közben elkészítjük a köreteket.\n3. Kb. 30-40 perc pihentetés után (duplán) bepanírozzuk a húsokat a következőképpen: először lisztben forgatjuk meg, majd sóval felvert tojásba, zsemlemorzsába, majd ismét tojásba, és végül zsemlemorzsában hempergetjük meg a húsokat.\n4. Felhevítjük az olajat egy serpenyőben, és minden oldalát aranybarnára sütjük közepes hőfokozaton (kb. 20 perc).\n5. Átmossuk a rizst, szűrőn lecsepegtetjük. Megtisztítjuk, megmossuk a vöröshagymát felaprítjuk, a (10 dkg) sonkát 1x1 cm-es kockákra vágjuk.\n6. A vajat felhevítjük egy lábasban, majd beletesszük a hagymát, és üvegesre pároljuk. Utána hozzáadjuk a sonkát, majd a rizst, és pár percig pirítjuk.\n7. Sózzuk, borsozzuk, felöntjük vízzel, és az egészet puhára főzzük (rizsfajtától függ, de kb. 10-15 perc). Tálalás előtt még fedő alatt pár percig pihentetjük.",
+            "source": "csirkeCordonBleuSonkasRizzsel.jpg",
+            "forras": "https://www.nosalty.hu/recept/csirke-cordon-bleu-zoldkorettel-sonkas-rizzsel?adag=6#ingredients"
+        },
+        {
+            "id": 11,
+            "tipus": "reggeli",
+            "nev": "Tükörtojás",
+            "ido": 5,
+            "adag": 2,
+            "hozzavalok": [{ "tojás": "2 db" }, { "olaj": "2 evőkanál (napraforgó olaj)" }],
+            "elkeszites": "1. Az olajat egy serpenyőben kellőképp felforrósítjuk és óvatosan beleütjük a tojásokat.\n2. Keverés nélkül készre sütjük, míg a tojásfehérje megsül, de a sárgája folyós marad.\n3. Hogy jobban átsüljön, a tojásfehérjét egy villa segítségével óvatosan megmozgathatjuk.",
+            "source": "tukortojas.jpg",
+            "forras": "https://www.nosalty.hu/recept/tukortojas?adag=2#ingredients ; https://streetkitchen.hu/basic/tukortojas-sutese/"
+        },
+        {
+            "id": 12,
+            "tipus": "desszert",
+            "nev": "Csokis cupcake",
+            "ido": 45,
+            "adag": 12,
+            "hozzavalok": [
+                { "vaj": "15 dkg (puha)" },
+                { "cukor": "12 dkg + 2 evőkanál" },
+                { "tojás": "3 db" },
+                { "liszt": "15 dkg" },
+                { "sütőpor": "1.5 teáskanál" },
+                { "kakaópor": "3 evőkanál (púpos)" },
+                { "tejszín": "2 dl" },
+                { "étcsokoládé": "20 dkg" }
+            ],
+            "elkeszites": "1. A vajat habosra keverjük a cukorral, és egyenként beledolgozzuk a tojásokat. A lisztet elvegyítjük a sütőporral és a kakaóval, majd a vajas keverékbe forgatjuk.\n2. A sütőt előmelegítjük 180 fokra. A tészta masszját egy 12 részes muffintepsi papírkapszlikkal kibélelt mélyedéseibe kanalazzuk, majd kb. 20 perc alatt megsütjük. A muffinokat kiemeljük a tepsiből, és a rácson hűlni hagyjuk.\n3. A krémhez felverjük a tejszínt a cukorral, majd hozzákeverjük a gőz felett felolvasztott csokoládét. A krémet lehűtjük, majd habzsákba töltjük, és a muffinok tetejére nyomjuk. Végül mindet megszórjuk csokoládédarabokkal.",
+            "source": "csokisCupcake.jpg",
+            "forras": "https://www.mindmegette.hu/recept/csokis-cupcake"
         }
     ]
 }
