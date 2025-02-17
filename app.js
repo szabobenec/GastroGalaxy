@@ -104,6 +104,11 @@ app.get('/api/recept', (request, response) => {
     response.status(200).json({ recept: recept });
 });
 
+// app.get('/api/fullview/:recept', (request, response) => {
+//     const recept = request.params.recept;
+//     const link = `/recipefullview/${recept}`;
+// });
+
 //! Képfeltöltés:
 //? Kép felöltése:
 const multer = require('multer');
