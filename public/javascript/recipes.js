@@ -225,7 +225,7 @@ const fillDiv = (array1, array2) => {
 const SendRecipe = async (data) => {
     try {
         const postObject = { recept: data.nev };
-        const message = await postAPI('/api/recept', postObject);
+        const message = await postAPI('/api/postrecept', postObject);
         console.log(message);
         document.location.href = '/recipefullview';
     } catch (error) {

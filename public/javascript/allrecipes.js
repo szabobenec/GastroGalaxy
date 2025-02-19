@@ -92,7 +92,7 @@ const MakeCards = (data, receptDiv) => {
 const SendRecipe = async (data) => {
     try {
         const postObject = { recept: data.nev };
-        const message = await postAPI('/api/recept', postObject);
+        const message = await postAPI('/api/postrecept', postObject);
         console.log(message);
         document.location.href = `recipefullview/${data.source.split('.')[0]}`;
     } catch (error) {

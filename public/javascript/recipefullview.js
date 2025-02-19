@@ -33,7 +33,7 @@ const postAPI = (url, postObject) => {
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const data = (await getAPI('/api/getallrecept')).receptek;
-        const receptNev = await getAPI('/api/recept');
+        const receptNev = await getAPI('/api/getrecept');
         let random = Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0);
         let recept = data[random];
         for (let item of data) {
@@ -160,7 +160,7 @@ const RandomRecipes = (data, recept) => {
 const SendRecipe = async (data) => {
     try {
         const postObject = { recept: data.nev };
-        const message = await postAPI('/api/recept', postObject);
+        const message = await postAPI('/api/postrecept', postObject);
         console.log(message);
         document.location.href = `recipefullview/${data.source.split('.')[0]}`;
     } catch (error) {

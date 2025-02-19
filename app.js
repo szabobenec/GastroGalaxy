@@ -95,12 +95,12 @@ app.get('/api/getrandomrecipe', async (request, response) => {
 });
 //? Specifikus recept POST - GET:
 let recept = '';
-app.post('/api/recept', (request, response) => {
+app.post('/api/postrecept', (request, response) => {
     recept = request.body.recept;
     console.log(recept);
     response.status(200).json({ message: 'Sikeres mentés' });
 });
-app.get('/api/recept', (request, response) => {
+app.get('/api/getrecept', (request, response) => {
     response.status(200).json({ recept: recept });
 });
 
