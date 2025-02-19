@@ -263,12 +263,65 @@ body {
         align-items: center;
     }
 
+    .tovabbiReceptek {
+        margin: 25px;
+    }
+
+    .randomReceptek {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .randomRecipes {
+        background-color: var(--cardClrs);
+        color: var(--textColor);
+        width: 300px;
+        height: 350px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .grow {
         transition: all 0.2s ease-in-out;
     }
 
     .grow:hover {
         transform: scale(1.2);
+    }
+
+    .littleImg {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--textColor);
+    }
+
+    .titleDiv {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 20%;
+    }
+
+    .titleLink {
+        text-decoration: none;
+    }
+
+    .linkTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        color: var(--textColor);
+        text-decoration: none;
     }
 
     footer {
@@ -412,12 +465,65 @@ body {
         border: 1px solid white;
     }
 
+    .tovabbiReceptek {
+        margin: 25px;
+    }
+
+    .randomReceptek {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .randomRecipes {
+        background-color: var(--cardClrs);
+        color: var(--textColor);
+        width: 250px;
+        height: 300px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .grow {
         transition: all 0.2s ease-in-out;
     }
 
     .grow:hover {
         transform: scale(1.2);
+    }
+
+    .littleImg {
+        width: 215px;
+        height: 215px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--textColor);
+    }
+
+    .titleDiv {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 20%;
+    }
+
+    .titleLink {
+        text-decoration: none;
+    }
+
+    .linkTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        color: var(--textColor);
+        text-decoration: none;
     }
 
     footer {
