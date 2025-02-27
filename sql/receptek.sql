@@ -11,7 +11,7 @@ CREATE TABLE recept (
     tagek TEXT,
     ido INT,
     adag INT NOT NULL,
-    hozzavalok JSON NOT NULL,
+    hozzavalok TEXT NOT NULL,
     elkeszites TEXT NOT NULL,
     kepnev VARCHAR(100),
     forras VARCHAR(255)

@@ -83,6 +83,57 @@ app.get('/api/getallrecept', async (request, response) => {
         console.log(error.message);
     }
 });
+app.get('/getallrecept', async (request, response) => {
+    try {
+        const res = await db.selectAll();
+        response.status(200).json({
+            message: 'Sikeres lekérdezés',
+            response: res
+        });
+    } catch (error) {
+        response.status(500).json({ message: error });
+    }
+});
+//TODO temp
+// app.post('/tempupload', async (request, response) => {
+//     const data = request.body;
+//     try {
+//         let hozzavalok = JSON.stringify(data.hozzavalok);
+//         hozzavalok =
+//             '{' +
+//             hozzavalok
+//                 .split('[')
+//                 .join('')
+//                 .split(']')
+//                 .join('')
+//                 .split('{')
+//                 .join('')
+//                 .split('}')
+//                 .join('') +
+//             '}';
+
+//         console.log(hozzavalok);
+//         console.log(JSON.parse(hozzavalok));
+
+//         const res = await db.insertRecept(
+//             data.tipus,
+//             data.nev,
+//             data.ido,
+//             data.adag,
+//             hozzavalok,
+//             data.elkeszites,
+//             data.kepnev,
+//             data.forras
+//         );
+//         response.status(200).json({
+//             message: 'Sikeres beillesztés',
+//             response: res
+//         });
+//     } catch (error) {
+//         response.status(500).json({ message: error });
+//     }
+// });
+//TODO temp
 //? Random recept API:
 app.get('/api/getrandomrecipe', async (request, response) => {
     try {

@@ -32,8 +32,36 @@ const postAPI = (url, postObject) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const data = (await getAPI('/api/getallrecept')).receptek;
-        SelectType(data);
+        const data = await getAPI('/getallrecept');
+        console.log(data);
+        // const data2 = await getAPI('/api/getallrecept');
+        // console.log(data2);
+        // const data3 = await postAPI('/tempupload', data2);
+        // console.log(data3);
+
+        // for (let item of data2.receptek) {
+        //     const nev = item.nev;
+        //     const tipus = item.tipus;
+        //     const ido = item.ido;
+        //     const adag = item.adag;
+        //     const hozzavalok = item.hozzavalok;
+        //     const elkeszites = item.elkeszites;
+        //     const source = item.source;
+        //     const forras = item.forras;
+        //     const postObject = {
+        //         nev: nev,
+        //         tipus: tipus,
+        //         ido: ido,
+        //         adag: adag,
+        //         hozzavalok: hozzavalok,
+        //         elkeszites: elkeszites,
+        //         kepnev: source,
+        //         forras: forras
+        //     };
+        //     const data3 = await postAPI('/tempupload', postObject);
+        //     console.log(data3);
+        // }
+        SelectType(data.response);
     } catch (error) {
         console.error(error);
     }
@@ -84,7 +112,7 @@ const MakeCards = (data, receptDiv) => {
 
         const img = document.createElement('img');
         div.appendChild(img);
-        img.setAttribute('src', `../images/recipes/${item.source}`);
+        img.setAttribute('src', `../images/recipes/${item.kepnev}`);
         img.setAttribute('class', 'littleImg');
     }
 };
