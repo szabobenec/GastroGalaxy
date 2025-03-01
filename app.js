@@ -178,13 +178,47 @@ app.post('/upload', upload.single('uploaded_file'), (request, response) => {
 });
 //? Recept feltöltése:
 app.post('/api/feltoltes', async (request, response) => {
+    const recept = request.body;
+    console.log(recept);
     try {
-        const recept = request.body;
+        console.log(recept.hozzavalok);
+        console.log('haho?');
+
+        let hozzavalok = JSON.stringify(recept.hozzavalok);
+        console.log('haho?');
+
+        console.log(hozzavalok);
+        hozzavalok =
+            '{' +
+            hozzavalok
+                .split('[')
+                .join('')
+                .split(']')
+                .join('')
+                .split('{')
+                .join('')
+                .split('}')
+                .join('') +
+            '}';
+
+        console.log(hozzavalok);
+
+        const res = await db.insertRecept(
+            recept.tipus,
+            recept.nev,
+            recept.ido,
+            recept.adag,
+            hozzavalok,
+            recept.elkeszites,
+            recept.source,
+            recept.forras
+        );
+
         const data = JSON.parse(await readFile('receptek.json'));
         data.receptek.push(recept);
         const data2 = await writeFile('receptek.json', JSON.stringify(data));
 
-        response.status(200).json({ message: data2, data: recept });
+        response.status(200).json({ message: data2, data: recept, response: res });
     } catch (error) {
         response.status(500).json({ message: error });
     }

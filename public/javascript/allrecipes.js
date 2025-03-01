@@ -122,7 +122,7 @@ const SendRecipe = async (data) => {
         const postObject = { recept: data.nev };
         const message = await postAPI('/api/postrecept', postObject);
         console.log(message);
-        document.location.href = `recipefullview/${data.source.split('.')[0]}`;
+        document.location.href = `recipefullview/${data.kepnev.split('.')[0]}`;
     } catch (error) {
         console.error(error);
     }

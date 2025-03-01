@@ -250,6 +250,26 @@
             "elkeszites": "1. A vajat habosra keverjük a cukorral, és egyenként beledolgozzuk a tojásokat. A lisztet elvegyítjük a sütőporral és a kakaóval, majd a vajas keverékbe forgatjuk.\n2. A sütőt előmelegítjük 180 fokra. A tészta masszját egy 12 részes muffintepsi papírkapszlikkal kibélelt mélyedéseibe kanalazzuk, majd kb. 20 perc alatt megsütjük. A muffinokat kiemeljük a tepsiből, és a rácson hűlni hagyjuk.\n3. A krémhez felverjük a tejszínt a cukorral, majd hozzákeverjük a gőz felett felolvasztott csokoládét. A krémet lehűtjük, majd habzsákba töltjük, és a muffinok tetejére nyomjuk. Végül mindet megszórjuk csokoládédarabokkal.",
             "source": "csokisCupcake.jpg",
             "forras": "https://www.mindmegette.hu/recept/csokis-cupcake"
+        },
+        {
+            "id": 13,
+            "tipus": "reggeli",
+            "nev": "Amerikai palacsinta",
+            "ido": 7,
+            "adag": 4,
+            "hozzavalok": [
+                { "finomliszt": "225 g" },
+                { "tojás": "1 db" },
+                { "tej": "3 dl" },
+                { "sütőpor": "1 csomag" },
+                { "cukor": "3 evőkanál" },
+                { "vaníliás cukor": "1 csomag" },
+                { "fahéj": "1 késhegynyi" },
+                { "olaj": "1 evőkanál (napraforgó olaj)" }
+            ],
+            "elkeszites": "1. Az összes hozzávalót beletesszük a turmixba, és alaposan összemixeljük. Érdemes 2 részletben hozzáadni a tejet és a lisztet, így egyszerűbb, hatékonyabb.\n2. Felforrósítunk és beolajozunk egy teflon serpenyőt. A tésztakeverékből 2-3 korongot csorgatunk bele. A turmix kiöntője segítségével egyszerű adagolni. Aranybarnára sütjük mindkét oldalát.\n3. Ízlés szerint fogyaszthatjuk mézzel, mogyorókrémmel, olvasztott csokival, lekvárral, juharsziruppal.",
+            "source": "amerikaiPalacsinta.jpg",
+            "forras": "https://www.nosalty.hu/recept/gyors-amerikai-palacsinta"
         }
     ]
 }
