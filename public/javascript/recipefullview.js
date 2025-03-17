@@ -32,7 +32,7 @@ const postAPI = (url, postObject) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const data = (await getAPI('/api/getallrecept')).receptek;
+        const data = (await getAPI('/getallrecept')).response;
         const receptNev = await getAPI('/api/getrecept');
         let random = Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0);
         let recept = data[random];
@@ -59,23 +59,20 @@ const FillData = (data) => {
     receptTipus.innerHTML = data.tipus;
 
     const receptHozzavalok = document.getElementById('hozzavalok');
-    for (let item of data.hozzavalok) {
-        let hozzavaloNeve = '';
-        for (let item2 in item) {
-            hozzavaloNeve = item2;
-        }
+    let hozzavalok = JSON.parse(data.hozzavalok);
+    for (let item in hozzavalok) {
         const div = document.createElement('div');
         receptHozzavalok.appendChild(div);
         div.setAttribute('class', 'receptList');
         const input = document.createElement('input');
         div.appendChild(input);
         input.type = 'checkbox';
-        input.id = hozzavaloNeve;
+        input.id = item;
         input.setAttribute('class', 'hozzavaloListInputs');
         const label = document.createElement('label');
         div.appendChild(label);
-        label.for = hozzavaloNeve;
-        label.innerHTML = `${hozzavaloNeve}: ${item[hozzavaloNeve]}`;
+        label.for = item;
+        label.innerHTML = `${item}: ${hozzavalok[item]}`;
         label.setAttribute('class', 'receptListLabel hozzavaloListLabels');
 
         input.addEventListener('change', CrossWords);
@@ -92,7 +89,7 @@ const FillData = (data) => {
     receptForras.innerHTML = data.forras;
 
     const receptKep = document.getElementById('receptKep');
-    receptKep.setAttribute('src', `../images/recipes/${data.source}`);
+    receptKep.setAttribute('src', `../images/recipes/${data.kepnev}`);
 };
 
 const CrossWords = () => {
@@ -152,7 +149,7 @@ const RandomRecipes = (data, recept) => {
 
         const img = document.createElement('img');
         div.appendChild(img);
-        img.setAttribute('src', `../images/recipes/${data[item].source}`);
+        img.setAttribute('src', `../images/recipes/${data[item].kepnev}`);
         img.setAttribute('class', 'littleImg');
     }
 };
@@ -162,7 +159,7 @@ const SendRecipe = async (data) => {
         const postObject = { recept: data.nev };
         const message = await postAPI('/api/postrecept', postObject);
         console.log(message);
-        document.location.href = `${data.source.split('.')[0]}`;
+        document.location.href = `${data.kepnev.split('.')[0]}`;
     } catch (error) {
         console.error(error);
     }

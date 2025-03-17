@@ -77,8 +77,12 @@ const writeFile = (file, text) => {
 //? Összes recept API:
 app.get('/api/getallrecept', async (request, response) => {
     try {
-        const data = JSON.parse(await readFile('receptek.json'));
-        response.json(data);
+        const res = await db.selectAll();
+        // const data = JSON.parse(await readFile('receptek.json'));
+        responsestatus(200).json({
+            message: 'Sikeres lekérdezés',
+            response: res
+        });
     } catch (error) {
         console.log(error.message);
     }

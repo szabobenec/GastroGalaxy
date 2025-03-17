@@ -33,7 +33,7 @@ const postAPI = (url, postObject) => {
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const data = await getAPI('/getallrecept');
-        console.log(data);
+        console.log(data.response);
         // const data2 = await getAPI('/api/getallrecept');
         // console.log(data2);
         // const data3 = await postAPI('/tempupload', data2);
