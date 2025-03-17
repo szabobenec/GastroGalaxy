@@ -52,7 +52,8 @@ router.get('/uploadrecipe', (request, response) => {
 });
 
 app.use(express.json());
-//! API
+//! API végpontok
+//? fájl olvasás és írás
 const readFile = (file) => {
     return new Promise((resolve, reject) => {
         fs.readFile(file, 'utf-8', (error, data) => {
@@ -74,20 +75,8 @@ const writeFile = (file, text) => {
         });
     });
 };
-//? Összes recept API:
+//! Összes recept API:
 app.get('/api/getallrecept', async (request, response) => {
-    try {
-        const res = await db.selectAll();
-        // const data = JSON.parse(await readFile('receptek.json'));
-        responsestatus(200).json({
-            message: 'Sikeres lekérdezés',
-            response: res
-        });
-    } catch (error) {
-        console.log(error.message);
-    }
-});
-app.get('/getallrecept', async (request, response) => {
     try {
         const res = await db.selectAll();
         response.status(200).json({
@@ -98,8 +87,9 @@ app.get('/getallrecept', async (request, response) => {
         response.status(500).json({ message: error });
     }
 });
+
 //TODO temp
-// app.post('/tempupload', async (request, response) => {
+// app.post('/upload-all-to-database', async (request, response) => {
 //     const data = request.body;
 //     try {
 //         let hozzavalok = JSON.stringify(data.hozzavalok);
@@ -138,16 +128,19 @@ app.get('/getallrecept', async (request, response) => {
 //     }
 // });
 //TODO temp
+
 //? Random recept API:
 app.get('/api/getrandomrecipe', async (request, response) => {
     try {
-        const data = JSON.parse(await readFile('receptek.json'));
+        // const data = JSON.parse(await readFile('receptek.json'));
+        const data = await db.selectAll();
         const random = Math.floor(Math.random() * (data.receptek.length - 1 - 0 + 1) + 0);
-        response.json(data.receptek[random]);
+        response.status(200).json(data.response[random]);
     } catch (error) {
         console.log(error.message);
     }
 });
+
 //? Specifikus recept POST - GET:
 let recept = '';
 app.post('/api/postrecept', (request, response) => {
@@ -164,7 +157,7 @@ app.get('/api/getrecept', (request, response) => {
 //     const link = `/recipefullview/${recept}`;
 // });
 
-//! Képfeltöltés:
+//! Receptfeltöltés:
 //? Kép felöltése:
 const multer = require('multer');
 const storage = multer.diskStorage({
@@ -180,7 +173,7 @@ const upload = multer({ storage: storage });
 app.post('/upload', upload.single('uploaded_file'), (request, response) => {
     response.status(200).json({ message: 'Sikeres feltöltés!' });
 });
-//? Recept feltöltése:
+//? Adatok feltöltése:
 app.post('/api/feltoltes', async (request, response) => {
     const recept = request.body;
     console.log(recept);

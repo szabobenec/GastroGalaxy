@@ -31,8 +31,9 @@ const postAPI = (url, postObject) => {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
+    //! backend-en lementett recept név megkeresése az összes receptben
     try {
-        const data = (await getAPI('/getallrecept')).response;
+        const data = (await getAPI('/api/getallrecept')).response;
         const receptNev = await getAPI('/api/getrecept');
         let random = Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0);
         let recept = data[random];
@@ -49,6 +50,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 const FillData = (data) => {
+    //! megtalált recept adatainak megjelenítése
+    //? recept neve, elkészítési ideje, alkészített adag, tipusa, tag-jei
     const receptNev = document.getElementById('receptNev');
     receptNev.innerHTML = data.nev;
     const receptIdo = document.getElementById('receptIdo');
@@ -57,7 +60,17 @@ const FillData = (data) => {
     receptAdag.innerHTML = data.adag;
     const receptTipus = document.getElementById('receptTipus');
     receptTipus.innerHTML = data.tipus;
+    const receptTag = document.getElementById('receptTag');
+    if (data.tagek == null) {
+        //* ha nincsenek tagek, akkor elrejti a 'tagek' bekezdést
+        const receptTagek = document.getElementById('receptTagek');
+        receptTagek.style.display = 'none';
+    } else {
+        const tagek = data.tagek.split(';').join(', ');
+        receptTag.innerHTML = tagek;
+    }
 
+    //? hozzávalók checkbox listában való megjelenítése
     const receptHozzavalok = document.getElementById('hozzavalok');
     let hozzavalok = JSON.parse(data.hozzavalok);
     for (let item in hozzavalok) {
@@ -78,6 +91,7 @@ const FillData = (data) => {
         input.addEventListener('change', CrossWords);
     }
 
+    //? recept elkészítésének leírása
     const receptElkeszites = document.getElementById('receptElkeszites');
     for (let item of data.elkeszites.split('\n')) {
         const p = document.createElement('p');
@@ -85,14 +99,17 @@ const FillData = (data) => {
         p.innerHTML = item;
     }
 
+    //? recept forrása
     const receptForras = document.getElementById('receptForras');
     receptForras.innerHTML = data.forras;
 
+    //? recept képének megjelenítése, megfelelő .source beállítása
     const receptKep = document.getElementById('receptKep');
     receptKep.setAttribute('src', `../images/recipes/${data.kepnev}`);
 };
 
 const CrossWords = () => {
+    //! hozzávalók lista elemeinek kifejlölése esetén való áthúzása
     const receptLista = Array.from(document.getElementsByClassName('receptList'));
     for (let item of receptLista) {
         if (item.firstChild.checked) {
@@ -104,10 +121,12 @@ const CrossWords = () => {
 };
 
 const RandomRecipes = (data, recept) => {
+    //! pár darab random recept megjelenítése a lap alján
     const randomReceptek = document.getElementById('randomReceptek');
     let indexek = [];
     let index = 0;
 
+    //? random, különböző indexek létrehozása
     for (let i = 0; i < data.length; i++) {
         if (data[i].nev === recept.nev) {
             index = i;
@@ -121,6 +140,7 @@ const RandomRecipes = (data, recept) => {
         }
     }
 
+    //? létrehozott indexekhez tartozó receptek megjelenítése
     for (let item of indexek) {
         const div = document.createElement('div');
         randomReceptek.appendChild(div);
@@ -136,16 +156,6 @@ const RandomRecipes = (data, recept) => {
         const h3 = document.createElement('h3');
         titleDiv.appendChild(h3);
         h3.innerHTML = data[item].nev;
-        // h3.style.width = '90%';
-        // const p = document.createElement('p');
-        // div.appendChild(p);
-        // p.innerHTML = 'Hozzávalók:<br>';
-        // p.style.width = '90%';
-        // for (let item2 of data[item].hozzavalok) {
-        //     for (let hozzavalo in item2) {
-        //         p.innerHTML += `${hozzavalo}; `;
-        //     }
-        // }
 
         const img = document.createElement('img');
         div.appendChild(img);
@@ -155,6 +165,7 @@ const RandomRecipes = (data, recept) => {
 };
 
 const SendRecipe = async (data) => {
+    //! rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
     try {
         const postObject = { recept: data.nev };
         const message = await postAPI('/api/postrecept', postObject);

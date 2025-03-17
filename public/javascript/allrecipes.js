@@ -32,35 +32,7 @@ const postAPI = (url, postObject) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const data = await getAPI('/getallrecept');
-        console.log(data.response);
-        // const data2 = await getAPI('/api/getallrecept');
-        // console.log(data2);
-        // const data3 = await postAPI('/tempupload', data2);
-        // console.log(data3);
-
-        // for (let item of data2.receptek) {
-        //     const nev = item.nev;
-        //     const tipus = item.tipus;
-        //     const ido = item.ido;
-        //     const adag = item.adag;
-        //     const hozzavalok = item.hozzavalok;
-        //     const elkeszites = item.elkeszites;
-        //     const source = item.source;
-        //     const forras = item.forras;
-        //     const postObject = {
-        //         nev: nev,
-        //         tipus: tipus,
-        //         ido: ido,
-        //         adag: adag,
-        //         hozzavalok: hozzavalok,
-        //         elkeszites: elkeszites,
-        //         kepnev: source,
-        //         forras: forras
-        //     };
-        //     const data3 = await postAPI('/tempupload', postObject);
-        //     console.log(data3);
-        // }
+        const data = await getAPI('/api/getallrecept');
         SelectType(data.response);
     } catch (error) {
         console.error(error);
@@ -68,6 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 const SelectType = (data) => {
+    //! típusonként való elosztás/elrendezés
     let tipusok = { reggeli: [], leves: [], foetel: [], vacsora: [], desszert: [] };
     for (let item of data) {
         if (item.tipus === 'reggeli') {
@@ -94,6 +67,7 @@ const SelectType = (data) => {
 };
 
 const MakeCards = (data, receptDiv) => {
+    //! kártyák létrehozása, dizájnolással
     for (let item of data) {
         const div = document.createElement('div');
         receptDiv.appendChild(div);
@@ -118,6 +92,7 @@ const MakeCards = (data, receptDiv) => {
 };
 
 const SendRecipe = async (data) => {
+    //! rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
     try {
         const postObject = { recept: data.nev };
         const message = await postAPI('/api/postrecept', postObject);
