@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('hozzavaloPlus').addEventListener('click', AddHozzavalo);
     document.getElementById('elkeszitesPlus').addEventListener('click', AddLepes);
     try {
-        const data = (await getAPI('/api/getallrecept')).receptek.length;
+        const data = (await getAPI('/api/getallrecept')).response.length;
         document.getElementById('sendBtn').addEventListener('click', () => {
             SendData(data);
         });
@@ -161,10 +161,19 @@ const SendData = (length) => {
     const tipus = document.getElementById('tipus').value;
     const ido = document.getElementById('ido').value;
     const adag = document.getElementById('adag').value;
+    const tagek = document.getElementById('tagek').value;
     const kepSrc = document.getElementById('kepSrc');
-    console.log(kepSrc);
+    console.log(kepSrc.value);
     const forras = document.getElementById('forras').value;
-    if (nev === '' || tipus === '' || ido === '' || adag === '' || kepSrc === '' || forras === '') {
+    if (
+        nev === '' ||
+        tipus === '' ||
+        ido === '' ||
+        adag === '' ||
+        tagek === '' ||
+        kepSrc === '' ||
+        forras === ''
+    ) {
         checker = false;
     }
 
@@ -212,6 +221,7 @@ const SendData = (length) => {
             id: (length + 1) * 1,
             tipus: tipus,
             nev: nev,
+            tagek: tagek,
             ido: ido * 1,
             adag: adag * 1,
             hozzavalok: hozzavalo,

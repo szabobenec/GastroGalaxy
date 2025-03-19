@@ -1,9 +1,10 @@
 {
     "receptek": [
         {
-            "id": "1",
+            "id": 1,
             "tipus": "főétel",
             "nev": "Krémes fokhagymás tészta",
+            "tagek": "tészta;sajtos",
             "ido": 35,
             "adag": 3,
             "hozzavalok": [
@@ -19,13 +20,14 @@
                 { "petrezselyem": "1.5 evőkanál" }
             ],
             "elkeszites": "1. Melegítsünk olívaolajat egy közepes serpenyőben közepes lángon. Adjuk hozzá a fokhagymát, és keverjük, amíg illatos nem lesz, 1-2 percig. Adjuk hozzá a vajat, és folyamatosan kevergetve olvasszuk meg.\n2. Öntsük hozzá a vizet; adjunk hozzá borsot és sót. Forraljuk fel. Adjuk hozzá a spagettit (vagy a választott tésztát), és időnként megkeverve főzzük, amíg puha, de harapható nem lesz, kb. 12 percig. Adjunk hozzá még vizet, ha a tészta elkezd ragadni a serpenyőhöz.\n3. Adjuk hozzá a parmezán sajtot, a tejszínt és a petrezselymet, és keverjük össze, amíg alaposan össze nem áll. Azonnal tálaljuk.",
-            "source": "kremesFokhagymasTeszta.jpg",
+            "kepnev": "kremesFokhagymasTeszta.jpg",
             "forras": "https://www.allrecipes.com/recipe/269500/creamy-garlic-pasta/"
         },
         {
-            "id": "2",
+            "id": 2,
             "tipus": "vacsora",
             "nev": "Sült feta tészta",
+            "tagek": "tészta;sajtos",
             "ido": 40,
             "adag": 4,
             "hozzavalok": [
@@ -40,13 +42,14 @@
                 { "bazsalikom": "25 g" }
             ],
             "elkeszites": "A folyamat egyszerű, és ez az, ami szerintünk ezt a receptet olyan nagyszerűvé teszi! A következőkre lesz szükségünk:\n1. Melegítsük elő a sütőt 200 °C-ra.\n2. Tegyük a fetatömböt a tepsibe. - helyezzük a feta sajtblokkot a tál közepére.\n3. Adjuk hozzá a tésztát és a vizet - tegyük a száraztésztát a sütőtálba (a feta tömb körül), öntsük rá a vizet a nyers tésztára, és óvatosan keverjük össze a tésztát és a vizet (ügyelve arra, hogy a tészta ne kerüljön a feta alá vagy tetejére), hogy az összes tészta elmerüljön a folyadékban.\n4. Adjuk hozzá a cseresznyeparadicsomot, az EVOO-t, sót és borsot - szórjuk a cseresznyeparadicsomot a tészta tetejére, és locsoljunk meg mindent az EVOO-val, sóval és borssal.\n5. Szorosan lefedjük + sütjük - a tepsit a lehető legszorosabban lefedjük fóliával, és 400 fokon 40 percig sütjük.\n6. Adjuk hozzá a fokhagymát és a bazsalikomot + keverjük össze - miután befejeztük a sütést, vegyük le a fóliát, adjuk hozzá a felaprított fokhagymát és a friss bazsalikomot, és keverjünk össze mindent, amíg jól össze nem keveredik.\nTálalja és élvezze!",
-            "source": "sultFetaTeszta.jpeg",
+            "kepnev": "sultFetaTeszta.jpeg",
             "forras": "https://fedandfit.com/feta-pasta/"
         },
         {
-            "id": "3",
+            "id": 3,
             "tipus": "főétel",
             "nev": "Borsós csirketokány",
+            "tagek": "",
             "ido": 25,
             "adag": 4,
             "hozzavalok": [
@@ -62,13 +65,14 @@
                 { "vaj": "30 g" }
             ],
             "elkeszites": "A borsós csirketokány elkészítéséhez a zsírt melegítünk egy serpenyőben. Hozzáadjuk a finomra vágott vöröshagymát és fokhagymát, és közepes hőfokon 5 percig dinszteljük. Hozzáadjuk a kb. 2 cm-es csíkokra vágott csirkemellet. Sózzuk, borsozzuk, és erős hőfokon 2 perc alatt jól lepirítjuk. Mehet hozzá a sűrített paradicsom is, és újabb 1-2 percig pirítjuk. Felöntjük a tejszínnel, hozzáadjuk a borsót, a vajat, és további 6 perc alatt készre főzzük.\nA szarvacskatésztát kifőzzük a csomagoláson írtak szerint, és ezzel tálaljuk a ragut. ",
-            "source": "borsosCsirketokany.jpg",
+            "kepnev": "borsosCsirketokany.jpg",
             "forras": "https://streetkitchen.hu/hust-hussal/borsos-csirketokany/"
         },
         {
-            "id": "4",
+            "id": 4,
             "tipus": "desszert",
             "nev": "Túrós pite",
+            "tagek": "édes",
             "ido": 65,
             "adag": 8,
             "hozzavalok": [
@@ -84,13 +88,14 @@
                 { "zöldborsó": "200 g (mirelit)" }
             ],
             "elkeszites": "1. A túrós pite elkészítéséhez összekeverjük a lisztet, a cukrot és a sütőport, majd belemorzsoljuk a hideg vajat.\n2. Hozzáadjuk a tejfölt és a tojássárgákat, és gyors mozdulatokkal összekeverjük, összegyúrjuk a tésztát, majd folpackba csomagolva a hűtőbe tesszük, és hagyjuk pihenni. Ez idő alatt elkészítjük a túrós tölteléket.\n3. A töltelékhez összekeverjük a túrót, a tojássárgáját, a cukrot, a vaníliás cukrot, a lisztet és a citrom lereszelt héját és a mazsolát. A tojásfehérjét kemény habbá verjük, és a túrós masszába keverjük.\n4. Tepsibe terítjük a tészta 2/3-ad részét kinyújtva (nem kell túl vastagon), ezen elegyengetjük a túrós tölteléket. A tetejét négyzetrácsosan befedjük a maradék tésztával (vagy ráborítjuk vékonyra van nyújtva).\n5. Megszurkáljuk, és 170 fokra előmelegített sütőben 35-40 percig sütjük. Még forrón megszórjuk porcukorral.",
-            "source": "turosPite.jpg",
+            "kepnev": "turosPite.jpg",
             "forras": "https://www.mindmegette.hu/recept/turos-pite-ii"
         },
         {
-            "id": "5",
+            "id": 5,
             "tipus": "leves",
             "nev": "Zöldségleves tortillachipsszel",
+            "tagek": "",
             "ido": 45,
             "adag": 5,
             "hozzavalok": [
@@ -114,13 +119,14 @@
                 { "tortillachips": "ízlésre" }
             ],
             "elkeszites": "1. Az olajat vastag aljú serpenyőben vagy fazékban felforrósítjuk.\n2. Beledobjuk a vöröshagymát a fokhagymával együtt, és néhány perc alatt üvegesre pároljuk. Meghintjük a római köménnyel és chiliporral. Hozzákeverjük a felaprított sárgarépát, burgonyát, paradicsomot, cukkinit meg káposztát, és időnként megkeverve 2 percig pirítjuk.\n3. Felöntjük vízzel. Fedő alatt, közepes lángon, 20 perc alatt puhára főzzük a zöldségeket.\n4. Ha szükségesnek látjuk, kevés vizet öntünk hozzá, belekeverjük a kukoricát és a zöldbabot, majd további 5-10 perc alatt a babot is puhára pároljuk. Sóval, borssal ízesítjük, nem feledkezve meg arról, hogy a tortillachips is sós.\n5. Mélytányérba merjük, és apróra vágott friss korianderzöldet hintünk a tetejére. Kevés salsát kanalazunk a tetejére, és egy marék tortillachipset kínálunk mellé.",
-            "source": "zoldseglevesTortillachipsszel.jpg",
+            "kepnev": "zoldseglevesTortillachipsszel.jpg",
             "forras": "Szakácskönyv Mexikói Konyha, több mint 100 fontosabb recept, 8. oldal (https://bookline.hu/product/home.action?_v=Szakacskonyvtar_Mexikoi_konyha&type=22&id=101359)"
         },
         {
-            "id": "6",
+            "id": 6,
             "tipus": "desszert",
             "nev": "Holland fánk",
+            "tagek": "édes",
             "ido": 50,
             "adag": 1,
             "hozzavalok": [
@@ -137,13 +143,14 @@
                 { "olaj": "a sütéshez" }
             ],
             "elkeszites": "1. Meglangyosítjuk a tejet. Beletesszük a két evőkanál cukrot, beleszórjuk az élesztőt, elkeverjük, és langyos helyen hagyjuk tíz percig állni.\n2. Közben az almát meghámozzuk és apróra vágjuk.\n3. Keverőtálba tesszük a lisztet, hozzáöntjük a felhabosodott élesztős tejet, a villával felvert tojást, a csipet sót, és habverővel összedolgozzuk. Végül beleforgatjuk az apróra vágott almát, a narancs reszelt héját és a mazsolát. Letakarva egy órán át hagyjuk kelni. \n4. Egy serpenyőben bő olajat forrósítunk. Két evőkanalat belemártunk, majd a tésztából kiveszünk egy kanálnyit, megformázzuk a két kanállal, beletesszük a forró olajba. Ha pirulni kezd, megfordítjuk. Konyhai kéztörlőre szedve hagyjuk lecsepegni, végül megforgatjuk porcukorban.",
-            "source": "HollandFank.png",
+            "kepnev": "HollandFank.png",
             "forras": "https://www.mindmegette.hu/alapetelek/oliebollen-holland-fank-recept"
         },
         {
             "id": 7,
             "tipus": "főétel",
             "nev": "Hagyományos káposztás tészta",
+            "tagek": "tészta",
             "ido": 45,
             "adag": 4,
             "hozzavalok": [
@@ -154,13 +161,14 @@
                 { "tészta": "50 dkg (fodros kockatészta)" }
             ],
             "elkeszites": "1. A káposzta külső leveleit eltávolítjuk, majd negyedeljük. A torzsáját kivágjuk és a leveleit felkockázzuk.\n2. Egy nagyobb fazékban olajat hevítünk, erre dobjuk rá a kockázott káposztát, alaposan sózzuk, és folyamatos kevergetés mellett pirítjuk, amíg a káposzta kb. a felére esik össze, közben frissen őrölt borssal megszórjuk.\n3. Amíg pirul a káposzta egy lábasban vizet forralunk kevés olajjal, majd ha felforrt, sózzuk a főzővizet, és puhára főzzük a tésztát. Leszűrjük, és a pirított káposztához keverjük. Frissen tálaljuk.",
-            "source": "hagyomanyosKaposztasTeszta.jpg",
+            "kepnev": "hagyomanyosKaposztasTeszta.jpg",
             "forras": "https://www.mindmegette.hu/recept/hagyomanyos-kaposztas-teszta"
         },
         {
             "id": 8,
             "tipus": "reggeli",
             "nev": "Rántotta",
+            "tagek": "",
             "ido": 10,
             "adag": 1,
             "hozzavalok": [
@@ -170,13 +178,14 @@
                 { "só": "1 csipet" }
             ],
             "elkeszites": "1. Egy serpenyőt közepes lángon melegíteni kezdünk. Beleöntjük az olajat, majd hozzáadjuk a vajat. Amíg a vaj felhabzik, a tojásokat egy keverőtálba öntjük, sózzuk, villával kissé felverjük (nem kell, hogy teljesen elkeveredjen a sárgája a fehérjével).\n2. A keveréket a habzó vajra öntjük, és körkörös mozdulatokkal keverve megsütjük. Ügyeljünk arra, hogy ne süssük szárazra (3 db tojás esetén nagyjából 1-2 perc a sütési idő).\n3. Végül ízlés szerint megszórhatjuk egy kevés őrölt pirospaprikával vagy akár sajttal. Pirítóssal, vagy friss kenyérrel tálaljuk.",
-            "source": "rantotta.jpg",
+            "kepnev": "rantotta.jpg",
             "forras": "https://www.mindmegette.hu/recept/rantotta"
         },
         {
             "id": 9,
             "tipus": "leves",
             "nev": "Póréhagyma-krémleves pirítóssal",
+            "tagek": "",
             "ido": 45,
             "adag": 4,
             "hozzavalok": [
@@ -191,13 +200,14 @@
                 { "snidling": "ízlésre" }
             ],
             "elkeszites": "1. A vajat egy lábasban megolvasztjuk, és megfuttatjuk benne a megtisztított, apróra vágott póréhagymát. Addig főzzük, míg megpuhul (ez kb. 10 perc).\n2. Felöntjük az alaplével, hozzáadjuk a meghámozott, felkockázott burgonyát és a babérlevelet. Sózzuk, borsozzuk, és felforraljuk, majd közepes lángon kb. 15 percig főzzük, vagy amíg a burgonya teljesen megpuhul.\n3. Lehúzzuk a levest a tűzről, hagyjuk kissé hűlni, majd eltávolítjuk belőle a babérlevelet.\n4. A levest simára turmixoljuk, majd visszatesszük a tűzre. Folyamatos kevergetés mellett hozzáadjuk a tejszínt, és felforraljuk. Ha szükséges, ismét sózzuk, borsozzuk. Ezután lehúzzuk a tűzről, és tányérokba vagy kis tálkákba merve kínáljuk.\n5. Megszórjuk az apróra vágott snidlinggel, és pirított kenyérszeleteket kínálunk mellé.",
-            "source": "porehagymaKremlevesPiritossal.jpg",
+            "kepnev": "porehagymaKremlevesPiritossal.jpg",
             "forras": "https://www.mindmegette.hu/recept/porehagymakremleves-piritossal"
         },
         {
             "id": 10,
             "tipus": "főétel",
             "nev": "Csirke Cordon bleu sonkás rizzsel",
+            "tagek": "",
             "ido": 90,
             "adag": 6,
             "hozzavalok": [
@@ -217,24 +227,26 @@
                 { "víz": "3 dl" }
             ],
             "elkeszites": "1. Megtisztítjuk, megmossuk, vékony szeletekre vágjuk, majd folpackban kiklopfoljuk a húst. Mindkét oldalát ízlés szerint sózzuk, borsozzuk.\n2. Előkészítjük a (30 dkg) sonkát, lereszeljük a sajtot, majd a hússzeletekre helyezünk 2 szelet sonkát és egy maréknyi sajtot, és szorosan feltekerjük (ha kisebbek a szeletek, akkor érdemes fogpiszkálóval összetűzni, hogy ne nyíljanak szét). Ha kész vagyunk, akkor tálcára helyezzük a roládokat, folpackkal fedjük, majd hűtőben pihentetjük, közben elkészítjük a köreteket.\n3. Kb. 30-40 perc pihentetés után (duplán) bepanírozzuk a húsokat a következőképpen: először lisztben forgatjuk meg, majd sóval felvert tojásba, zsemlemorzsába, majd ismét tojásba, és végül zsemlemorzsában hempergetjük meg a húsokat.\n4. Felhevítjük az olajat egy serpenyőben, és minden oldalát aranybarnára sütjük közepes hőfokozaton (kb. 20 perc).\n5. Átmossuk a rizst, szűrőn lecsepegtetjük. Megtisztítjuk, megmossuk a vöröshagymát felaprítjuk, a (10 dkg) sonkát 1x1 cm-es kockákra vágjuk.\n6. A vajat felhevítjük egy lábasban, majd beletesszük a hagymát, és üvegesre pároljuk. Utána hozzáadjuk a sonkát, majd a rizst, és pár percig pirítjuk.\n7. Sózzuk, borsozzuk, felöntjük vízzel, és az egészet puhára főzzük (rizsfajtától függ, de kb. 10-15 perc). Tálalás előtt még fedő alatt pár percig pihentetjük.",
-            "source": "csirkeCordonBleuSonkasRizzsel.jpg",
+            "kepnev": "csirkeCordonBleuSonkasRizzsel.jpg",
             "forras": "https://www.nosalty.hu/recept/csirke-cordon-bleu-zoldkorettel-sonkas-rizzsel?adag=6#ingredients"
         },
         {
             "id": 11,
             "tipus": "reggeli",
             "nev": "Tükörtojás",
+            "tagek": "",
             "ido": 5,
             "adag": 2,
             "hozzavalok": [{ "tojás": "2 db" }, { "olaj": "2 evőkanál (napraforgó olaj)" }],
             "elkeszites": "1. Az olajat egy serpenyőben kellőképp felforrósítjuk és óvatosan beleütjük a tojásokat.\n2. Keverés nélkül készre sütjük, míg a tojásfehérje megsül, de a sárgája folyós marad.\n3. Hogy jobban átsüljön, a tojásfehérjét egy villa segítségével óvatosan megmozgathatjuk.",
-            "source": "tukortojas.jpg",
+            "kepnev": "tukortojas.jpg",
             "forras": "https://www.nosalty.hu/recept/tukortojas?adag=2#ingredients ; https://streetkitchen.hu/basic/tukortojas-sutese/"
         },
         {
             "id": 12,
             "tipus": "desszert",
             "nev": "Csokis cupcake",
+            "tagek": "édes",
             "ido": 45,
             "adag": 12,
             "hozzavalok": [
@@ -248,13 +260,14 @@
                 { "étcsokoládé": "20 dkg" }
             ],
             "elkeszites": "1. A vajat habosra keverjük a cukorral, és egyenként beledolgozzuk a tojásokat. A lisztet elvegyítjük a sütőporral és a kakaóval, majd a vajas keverékbe forgatjuk.\n2. A sütőt előmelegítjük 180 fokra. A tészta masszját egy 12 részes muffintepsi papírkapszlikkal kibélelt mélyedéseibe kanalazzuk, majd kb. 20 perc alatt megsütjük. A muffinokat kiemeljük a tepsiből, és a rácson hűlni hagyjuk.\n3. A krémhez felverjük a tejszínt a cukorral, majd hozzákeverjük a gőz felett felolvasztott csokoládét. A krémet lehűtjük, majd habzsákba töltjük, és a muffinok tetejére nyomjuk. Végül mindet megszórjuk csokoládédarabokkal.",
-            "source": "csokisCupcake.jpg",
+            "kepnev": "csokisCupcake.jpg",
             "forras": "https://www.mindmegette.hu/recept/csokis-cupcake"
         },
         {
             "id": 13,
             "tipus": "reggeli",
             "nev": "Amerikai palacsinta",
+            "tagek": "édes",
             "ido": 7,
             "adag": 4,
             "hozzavalok": [
@@ -268,8 +281,28 @@
                 { "olaj": "1 evőkanál (napraforgó olaj)" }
             ],
             "elkeszites": "1. Az összes hozzávalót beletesszük a turmixba, és alaposan összemixeljük. Érdemes 2 részletben hozzáadni a tejet és a lisztet, így egyszerűbb, hatékonyabb.\n2. Felforrósítunk és beolajozunk egy teflon serpenyőt. A tésztakeverékből 2-3 korongot csorgatunk bele. A turmix kiöntője segítségével egyszerű adagolni. Aranybarnára sütjük mindkét oldalát.\n3. Ízlés szerint fogyaszthatjuk mézzel, mogyorókrémmel, olvasztott csokival, lekvárral, juharsziruppal.",
-            "source": "amerikaiPalacsinta.jpg",
+            "kepnev": "amerikaiPalacsinta.jpg",
             "forras": "https://www.nosalty.hu/recept/gyors-amerikai-palacsinta"
+        },
+        {
+            "id": 14,
+            "tipus": "főétel",
+            "nev": "Paprikás krumpli",
+            "tagek": "krumpli;sós",
+            "ido": 40,
+            "adag": 4,
+            "hozzavalok": [
+                { "hagyma": "2 fej" },
+                { "olaj": "főzéshez" },
+                { "kolbász": "20 dkg" },
+                { "pirospaprika": "2 evőkanál" },
+                { "burgonya": "1 kg" },
+                { "só": "ízlésre" },
+                { "paradicsompüré": "1 evőkanál" }
+            ],
+            "elkeszites": "1. A hagyományos paprikás krumpli elkészítéséhez a hagymát megtisztítjuk, apró kockára vágjuk.\n2. Tűzálló tálban egy kevés olajat forrósítunk, beletesszük a felaprított hagymát, és üvegesre pirítjuk, majd hozzáadjuk a felkarikázott kolbászt, és megpirítjuk.\n3. Lehúzzuk a lábast a tűzhelyről, megszórjuk a kolbászos pirított hagymát a pirospaprikával.\n4. Átkeverjük, majd hozzáadjuk az alaposan megmosott, megtisztított, kockákra vágott burgonyát.\n5. Felöntjük annyi vízzel, ami majdnem ellepi. Megsózzuk, hozzáadjuk a paradicsompürét, és addig főzzük, amíg a burgonya megpuhul.\n6. Friss kenyérrel, savanyú uborkával tálaljuk.",
+            "source": "paprikasKrumpli.jpg",
+            "forras": "https://www.mindmegette.hu/recept/paprikas-krumpli"
         }
     ]
 }

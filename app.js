@@ -88,47 +88,6 @@ app.get('/api/getallrecept', async (request, response) => {
     }
 });
 
-//TODO temp
-// app.post('/upload-all-to-database', async (request, response) => {
-//     const data = request.body;
-//     try {
-//         let hozzavalok = JSON.stringify(data.hozzavalok);
-//         hozzavalok =
-//             '{' +
-//             hozzavalok
-//                 .split('[')
-//                 .join('')
-//                 .split(']')
-//                 .join('')
-//                 .split('{')
-//                 .join('')
-//                 .split('}')
-//                 .join('') +
-//             '}';
-
-//         console.log(hozzavalok);
-//         console.log(JSON.parse(hozzavalok));
-
-//         const res = await db.insertRecept(
-//             data.tipus,
-//             data.nev,
-//             data.ido,
-//             data.adag,
-//             hozzavalok,
-//             data.elkeszites,
-//             data.kepnev,
-//             data.forras
-//         );
-//         response.status(200).json({
-//             message: 'Sikeres beillesztés',
-//             response: res
-//         });
-//     } catch (error) {
-//         response.status(500).json({ message: error });
-//     }
-// });
-//TODO temp
-
 //? Random recept API:
 app.get('/api/getrandomrecipe', async (request, response) => {
     try {
@@ -178,13 +137,8 @@ app.post('/api/feltoltes', async (request, response) => {
     const recept = request.body;
     console.log(recept);
     try {
-        console.log(recept.hozzavalok);
-        console.log('haho?');
-
         let hozzavalok = JSON.stringify(recept.hozzavalok);
-        console.log('haho?');
 
-        console.log(hozzavalok);
         hozzavalok =
             '{' +
             hozzavalok
@@ -198,11 +152,10 @@ app.post('/api/feltoltes', async (request, response) => {
                 .join('') +
             '}';
 
-        console.log(hozzavalok);
-
         const res = await db.insertRecept(
             recept.tipus,
             recept.nev,
+            recept.tagek,
             recept.ido,
             recept.adag,
             hozzavalok,
@@ -220,6 +173,48 @@ app.post('/api/feltoltes', async (request, response) => {
         response.status(500).json({ message: error });
     }
 });
+
+//! Setup
+//? Összes recept beillesztéséhez szükséges függvény:
+const DBSetup = async () => {
+    try {
+        const data = JSON.parse(await readFile('receptek.json')).receptek;
+
+        for (let item of data) {
+            let hozzavalok = JSON.stringify(item.hozzavalok);
+            hozzavalok =
+                '{' +
+                hozzavalok
+                    .split('[')
+                    .join('')
+                    .split(']')
+                    .join('')
+                    .split('{')
+                    .join('')
+                    .split('}')
+                    .join('') +
+                '}';
+
+            const res = await db.insertRecept(
+                item.tipus,
+                item.nev,
+                item.tagek,
+                item.ido,
+                item.adag,
+                hozzavalok,
+                item.elkeszites,
+                item.kepnev,
+                item.forras
+            );
+
+            console.log(res);
+        }
+    } catch (error) {
+        console.log(error);
+    }
+};
+//? Ezt kell hozzá kivenni kommentből:
+// DBSetup();
 
 //! Server
 app.use(express.static('public'));

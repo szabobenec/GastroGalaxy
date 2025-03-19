@@ -16,13 +16,3 @@ CREATE TABLE recept (
     kepnev VARCHAR(100),
     forras VARCHAR(255)
 );
-
--- CREATE TABLE tag (
---     id INT PRIMARY KEY AUTO_INCREMENT,
---     tagek JSON
--- );
-
--- CREATE TABLE hozzavalo (
---     id INT PRIMARY KEY AUTO_INCREMENT,
---     hozzavalok JSON
--- );

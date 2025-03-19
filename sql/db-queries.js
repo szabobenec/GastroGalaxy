@@ -18,11 +18,11 @@ function selectAll() {
     });
 }
 //! INSERT INTO recept parancs, paraméterekkel
-function insertRecept(tipus, nev, ido, adag, hozzavalok, elkeszites, kepnev, forras) {
+function insertRecept(tipus, nev, tagek, ido, adag, hozzavalok, elkeszites, kepnev, forras) {
     return new Promise((resolve, reject) => {
         pool.query(
-            'INSERT INTO recept(tipus, nev, ido, adag, hozzavalok, elkeszites, kepnev, forras) VALUES (?, ?, ?, ?, ?, ?, ?, ?);',
-            [tipus, nev, ido, adag, hozzavalok, elkeszites, kepnev, forras],
+            'INSERT INTO recept(tipus, nev, tagek, ido, adag, hozzavalok, elkeszites, kepnev, forras) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);',
+            [tipus, nev, tagek, ido, adag, hozzavalok, elkeszites, kepnev, forras],
             (error, result) => {
                 if (error) return reject(error);
                 resolve(result);
