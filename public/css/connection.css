@@ -70,6 +70,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 5;
 }
 
 .headerStart {
@@ -109,7 +110,8 @@ header {
 }
 
 .StoreInfo-card {
-    width: 15%;
+    width: 222px;
+    line-height: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
