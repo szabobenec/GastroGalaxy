@@ -226,7 +226,7 @@ const SendData = (length) => {
             adag: adag * 1,
             hozzavalok: hozzavalo,
             elkeszites: elkeszites,
-            source: source,
+            kepnev: source,
             forras: forras
         };
 
