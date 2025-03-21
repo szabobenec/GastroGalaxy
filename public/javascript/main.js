@@ -43,6 +43,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
         RandomRecipes(data, recept);
+
+        document.getElementById('themeChanger').addEventListener('change', function () {
+            if (this.checked) {
+                // Apply dark theme by adding the class to the body
+                document.body.classList.add('dark-theme');
+            } else {
+                // Remove dark theme when unchecked
+                document.body.classList.remove('dark-theme');
+            }
+        });
     } catch (error) {
         console.error(error);
     }

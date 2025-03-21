@@ -10,11 +10,23 @@
     --darkCyan: #3c887e;
     --nonPhotoBlue: #a6e1fa;
 
-    --bgColor: light-dark(var(--nonPhotoBlue), var(--raisinBlack));
+    /* --bgColor: light-dark(var(--nonPhotoBlue), var(--raisinBlack));
     --secondaryClrs: light-dark(white, var(--iris));
     --scndClrs: light-dark();
     --cardClrs: light-dark(var(--mint), var(--iris));
-    --textColor: light-dark(var(--raisinBlack), white);
+    --textColor: light-dark(var(--raisinBlack), white); */
+
+    --bgColor: var(--nonPhotoBlue);
+    --secondaryClrs: white;
+    --cardClrs: var(--mint);
+    --textColor: var(--raisinBlack);
+}
+
+[data-theme='dark'] {
+    --background-color: #121212;
+    --text-color: #fff;
+    --svg-fill: #fff;
+    --button-background: #333;
 }
 
 html {
@@ -57,6 +69,15 @@ body {
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
             center / var(--dot-space) var(--dot-space),
         var(--dot-color);
+
+    color: var(--textColor);
+}
+
+body.dark-theme {
+    --bgColor: var(--raisinBlack);
+    --secondaryClrs: var(--iris);
+    --cardClrs: var(--iris);
+    --textColor: white;
 }
 
 .titleLink {
