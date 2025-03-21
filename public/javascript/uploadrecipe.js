@@ -170,7 +170,6 @@ const SendData = (length) => {
         tipus === '' ||
         ido === '' ||
         adag === '' ||
-        tagek === '' ||
         kepSrc === '' ||
         forras === ''
     ) {

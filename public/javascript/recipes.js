@@ -32,7 +32,7 @@ const postAPI = (url, postObject) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const data = (await getAPI('/api/getallrecept')).receptek;
+        const data = (await getAPI('/api/getallrecept')).response;
         MakeArray(data);
     } catch (error) {
         console.error(error);
@@ -192,7 +192,7 @@ const fillDiv = (array1, array2) => {
 
         const img = document.createElement('img');
         div.appendChild(img);
-        img.setAttribute('src', `../images/recipes/${item.source}`);
+        img.setAttribute('src', `../images/recipes/${item.kepnev}`);
         img.setAttribute('class', 'littleImg');
     }
 
@@ -217,7 +217,7 @@ const fillDiv = (array1, array2) => {
 
         const img = document.createElement('img');
         div.appendChild(img);
-        img.setAttribute('src', `../images/recipes/${item.source}`);
+        img.setAttribute('src', `../images/recipes/${item.kepnev}`);
         img.setAttribute('class', 'littleImg');
     }
 };

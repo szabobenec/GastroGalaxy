@@ -33,7 +33,7 @@ const postAPI = (url, postObject) => {
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('Welcome to Gastro Galaxy!');
     try {
-        const data = (await getAPI('/api/getallrecept')).receptek;
+        const data = (await getAPI('/api/getallrecept')).response;
         const receptNev = await getAPI('/api/getrecept');
         let random = Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0);
         let recept = data[random];
@@ -84,7 +84,7 @@ const RandomRecipes = (data, recept) => {
 
         const img = document.createElement('img');
         div.appendChild(img);
-        img.setAttribute('src', `../images/recipes/${data[item].source}`);
+        img.setAttribute('src', `../images/recipes/${data[item].kepnev}`);
         img.setAttribute('class', 'littleImg');
     }
 };
@@ -94,7 +94,7 @@ const SendRecipe = async (data) => {
         const postObject = { recept: data.nev };
         const message = await postAPI('/api/postrecept', postObject);
         console.log(message);
-        document.location.href = `recipefullview/${data.source.split('.')[0]}`;
+        document.location.href = `recipefullview/${data.kepnev.split('.')[0]}`;
     } catch (error) {
         console.error(error);
     }
