@@ -44,10 +44,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         FillData(recept);
         RandomRecipes(data, recept);
+
+        const themeChanger = document.getElementById('themeChanger');
+        themeChanger.addEventListener('change', () => {
+            changeTheme(themeChanger);
+        });
     } catch (error) {
         console.error(error);
     }
 });
+
+const changeTheme = (theme) => {
+    if (theme.checked) {
+        document.body.classList.add('dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
+    }
+};
 
 const FillData = (data) => {
     //! megtalált recept adatainak megjelenítése

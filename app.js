@@ -88,7 +88,7 @@ app.get('/api/getallrecept', async (request, response) => {
     }
 });
 
-//? Random recept API:
+//! Random recept API:
 app.get('/api/getrandomrecipe', async (request, response) => {
     try {
         // const data = JSON.parse(await readFile('receptek.json'));
@@ -100,7 +100,7 @@ app.get('/api/getrandomrecipe', async (request, response) => {
     }
 });
 
-//? Specifikus recept POST - GET:
+//! Specifikus recept POST - GET:
 let recept = '';
 app.post('/api/postrecept', (request, response) => {
     recept = request.body.recept;

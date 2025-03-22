@@ -39,10 +39,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('sendBtn').addEventListener('click', () => {
             SendData(data);
         });
+
+        const themeChanger = document.getElementById('themeChanger');
+        themeChanger.addEventListener('change', () => {
+            changeTheme(themeChanger);
+        });
     } catch (error) {
         console.error(error);
     }
 });
+
+const changeTheme = (theme) => {
+    if (theme.checked) {
+        document.body.classList.add('dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
+    }
+};
 
 const AddHozzavalo = () => {
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
@@ -165,14 +178,7 @@ const SendData = (length) => {
     const kepSrc = document.getElementById('kepSrc');
     console.log(kepSrc.value);
     const forras = document.getElementById('forras').value;
-    if (
-        nev === '' ||
-        tipus === '' ||
-        ido === '' ||
-        adag === '' ||
-        kepSrc === '' ||
-        forras === ''
-    ) {
+    if (nev === '' || tipus === '' || ido === '' || adag === '' || kepSrc === '' || forras === '') {
         checker = false;
     }
 

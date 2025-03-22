@@ -44,19 +44,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         RandomRecipes(data, recept);
 
-        document.getElementById('themeChanger').addEventListener('change', function () {
-            if (this.checked) {
-                // Apply dark theme by adding the class to the body
-                document.body.classList.add('dark-theme');
-            } else {
-                // Remove dark theme when unchecked
-                document.body.classList.remove('dark-theme');
-            }
+        const themeChanger = document.getElementById('themeChanger');
+        themeChanger.addEventListener('change', () => {
+            changeTheme(themeChanger);
         });
     } catch (error) {
         console.error(error);
     }
 });
+
+const changeTheme = (theme) => {
+    if (theme.checked) {
+        document.body.classList.add('dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
+    }
+};
 
 const RandomRecipes = (data, recept) => {
     const randomReceptek = document.getElementById('randomReceptek');

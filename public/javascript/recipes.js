@@ -34,10 +34,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const data = (await getAPI('/api/getallrecept')).response;
         MakeArray(data);
+
+        const themeChanger = document.getElementById('themeChanger');
+        themeChanger.addEventListener('change', () => {
+            changeTheme(themeChanger);
+        });
     } catch (error) {
         console.error(error);
     }
 });
+
+const changeTheme = (theme) => {
+    if (theme.checked) {
+        document.body.classList.add('dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
+    }
+};
 
 const MakeArray = (data) => {
     let hozzavalok = [];

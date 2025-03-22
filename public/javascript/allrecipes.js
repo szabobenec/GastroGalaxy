@@ -34,10 +34,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const data = await getAPI('/api/getallrecept');
         SelectType(data.response);
+
+        const themeChanger = document.getElementById('themeChanger');
+        themeChanger.addEventListener('change', () => {
+            changeTheme(themeChanger);
+        });
     } catch (error) {
         console.error(error);
     }
 });
+
+const changeTheme = (theme) => {
+    if (theme.checked) {
+        document.body.classList.add('dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
+    }
+};
 
 const SelectType = (data) => {
     //! típusonként való elosztás/elrendezés

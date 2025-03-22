@@ -9,7 +9,7 @@
         <link rel="icon" type="image/x-icon" href="../images/mascot.png" />
     </head>
 
-    <body>
+    <body class="dark-theme">
         <header>
             <div class="headerStart">
                 <a href="http://127.0.0.1:3000/" class="headerLogo unselectable"
@@ -27,15 +27,15 @@
                 <a href="http://127.0.0.1:3000/uploadrecipe" class="links">Recept feltöltése</a>
                 <a href="http://127.0.0.1:3000/connection/" class="links">Kapcsolat</a>
             </div>
-            <!-- <div class="headerEnd">
-                <select id="themeSelector">
-                    <option value="light">Világos</option>
-                    <option value="dark">Sötét</option>
-                </select>
-            </div> -->
+
             <div class="headerEnd">
                 <label class="theme-switch">
-                    <input type="checkbox" id="themeChanger" class="theme-switch__checkbox" />
+                    <input
+                        type="checkbox"
+                        id="themeChanger"
+                        checked
+                        class="theme-switch__checkbox"
+                    />
                     <div class="theme-switch__container">
                         <div class="theme-switch__clouds"></div>
                         <div class="theme-switch__stars-container">
