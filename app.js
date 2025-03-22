@@ -88,6 +88,27 @@ app.get('/api/getallrecept', async (request, response) => {
     }
 });
 
+//! Light-Dark Theme - Témaválasztó, ami elmenti még oldalváltáskor is a témát
+let theme = true;
+//? GET - Elküldi az előzőleg beállított témát
+app.get('/api/gettheme', async (request, response) => {
+    try {
+        response.status(200).json({ theme: theme });
+    } catch (error) {
+        response.status(500).json({ message: error });
+    }
+});
+//? POST - Átállítja a témát, ha az oldalon megváltoztattuk
+app.post('/api/savetheme', async (request, response) => {
+    try {
+        const body = request.body;
+        theme = body.theme;
+        response.status(200).json({ message: theme });
+    } catch (error) {
+        response.status(500).json({ message: error });
+    }
+});
+
 //! Random recept API:
 app.get('/api/getrandomrecipe', async (request, response) => {
     try {

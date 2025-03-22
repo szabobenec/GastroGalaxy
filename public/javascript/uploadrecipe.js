@@ -41,6 +41,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         const themeChanger = document.getElementById('themeChanger');
+        const theme = (await getAPI('/api/gettheme')).theme;
+        if (theme) {
+            document.body.classList.add('dark-theme');
+            themeChanger.setAttribute('checked', true);
+        } else {
+            document.body.classList.remove('dark-theme');
+            themeChanger.removeAttribute('checked');
+        }
+
         themeChanger.addEventListener('change', () => {
             changeTheme(themeChanger);
         });
@@ -49,11 +58,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-const changeTheme = (theme) => {
+const changeTheme = async (theme) => {
+    let saveTheme;
     if (theme.checked) {
         document.body.classList.add('dark-theme');
+        saveTheme = true;
     } else {
         document.body.classList.remove('dark-theme');
+        saveTheme = false;
+    }
+
+    const postObject = { theme: saveTheme };
+
+    try {
+        const data = await postAPI('/api/savetheme', postObject);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
     }
 };
 

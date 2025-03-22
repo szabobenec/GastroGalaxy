@@ -30,69 +30,44 @@ const postAPI = (url, postObject) => {
     });
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Welcome to Recipe of the Day!');
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        console.log('Welcome to Recipe of the Day!');
 
-    // const toggle = document.getElementById('themeChanger');
-
-    // if (localStorage.getItem('theme') === 'dark') {
-    //     document.body.setAttribute('data-theme', 'dark');
-    //     toggle.checked = true;
-    // } else {
-    //     document.body.setAttribute('data-theme', 'light');
-    //     toggle.checked = false;
-    // }
-
-    // console.log(localStorage.getItem('theme'));
-
-    // // Toggle theme when checkbox changes
-    // toggle.addEventListener('change', () => {
-    //     if (toggle.checked) {
-    //         document.body.setAttribute('data-theme', 'dark');
-    //         localStorage.setItem('theme', 'dark');
-    //     } else {
-    //         document.body.setAttribute('data-theme', 'light');
-    //         localStorage.setItem('theme', 'light');
-    //     }
-    // });
-
-    // const themeSwitcher = document.getElementById('themeChanger');
-    // const body = document.body;
-
-    // // Check localStorage for saved theme preference
-    // const savedTheme = localStorage.getItem('theme');
-    // if (savedTheme) {
-    //     body.setAttribute('data-theme', savedTheme);
-    //     themeSwitcher.checked = savedTheme === 'dark';
-    // }
-
-    // // Toggle theme when the checkbox is clicked
-    // themeSwitcher.addEventListener('change', () => {
-    //     // const theme = themeSwitcher.checked ? 'dark' : 'light';
-    //     // body.setAttribute('data-theme', theme);
-    //     // localStorage.setItem('theme', theme); // Save theme preference
-    //     document.documentElement.setAttribute(
-    //         'data-theme',
-    //         themeSwitcher.checked ? 'dark' : 'light'
-    //     );
-    //     // console.log(theme);
-    // });
-
-    // document.getElementById('themeChanger').addEventListener('change', function () {
-    //     if (this.checked) {
-    //         document.body.classList.add('dark-theme');
-    //     } else {
-    //         document.body.classList.remove('dark-theme');
-    //     }
-    // });
-
-    document.getElementById('themeChanger').addEventListener('change', function () {
-        if (this.checked) {
-            // Apply dark theme by adding the class to the body
+        const themeChanger = document.getElementById('themeChanger');
+        const theme = (await getAPI('/api/gettheme')).theme;
+        if (theme) {
             document.body.classList.add('dark-theme');
+            themeChanger.setAttribute('checked', true);
         } else {
-            // Remove dark theme when unchecked
             document.body.classList.remove('dark-theme');
+            themeChanger.removeAttribute('checked');
         }
-    });
+
+        themeChanger.addEventListener('change', () => {
+            changeTheme(themeChanger);
+        });
+    } catch (error) {
+        console.error(error);
+    }
 });
+
+const changeTheme = async (theme) => {
+    let saveTheme;
+    if (theme.checked) {
+        document.body.classList.add('dark-theme');
+        saveTheme = true;
+    } else {
+        document.body.classList.remove('dark-theme');
+        saveTheme = false;
+    }
+
+    const postObject = { theme: saveTheme };
+
+    try {
+        const data = await postAPI('/api/savetheme', postObject);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+};
