@@ -303,6 +303,56 @@
             "elkeszites": "1. A hagyományos paprikás krumpli elkészítéséhez a hagymát megtisztítjuk, apró kockára vágjuk.\n2. Tűzálló tálban egy kevés olajat forrósítunk, beletesszük a felaprított hagymát, és üvegesre pirítjuk, majd hozzáadjuk a felkarikázott kolbászt, és megpirítjuk.\n3. Lehúzzuk a lábast a tűzhelyről, megszórjuk a kolbászos pirított hagymát a pirospaprikával.\n4. Átkeverjük, majd hozzáadjuk az alaposan megmosott, megtisztított, kockákra vágott burgonyát.\n5. Felöntjük annyi vízzel, ami majdnem ellepi. Megsózzuk, hozzáadjuk a paradicsompürét, és addig főzzük, amíg a burgonya megpuhul.\n6. Friss kenyérrel, savanyú uborkával tálaljuk.",
             "kepnev": "paprikasKrumpli.jpg",
             "forras": "https://www.mindmegette.hu/recept/paprikas-krumpli"
+        },
+        {
+            "id": 15,
+            "tipus": "főétel",
+            "nev": "Csőben sült karalábé",
+            "tagek": "vegetáriánus",
+            "ido": 45,
+            "adag": 4,
+            "hozzavalok": [
+                { "karalábé": "4 db (200 g/db)" },
+                { "vaj": "100 g" },
+                { "vöröshagyma": "2 fej" },
+                { "fokhagyma": "6 gerezd" },
+                { "cukor": "2 teáskanál (kristálycukor)" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" },
+                { "bazsalikom": "0.5 csokor" },
+                { "finomliszt": "35 g" },
+                { "tej": "500 ml" },
+                { "szerecsendió": "0.5 teáskanál (őrölt)" },
+                { "edami sajt": "150 g" },
+                { "petrezselyem": "0.5 csokor" }
+            ],
+            "elkeszites": "1. A karalábékat megpucoljuk és 1 cm-es szeletekre vágjuk, majd bő, enyhén sós vízben előfőzzük őket kb. 10 perc alatt. Akkor jó, ha marad egy kis roppanása a zöldségnek. Leszűrjük és félretesszük. \n2. Egy serpenyőben, közepesen magas hőfokon megkaramellizáljuk a vajon (50 g) a félfőre vágott vöröshagymát és a szeletelt fokhagymát a cukorral kb. 10 perc alatt, közben sózzuk és borsozzuk, majd ha elkészültünk, belekeverjük a finomra vágott bazsalikomot és félrerakjuk. \n3. A besamelhez közepesen magas hőfokon, egy lábasban habzásig melegítjük a vajat (50 g), majd ráöntjük a lisztet és 1 percig pirítjuk. Felöntjük a hideg tejjel, amit egy habverővel folyamatosan keverünk, közben sózzuk, borsozzuk és ízesítjük a szerecsendióval. Forrástól számítva 2-3 percig főzzük a besamelt, majd lehúzzuk a tűzről. \n4. Egy tepsibe rétegezzük félig fedve a karalábészeleteket, az egészet beborítjuk a pirított vajas, bazsalikomos hagymával, és leöntjük a besamellel. A tetejére szórjuk a reszelt edami sajtot, és betesszük grill funkción a 230 fokra előmelegített sütőbe kb. 15 percre, míg a sajt szépen rápirul. Utána már szedhetjük is tányérra a csőben sült karalábét, amit megszórunk finomra vágott petrezselyemmel. ",
+            "kepnev": "csobenSultKaralabe.jpg",
+            "forras": "https://streetkitchen.hu/green-kitchen/vegetarianus/csoben-sult-karalabe/"
+        },
+        {
+            "id": 16,
+            "tipus": "desszert",
+            "nev": "Körtés pite",
+            "tagek": "édes",
+            "ido": 110,
+            "adag": 1,
+            "hozzavalok": [
+                { "finomliszt": "300 g" },
+                { "vaj": "150 g (fagyasztott)" },
+                { "só": "1 csipet" },
+                { "sütőpor": "1 teáskanál" },
+                { "cukor": "180 g (porcukor)" },
+                { "citrom": "1 db" },
+                { "tojás": "2 db" },
+                { "körte": "4 db" },
+                { "mandulaszirom": "50 g" },
+                { "vaníliás pudingpor": "1 csomag" },
+                { "tej": "500 ml" }
+            ],
+            "elkeszites": "1. A körtés pite elkészítését a tésztával kezdjük. Ehhez a lisztbe belereszeljük a vajat úgy, hogy közben néha belemártjuk a lisztbe. Ezzel a technikával nem fog összeállni egy csomóba a vaj. Beleszórjuk a sót és a sütőport, és hozzáadunk 130 g porcukrot, valamint a citrom lereszelt héját. Jöhet a tálba egy egész tojás és egy tojássárgája, majd az egész tésztát alaposan összegyúrjuk és folpackba csomagolva hűtőben pihentetjük legalább 30 percet. \n2. A citrom levét kifacsarjuk, a körtéket pedig megtisztítjuk és felcikkezzük. A körtecikkeket összekeverjük a citromlével és lefedve 200 fokra előmelegített sütőben 35 percig sütjük, majd félretesszük kihűlni. \n3. A pihentetett tésztát lisztezett felületen kb. 5 mm vastagon kinyújtjuk a piteformánál nagyobbra és belefektetjük a kivajazott formába úgy, hogy a széleinél a túllógó részt levágjuk. A leeső darabokat újra összegyúrjuk és félretesszük. A megmaradt tojásfehérjét lazán felverjük 1 evőkanál porcukorral, és beleforgatjuk a mandulaszirmot és a kihűlt körtecikkeket. Ezt a keveréket belesimítjuk a tésztával kibélelt piteformába. \n4. A pudingport kikeverjük kb. 100 ml tejjel, majd a maradék tejhez adjuk és folyamatosan kevergetve közepes lángon felforraljuk. A még meleg pudingot is a pitére simítjuk. Az újra összegyúrt tésztát kinyújtjuk, 2 cm-es csíkokra vágjuk és berácsozzuk vele a pite tetejét. 180 fokra előmelegített sütőben 35-40 perc alatt készre sütjük, majd szeletelés előtt legalább langyosra hűtjük és megszórjuk porcukorral. ",
+            "kepnev": "kortesPite.jpg",
+            "forras": "https://streetkitchen.hu/fantasztikus-desszertek/kortes-pite/"
         }
     ]
 }

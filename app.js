@@ -181,7 +181,7 @@ app.post('/api/feltoltes', async (request, response) => {
             recept.adag,
             hozzavalok,
             recept.elkeszites,
-            recept.source,
+            recept.kepnev,
             recept.forras
         );
 
