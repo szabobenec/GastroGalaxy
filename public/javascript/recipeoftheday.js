@@ -50,7 +50,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (error) {
         console.error(error);
     }
+    document.getElementById("day").addEventListener("click", () =>{ getDate(); console.log(); Datum()
+        fetch('/check-date', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('responseMessage').innerHTML = data.message;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('responseMessage').innerHTML = 'An error occurred.';
+        });
+    })
 });
+
+function getDate() {
+    let a = new Date().toDateString();
+    console.log(a);
+}
+
+function Datum() {
+    fetch('../assets/datum.txt')
+        .then(response => response.text())
+        .then(text => console.log(text))
+}
 
 const changeTheme = async (theme) => {
     let saveTheme;
