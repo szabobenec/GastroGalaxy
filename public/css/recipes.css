@@ -382,6 +382,14 @@ header {
     /* width: 100px; */
 }
 
+.grow2 {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow2:hover {
+    transform: scale(1.15);
+}
+
 .formsDiv {
     display: flex;
     flex-direction: column;

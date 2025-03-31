@@ -1,3 +1,4 @@
+//! GET metódus
 const getAPI = (url) => {
     return new Promise((resolve, reject) => {
         fetch(url)
@@ -12,6 +13,7 @@ const getAPI = (url) => {
     });
 };
 
+//! POST metódus
 const postAPI = (url, postObject) => {
     return new Promise((resolve, reject) => {
         fetch(url, {
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const data = (await getAPI('/api/getallrecept')).response;
         MakeArray(data);
 
+        //? Témaválasztás a NAV-ban lévő SVG segítségével
         const themeChanger = document.getElementById('themeChanger');
         const theme = (await getAPI('/api/gettheme')).theme;
         if (theme) {
@@ -53,6 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+//! Témaváltáshoz használt függvény
 const changeTheme = async (theme) => {
     let saveTheme;
     if (theme.checked) {
@@ -73,6 +77,7 @@ const changeTheme = async (theme) => {
     }
 };
 
+//! Hozzávalók lista létrehozása - ismétlődés nélkül, abc sorban
 const MakeArray = (data) => {
     let hozzavalok = [];
     for (let item of data) {
@@ -89,6 +94,7 @@ const MakeArray = (data) => {
             }
         }
     }
+    //? Sorbarendezés
     hozzavalok.sort((a, b) => a.localeCompare(b));
     // hozzavalok.sort(Intl.Collator().compare);
 
@@ -98,30 +104,34 @@ const MakeArray = (data) => {
     });
 };
 
+//! Két div feltöltése a hozzávalók neveikkel - kártyákon való megjelenítés
 const FillDiv = (data) => {
+    //? Kereséshez használt kártyák - alapértelmezetten rejtve
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
     for (let item of data) {
         const div = document.createElement('div');
         hozzavalokDiv.appendChild(div);
         div.innerHTML = item;
-        div.setAttribute('class', 'card hide');
+        div.setAttribute('class', 'card grow2 hide');
         div.addEventListener('click', () => {
             AddHozzavalo(div);
         });
     }
 
+    //? Lap alján látható összes hozzávaló rész
     const osszesHozzavalo = document.getElementById('osszesHozzavalo');
     for (let item of data) {
         const div = document.createElement('div');
         osszesHozzavalo.appendChild(div);
         div.innerHTML = item;
-        div.setAttribute('class', 'card');
+        div.setAttribute('class', 'card grow2');
         div.addEventListener('click', () => {
             AddHozzavalo(div);
         });
     }
 };
 
+//! Keresés frissítése - bármely bevitel esetén
 const UpdateSearch = (elem, data) => {
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
     const value = elem.value.toLowerCase();
@@ -134,6 +144,7 @@ const UpdateSearch = (elem, data) => {
         }
     }
 
+    //? Nem keresett hozzávalók elrejtése
     if (value == '') {
         for (let item of hozzavalokDiv.children) {
             item.classList.add('hide');
@@ -141,9 +152,11 @@ const UpdateSearch = (elem, data) => {
     }
 };
 
+//! Kiválasztott hozzávaló hozzáadása a keresett hozzávalókhoz
 const AddHozzavalo = (div) => {
     const hozzavalok = document.getElementById('hozzavalok');
 
+    //? Annak ellenőrzése, hogy már szerepel-e a kiválasztottak között
     let contains = false;
     for (let item of hozzavalok.children) {
         let temp = [];
@@ -162,7 +175,7 @@ const AddHozzavalo = (div) => {
         const newDiv = document.createElement('div');
         hozzavalok.appendChild(newDiv);
         newDiv.innerHTML = div.innerHTML + ' X';
-        newDiv.setAttribute('class', 'card');
+        newDiv.setAttribute('class', 'card grow2');
 
         newDiv.addEventListener('click', () => {
             RemoveHozzavalo(newDiv, hozzavalok);
@@ -175,11 +188,13 @@ const AddHozzavalo = (div) => {
     }
 };
 
+//! Kiválasztott hozzávalók közül való eltávolítás
 const RemoveHozzavalo = (div, hozzavalok) => {
     hozzavalok.removeChild(div);
     UpdateRecipes();
 };
 
+//! Hozzávalük alapján talált, megjelenített receptek frissítése
 const UpdateRecipes = async () => {
     try {
         const div = document.getElementById('hozzavalok');
@@ -196,6 +211,7 @@ const UpdateRecipes = async () => {
 
         const data = (await getAPI('/api/getallrecept')).response;
 
+        //? Recept hozzávalói egyezésének ellenőrzése
         let keresett = [];
         let keresett2 = [];
         if (hozzavalok.length > 0) {
@@ -226,6 +242,7 @@ const UpdateRecipes = async () => {
     }
 };
 
+//! Receptek megjelenítése - dizájnolva
 const fillDivs = (array1, array2) => {
     const teljes = document.getElementById('teljes');
     if (array1.length > 0) {
@@ -236,6 +253,7 @@ const fillDivs = (array1, array2) => {
         reszleges.setAttribute('class', '');
     }
 
+    //? Amennyiben az összes kiválasztott hozzávalót tartalmazza, úgy a 'teljes' div-ben kerül megjelenítésre
     const div1 = document.getElementById('teljesDiv');
     div1.innerHTML = '';
     for (let item of array1) {
@@ -260,6 +278,7 @@ const fillDivs = (array1, array2) => {
         img.setAttribute('class', 'littleImg');
     }
 
+    //? Amennyiben nem az összes, de több, mint egy hozzávalót tartalmaz, úgy a 'reszleges' div-ben kerül megjelenítésre
     const div2 = document.getElementById('reszlegesDiv');
     div2.innerHTML = '';
     for (let item of array2) {
@@ -286,8 +305,8 @@ const fillDivs = (array1, array2) => {
     }
 };
 
+//! Rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
 const SendRecipe = async (data) => {
-    //! Rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
     try {
         const postObject = { recept: data.nev };
         const message = await postAPI('/api/postrecept', postObject);

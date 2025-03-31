@@ -1,3 +1,4 @@
+//! GET metódus
 const getAPI = (url) => {
     return new Promise((resolve, reject) => {
         fetch(url)
@@ -12,6 +13,7 @@ const getAPI = (url) => {
     });
 };
 
+//! POST metódus
 const postAPI = (url, postObject) => {
     return new Promise((resolve, reject) => {
         fetch(url, {
@@ -32,9 +34,10 @@ const postAPI = (url, postObject) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const data = await getAPI('/api/getallrecept');
-        SelectType(data.response);
+        const data = (await getAPI('/api/getallrecept')).response;
+        SelectType(data);
 
+        //? Témaválasztás a NAV-ban lévő SVG segítségével
         const themeChanger = document.getElementById('themeChanger');
         const theme = (await getAPI('/api/gettheme')).theme;
         if (theme) {
@@ -53,6 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+//! Témaváltáshoz használt függvény
 const changeTheme = async (theme) => {
     let saveTheme;
     if (theme.checked) {
@@ -73,8 +77,8 @@ const changeTheme = async (theme) => {
     }
 };
 
+//! Típusonként való elosztás/elrendezés
 const SelectType = (data) => {
-    //! típusonként való elosztás/elrendezés
     let tipusok = { reggeli: [], leves: [], foetel: [], vacsora: [], desszert: [] };
     for (let item of data) {
         if (item.tipus === 'reggeli') {
@@ -89,7 +93,7 @@ const SelectType = (data) => {
             tipusok.desszert.push(item);
         }
     }
-    console.log(tipusok);
+    // console.log(tipusok); //* Receptek konzolon való kiírása, típusok alapján
     const divs = Array.from(document.getElementsByClassName('innerReceptek'));
     for (let item of divs) {
         for (let item2 in tipusok) {
@@ -100,8 +104,8 @@ const SelectType = (data) => {
     }
 };
 
+//! Kártyák létrehozása - dizájnolással
 const MakeCards = (data, receptDiv) => {
-    //! kártyák létrehozása, dizájnolással
     for (let item of data) {
         const div = document.createElement('div');
         receptDiv.appendChild(div);
@@ -125,8 +129,8 @@ const MakeCards = (data, receptDiv) => {
     }
 };
 
+//! Rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
 const SendRecipe = async (data) => {
-    //! Rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
     try {
         const postObject = { recept: data.nev };
         const message = await postAPI('/api/postrecept', postObject);
