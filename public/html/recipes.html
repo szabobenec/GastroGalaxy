@@ -68,7 +68,7 @@
             <h1>Receptek</h1>
             <h2>Keressen recepteket hozzávalók alapján!</h2>
 
-            <div class="formsDiv" id="formsDiv">
+            <!-- <div class="formsDiv" id="formsDiv">
                 <form id="innerForms" class="innerForms">
                     <div id="formDiv0" class="formsDivs">
                         <label for="hozzavalok">Hozzávalók:</label><br />
@@ -79,6 +79,24 @@
                 </form>
                 <input type="button" value="+" id="addBtn" />
                 <input type="button" value="Keresés" name="search" id="search" />
+            </div> -->
+
+            <div class="formsDiv" id="formDiv">
+                <form id="formData">
+                    <label for="searchBar">Recept neve: </label>
+                    <input
+                        type="search"
+                        name="searchBar"
+                        id="searchBar"
+                        placeholder="Keresés . . ."
+                    />
+                    <div class="hozzavalokDiv" id="hozzavalokDiv"></div>
+                </form>
+            </div>
+
+            <div class="selectedHozzavalok" id="selectedHozzavalok">
+                <h2>Kiválasztott hozzávalók:</h2>
+                <div class="hozzavalok" id="hozzavalok"></div>
             </div>
 
             <div id="receptek" class="receptek">
@@ -86,6 +104,11 @@
                 <div class="teljesDiv" id="teljesDiv"></div>
                 <h2 class="reszleges" id="reszleges">A továbbiak is tartalmazzák:</h2>
                 <div class="reszlegesDiv" id="reszlegesDiv"></div>
+            </div>
+
+            <div class="osszesHozzavalo">
+                <h2>Összes elérhető hozzávaló:</h2>
+                <div class="hozzavalok" id="osszesHozzavalo"></div>
             </div>
 
             <div class="osszesRecept" id="osszesRecept">

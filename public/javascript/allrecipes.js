@@ -126,7 +126,7 @@ const MakeCards = (data, receptDiv) => {
 };
 
 const SendRecipe = async (data) => {
-    //! rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
+    //! Rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
     try {
         const postObject = { recept: data.nev };
         const message = await postAPI('/api/postrecept', postObject);

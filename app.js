@@ -83,8 +83,7 @@ app.post('/check-date', (req, res) => {
     let az = null;
     fs.readFile(datumPath, 'utf8', (err, fileDate) => {
         if (err) {
-            console.error('Error reading file:', err);  // Log the error
-            
+            console.error('Error reading file:', err); // Log the error
         }
 
         // Get the current date in YYYY-MM-DD format
@@ -94,23 +93,20 @@ app.post('/check-date', (req, res) => {
         if (fileDate.trim() === currentDate) {
             fs.readFile(idPath, 'utf8', (err, fileId) => {
                 if (err) {
-                    console.error('Error reading file:', err);  // Log the error
+                    console.error('Error reading file:', err); // Log the error
                     return res.status(500).json({ error: 'Error reading file' });
                 }
-            return res.json({ message: currentDate + " id: " + fileId });
-
-        });
-
+                return res.json({ message: currentDate + ' id: ' + fileId });
+            });
         } else {
-            
             fs.writeFile(datumPath, currentDate, (err) => {
                 if (err) console.log(err);
             });
-            let newID=""+(Math.floor(Math.random() * 10) + 1);
+            let newID = '' + (Math.floor(Math.random() * 10) + 1);
             fs.writeFile(idPath, newID, (err) => {
                 if (err) console.log(err);
             });
-            res.json({ message: 'Updated date to today: ' + currentDate +" id: " + newID });
+            res.json({ message: 'Updated date to today: ' + currentDate + ' id: ' + newID });
         }
     });
 });

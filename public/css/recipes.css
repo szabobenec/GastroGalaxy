@@ -361,6 +361,27 @@ header {
     margin: 5px;
 }
 
+.hide {
+    display: none;
+}
+
+.hozzavalokDiv,
+.hozzavalok {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.card {
+    border: 1px solid var(--textColor);
+    background-color: var(--cardClrs);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: larger;
+    /* width: 100px; */
+}
+
 .formsDiv {
     display: flex;
     flex-direction: column;

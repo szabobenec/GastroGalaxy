@@ -67,7 +67,7 @@ const changeTheme = async (theme) => {
 
     try {
         const data = await postAPI('/api/savetheme', postObject);
-        console.log(data);
+        // console.log(data);
     } catch (error) {
         console.error(error);
     }
@@ -76,127 +76,157 @@ const changeTheme = async (theme) => {
 const MakeArray = (data) => {
     let hozzavalok = [];
     for (let item of data) {
-        for (let item2 of item.hozzavalok) {
-            for (let item3 in item2) {
-                let contains = false;
-                for (let i = 0; i < hozzavalok.length; i++) {
-                    if (item3 == hozzavalok[i]) {
-                        contains = true;
-                    }
+        let tempHozzavalok = JSON.parse(item.hozzavalok);
+        for (let element in tempHozzavalok) {
+            let contains = false;
+            for (let temp of hozzavalok) {
+                if (temp == element) {
+                    contains = true;
                 }
-                if (!contains) {
-                    hozzavalok.push(item3);
-                }
+            }
+            if (!contains) {
+                hozzavalok.push(element);
             }
         }
     }
     hozzavalok.sort((a, b) => a.localeCompare(b));
     // hozzavalok.sort(Intl.Collator().compare);
-    FillSelect(hozzavalok);
-};
 
-const FillSelect = (data) => {
-    const select = document.getElementById('hozzavalok');
-    for (let item of data) {
-        const option = document.createElement('option');
-        select.appendChild(option);
-        option.innerHTML = item;
-        option.value = item;
-    }
-    const plusBtn = document.getElementById('addBtn');
-    plusBtn.addEventListener('click', () => {
-        AddNewForm(data);
+    FillDiv(hozzavalok);
+    document.getElementById('searchBar').addEventListener('input', function () {
+        UpdateSearch(this, hozzavalok);
     });
-    document.getElementById('search').addEventListener('click', SearchRecipe);
 };
 
-const AddNewForm = (data) => {
-    const fomrsDivs = Array.from(document.getElementsByClassName('formsDivs'));
-
-    if (fomrsDivs.length < 5) {
-        const innerForms = document.getElementById('innerForms');
+const FillDiv = (data) => {
+    const hozzavalokDiv = document.getElementById('hozzavalokDiv');
+    for (let item of data) {
         const div = document.createElement('div');
-        innerForms.appendChild(div);
-        div.setAttribute('class', 'formsDivs');
+        hozzavalokDiv.appendChild(div);
+        div.innerHTML = item;
+        div.setAttribute('class', 'card hide');
+        div.addEventListener('click', () => {
+            AddHozzavalo(div);
+        });
+    }
 
-        const label = document.createElement('label');
-        div.appendChild(label);
-        label.for = 'hozzavalok';
-        label.innerHTML = 'Hozzávalók:';
-
-        const br = document.createElement('br');
-        div.appendChild(br);
-
-        const select = document.createElement('select');
-        div.appendChild(select);
-        select.name = 'hozzavalok';
-        select.setAttribute('class', 'hozzavalok');
-
-        const option0 = document.createElement('option');
-        select.appendChild(option0);
-        option0.value = 'zero';
-        option0.innerHTML = '-- Válassz hozzávalót! --';
-        for (let item of data) {
-            const option = document.createElement('option');
-            select.appendChild(option);
-            option.innerHTML = item;
-            option.value = item;
-        }
-
-        const button = document.createElement('input');
-        div.appendChild(button);
-        button.type = 'button';
-        button.value = '-';
-        button.id = 'removeBtn';
-        button.addEventListener('click', () => {
-            RemoveForm(div);
+    const osszesHozzavalo = document.getElementById('osszesHozzavalo');
+    for (let item of data) {
+        const div = document.createElement('div');
+        osszesHozzavalo.appendChild(div);
+        div.innerHTML = item;
+        div.setAttribute('class', 'card');
+        div.addEventListener('click', () => {
+            AddHozzavalo(div);
         });
     }
 };
 
-const RemoveForm = (div) => {
-    const innerForms = document.getElementById('innerForms');
-    innerForms.removeChild(div);
+const UpdateSearch = (elem, data) => {
+    const hozzavalokDiv = document.getElementById('hozzavalokDiv');
+    const value = elem.value.toLowerCase();
+
+    for (let item of hozzavalokDiv.children) {
+        const isVisible = item.innerHTML.includes(value);
+        item.classList.toggle('hide', !isVisible);
+        if (value == '') {
+            item.classList.add('hide');
+        }
+    }
+
+    if (value == '') {
+        for (let item of hozzavalokDiv.children) {
+            item.classList.add('hide');
+        }
+    }
 };
 
-const SearchRecipe = async () => {
-    try {
-        const data = (await getAPI('/api/getallrecept')).receptek;
-        const selects = Array.from(document.getElementsByClassName('hozzavalok'));
-        let values = [];
-        for (let item of selects) {
-            if (!values.includes(item.value) && item.value !== 'zero') {
-                values.push(item.value);
-            }
+const AddHozzavalo = (div) => {
+    const hozzavalok = document.getElementById('hozzavalok');
+
+    let contains = false;
+    for (let item of hozzavalok.children) {
+        let temp = [];
+        for (let item2 of item.innerHTML.split(' ')) {
+            temp.push(item2);
         }
+        temp.pop();
+        let name = temp.join(' ');
+
+        if (name == div.innerHTML) {
+            contains = true;
+        }
+    }
+
+    if (!contains) {
+        const newDiv = document.createElement('div');
+        hozzavalok.appendChild(newDiv);
+        newDiv.innerHTML = div.innerHTML + ' X';
+        newDiv.setAttribute('class', 'card');
+
+        newDiv.addEventListener('click', () => {
+            RemoveHozzavalo(newDiv, hozzavalok);
+        });
+    }
+    UpdateRecipes();
+    document.getElementById('searchBar').value = '';
+    for (let item of hozzavalokDiv.children) {
+        item.classList.add('hide');
+    }
+};
+
+const RemoveHozzavalo = (div, hozzavalok) => {
+    hozzavalok.removeChild(div);
+    UpdateRecipes();
+};
+
+const UpdateRecipes = async () => {
+    try {
+        const div = document.getElementById('hozzavalok');
+        let hozzavalok = [];
+        for (let item of div.children) {
+            let temp = [];
+            for (let item2 of item.innerHTML.split(' ')) {
+                temp.push(item2);
+            }
+            temp.pop();
+            hozzavalok.push(temp.join(' '));
+        }
+        // console.log(hozzavalok);
+
+        const data = (await getAPI('/api/getallrecept')).response;
+
         let keresett = [];
         let keresett2 = [];
-        if (values.length > 0) {
+        if (hozzavalok.length > 0) {
             for (let item of data) {
                 let counter = 0;
-                for (let item2 of item.hozzavalok) {
-                    for (let item3 in item2) {
-                        for (let hozzavalo of values) {
-                            if (!keresett.includes(item) && item3 === hozzavalo) {
-                                counter++;
-                            }
+                let hozzavalo = JSON.parse(item.hozzavalok);
+
+                for (let item2 in hozzavalo) {
+                    for (let item3 of hozzavalok) {
+                        if (!keresett.includes(item) && item2 === item3) {
+                            counter++;
                         }
                     }
                 }
-                if (counter == values.length) {
+                if (counter == hozzavalok.length) {
                     keresett.push(item);
-                } else if (values.length > 2 && counter == values.length - 1) {
+                } else if (hozzavalok.length > 1 && counter == hozzavalok.length - 1) {
                     keresett2.push(item);
                 }
             }
-            fillDiv(keresett, keresett2);
+
+            // console.log(keresett);
+            // console.log(keresett2);
+            fillDivs(keresett, keresett2);
         }
     } catch (error) {
         console.error(error);
     }
 };
 
-const fillDiv = (array1, array2) => {
+const fillDivs = (array1, array2) => {
     const teljes = document.getElementById('teljes');
     if (array1.length > 0) {
         teljes.setAttribute('class', '');
@@ -257,11 +287,12 @@ const fillDiv = (array1, array2) => {
 };
 
 const SendRecipe = async (data) => {
+    //! Rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
     try {
         const postObject = { recept: data.nev };
         const message = await postAPI('/api/postrecept', postObject);
         console.log(message);
-        document.location.href = '/recipefullview';
+        document.location.href = `/recipefullview/${data.kepnev.split('.')[0]}`;
     } catch (error) {
         console.error(error);
     }
