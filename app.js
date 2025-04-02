@@ -75,6 +75,38 @@ const writeFile = (file, text) => {
         });
     });
 };
+//? Random sorrend generálás:
+const randomOrder = async () => {
+    try {
+        const data = JSON.parse(await readFile('receptek.json'));
+
+        let randomIds = [];
+        let j = 0;
+        while (j < data.receptek.length) {
+            let random = Math.floor(Math.random() * (data.receptek.length - 1 + 1) + 1);
+            if (!randomIds.includes(random)) {
+                randomIds.push(random);
+                j++;
+            }
+        }
+        console.log(randomIds);
+
+        let string = randomIds.join(';');
+
+        const res = await writeFile('rotd.txt', string);
+    } catch (error) {
+        console.log(error);
+    }
+};
+// randomOrder();
+
+app.get('/api/recipe-of-the-day', async (request, response) => {
+    try {
+    } catch (error) {
+        response.status(500).json({ message: 'Hiba', response: error });
+    }
+});
+
 //! Nap recepje apik; Dátum visszaigazolása
 app.post('/check-date', (req, res) => {
     const datumPath = path.join(__dirname, '/public/assets/datum.txt');
