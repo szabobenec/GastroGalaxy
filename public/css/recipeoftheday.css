@@ -60,10 +60,14 @@ body {
     --dot-color: var(--secondaryClrs);
     --dot-size: 2px;
     --dot-space: 15px;
-    background: linear-gradient(90deg,
-            var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-            transparent 1%) center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    background: linear-gradient(
+                90deg,
+                var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+                transparent 1%
+            )
+            center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
+            center / var(--dot-space) var(--dot-space),
         var(--dot-color);
 
     color: var(--textColor);
@@ -172,7 +176,7 @@ footer {
 .button:hover .befText {
     text-decoration: none;
     font-weight: bold;
-    
+
     transform: translateY(-100%);
 }
 
@@ -215,4 +219,9 @@ footer {
     to {
         transform: translateX(8em);
     }
+}
+
+.cardDiv {
+    display: flex;
+    justify-content: center;
 }
