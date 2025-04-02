@@ -93,15 +93,30 @@ const randomOrder = async () => {
 
         let string = randomIds.join(';');
 
-        const res = await writeFile('rotd.txt', string);
+        await writeFile('rotd.txt', string);
     } catch (error) {
         console.log(error);
     }
 };
 // randomOrder();
 
+//! Recipe of the Day API:
 app.get('/api/recipe-of-the-day', async (request, response) => {
     try {
+        const string = await readFile('rotd.txt');
+        let randomIds = [];
+        for (let item of string.split(';')) {
+            randomIds.push(parseInt(item));
+        }
+        const currentDate = new Date().toISOString().split('T')[0];
+        const dayCounter = parseInt(currentDate.split('-')[currentDate.split('-').length - 1]);
+
+        const res = await db.selectRecipeOfTheDay(randomIds[dayCounter - 1]);
+
+        response.status(200).json({
+            message: 'Sikeres lekérdezés',
+            response: res
+        });
     } catch (error) {
         response.status(500).json({ message: 'Hiba', response: error });
     }
