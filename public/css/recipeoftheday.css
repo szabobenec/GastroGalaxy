@@ -161,7 +161,7 @@ footer {
     height: 4rem;
     width: 8rem;
     display: block;
-    animation: cloudMovement ease-in-out 3s infinite alternate;
+    animation: cloudMovement ease-in 6s infinite alternate;
     margin-top: -1.5em;
 }
 
