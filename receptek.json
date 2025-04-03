@@ -2255,7 +2255,7 @@
         {
             "id": 70,
             "tipus": "főétel",
-            "nev": "Zöldborsó főzelék",
+            "nev": "Zöldborsófőzelék",
             "tagek": "vegetáriánus;főzelék",
             "ido": 45,
             "adag": 4,
@@ -2355,7 +2355,7 @@
             "forras": "https://www.nosalty.hu/recept/sargarepafozelek"
         },
         {
-            "id": 76,
+            "id": 75,
             "tipus": "főétel",
             "nev": "Görög saláta",
             "tagek": "saláta;nyári",
@@ -2376,7 +2376,7 @@
             "forras": "https://www.nosalty.hu/recept/original-gorog-salata"
         },
         {
-            "id": 77,
+            "id": 76,
             "tipus": "desszert",
             "nev": "Tiramisu",
             "tagek": "édes;olasz",
@@ -2396,7 +2396,7 @@
             "forras": "https://www.mindmegette.hu/recept/eredeti-tiramisu"
         },
         {
-            "id": 78,
+            "id": 77,
             "tipus": "főétel",
             "nev": "Zöldbabos rizses hús",
             "tagek": "hús;rizses",
@@ -2417,7 +2417,7 @@
             "forras": "https://www.nosalty.hu/recept/zoldbabos-rizses-hus"
         },
         {
-            "id": 79,
+            "id": 78,
             "tipus": "desszert",
             "nev": "Puncs szelet",
             "tagek": "édes;sütemény",
