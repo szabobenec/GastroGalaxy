@@ -1022,9 +1022,7 @@
             "elkeszites": "1. A rizst félig megfőzzük. A hagymát apróra vágjuk, és az olajon üvegesre pirítjuk. Hozzáadjuk a fokhagymát és a pirospaprikát.\n2. A darált húst összekeverjük a rizzsel, hagymás keverékkel, sóval és borssal.\n3. A paprikák tetejét levágjuk, magházukat kitisztítjuk, majd megtöltjük a húsos keverékkel.\n4. Egy lábas aljára paradicsomszeleteket teszünk, ráhelyezzük a töltött paprikákat, és felöntjük vízzel. Fedő alatt 45 percig főzzük.",
             "kepnev": "toltottPaprika.jpg",
             "forras": "https://www.nosalty.hu/recept/nagymama-fele-toltott-paprika"
-        }{
-    "receptek": [
-        // ... (your existing recipes 1-24) ...
+        },
         {
             "id": 25,
             "tipus": "főétel",
@@ -1436,7 +1434,7 @@
             "elkeszites": "1. A tésztát sós vízben kifőzzük.\n2. A mákot a tejjel és a vaníliával felforraljuk, majd hozzáadjuk a cukrot.\n3. A leszűrt tésztát a mákos keverékkel összeragasztjuk, és vajjal ízesítjük.",
             "kepnev": "makosTeszta.jpg",
             "forras": "https://www.nosalty.hu/recept/makos-teszta"
-        }
+        },
         {
             "id": 25,
             "tipus": "főétel",
