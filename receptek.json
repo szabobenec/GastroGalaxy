@@ -2275,7 +2275,7 @@
         },
         {
             "id": 71,
-            "tipus": "desszert",
+            "tipus": "főétel",
             "nev": "Káposztás tészta",
             "tagek": "édes;tészta",
             "ido": 60,
@@ -2353,27 +2353,6 @@
             "elkeszites": "1. A sárgarépát meghámozzuk, és karikákra vágjuk.\n2. A hagymát apróra vágjuk, az olajon megpirítjuk, hozzáadjuk a köményt és lisztet.\n3. Hozzáadjuk a répát, és kevés vízzel puhára főzzük.\n4. A tejfölt hozzáadjuk, és összeforraljuk. Tojással tálaljuk.",
             "kepnev": "sargarepaFozelek.jpg",
             "forras": "https://www.nosalty.hu/recept/sargarepafozelek"
-        },
-        {
-            "id": 75,
-            "tipus": "desszert",
-            "nev": "Linzer",
-            "tagek": "édes;sütemény",
-            "ido": 90,
-            "adag": 24,
-            "hozzavalok": [
-                { "liszt": "30 dkg" },
-                { "vaj": "20 dkg" },
-                { "cukor": "15 dkg" },
-                { "tojás": "1 db" },
-                { "citromhéj": "1 db" },
-                { "fahéj": "1 teáskanál" },
-                { "lekvár": "20 dkg" },
-                { "porcukor": "díszítéshez" }
-            ],
-            "elkeszites": "1. A vajat habosra keverjük a cukorral, hozzáadjuk a tojást és citromhéjat.\n2. A lisztet a fahéjjal elkeverjük, majd hozzáadjuk a vajas keverékhez.\n3. A tésztát fóliába csomagolva 1 órára hűtőbe tesszük.\n4. Kinyújtjuk, kiszúrjuk, és 180°C-on 10 percig sütjük. Kihűtés után lekvárosan összeragasztjuk.",
-            "kepnev": "linzer.jpg",
-            "forras": "https://www.mindmegette.hu/recept/linzer"
         },
         {
             "id": 76,
