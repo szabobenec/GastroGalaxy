@@ -30,9 +30,19 @@ function insertRecept(tipus, nev, tagek, ido, adag, hozzavalok, elkeszites, kepn
         );
     });
 }
+//! SELECT Recipe of the Day
+function selectRecipeOfTheDay(id) {
+    return new Promise((resolve, reject) => {
+        pool.query('SELECT * FROM recept WHERE id = ?;', [id], (error, result) => {
+            if (error) return reject(error);
+            resolve(result);
+        });
+    });
+}
 
 module.exports = {
     selectAll,
-    insertRecept
+    insertRecept,
+    selectRecipeOfTheDay
 };
 //?Több function esetén vesszővel felsorolni a meghívható metódusokat. (pl.: selectAll, insertData)
