@@ -20,6 +20,7 @@
     --secondaryClrs: white;
     --cardClrs: var(--mint);
     --textColor: var(--raisinBlack);
+    --rotdCardClr: var(--raisinBlack);
 }
 
 [data-theme='dark'] {
@@ -78,6 +79,7 @@ body.dark-theme {
     --secondaryClrs: var(--iris);
     --cardClrs: var(--iris);
     --textColor: white;
+    --rotdCardClr: var(--nonPhotoBlue);
 }
 
 .theme-switch {
@@ -316,8 +318,7 @@ body.dark-theme {
     transform: translateY(-50%);
 }
 
-.recipe-image
-{
+.recipe-image {
     width: 90%;
 }
 
@@ -383,7 +384,7 @@ footer {
     padding: 0.2em;
 
     border: none;
-    background-color: lightskyblue;
+    background-color: var(--rotdCardClr);
     display: block;
     font-size: 25px;
     letter-spacing: 5px;
@@ -467,4 +468,13 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.teljes {
+    display: flex;
+    margin-top: 2em;
+}
+
+.sendRecipeBtn {
+    background-color: var(--cardClrs);
 }

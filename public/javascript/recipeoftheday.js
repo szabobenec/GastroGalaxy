@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         `;
         console.log(apiData);
 
-        document.getElementById('cardDiv').addEventListener('click', () => {
-            teljes.innerHTML = `<input type="button" id="sendRecipeBtn" value="Teljes recept megtekintése" />`;
+        document.getElementById('cardDivBtn').addEventListener('click', () => {
+            teljes.innerHTML = `<input type="button" class="sendRecipeBtn" id="sendRecipeBtn" value="Teljes recept megtekintése" />`;
 
             document.getElementById('sendRecipeBtn').addEventListener('click', () => {
                 SendRecipe(apiData.response[0]);
