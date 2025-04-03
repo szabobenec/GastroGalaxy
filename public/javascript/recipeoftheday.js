@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-        })
+        })   
         .then(response => response.json())
         .then(data => {
             document.getElementById('responseMessage').innerHTML = data.message;
