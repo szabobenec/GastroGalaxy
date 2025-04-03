@@ -316,6 +316,11 @@ body.dark-theme {
     transform: translateY(-50%);
 }
 
+.recipe-image
+{
+    width: 90%;
+}
+
 header {
     background-color: var(--bgColor);
     color: var(--textColor);
@@ -459,5 +464,7 @@ footer {
 
 .cardDiv {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
