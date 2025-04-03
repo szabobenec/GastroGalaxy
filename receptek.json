@@ -1022,6 +1022,832 @@
             "elkeszites": "1. A rizst félig megfőzzük. A hagymát apróra vágjuk, és az olajon üvegesre pirítjuk. Hozzáadjuk a fokhagymát és a pirospaprikát.\n2. A darált húst összekeverjük a rizzsel, hagymás keverékkel, sóval és borssal.\n3. A paprikák tetejét levágjuk, magházukat kitisztítjuk, majd megtöltjük a húsos keverékkel.\n4. Egy lábas aljára paradicsomszeleteket teszünk, ráhelyezzük a töltött paprikákat, és felöntjük vízzel. Fedő alatt 45 percig főzzük.",
             "kepnev": "toltottPaprika.jpg",
             "forras": "https://www.nosalty.hu/recept/nagymama-fele-toltott-paprika"
+        }{
+    "receptek": [
+        // ... (your existing recipes 1-24) ...
+        {
+            "id": 25,
+            "tipus": "főétel",
+            "nev": "Kínai szezámmagos csirke",
+            "tagek": "kínai;csirke",
+            "ido": 30,
+            "adag": 4,
+            "hozzavalok": [
+                { "csirkemell": "60 dkg" },
+                { "szójaszósz": "5 evőkanál" },
+                { "méz": "2 evőkanál" },
+                { "fokhagyma": "3 gerezd" },
+                { "gyömbér": "2 cm" },
+                { "szezámolaj": "1 evőkanál" },
+                { "kukoricaliszt": "2 evőkanál" },
+                { "szezámmag": "2 evőkanál" },
+                { "olaj": "sütéshez" },
+                { "rizs": "körethez" }
+            ],
+            "elkeszites": "1. A csirkemellet kockára vágjuk. A szójaszószt, mézet, összezúzott fokhagymát és reszelt gyömbért összekeverjük, majd a húst belemártjuk és 30 percre beáztatjuk.\n2. A kukoricalisztbe forgatjuk a csirkedarabokat, majd bő forró olajban aranybarnára sütjük.\n3. A maradék mártást felmelegítjük, és a sült csirkére öntjük. Szezámmaggal megszórva tálaljuk, rizzsel.",
+            "kepnev": "kinaiSzezammagosCsirke.jpg",
+            "forras": "https://www.nosalty.hu/recept/kinai-szezammagos-csirke"
+        },
+        {
+            "id": 26,
+            "tipus": "leves",
+            "nev": "Paradicsomleves",
+            "tagek": "leves;nyári",
+            "ido": 40,
+            "adag": 6,
+            "hozzavalok": [
+                { "paradicsom": "1.5 kg" },
+                { "vöröshagyma": "1 fej" },
+                { "fokhagyma": "2 gerezd" },
+                { "olivaolaj": "2 evőkanál" },
+                { "bazsalikom": "1 csokor" },
+                { "cukor": "1 teáskanál" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" },
+                { "tejszín": "2 dl" },
+                { "zsemlemorzsa": "tálaláshoz" }
+            ],
+            "elkeszites": "1. A paradicsomokat megmossuk, negyedeljük. A hagymát és fokhagymát apróra vágjuk.\n2. Az olajon megdinszteljük a hagymát, hozzáadjuk a paradicsomot és a fűszereket. 20 percig főzzük.\n3. Turmixoljuk, majd szitán áttörjük. Hozzáadjuk a tejszínt, és újra felmelegítjük. Pirított zsemlemorzsával tálaljuk.",
+            "kepnev": "paradicsomleves.jpg",
+            "forras": "https://www.mindmegette.hu/recept/paradicsomleves-tejszinnel"
+        },
+        {
+            "id": 27,
+            "tipus": "reggeli",
+            "nev": "Gofri",
+            "tagek": "édes;reggeli",
+            "ido": 25,
+            "adag": 4,
+            "hozzavalok": [
+                { "liszt": "25 dkg" },
+                { "tojás": "2 db" },
+                { "tej": "3 dl" },
+                { "vaj": "5 dkg" },
+                { "sütőpor": "1 csomag" },
+                { "cukor": "2 evőkanál" },
+                { "só": "1 csipet" },
+                { "vanília": "1 csomag" }
+            ],
+            "elkeszites": "1. A lisztet elkeverjük a sütőporral, cukorral és sóval.\n2. A tojásokat, olvasztott vajat és tejet hozzáadjuk, simára keverjük.\n3. A gofrisütőt felmelegítjük, vékonyan kiolajozzuk, és a tésztából adagonként sütjük a gofrit 3-4 percig. Tetszés szerint lekvárosan, csokival vagy gyümölccsel tálaljuk.",
+            "kepnev": "gofri.jpg",
+            "forras": "https://www.nosalty.hu/recept/alap-gofri"
+        },
+        {
+            "id": 28,
+            "tipus": "desszert",
+            "nev": "Lekváros bukta",
+            "tagek": "édes;sütemény",
+            "ido": 90,
+            "adag": 12,
+            "hozzavalok": [
+                { "liszt": "50 dkg" },
+                { "élesztő": "2 dkg" },
+                { "tej": "2 dl" },
+                { "tojás": "1 db" },
+                { "vaj": "10 dkg" },
+                { "cukor": "10 dkg" },
+                { "só": "1 csipet" },
+                { "baracklekvár": "40 dkg" },
+                { "porcukor": "díszítéshez" }
+            ],
+            "elkeszites": "1. A meleg tejbe belemorzsoljuk az élesztőt, cukrot és egy csipet lisztet, majd kelni hagyjuk.\n2. A lisztbe keverjük a tojást, olvasztott vajat, sót és a felfuttatott élesztőt. Lágy tésztát gyúrunk, és kelni hagyjuk.\n3. A tésztát kinyújtjuk, négyzet alakúra vágjuk, mindegyikbe teszünk egy kis lekvárt, és összehajtjuk.\n4. 180°C-ra előmelegített sütőben 25 percig sütjük. Porcukorral megszórva tálaljuk.",
+            "kepnev": "lekvarosBukta.jpg",
+            "forras": "https://www.mindmegette.hu/recept/lekvaros-bukta"
+        },
+        {
+            "id": 29,
+            "tipus": "reggeli",
+            "nev": "Baconbe tekert virsli",
+            "tagek": "sós;reggeli",
+            "ido": 20,
+            "adag": 4,
+            "hozzavalok": [
+                { "virsli": "8 db" },
+                { "bacon": "16 szelet" },
+                { "mustár": "ízlésre" },
+                { "ketchup": "ízlésre" }
+            ],
+            "elkeszites": "1. Minden virslit 2 szelet baconbe csavarunk.\n2. Serpenyőben vagy grillen mindkét oldalát aranybarnára sütjük.\n3. Mustárral és ketchuppal tálaljuk friss kenyérrel vagy zsemlével.",
+            "kepnev": "baconbeTekertVirsli.jpg",
+            "forras": "https://streetkitchen.hu/otthon/baconbe-tekert-virsli/"
+        },
+        {
+            "id": 30,
+            "tipus": "főétel",
+            "nev": "Pirosrántásos borsó főzelék",
+            "tagek": "vegetáriánus;főzelék",
+            "ido": 45,
+            "adag": 4,
+            "hozzavalok": [
+                { "zöldborsó": "80 dkg (friss vagy fagyasztott)" },
+                { "vöröshagyma": "1 fej" },
+                { "liszt": "2 evőkanál" },
+                { "pirospaprika": "1 evőkanál" },
+                { "só": "ízlésre" },
+                { "cukor": "1 kávéskanál" },
+                { "tejföl": "2 dl" },
+                { "olaj": "2 evőkanál" }
+            ],
+            "elkeszites": "1. A hagymát apróra vágjuk, az olajon üvegesre pirítjuk. Hozzáadjuk a pirospaprikát és a lisztet, és rántást készítünk.\n2. Felöntjük vízzel, hozzáadjuk a borsót, és puhára főzzük.\n3. Sóval, cukorral ízesítjük, végül a tejföllel behabarjuk. Tojással vagy sült kolbásszal tálaljuk.",
+            "kepnev": "pirosrantasosBorsoFozelek.jpg",
+            "forras": "https://www.nosalty.hu/recept/pirosrantasos-borso-fozelek"
+        },
+        {
+            "id": 31,
+            "tipus": "desszert",
+            "nev": "Rákóczi túrós",
+            "tagek": "édes;sütemény",
+            "ido": 60,
+            "adag": 12,
+            "hozzavalok": [
+                { "liszt": "30 dkg" },
+                { "vaj": "20 dkg" },
+                { "tojás": "1 db" },
+                { "cukor": "10 dkg" },
+                { "sütőpor": "1 csomag" },
+                { "túró": "40 dkg" },
+                { "vaníliás cukor": "1 csomag" },
+                { "baracklekvár": "20 dkg" },
+                { "tejföl": "2 dl" }
+            ],
+            "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással, 5 dkg cukorral és sütőporral. Kinyújtjuk, és tepsibe helyezzük.\n2. A túrót összekeverjük a tejföllel, maradék cukorral és vaníliás cukorral, rákenjük a tésztára.\n3. 180°C-ra előmelegített sütőben 30 percig sütjük. Kihűlés után lekváros csíkokat rácsot formálva kenünk rá.",
+            "kepnev": "rakocziTuros.jpg",
+            "forras": "https://www.mindmegette.hu/recept/rakoczi-turos"
+        },
+        {
+            "id": 32,
+            "tipus": "főétel",
+            "nev": "Hortobágyi húsos palacsinta",
+            "tagek": "hagyományos",
+            "ido": 60,
+            "adag": 6,
+            "hozzavalok": [
+                { "darált sertéshús": "50 dkg" },
+                { "vöröshagyma": "1 fej" },
+                { "pirospaprika": "1 evőkanál" },
+                { "liszt": "20 dkg" },
+                { "tojás": "2 db" },
+                { "tej": "5 dl" },
+                { "só": "ízlésre" },
+                { "tejföl": "3 dl" }
+            ],
+            "elkeszites": "1. A hagymát apróra vágjuk, a hússal együtt megpirítjuk. Piros paprikával ízesítjük.\n2. A palacsintatésztát elkészítjük, és vékony palacsintákat sütünk.\n3. A húsos tölteléket a palacsintákba tekerve, tepsibe helyezzük, tejföllel leöntjük, és 180°C-on 20 percig sütjük.",
+            "kepnev": "hortobagyiHusosPalacsinta.jpg",
+            "forras": "https://www.nosalty.hu/recept/hortobagyi-husos-palacsinta"
+        },
+        {
+            "id": 33,
+            "tipus": "leves",
+            "nev": "Jókai bableves",
+            "tagek": "hagyományos",
+            "ido": 180,
+            "adag": 8,
+            "hozzavalok": [
+                { "bab": "40 dkg (száraz)" },
+                { "füstölt csülök": "1 kg" },
+                { "vöröshagyma": "2 fej" },
+                { "sárgarépa": "2 db" },
+                { "zeller": "1 db" },
+                { "paradicsompüré": "2 evőkanál" },
+                { "fokhagyma": "3 gerezd" },
+                { "pirospaprika": "1 evőkanál" },
+                { "liszt": "1 evőkanál" },
+                { "só": "ízlésre" }
+            ],
+            "elkeszites": "1. A babot előző este beáztatjuk. Másnap a csülköt és a babot puhára főzzük.\n2. A zöldségeket apróra vágjuk, a hagymát megpirítjuk, hozzáadjuk a paprikát és paradicsompürét.\n3. A főzőléből egy keveset kiveszünk, a liszttel elkeverjük, majd visszaöntjük a levesbe. Főzzük még 10 percig.",
+            "kepnev": "jokaiBableves.jpg",
+            "forras": "https://www.mindmegette.hu/recept/jokai-bableves"
+        },
+        {
+            "id": 34,
+            "tipus": "desszert",
+            "nev": "Gesztenyepüré",
+            "tagek": "édes;téli",
+            "ido": 30,
+            "adag": 6,
+            "hozzavalok": [
+                { "gesztenye": "50 dkg (főtt)" },
+                { "tejszín": "2 dl" },
+                { "rum": "2 evőkanál" },
+                { "vaníliás cukor": "1 csomag" },
+                { "cukor": "ízlésre" },
+                { "tej": "1 dl" }
+            ],
+            "elkeszites": "1. A főtt gesztenyét áttörjük, majd a tejjel simára keverjük.\n2. Hozzáadjuk a felmelegített tejszínt, rumot, vaníliás cukrot, és ízlés szerint édesítjük.\n3. Habverővel simára keverjük, és hidegen tálaljuk tejszínhabbal.",
+            "kepnev": "gesztenyepure.jpg",
+            "forras": "https://www.nosalty.hu/recept/gesztenyepure-rummal"
+        },
+        {
+            "id": 35,
+            "tipus": "főétel",
+            "nev": "Töltött káposzta",
+            "tagek": "hagyományos",
+            "ido": 180,
+            "adag": 8,
+            "hozzavalok": [
+                { "savanyú káposzta": "2 kg" },
+                { "darált hús": "80 dkg" },
+                { "rizs": "15 dkg" },
+                { "füstölt szalonna": "20 dkg" },
+                { "tejföl": "3 dl" },
+                { "pirospaprika": "1 evőkanál" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" }
+            ],
+            "elkeszites": "1. A rizst félig megfőzzük, és összekeverjük a darált hússal, sóval, borssal.\n2. A káposztaleveleket megtöltjük a húsos keverékkel, és szorosan feltekerjük.\n3. Egy lábas aljára káposztát teszünk, rá a töltelékeket, és rétegezve végig. Felöntjük vízzel, és lassú tűzön 2 órán át főzzük.\n4. Tejföllel és pirospaprikával tálaljuk.",
+            "kepnev": "toltottKaposzta.jpg",
+            "forras": "https://www.mindmegette.hu/recept/erdelyi-toltott-kaposzta"
+        },
+        {
+            "id": 36,
+            "tipus": "reggeli",
+            "nev": "Francia pirítós",
+            "tagek": "reggeli;édes",
+            "ido": 15,
+            "adag": 2,
+            "hozzavalok": [
+                { "kenyér": "4 szelet" },
+                { "tojás": "2 db" },
+                { "tej": "1 dl" },
+                { "cukor": "2 evőkanál" },
+                { "vanília": "1 csomag" },
+                { "vaj": "sütéshez" },
+                { "porcukor": "díszítéshez" }
+            ],
+            "elkeszites": "1. A tojásokat felverjük a tejjel, cukorral és vaníliával.\n2. A kenyérszeleteket belemártjuk a keverékbe, majd vajon mindkét oldalát aranybarnára sütjük.\n3. Porcukorral megszórva, gyümölccsel vagy mézzel tálaljuk.",
+            "kepnev": "franciaPiritos.jpg",
+            "forras": "https://www.nosalty.hu/recept/francia-piritos"
+        },
+        {
+            "id": 37,
+            "tipus": "desszert",
+            "nev": "Rigó Jancsi",
+            "tagek": "édes;csokoládés",
+            "ido": 120,
+            "adag": 12,
+            "hozzavalok": [
+                { "tojás": "6 db" },
+                { "cukor": "30 dkg" },
+                { "liszt": "15 dkg" },
+                { "kakaópor": "3 evőkanál" },
+                { "csokoládé": "30 dkg" },
+                { "tejszín": "4 dl" },
+                { "vanília": "1 rúd" }
+            ],
+            "elkeszites": "1. A tojások sárgáját a cukor felével habosra keverjük, hozzáadjuk a lisztet és kakaóport.\n2. A fehérjéből kemény habot verünk a maradék cukorral, és óvatosan a masszába keverjük.\n3. Tepsiben 180°C-on 15 percig sütjük. Kihűtjük, majd két részre vágjuk.\n4. A csokoládét a tejszínnel és a vaníliával gőz felett olvasztjuk, majd a piskóta rétegek közé kenjük. Hűtőben dermesztjük.",
+            "kepnev": "rigoJancsi.jpg",
+            "forras": "https://www.mindmegette.hu/recept/rigo-jancsi"
+        },
+        {
+            "id": 38,
+            "tipus": "főétel",
+            "nev": "Brassói aprópecsenye",
+            "tagek": "hús;sült",
+            "ido": 90,
+            "adag": 6,
+            "hozzavalok": [
+                { "sertéslapocka": "1.5 kg" },
+                { "burgonya": "1 kg" },
+                { "fokhagyma": "6 gerezd" },
+                { "zsír": "sütéshez" },
+                { "majoránna": "1 evőkanál" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" }
+            ],
+            "elkeszites": "1. A húst kockára vágjuk, sózzuk, borsozzuk, majoránnával megszórjuk.\n2. A burgonyát meghámozzuk, és nagyobb kockákra vágjuk.\n3. Forró zsírban először a húst pirítjuk meg, majd hozzáadjuk a burgonyát és a fokhagymát. Addig sütjük, amíg minden aranybarna és ropogós lesz.",
+            "kepnev": "brassoiaAropecsenye.jpg",
+            "forras": "https://www.nosalty.hu/recept/brassoi-apropecsenye"
+        },
+        {
+            "id": 39,
+            "tipus": "leves",
+            "nev": "Halászlé",
+            "tagek": "hagyományos;hal",
+            "ido": 120,
+            "adag": 8,
+            "hozzavalok": [
+                { "ponty": "2 kg" },
+                { "vöröshagyma": "3 fej" },
+                { "pirospaprika": "5 evőkanál" },
+                { "só": "ízlésre" },
+                { "erős paprika": "ízlésre" },
+                { "víz": "3 l" }
+            ],
+            "elkeszites": "1. A halat megtisztítjuk, a fejét és a csontját vízbe tesszük, és 1 órán át főzzük.\n2. A hagymát apróra vágjuk, a paprikával együtt a lébe tesszük, és további 30 percig főzzük.\n3. A halhúst nagyobb darabokban visszatesszük a levesbe, és 5 percig főzzük. Erős paprikával ízesítjük.",
+            "kepnev": "halaszle.jpg",
+            "forras": "https://www.mindmegette.hu/recept/halaszle"
+        },
+        {
+            "id": 40,
+            "tipus": "desszert",
+            "nev": "Krémes",
+            "tagek": "édes;réteges",
+            "ido": 180,
+            "adag": 12,
+            "hozzavalok": [
+                { "liszt": "40 dkg" },
+                { "vaj": "25 dkg" },
+                { "tojás": "1 db" },
+                { "sütőpor": "1 csomag" },
+                { "tej": "1 l" },
+                { "vanília puding": "2 csomag" },
+                { "cukor": "30 dkg" },
+                { "csokoládé": "20 dkg" }
+            ],
+            "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással és sütőporral. Kinyújtjuk, és tepsiben 180°C-on 15 percig sütjük.\n2. A pudingot a tejjel és cukorral főzzük, majd kihűtjük.\n3. A piskóta tetejére kenjük a pudingot, majd a felolvasztott csokoládét öntjük rá. Hűtőben dermesztjük.",
+            "kepnev": "kremes.jpg",
+            "forras": "https://www.mindmegette.hu/recept/kremes"
+        },
+        {
+            "id": 41,
+            "tipus": "főétel",
+            "nev": "Rántott sajt",
+            "tagek": "sajtos;sült",
+            "ido": 20,
+            "adag": 4,
+            "hozzavalok": [
+                { "trapista sajt": "40 dkg" },
+                { "liszt": "10 dkg" },
+                { "tojás": "2 db" },
+                { "zsemlemorzsa": "20 dkg" },
+                { "olaj": "sütéshez" },
+                { "só": "ízlésre" }
+            ],
+            "elkeszites": "1. A sajtot ujjnyi vastag szeletekre vágjuk.\n2. A lisztbe, felvert tojásba, majd zsemlemorzsába forgatjuk.\n3. Forró olajban mindkét oldalát aranybarnára sütjük. Salátával és tartármártással tálaljuk.",
+            "kepnev": "rantottSajt.jpg",
+            "forras": "https://www.nosalty.hu/recept/rantott-sajt"
+        },
+        {
+            "id": 42,
+            "tipus": "leves",
+            "nev": "Újházi tyúkhúsleves",
+            "tagek": "hagyományos",
+            "ido": 180,
+            "adag": 8,
+            "hozzavalok": [
+                { "tyúk": "1 db" },
+                { "sárgarépa": "3 db" },
+                { "zeller": "1 db" },
+                { "petrezselyemgyökér": "1 db" },
+                { "vöröshagyma": "1 fej" },
+                { "zöldborsó": "20 dkg" },
+                { "só": "ízlésre" },
+                { "tészta": "leveshez" }
+            ],
+            "elkeszites": "1. A tyúkot nagy fazékban feltétlen vízzel lefedjük, és lassú tűzön főzzük.\n2. Hozzáadjuk a megtisztított, nagyobb darabokra vágott zöldségeket, és további 2 órát főzzük.\n3. A zöldségeket és a húst kivesszük, a levét leszűrjük. Tésztát főzünk bele, és a visszaaprított hússal és zöldségekkel tálaljuk.",
+            "kepnev": "ujhaziTyukhusleves.jpg",
+            "forras": "https://www.mindmegette.hu/recept/ujhazi-tyukhusleves"
+        },
+        {
+            "id": 43,
+            "tipus": "desszert",
+            "nev": "Isler",
+            "tagek": "édes;sütemény",
+            "ido": 90,
+            "adag": 24,
+            "hozzavalok": [
+                { "liszt": "40 dkg" },
+                { "vaj": "25 dkg" },
+                { "tojás": "1 db" },
+                { "cukor": "15 dkg" },
+                { "lekvár": "20 dkg" },
+                { "csokoládé": "20 dkg" },
+                { "tej": "2 dl" }
+            ],
+            "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással és cukorral. 30 percig hűtőben pihentetjük.\n2. Kinyújtjuk, kiszúrjuk, és 180°C-on 10 percig sütjük.\n3. Kihűlés után lekvárosan összeragasztjuk, és csokoládémázzal leöntjük.",
+            "kepnev": "isler.jpg",
+            "forras": "https://www.mindmegette.hu/recept/isler"
+        },
+        {
+            "id": 44,
+            "tipus": "főétel",
+            "nev": "Mákos tészta",
+            "tagek": "édes;tészta",
+            "ido": 30,
+            "adag": 6,
+            "hozzavalok": [
+                { "tészta": "50 dkg" },
+                { "mák": "20 dkg" },
+                { "cukor": "15 dkg" },
+                { "tej": "3 dl" },
+                { "vanília": "1 rúd" },
+                { "vaj": "5 dkg" }
+            ],
+            "elkeszites": "1. A tésztát sós vízben kifőzzük.\n2. A mákot a tejjel és a vaníliával felforraljuk, majd hozzáadjuk a cukrot.\n3. A leszűrt tésztát a mákos keverékkel összeragasztjuk, és vajjal ízesítjük.",
+            "kepnev": "makosTeszta.jpg",
+            "forras": "https://www.nosalty.hu/recept/makos-teszta"
+        }
+        {
+            "id": 25,
+            "tipus": "főétel",
+            "nev": "Kínai szezámmagos csirke",
+            "tagek": "kínai;csirke",
+            "ido": 30,
+            "adag": 4,
+            "hozzavalok": [
+                { "csirkemell": "60 dkg" },
+                { "szójaszósz": "5 evőkanál" },
+                { "méz": "2 evőkanál" },
+                { "fokhagyma": "3 gerezd" },
+                { "gyömbér": "2 cm" },
+                { "szezámolaj": "1 evőkanál" },
+                { "kukoricaliszt": "2 evőkanál" },
+                { "szezámmag": "2 evőkanál" },
+                { "olaj": "sütéshez" },
+                { "rizs": "körethez" }
+            ],
+            "elkeszites": "1. A csirkemellet kockára vágjuk. A szójaszószt, mézet, összezúzott fokhagymát és reszelt gyömbért összekeverjük, majd a húst belemártjuk és 30 percre beáztatjuk.\n2. A kukoricalisztbe forgatjuk a csirkedarabokat, majd bő forró olajban aranybarnára sütjük.\n3. A maradék mártást felmelegítjük, és a sült csirkére öntjük. Szezámmaggal megszórva tálaljuk, rizzsel.",
+            "kepnev": "kinaiSzezammagosCsirke.jpg",
+            "forras": "https://www.nosalty.hu/recept/kinai-szezammagos-csirke"
+        },
+        {
+            "id": 26,
+            "tipus": "leves",
+            "nev": "Paradicsomleves",
+            "tagek": "leves;nyári",
+            "ido": 40,
+            "adag": 6,
+            "hozzavalok": [
+                { "paradicsom": "1.5 kg" },
+                { "vöröshagyma": "1 fej" },
+                { "fokhagyma": "2 gerezd" },
+                { "olivaolaj": "2 evőkanál" },
+                { "bazsalikom": "1 csokor" },
+                { "cukor": "1 teáskanál" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" },
+                { "tejszín": "2 dl" },
+                { "zsemlemorzsa": "tálaláshoz" }
+            ],
+            "elkeszites": "1. A paradicsomokat megmossuk, negyedeljük. A hagymát és fokhagymát apróra vágjuk.\n2. Az olajon megdinszteljük a hagymát, hozzáadjuk a paradicsomot és a fűszereket. 20 percig főzzük.\n3. Turmixoljuk, majd szitán áttörjük. Hozzáadjuk a tejszínt, és újra felmelegítjük. Pirított zsemlemorzsával tálaljuk.",
+            "kepnev": "paradicsomleves.jpg",
+            "forras": "https://www.mindmegette.hu/recept/paradicsomleves-tejszinnel"
+        },
+        {
+            "id": 27,
+            "tipus": "reggeli",
+            "nev": "Gofri",
+            "tagek": "édes;reggeli",
+            "ido": 25,
+            "adag": 4,
+            "hozzavalok": [
+                { "liszt": "25 dkg" },
+                { "tojás": "2 db" },
+                { "tej": "3 dl" },
+                { "vaj": "5 dkg" },
+                { "sütőpor": "1 csomag" },
+                { "cukor": "2 evőkanál" },
+                { "só": "1 csipet" },
+                { "vanília": "1 csomag" }
+            ],
+            "elkeszites": "1. A lisztet elkeverjük a sütőporral, cukorral és sóval.\n2. A tojásokat, olvasztott vajat és tejet hozzáadjuk, simára keverjük.\n3. A gofrisütőt felmelegítjük, vékonyan kiolajozzuk, és a tésztából adagonként sütjük a gofrit 3-4 percig. Tetszés szerint lekvárosan, csokival vagy gyümölccsel tálaljuk.",
+            "kepnev": "gofri.jpg",
+            "forras": "https://www.nosalty.hu/recept/alap-gofri"
+        },
+        {
+            "id": 28,
+            "tipus": "desszert",
+            "nev": "Lekváros bukta",
+            "tagek": "édes;sütemény",
+            "ido": 90,
+            "adag": 12,
+            "hozzavalok": [
+                { "liszt": "50 dkg" },
+                { "élesztő": "2 dkg" },
+                { "tej": "2 dl" },
+                { "tojás": "1 db" },
+                { "vaj": "10 dkg" },
+                { "cukor": "10 dkg" },
+                { "só": "1 csipet" },
+                { "baracklekvár": "40 dkg" },
+                { "porcukor": "díszítéshez" }
+            ],
+            "elkeszites": "1. A meleg tejbe belemorzsoljuk az élesztőt, cukrot és egy csipet lisztet, majd kelni hagyjuk.\n2. A lisztbe keverjük a tojást, olvasztott vajat, sót és a felfuttatott élesztőt. Lágy tésztát gyúrunk, és kelni hagyjuk.\n3. A tésztát kinyújtjuk, négyzet alakúra vágjuk, mindegyikbe teszünk egy kis lekvárt, és összehajtjuk.\n4. 180°C-ra előmelegített sütőben 25 percig sütjük. Porcukorral megszórva tálaljuk.",
+            "kepnev": "lekvarosBukta.jpg",
+            "forras": "https://www.mindmegette.hu/recept/lekvaros-bukta"
+        },
+        {
+            "id": 29,
+            "tipus": "reggeli",
+            "nev": "Baconbe tekert virsli",
+            "tagek": "sós;reggeli",
+            "ido": 20,
+            "adag": 4,
+            "hozzavalok": [
+                { "virsli": "8 db" },
+                { "bacon": "16 szelet" },
+                { "mustár": "ízlésre" },
+                { "ketchup": "ízlésre" }
+            ],
+            "elkeszites": "1. Minden virslit 2 szelet baconbe csavarunk.\n2. Serpenyőben vagy grillen mindkét oldalát aranybarnára sütjük.\n3. Mustárral és ketchuppal tálaljuk friss kenyérrel vagy zsemlével.",
+            "kepnev": "baconbeTekertVirsli.jpg",
+            "forras": "https://streetkitchen.hu/otthon/baconbe-tekert-virsli/"
+        },
+        {
+            "id": 30,
+            "tipus": "főétel",
+            "nev": "Pirosrántásos borsó főzelék",
+            "tagek": "vegetáriánus;főzelék",
+            "ido": 45,
+            "adag": 4,
+            "hozzavalok": [
+                { "zöldborsó": "80 dkg (friss vagy fagyasztott)" },
+                { "vöröshagyma": "1 fej" },
+                { "liszt": "2 evőkanál" },
+                { "pirospaprika": "1 evőkanál" },
+                { "só": "ízlésre" },
+                { "cukor": "1 kávéskanál" },
+                { "tejföl": "2 dl" },
+                { "olaj": "2 evőkanál" }
+            ],
+            "elkeszites": "1. A hagymát apróra vágjuk, az olajon üvegesre pirítjuk. Hozzáadjuk a pirospaprikát és a lisztet, és rántást készítünk.\n2. Felöntjük vízzel, hozzáadjuk a borsót, és puhára főzzük.\n3. Sóval, cukorral ízesítjük, végül a tejföllel behabarjuk. Tojással vagy sült kolbásszal tálaljuk.",
+            "kepnev": "pirosrantasosBorsoFozelek.jpg",
+            "forras": "https://www.nosalty.hu/recept/pirosrantasos-borso-fozelek"
+        },
+        {
+            "id": 31,
+            "tipus": "desszert",
+            "nev": "Rákóczi túrós",
+            "tagek": "édes;sütemény",
+            "ido": 60,
+            "adag": 12,
+            "hozzavalok": [
+                { "liszt": "30 dkg" },
+                { "vaj": "20 dkg" },
+                { "tojás": "1 db" },
+                { "cukor": "10 dkg" },
+                { "sütőpor": "1 csomag" },
+                { "túró": "40 dkg" },
+                { "vaníliás cukor": "1 csomag" },
+                { "baracklekvár": "20 dkg" },
+                { "tejföl": "2 dl" }
+            ],
+            "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással, 5 dkg cukorral és sütőporral. Kinyújtjuk, és tepsibe helyezzük.\n2. A túrót összekeverjük a tejföllel, maradék cukorral és vaníliás cukorral, rákenjük a tésztára.\n3. 180°C-ra előmelegített sütőben 30 percig sütjük. Kihűlés után lekváros csíkokat rácsot formálva kenünk rá.",
+            "kepnev": "rakocziTuros.jpg",
+            "forras": "https://www.mindmegette.hu/recept/rakoczi-turos"
+        },
+        {
+            "id": 32,
+            "tipus": "főétel",
+            "nev": "Hortobágyi húsos palacsinta",
+            "tagek": "hagyományos",
+            "ido": 60,
+            "adag": 6,
+            "hozzavalok": [
+                { "darált sertéshús": "50 dkg" },
+                { "vöröshagyma": "1 fej" },
+                { "pirospaprika": "1 evőkanál" },
+                { "liszt": "20 dkg" },
+                { "tojás": "2 db" },
+                { "tej": "5 dl" },
+                { "só": "ízlésre" },
+                { "tejföl": "3 dl" }
+            ],
+            "elkeszites": "1. A hagymát apróra vágjuk, a hússal együtt megpirítjuk. Piros paprikával ízesítjük.\n2. A palacsintatésztát elkészítjük, és vékony palacsintákat sütünk.\n3. A húsos tölteléket a palacsintákba tekerve, tepsibe helyezzük, tejföllel leöntjük, és 180°C-on 20 percig sütjük.",
+            "kepnev": "hortobagyiHusosPalacsinta.jpg",
+            "forras": "https://www.nosalty.hu/recept/hortobagyi-husos-palacsinta"
+        },
+        {
+            "id": 33,
+            "tipus": "leves",
+            "nev": "Jókai bableves",
+            "tagek": "hagyományos",
+            "ido": 180,
+            "adag": 8,
+            "hozzavalok": [
+                { "bab": "40 dkg (száraz)" },
+                { "füstölt csülök": "1 kg" },
+                { "vöröshagyma": "2 fej" },
+                { "sárgarépa": "2 db" },
+                { "zeller": "1 db" },
+                { "paradicsompüré": "2 evőkanál" },
+                { "fokhagyma": "3 gerezd" },
+                { "pirospaprika": "1 evőkanál" },
+                { "liszt": "1 evőkanál" },
+                { "só": "ízlésre" }
+            ],
+            "elkeszites": "1. A babot előző este beáztatjuk. Másnap a csülköt és a babot puhára főzzük.\n2. A zöldségeket apróra vágjuk, a hagymát megpirítjuk, hozzáadjuk a paprikát és paradicsompürét.\n3. A főzőléből egy keveset kiveszünk, a liszttel elkeverjük, majd visszaöntjük a levesbe. Főzzük még 10 percig.",
+            "kepnev": "jokaiBableves.jpg",
+            "forras": "https://www.mindmegette.hu/recept/jokai-bableves"
+        },
+        {
+            "id": 34,
+            "tipus": "desszert",
+            "nev": "Gesztenyepüré",
+            "tagek": "édes;téli",
+            "ido": 30,
+            "adag": 6,
+            "hozzavalok": [
+                { "gesztenye": "50 dkg (főtt)" },
+                { "tejszín": "2 dl" },
+                { "rum": "2 evőkanál" },
+                { "vaníliás cukor": "1 csomag" },
+                { "cukor": "ízlésre" },
+                { "tej": "1 dl" }
+            ],
+            "elkeszites": "1. A főtt gesztenyét áttörjük, majd a tejjel simára keverjük.\n2. Hozzáadjuk a felmelegített tejszínt, rumot, vaníliás cukrot, és ízlés szerint édesítjük.\n3. Habverővel simára keverjük, és hidegen tálaljuk tejszínhabbal.",
+            "kepnev": "gesztenyepure.jpg",
+            "forras": "https://www.nosalty.hu/recept/gesztenyepure-rummal"
+        },
+        {
+            "id": 35,
+            "tipus": "főétel",
+            "nev": "Töltött káposzta",
+            "tagek": "hagyományos",
+            "ido": 180,
+            "adag": 8,
+            "hozzavalok": [
+                { "savanyú káposzta": "2 kg" },
+                { "darált hús": "80 dkg" },
+                { "rizs": "15 dkg" },
+                { "füstölt szalonna": "20 dkg" },
+                { "tejföl": "3 dl" },
+                { "pirospaprika": "1 evőkanál" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" }
+            ],
+            "elkeszites": "1. A rizst félig megfőzzük, és összekeverjük a darált hússal, sóval, borssal.\n2. A káposztaleveleket megtöltjük a húsos keverékkel, és szorosan feltekerjük.\n3. Egy lábas aljára káposztát teszünk, rá a töltelékeket, és rétegezve végig. Felöntjük vízzel, és lassú tűzön 2 órán át főzzük.\n4. Tejföllel és pirospaprikával tálaljuk.",
+            "kepnev": "toltottKaposzta.jpg",
+            "forras": "https://www.mindmegette.hu/recept/erdelyi-toltott-kaposzta"
+        },
+        {
+            "id": 36,
+            "tipus": "reggeli",
+            "nev": "Francia pirítós",
+            "tagek": "reggeli;édes",
+            "ido": 15,
+            "adag": 2,
+            "hozzavalok": [
+                { "kenyér": "4 szelet" },
+                { "tojás": "2 db" },
+                { "tej": "1 dl" },
+                { "cukor": "2 evőkanál" },
+                { "vanília": "1 csomag" },
+                { "vaj": "sütéshez" },
+                { "porcukor": "díszítéshez" }
+            ],
+            "elkeszites": "1. A tojásokat felverjük a tejjel, cukorral és vaníliával.\n2. A kenyérszeleteket belemártjuk a keverékbe, majd vajon mindkét oldalát aranybarnára sütjük.\n3. Porcukorral megszórva, gyümölccsel vagy mézzel tálaljuk.",
+            "kepnev": "franciaPiritos.jpg",
+            "forras": "https://www.nosalty.hu/recept/francia-piritos"
+        },
+        {
+            "id": 37,
+            "tipus": "desszert",
+            "nev": "Rigó Jancsi",
+            "tagek": "édes;csokoládés",
+            "ido": 120,
+            "adag": 12,
+            "hozzavalok": [
+                { "tojás": "6 db" },
+                { "cukor": "30 dkg" },
+                { "liszt": "15 dkg" },
+                { "kakaópor": "3 evőkanál" },
+                { "csokoládé": "30 dkg" },
+                { "tejszín": "4 dl" },
+                { "vanília": "1 rúd" }
+            ],
+            "elkeszites": "1. A tojások sárgáját a cukor felével habosra keverjük, hozzáadjuk a lisztet és kakaóport.\n2. A fehérjéből kemény habot verünk a maradék cukorral, és óvatosan a masszába keverjük.\n3. Tepsiben 180°C-on 15 percig sütjük. Kihűtjük, majd két részre vágjuk.\n4. A csokoládét a tejszínnel és a vaníliával gőz felett olvasztjuk, majd a piskóta rétegek közé kenjük. Hűtőben dermesztjük.",
+            "kepnev": "rigoJancsi.jpg",
+            "forras": "https://www.mindmegette.hu/recept/rigo-jancsi"
+        },
+        {
+            "id": 38,
+            "tipus": "főétel",
+            "nev": "Brassói aprópecsenye",
+            "tagek": "hús;sült",
+            "ido": 90,
+            "adag": 6,
+            "hozzavalok": [
+                { "sertéslapocka": "1.5 kg" },
+                { "burgonya": "1 kg" },
+                { "fokhagyma": "6 gerezd" },
+                { "zsír": "sütéshez" },
+                { "majoránna": "1 evőkanál" },
+                { "só": "ízlésre" },
+                { "bors": "ízlésre" }
+            ],
+            "elkeszites": "1. A húst kockára vágjuk, sózzuk, borsozzuk, majoránnával megszórjuk.\n2. A burgonyát meghámozzuk, és nagyobb kockákra vágjuk.\n3. Forró zsírban először a húst pirítjuk meg, majd hozzáadjuk a burgonyát és a fokhagymát. Addig sütjük, amíg minden aranybarna és ropogós lesz.",
+            "kepnev": "brassoiaAropecsenye.jpg",
+            "forras": "https://www.nosalty.hu/recept/brassoi-apropecsenye"
+        },
+        {
+            "id": 39,
+            "tipus": "leves",
+            "nev": "Halászlé",
+            "tagek": "hagyományos;hal",
+            "ido": 120,
+            "adag": 8,
+            "hozzavalok": [
+                { "ponty": "2 kg" },
+                { "vöröshagyma": "3 fej" },
+                { "pirospaprika": "5 evőkanál" },
+                { "só": "ízlésre" },
+                { "erős paprika": "ízlésre" },
+                { "víz": "3 l" }
+            ],
+            "elkeszites": "1. A halat megtisztítjuk, a fejét és a csontját vízbe tesszük, és 1 órán át főzzük.\n2. A hagymát apróra vágjuk, a paprikával együtt a lébe tesszük, és további 30 percig főzzük.\n3. A halhúst nagyobb darabokban visszatesszük a levesbe, és 5 percig főzzük. Erős paprikával ízesítjük.",
+            "kepnev": "halaszle.jpg",
+            "forras": "https://www.mindmegette.hu/recept/halaszle"
+        },
+        {
+            "id": 40,
+            "tipus": "desszert",
+            "nev": "Krémes",
+            "tagek": "édes;réteges",
+            "ido": 180,
+            "adag": 12,
+            "hozzavalok": [
+                { "liszt": "40 dkg" },
+                { "vaj": "25 dkg" },
+                { "tojás": "1 db" },
+                { "sütőpor": "1 csomag" },
+                { "tej": "1 l" },
+                { "vanília puding": "2 csomag" },
+                { "cukor": "30 dkg" },
+                { "csokoládé": "20 dkg" }
+            ],
+            "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással és sütőporral. Kinyújtjuk, és tepsiben 180°C-on 15 percig sütjük.\n2. A pudingot a tejjel és cukorral főzzük, majd kihűtjük.\n3. A piskóta tetejére kenjük a pudingot, majd a felolvasztott csokoládét öntjük rá. Hűtőben dermesztjük.",
+            "kepnev": "kremes.jpg",
+            "forras": "https://www.mindmegette.hu/recept/kremes"
+        },
+        {
+            "id": 41,
+            "tipus": "főétel",
+            "nev": "Rántott sajt",
+            "tagek": "sajtos;sült",
+            "ido": 20,
+            "adag": 4,
+            "hozzavalok": [
+                { "trapista sajt": "40 dkg" },
+                { "liszt": "10 dkg" },
+                { "tojás": "2 db" },
+                { "zsemlemorzsa": "20 dkg" },
+                { "olaj": "sütéshez" },
+                { "só": "ízlésre" }
+            ],
+            "elkeszites": "1. A sajtot ujjnyi vastag szeletekre vágjuk.\n2. A lisztbe, felvert tojásba, majd zsemlemorzsába forgatjuk.\n3. Forró olajban mindkét oldalát aranybarnára sütjük. Salátával és tartármártással tálaljuk.",
+            "kepnev": "rantottSajt.jpg",
+            "forras": "https://www.nosalty.hu/recept/rantott-sajt"
+        },
+        {
+            "id": 42,
+            "tipus": "leves",
+            "nev": "Újházi tyúkhúsleves",
+            "tagek": "hagyományos",
+            "ido": 180,
+            "adag": 8,
+            "hozzavalok": [
+                { "tyúk": "1 db" },
+                { "sárgarépa": "3 db" },
+                { "zeller": "1 db" },
+                { "petrezselyemgyökér": "1 db" },
+                { "vöröshagyma": "1 fej" },
+                { "zöldborsó": "20 dkg" },
+                { "só": "ízlésre" },
+                { "tészta": "leveshez" }
+            ],
+            "elkeszites": "1. A tyúkot nagy fazékban feltétlen vízzel lefedjük, és lassú tűzön főzzük.\n2. Hozzáadjuk a megtisztított, nagyobb darabokra vágott zöldségeket, és további 2 órát főzzük.\n3. A zöldségeket és a húst kivesszük, a levét leszűrjük. Tésztát főzünk bele, és a visszaaprított hússal és zöldségekkel tálaljuk.",
+            "kepnev": "ujhaziTyukhusleves.jpg",
+            "forras": "https://www.mindmegette.hu/recept/ujhazi-tyukhusleves"
+        },
+        {
+            "id": 43,
+            "tipus": "desszert",
+            "nev": "Isler",
+            "tagek": "édes;sütemény",
+            "ido": 90,
+            "adag": 24,
+            "hozzavalok": [
+                { "liszt": "40 dkg" },
+                { "vaj": "25 dkg" },
+                { "tojás": "1 db" },
+                { "cukor": "15 dkg" },
+                { "lekvár": "20 dkg" },
+                { "csokoládé": "20 dkg" },
+                { "tej": "2 dl" }
+            ],
+            "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással és cukorral. 30 percig hűtőben pihentetjük.\n2. Kinyújtjuk, kiszúrjuk, és 180°C-on 10 percig sütjük.\n3. Kihűlés után lekvárosan összeragasztjuk, és csokoládémázzal leöntjük.",
+            "kepnev": "isler.jpg",
+            "forras": "https://www.mindmegette.hu/recept/isler"
+        },
+        {
+            "id": 44,
+            "tipus": "főétel",
+            "nev": "Mákos tészta",
+            "tagek": "édes;tészta",
+            "ido": 30,
+            "adag": 6,
+            "hozzavalok": [
+                { "tészta": "50 dkg" },
+                { "mák": "20 dkg" },
+                { "cukor": "15 dkg" },
+                { "tej": "3 dl" },
+                { "vanília": "1 rúd" },
+                { "vaj": "5 dkg" }
+            ],
+            "elkeszites": "1. A tésztát sós vízben kifőzzük.\n2. A mákot a tejjel és a vaníliával felforraljuk, majd hozzáadjuk a cukrot.\n3. A leszűrt tésztát a mákos keverékkel összeragasztjuk, és vajjal ízesítjük.",
+            "kepnev": "makosTeszta.jpg",
+            "forras": "https://www.nosalty.hu/recept/makos-teszta"
         }
     ]
 }
