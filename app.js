@@ -82,7 +82,7 @@ const randomOrder = async () => {
 
         let randomIds = [];
         let j = 0;
-        while (j < data.receptek.length) {
+        while (j < 31) {
             let random = Math.floor(Math.random() * (data.receptek.length - 1 + 1) + 1);
             if (!randomIds.includes(random)) {
                 randomIds.push(random);
