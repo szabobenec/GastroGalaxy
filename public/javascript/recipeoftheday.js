@@ -47,37 +47,75 @@ document.addEventListener('DOMContentLoaded', async () => {
         themeChanger.addEventListener('change', () => {
             changeTheme(themeChanger);
         });
+
+        console.log("kártyaadatok feltoltése");
+        const apiData = await getAPI("/api/recipe-of-the-day");
+
+        // Extract ONLY the fields you need from the first recipe
+        const { tipus, nev, ido, adag, kepnev } = apiData.response[0];
+
+        // Create a clean object with selected fields
+        const recipeData = { tipus, nev, ido, adag, kepnev };
+        console.log("Extracted data:", recipeData);
+
+        // Render to HTML
+        let link = kepnev.split(".");
+        const teljes = document.getElementById("teljes");
+        const hova = document.getElementById("hova");
+        hova.innerHTML = `
+            <div class="recipe-card">
+                <img src="../images/recipes/${kepnev}" alt="${nev}" class="recipe-image">
+                <div class="recipe-details">
+                    <h2>${nev}</h2>
+                    <p><strong>Típus:</strong> ${tipus}</p>
+                    <p><strong>Elkészítés:</strong> ${ido} perc</p>
+                    <p><strong>Adag:</strong> ${adag}</p>
+                </div>
+            </div>
+        `;
+        document.getElementById("cardDiv").addEventListener("click", () => {
+            teljes.innerHTML = `<p><strong><a href="../recipefullview/${link[0]}" class="recipe-link">Teljes recept megtekintése</a></p>`;
+        }
+        )
+
+
     } catch (error) {
-        console.error(error);
+        console.error("Error:", error);
+        document.getElementById("hova").innerHTML = `
+            <p class="error">Failed to load recipe. Please try again later.</p>
+        `;
     }
-    document.getElementById("day").addEventListener("click", () =>{ getDate(); console.log(); Datum()
+    document.getElementById("day").addEventListener("click", () => {
+        getDate(); console.log(); Datum()
         fetch('/check-date', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-        })   
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('responseMessage').innerHTML = data.message;
         })
-        .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('responseMessage').innerHTML = 'An error occurred.';
-        });
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').innerHTML = data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('responseMessage').innerHTML = 'An error occurred.';
+            });
     })
 });
 
-function getDate() {
-    let a = new Date().toDateString();
-    console.log(a);
-}
 
-function Datum() {
-    fetch('../assets/datum.txt')
-        .then(response => response.text())
-        .then(text => console.log(text))
-}
+
+// function getDate() {
+//     let a = new Date().toDateString();
+//     console.log(a);
+// }
+
+// function Datum() {
+//     fetch('../assets/datum.txt')
+//         .then(response => response.text())
+//         .then(text => console.log(text))
+// }
 
 const changeTheme = async (theme) => {
     let saveTheme;
