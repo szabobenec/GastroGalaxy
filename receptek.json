@@ -1764,7 +1764,7 @@
         {
             "id": 46,
             "tipus": "főétel",
-            "nev": "Pösköta tekercs",
+            "nev": "Piskóta tekercs",
             "tagek": "sós;sütemény",
             "ido": 45,
             "adag": 8,
@@ -1780,7 +1780,7 @@
                 { "snidling": "1 csokor" }
             ],
             "elkeszites": "1. A lisztet összegyúrjuk a tejföllel, vajjal, sóval és sütőporral.\n2. A túrót összekeverjük a tojással, zúzott fokhagymával és finomra vágott snidlinggel.\n3. A tésztát kinyújtjuk, rákenjük a túrós tölteléket, feltekerjük.\n4. 180°C-ra előmelegített sütőben 30 percig sütjük. Melegen szeleteljük.",
-            "kepnev": "poskotaTekercs.jpg",
+            "kepnev": "piskotaTekercs.jpg",
             "forras": "https://www.mindmegette.hu/recept/tejfolos-poskota-tekercs"
         },
         {
