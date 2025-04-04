@@ -302,7 +302,7 @@ const DBSetup = async () => {
                     .join('') +
                 '}';
 
-            const res = await db.insertRecept(
+            await db.insertRecept(
                 item.tipus,
                 item.nev,
                 item.tagek,
@@ -313,8 +313,6 @@ const DBSetup = async () => {
                 item.kepnev,
                 item.forras
             );
-
-            // console.log(res);
         }
     } catch (error) {
         console.log(error);

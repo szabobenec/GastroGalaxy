@@ -77,7 +77,15 @@
 
                     <div class="sor">
                         <label for="tipus">Típusa:</label>
-                        <input type="text" name="tipus" id="tipus" placeholder="főétel" />
+                        <!-- <input type="text" name="tipus" id="tipus" placeholder="főétel" /> -->
+                        <select name="tipus" id="tipus">
+                            <option value="null" id="nullOption">-- Válasszon típust! --</option>
+                            <option value="reggeli">reggeli</option>
+                            <option value="leves">leves</option>
+                            <option value="főétel">főétel</option>
+                            <option value="vacsora">vacsora</option>
+                            <option value="desszert">desszert</option>
+                        </select>
                     </div>
 
                     <div class="sor">

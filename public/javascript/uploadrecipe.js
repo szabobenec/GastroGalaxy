@@ -34,6 +34,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log('Welcome to Recipe Uploader!');
     document.getElementById('hozzavaloPlus').addEventListener('click', AddHozzavalo);
     document.getElementById('elkeszitesPlus').addEventListener('click', AddLepes);
+    document.getElementById('tipus').addEventListener('change', function removeFirstOption() {
+        const option = document.getElementById('nullOption');
+        this.removeChild(option);
+        this.removeEventListener('change', removeFirstOption);
+    });
     try {
         const data = (await getAPI('/api/getallrecept')).response.length;
         document.getElementById('sendBtn').addEventListener('click', () => {
@@ -199,7 +204,14 @@ const SendData = (length) => {
     const kepSrc = document.getElementById('kepSrc');
     console.log(kepSrc.value);
     const forras = document.getElementById('forras').value;
-    if (nev === '' || tipus === '' || ido === '' || adag === '' || kepSrc === '' || forras === '') {
+    if (
+        nev === '' ||
+        tipus === 'null' ||
+        ido === '' ||
+        adag === '' ||
+        kepSrc === '' ||
+        forras === ''
+    ) {
         checker = false;
     }
 
@@ -262,26 +274,25 @@ const SendData = (length) => {
 
 const SendRecept = async (recept) => {
     console.log(recept);
-    const uploadForm = document.getElementById('uploadForm');
+    // const uploadForm = document.getElementById('uploadForm');
 
     try {
-        // console.log(JSON.stringify(postObject));
         const data = await postAPI('/api/feltoltes', recept);
         console.log(data);
 
-        const formData = new FormData(uploadForm);
+        // const formData = new FormData(uploadForm);
 
-        const response = await fetch('/upload', {
-            method: 'POST',
-            body: formData
-        });
+        // const response = await fetch('/upload', {
+        //     method: 'POST',
+        //     body: formData
+        // });
 
-        if (response.ok) {
-            const data = await response.json();
-            alert(data.message);
-        } else {
-            throw new Error('Upload failed');
-        }
+        // if (response.ok) {
+        //     const data = await response.json();
+        //     alert(data.message);
+        // } else {
+        //     throw new Error('Upload failed');
+        // }
 
         document.location.href = 'uploadrecipe';
     } catch (error) {
