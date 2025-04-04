@@ -527,6 +527,9 @@ body.dark-theme {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        top: 0;
+        z-index: 3;
     }
 
     .tovabbiReceptek {
@@ -621,9 +624,10 @@ body.dark-theme {
         align-items: center;
         width: 100%;
         margin: 0%;
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
+        z-index: 5;
     }
 
     .headerStart {
@@ -816,9 +820,6 @@ body.dark-theme {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        position: fixed;
-        left: 0;
-        bottom: 0;
     }
 
     .RecipeLoadDiv {
