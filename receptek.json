@@ -1228,23 +1228,23 @@
         },
         {
             "id": 58,
-            "tipus": "főétel",
-            "nev": "Rakott krumpli",
-            "tagek": "sült;krumpli",
-            "ido": 90,
-            "adag": 6,
+            "tipus": "vacsora",
+            "nev": "Baconbetekert csirkemáj",
+            "tagek": "húsimádó;sós",
+            "ido": 20,
+            "adag": 2,
             "hozzavalok": [
-                { "burgonya": "1.5 kg" },
-                { "kolbász": "40 dkg" },
-                { "tejföl": "3 dl" },
-                { "tojás": "4 db" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "vaj": "2 evőkanál" }
+                { "csirkemáj": "50 dkg" },
+                { "tej": "5 dl " },
+                { "fokhagyma": "2 gerezd" },
+                { "babérlevél": "1 db" },
+                { "rozmaring": "1 ág " },
+                { "bacon": "15 dkg " },
+                { "fehér bors": "1 tk" }
             ],
-            "elkeszites": "1. A burgonyát meghámozzuk, és kb. 5 mm vastag szeletekre vágjuk.\n2. A kolbászt karikákra vágjuk, a tojásokat keményre főzzük, és karikákra vágjuk.\n3. Tepsibe rétegezzük a burgonyát, kolbászt, tojást és tejfölt. Ismételjük a rétegezést.\n4. 180°C-on 1 órán át sütjük, amíg a burgonya megpuhul és a teteje megpirul.",
-            "kepnev": "rakottKrumpli.jpg",
-            "forras": "https://www.nosalty.hu/recept/rakott-krumpli"
+            "elkeszites": "1. A májat hártyázzuk le, az ereket távolítsuk el, majd mossuk át folyó víz alatt.\n2. A tejet öntsük keverőtálba, majd adjuk hozzá a reszelt fokhagymát, borsot, babérlevelet és a rozmaringot. Ebbe pácoljuk bele a májakat, fedjük le, és egy éjszakára tegyük hűtőbe.\n3. Másnap a májakról itassuk fel a felesleges nedvességet, majd baconnel tekerjük körbe.\n4. A baconnel körbetekert májakat sorakoztassuk sütőpapírral bélelt tepsire, majd toljuk 180 fokosra előmelegített sütőbe, és 15-20 perc alatt süssük készre. (A sütési idő a máj méretétől és a sütőtől is függ, épp ezért előfordulhat, hogy picit tovább kell sütni.)\n5. Az elkészült baconnel körbetekert csirkemáj mellé kínálj krumplipürét vagy salátát.",
+            "kepnev": "mJ.jpg",
+            "forras": "https://sobors.hu/receptek/fokhagymas-baconnel-korbetekert-csirkemaj-recept/"
         },
         {
             "id": 59,
@@ -1658,26 +1658,6 @@
         },
         {
             "id": 79,
-            "tipus": "vacsora",
-            "nev": "Baconbetekert csirkemáj",
-            "tagek": "húsimádó;sós",
-            "ido": 20,
-            "adag": 2,
-            "hozzavalok": [
-                { "csirkemáj": "50 dkg" },
-                { "tej": "5 dl " },
-                { "fokhagyma": "2 gerezd" },
-                { "babérlevél": "1 db" },
-                { "rozmaring": "1 ág " },
-                { "bacon": "15 dkg " },
-                { "fehér bors": "1 tk" }
-            ],
-            "elkeszites": "1. A májat hártyázzuk le, az ereket távolítsuk el, majd mossuk át folyó víz alatt.\n2. A tejet öntsük keverőtálba, majd adjuk hozzá a reszelt fokhagymát, borsot, babérlevelet és a rozmaringot. Ebbe pácoljuk bele a májakat, fedjük le, és egy éjszakára tegyük hűtőbe.\n3. Másnap a májakról itassuk fel a felesleges nedvességet, majd baconnel tekerjük körbe.\n4. A baconnel körbetekert májakat sorakoztassuk sütőpapírral bélelt tepsire, majd toljuk 180 fokosra előmelegített sütőbe, és 15-20 perc alatt süssük készre. (A sütési idő a máj méretétől és a sütőtől is függ, épp ezért előfordulhat, hogy picit tovább kell sütni.)\n5. Az elkészült baconnel körbetekert csirkemáj mellé kínálj krumplipürét vagy salátát.",
-            "kepnev": "mJ.jpg",
-            "forras": "https://sobors.hu/receptek/fokhagymas-baconnel-korbetekert-csirkemaj-recept/"
-        },
-        {
-            "id": 80,
             "tipus": "főétel",
             "nev": "Korianderes krumplifőzelék",
             "tagek": "főzelék",
