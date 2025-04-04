@@ -3,6 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const fs = require('fs');
+const multer = require('multer');
 
 const app = express();
 const router = express.Router();
@@ -123,40 +124,40 @@ app.get('/api/recipe-of-the-day', async (request, response) => {
 });
 
 //! Nap recepje apik; Dátum visszaigazolása
-app.post('/check-date', (req, res) => {
-    const datumPath = path.join(__dirname, '/public/assets/datum.txt');
-    const idPath = path.join(__dirname, '/public/assets/azonosito.txt');
+// app.post('/check-date', (req, res) => {
+//     const datumPath = path.join(__dirname, '/public/assets/datum.txt');
+//     const idPath = path.join(__dirname, '/public/assets/azonosito.txt');
 
-    let az = null;
-    fs.readFile(datumPath, 'utf8', (err, fileDate) => {
-        if (err) {
-            console.error('Error reading file:', err); // Log the error
-        }
+//     let az = null;
+//     fs.readFile(datumPath, 'utf8', (err, fileDate) => {
+//         if (err) {
+//             console.error('Error reading file:', err); // Log the error
+//         }
 
-        // Get the current date in YYYY-MM-DD format
-        const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+//         // Get the current date in YYYY-MM-DD format
+//         const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
 
-        // Check if the date in the file matches the current date
-        if (fileDate.trim() === currentDate) {
-            fs.readFile(idPath, 'utf8', (err, fileId) => {
-                if (err) {
-                    console.error('Error reading file:', err); // Log the error
-                    return res.status(500).json({ error: 'Error reading file' });
-                }
-                return res.json({ message: currentDate + ' id: ' + fileId });
-            });
-        } else {
-            fs.writeFile(datumPath, currentDate, (err) => {
-                if (err) console.log(err);
-            });
-            let newID = '' + (Math.floor(Math.random() * 10) + 1);
-            fs.writeFile(idPath, newID, (err) => {
-                if (err) console.log(err);
-            });
-            res.json({ message: 'Updated date to today: ' + currentDate + ' id: ' + newID });
-        }
-    });
-});
+//         // Check if the date in the file matches the current date
+//         if (fileDate.trim() === currentDate) {
+//             fs.readFile(idPath, 'utf8', (err, fileId) => {
+//                 if (err) {
+//                     console.error('Error reading file:', err); // Log the error
+//                     return res.status(500).json({ error: 'Error reading file' });
+//                 }
+//                 return res.json({ message: currentDate + ' id: ' + fileId });
+//             });
+//         } else {
+//             fs.writeFile(datumPath, currentDate, (err) => {
+//                 if (err) console.log(err);
+//             });
+//             let newID = '' + (Math.floor(Math.random() * 10) + 1);
+//             fs.writeFile(idPath, newID, (err) => {
+//                 if (err) console.log(err);
+//             });
+//             res.json({ message: 'Updated date to today: ' + currentDate + ' id: ' + newID });
+//         }
+//     });
+// });
 
 //! Összes recept API:
 app.get('/api/getallrecept', async (request, response) => {
@@ -216,14 +217,23 @@ app.get('/api/getrecept', (request, response) => {
 });
 
 //! Specifikus recept új GET:
-// app.get('/api/fullview/:recept', (request, response) => {
-//     const recept = request.params.recept;
-//     const link = `/recipefullview/${recept}`;
-// });
+app.get('/api/fullview/:recept', async (request, response) => {
+    try {
+        const recept = request.params.recept;
+        const data = await db.selectAll();
+        let j = 0;
+        while (j < data.length && data[j].kepnev.split('.')[0] !== recept) {
+            j++;
+        }
+
+        response.status(200).json({ message: 'nem hiba', response: data[j] });
+    } catch (error) {
+        response.status(500).json({ message: 'Hiba', response: error });
+    }
+});
 
 //! Receptfeltöltés:
 //? Kép felöltése:
-const multer = require('multer');
 const storage = multer.diskStorage({
     destination: (request, file, callback) => {
         callback(null, path.join(__dirname + '/public/images/recipes'));
