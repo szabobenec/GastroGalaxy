@@ -20,6 +20,8 @@
     --secondaryClrs: white;
     --cardClrs: var(--mint);
     --textColor: var(--raisinBlack);
+    --inpColor: var(--raisinBlack);
+    --inpBg: var(--nonPhotoBlue);
 }
 
 [data-theme='dark'] {
@@ -78,6 +80,16 @@ body.dark-theme {
     --secondaryClrs: var(--iris);
     --cardClrs: var(--iris);
     --textColor: white;
+}
+
+input{
+    color: var(--inpColor);
+    background-color: var(--vistaBlue);
+}
+
+textarea{
+    color: var(--inpColor);
+    background-color: white
 }
 
 .mainDiv {
