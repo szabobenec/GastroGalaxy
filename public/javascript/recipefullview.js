@@ -34,16 +34,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     //! backend-en lementett recept név megkeresése az összes receptben
     try {
         const data = (await getAPI('/api/getallrecept')).response;
-        const receptNev = await getAPI('/api/getrecept');
-        let random = Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0);
-        let recept = data[random];
-        for (let item of data) {
-            if (item.nev == receptNev.recept) {
-                recept = item;
-            }
+        // const receptNev = await getAPI('/api/getrecept');
+
+        const recept = window.location.href.split('/')[window.location.href.split('/').length - 1];
+
+        if (recept !== null) {
+            const res = (await getAPI(`/api/fullview/${recept}`)).response;
+            FillData(res);
+            RandomRecipes(data, res);
+        } else {
+            let random = Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0);
+            let res = data[random];
+            FillData(res);
+            RandomRecipes(data, res);
         }
-        FillData(recept);
-        RandomRecipes(data, recept);
 
         const themeChanger = document.getElementById('themeChanger');
         const theme = (await getAPI('/api/gettheme')).theme;
