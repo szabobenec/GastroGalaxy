@@ -336,11 +336,15 @@ body.dark-theme {
 
     .headerStart {
         height: 100%;
-        width: 80%;
+        width: 20%;
         display: flex;
         align-items: center;
         padding-left: 10px;
         gap: 20px;
+    }
+
+    .innerHeaderStart {
+        display: none;
     }
 
     .headerLogo {
@@ -351,6 +355,12 @@ body.dark-theme {
     .links {
         text-decoration: none;
         color: var(--textColor);
+    }
+
+    .headerMiddle {
+        width: 60%;
+        display: flex;
+        justify-content: center;
     }
 
     .headerEnd {
@@ -534,10 +544,16 @@ body.dark-theme {
 
     .headerStart {
         height: 100%;
-        width: 50%;
+        width: 90%;
         display: flex;
         align-items: center;
         padding-left: 10px;
+        gap: 20px;
+    }
+
+    .innerHeaderStart {
+        display: flex;
+        align-items: center;
         gap: 20px;
     }
 
@@ -551,8 +567,13 @@ body.dark-theme {
         color: var(--textColor);
     }
 
+    .headerMiddle {
+        display: none;
+        width: 0%;
+    }
+
     .headerEnd {
-        width: 50%;
+        width: 10%;
         display: flex;
         flex-direction: row-reverse;
         padding-right: 10px;
