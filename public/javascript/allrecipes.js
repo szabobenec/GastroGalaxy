@@ -35,7 +35,7 @@ const postAPI = (url, postObject) => {
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const data = (await getAPI('/api/getallrecept')).response;
-        SelectType(data);
+        OrderRecipes(data);
 
         //? Témaválasztás a NAV-ban lévő SVG segítségével
         const themeChanger = document.getElementById('themeChanger');
@@ -75,6 +75,27 @@ const changeTheme = async (theme) => {
     } catch (error) {
         console.error(error);
     }
+};
+
+//! Receptek abc sorrendbe rendezése, az egyszerűbb megtalálás érdekében
+const OrderRecipes = (data) => {
+    let names = [];
+    for (let item of data) {
+        names.push(item.nev);
+    }
+    names.sort((a, b) => a.localeCompare(b));
+
+    let newData = [];
+    let i = 0;
+    while (newData.length < data.length) {
+        let j = 0;
+        while (j < data.length && data[j].nev !== names[i]) {
+            j++;
+        }
+        i++;
+        newData.push(data[j]);
+    }
+    SelectType(newData);
 };
 
 //! Típusonként való elosztás/elrendezés
