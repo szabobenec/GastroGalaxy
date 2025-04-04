@@ -94,32 +94,6 @@ header {
     z-index: 5;
 }
 
-.headerStart {
-    height: 100%;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    gap: 20px;
-}
-
-.headerLogo {
-    height: 90%;
-    width: auto;
-}
-
-.links {
-    text-decoration: none;
-    color: var(--textColor);
-}
-
-.headerEnd {
-    width: 20%;
-    display: flex;
-    flex-direction: row-reverse;
-    padding-right: 10px;
-}
-
 /* From Uiverse.io by Galahhad */
 /*! Theme Switch */
 .theme-switch {
@@ -358,133 +332,356 @@ header {
     transform: translateY(-50%);
 }
 
-.mainDiv {
-    margin: 5px;
+/*? Kis képernyős eszközök */
+@media only screen and (max-width: 992px) {
+    .headerStart {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        gap: 20px;
+    }
+
+    .innerHeaderStart {
+        display: none;
+    }
+
+    .headerLogo {
+        height: 90%;
+        width: auto;
+    }
+
+    .links {
+        text-decoration: none;
+        color: var(--textColor);
+    }
+
+    .headerMiddle {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerEnd {
+        width: 20%;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 10px;
+    }
+
+    .mainDiv {
+        margin: 5px;
+    }
+
+    .hozzavalokDiv,
+    .hozzavalok {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .card {
+        border: 1px solid var(--textColor);
+        background-color: var(--cardClrs);
+        border-radius: 5px;
+        padding: 5px;
+        font-size: larger;
+    }
+
+    .grow2 {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .grow2:hover {
+        transform: scale(1.15);
+    }
+
+    .formsDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .innerForms {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    #addBtn {
+        height: 25px;
+        width: 25px;
+    }
+    #search {
+        height: 25px;
+        width: 75px;
+    }
+
+    .receptek {
+        margin: 10px;
+    }
+
+    .teljesDiv,
+    .reszlegesDiv,
+    .receptekDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    #formData0 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .innerFormData0 {
+        display: flex;
+    }
+
+    .receptDivs {
+        background-color: var(--cardClrs);
+        color: var(--textColor);
+        width: 190px;
+        height: 275px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .grow {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .grow:hover {
+        transform: scale(1.2);
+    }
+
+    .littleImg {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--textColor);
+    }
+
+    .titleDiv {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 20%;
+    }
+
+    .titleLink {
+        text-decoration: none;
+    }
+
+    .linkTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        color: var(--textColor);
+        text-decoration: none;
+    }
+
+    footer {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 108px;
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
-.hozzavalokDiv,
-.hozzavalok {
-    display: flex;
-    /* justify-content: space-between; */
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 25px;
-}
+/*? Nagy képernyős eszközök */
+@media only screen and (min-width: 992px) {
+    .headerStart {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        gap: 20px;
+    }
 
-.card {
-    border: 1px solid var(--textColor);
-    background-color: var(--cardClrs);
-    border-radius: 5px;
-    padding: 5px;
-    font-size: larger;
-    /* width: 100px; */
-}
+    .innerHeaderStart {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
-.grow2 {
-    transition: all 0.2s ease-in-out;
-}
+    .headerLogo {
+        height: 90%;
+        width: auto;
+    }
 
-.grow2:hover {
-    transform: scale(1.15);
-}
+    .links {
+        text-decoration: none;
+        color: var(--textColor);
+    }
 
-.formsDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    .headerMiddle {
+        display: none;
+        width: 0%;
+    }
 
-.innerForms {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 25px;
-}
+    .headerEnd {
+        width: 10%;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 10px;
+    }
 
-#addBtn {
-    height: 25px;
-    width: 25px;
-}
-#search {
-    height: 25px;
-    width: 75px;
-}
+    .mainDiv {
+        margin: 5px;
+    }
 
-.receptek {
-    margin: 10px;
-}
+    .hozzavalokDiv,
+    .hozzavalok {
+        display: flex;
+        /* justify-content: space-between; */
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 25px;
+    }
 
-.teljesDiv,
-.reszlegesDiv,
-.receptekDiv {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    gap: 25px;
-    margin-top: 25px;
-}
+    .card {
+        border: 1px solid var(--textColor);
+        background-color: var(--cardClrs);
+        border-radius: 5px;
+        padding: 5px;
+        font-size: larger;
+        /* width: 100px; */
+    }
 
-.receptDivs {
-    background-color: var(--cardClrs);
-    color: var(--textColor);
-    width: 250px;
-    height: 300px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .grow2 {
+        transition: all 0.2s ease-in-out;
+    }
 
-.hide {
-    display: none;
-}
+    .grow2:hover {
+        transform: scale(1.15);
+    }
 
-.grow {
-    transition: all 0.2s ease-in-out;
-}
+    .formsDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.grow:hover {
-    transform: scale(1.2);
-}
+    .innerForms {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
 
-.littleImg {
-    width: 215px;
-    height: 215px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid var(--textColor);
-}
+    #addBtn {
+        height: 25px;
+        width: 25px;
+    }
+    #search {
+        height: 25px;
+        width: 75px;
+    }
 
-.titleDiv {
-    display: flex;
-    align-items: center;
-    width: 90%;
-    height: 20%;
-}
+    .receptek {
+        margin: 10px;
+    }
 
-.titleLink {
-    text-decoration: none;
-}
+    .teljesDiv,
+    .reszlegesDiv,
+    .receptekDiv {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+        margin-top: 25px;
+    }
 
-.linkTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    color: var(--textColor);
-    text-decoration: none;
-}
+    .receptDivs {
+        background-color: var(--cardClrs);
+        color: var(--textColor);
+        width: 250px;
+        height: 300px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-footer {
-    background-color: var(--bgColor);
-    color: var(--textColor);
-    height: 108px;
-    width: 100%;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    .hide {
+        display: none;
+    }
+
+    .grow {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .grow:hover {
+        transform: scale(1.2);
+    }
+
+    .littleImg {
+        width: 215px;
+        height: 215px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--textColor);
+    }
+
+    .titleDiv {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 20%;
+    }
+
+    .titleLink {
+        text-decoration: none;
+    }
+
+    .linkTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        color: var(--textColor);
+        text-decoration: none;
+    }
+
+    footer {
+        background-color: var(--bgColor);
+        color: var(--textColor);
+        height: 108px;
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
