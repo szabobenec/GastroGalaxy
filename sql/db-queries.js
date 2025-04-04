@@ -11,8 +11,8 @@ const pool = mysql.createPool({
 //! összes recept lekérése
 function selectAll() {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT * FROM recept;', (err, result, fields) => {
-            if (err) return reject(err);
+        pool.query('SELECT * FROM recept;', (error, result, fields) => {
+            if (error) return reject(error);
             resolve(result);
         });
     });
@@ -39,10 +39,32 @@ function selectRecipeOfTheDay(id) {
         });
     });
 }
+//! tábla tórlése és újra létrehozása, annak érdekében, hogy mindenkinél egyezők legyenek az adatbázis adatai
+function dropTable() {
+    return new Promise((resolve, reject) => {
+        pool.query('DROP TABLE recept;', (error, result, fields) => {
+            if (error) return reject(error);
+            resolve(result);
+        });
+    });
+}
+function createTable() {
+    return new Promise((resolve, reject) => {
+        pool.query(
+            'CREATE TABLE recept (id INT PRIMARY KEY AUTO_INCREMENT, tipus VARCHAR(25) NOT NULL, nev VARCHAR(100) NOT NULL, tagek TEXT, ido INT, adag INT NOT NULL, hozzavalok TEXT NOT NULL, elkeszites TEXT NOT NULL, kepnev VARCHAR(100), forras VARCHAR(255));',
+            (error, result, fields) => {
+                if (error) return reject(error);
+                resolve(result);
+            }
+        );
+    });
+}
 
 module.exports = {
     selectAll,
     insertRecept,
-    selectRecipeOfTheDay
+    selectRecipeOfTheDay,
+    dropTable,
+    createTable
 };
 //?Több function esetén vesszővel felsorolni a meghívható metódusokat. (pl.: selectAll, insertData)

@@ -284,6 +284,9 @@ const DBSetup = async () => {
     try {
         const data = JSON.parse(await readFile('receptek.json')).receptek;
 
+        await db.dropTable();
+        await db.createTable();
+
         for (let item of data) {
             let hozzavalok = JSON.stringify(item.hozzavalok);
             hozzavalok =
@@ -311,14 +314,14 @@ const DBSetup = async () => {
                 item.forras
             );
 
-            console.log(res);
+            // console.log(res);
         }
     } catch (error) {
         console.log(error);
     }
 };
 //? Ezt kell hozzá kivenni kommentből:
-// DBSetup();
+DBSetup();
 
 //! Server
 app.use(express.static('public'));
