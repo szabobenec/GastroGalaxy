@@ -20,6 +20,8 @@
     --secondaryClrs: white;
     --cardClrs: var(--mint);
     --textColor: var(--raisinBlack);
+    --inpColor: var(--darkPurple);
+    --inpBg: white;
 }
 
 [data-theme='dark'] {
@@ -78,6 +80,8 @@ body.dark-theme {
     --secondaryClrs: var(--iris);
     --cardClrs: var(--iris);
     --textColor: white;
+    --inpColor: var(--nonPhotoBlue);
+    --inpBg: var(--gunmetal);
 }
 
 header {
@@ -330,6 +334,13 @@ header {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+input,
+select,
+textarea {
+    color: var(--inpColor);
+    background-color: var(--inpBg);
 }
 
 /*? Kis képernyős eszközök */
