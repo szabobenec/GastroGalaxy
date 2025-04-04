@@ -20,8 +20,8 @@
     --secondaryClrs: white;
     --cardClrs: var(--mint);
     --textColor: var(--raisinBlack);
-    --inpColor: var(--raisinBlack);
-    --inpBg: var(--nonPhotoBlue);
+    --inpColor: var(--darkPurple);
+    --inpBg: var(--mint);
 }
 
 html {
@@ -55,14 +55,10 @@ body {
     --dot-color: var(--secondaryClrs);
     --dot-size: 2px;
     --dot-space: 15px;
-    background: linear-gradient(
-                90deg,
-                var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-                transparent 1%
-            )
-            center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
-            center / var(--dot-space) var(--dot-space),
+    background: linear-gradient(90deg,
+            var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+            transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         var(--dot-color);
 
     color: var(--textColor);
@@ -73,17 +69,17 @@ body.dark-theme {
     --secondaryClrs: var(--iris);
     --cardClrs: var(--iris);
     --textColor: white;
+    --inpColor: var(--nonPhotoBlue);
+    --inpBg: var(--gunmetal);
 }
 
-input{
+input,
+select,
+textarea {
     color: var(--inpColor);
-    background-color: var(--vistaBlue);
+    background-color: var(--inpBg);
 }
 
-textarea{
-    color: var(--inpColor);
-    background-color: white
-}
 
 .mainDiv {
     margin-left: 10px;
@@ -148,9 +144,7 @@ header {
     --sun-bg: #ecca2f;
     --moon-bg: #c4c9d1;
     --spot-color: #959db1;
-    --circle-container-offset: calc(
-        (var(--circle-container-diameter) - var(--container-height)) / 2 * -1
-    );
+    --circle-container-offset: calc((var(--circle-container-diameter) - var(--container-height)) / 2 * -1);
     --stars-color: #fff;
     --clouds-color: #f3fdff;
     --back-clouds-color: #aacadf;
@@ -238,10 +232,8 @@ header {
         0em -0.062em 0.062em 0em #a1872a inset;
     box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset,
         0em -0.062em 0.062em 0em #a1872a inset;
-    -webkit-filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25))
-        drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
-    filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25))
-        drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
     overflow: hidden;
     -webkit-transition: var(--transition);
     -o-transition: var(--transition);
@@ -335,15 +327,15 @@ header {
 
 /* actions */
 
-.theme-switch__checkbox:checked + .theme-switch__container {
+.theme-switch__checkbox:checked+.theme-switch__container {
     background-color: var(--container-night-bg);
 }
 
-.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container {
+.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__circle-container {
     left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter));
 }
 
-.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container:hover {
+.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__circle-container:hover {
     left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em);
 }
 
@@ -351,17 +343,17 @@ header {
     left: calc(var(--circle-container-offset) + 0.187em);
 }
 
-.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__moon {
+.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__moon {
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
 }
 
-.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__clouds {
+.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__clouds {
     bottom: -4.062em;
 }
 
-.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__stars-container {
+.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__stars-container {
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);

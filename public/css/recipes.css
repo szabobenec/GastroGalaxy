@@ -668,6 +668,7 @@ header {
         display: flex;
         flex-direction: row;
         align-items: center;
+        width: 40%;
         gap: 5px;
         color: var(--textColor);
         text-decoration: none;
