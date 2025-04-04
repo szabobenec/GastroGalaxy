@@ -194,7 +194,6 @@ const RemoveLepes = (div) => {
 };
 
 const SendData = (length) => {
-    console.log('send');
     let checker = true;
     const nev = document.getElementById('nev').value;
     const tipus = document.getElementById('tipus').value;
@@ -202,7 +201,6 @@ const SendData = (length) => {
     const adag = document.getElementById('adag').value;
     const tagek = document.getElementById('tagek').value;
     const kepSrc = document.getElementById('kepSrc');
-    console.log(kepSrc.value);
     const forras = document.getElementById('forras').value;
     if (
         nev === '' ||
@@ -243,8 +241,6 @@ const SendData = (length) => {
         lepesSzam++;
     }
 
-    console.log(checker);
-
     if (checker) {
         let elkeszites = lepesek.join('\n');
         let hozzavalo = [];
@@ -269,6 +265,12 @@ const SendData = (length) => {
         };
 
         SendRecept(recept);
+    } else {
+        Swal.fire({
+            title: 'Sikertelen feltöltés!',
+            text: 'Üres mező(k)!',
+            icon: 'error'
+        });
     }
 };
 
@@ -280,21 +282,21 @@ const SendRecept = async (recept) => {
         const data = await postAPI('/api/feltoltes', recept);
         console.log(data);
 
-        // const formData = new FormData(uploadForm);
+        if (data.message !== 'Hiba') {
+            await Swal.fire({
+                title: 'Sikeres feltöltés!',
+                text: `Recept sikeresen feltöltve! (${data.message})`,
+                icon: 'success'
+            });
 
-        // const response = await fetch('/upload', {
-        //     method: 'POST',
-        //     body: formData
-        // });
-
-        // if (response.ok) {
-        //     const data = await response.json();
-        //     alert(data.message);
-        // } else {
-        //     throw new Error('Upload failed');
-        // }
-
-        document.location.href = 'uploadrecipe';
+            document.location.href = `/recipefullview/${recept.kepnev}`;
+        } else {
+            Swal.fire({
+                title: 'Sikertelen feltöltés!',
+                text: `Hibás adatok! (${data.message})`,
+                icon: 'error'
+            });
+        }
     } catch (error) {
         console.error(error);
     }

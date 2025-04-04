@@ -275,7 +275,7 @@ app.post('/api/feltoltes', async (request, response) => {
 
         response.status(200).json({ message: data2, data: recept, response: res });
     } catch (error) {
-        response.status(500).json({ message: error });
+        response.status(500).json({ message: 'Hiba', response: error });
     }
 });
 
