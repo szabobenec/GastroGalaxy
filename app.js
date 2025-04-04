@@ -215,6 +215,7 @@ app.get('/api/getrecept', (request, response) => {
     response.status(200).json({ recept: recept });
 });
 
+//! Specifikus recept új GET:
 // app.get('/api/fullview/:recept', (request, response) => {
 //     const recept = request.params.recept;
 //     const link = `/recipefullview/${recept}`;
