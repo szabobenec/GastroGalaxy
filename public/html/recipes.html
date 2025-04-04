@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/recipes.css" />
         <link rel="icon" type="image/x-icon" href="../images/mascot.png" />
     </head>
-    
+
     <body class="dark-theme">
         <header>
             <div class="headerStart">
@@ -67,11 +67,27 @@
 
         <div class="mainDiv">
             <h1>Receptek</h1>
+
+            <h2>Keressen recepteket név alapján!</h2>
+
+            <div class="formsDiv" id="SearchDiv">
+                <form id="formData0">
+                    <label for="searchBar0">Recept neve: </label>
+                    <input
+                        type="search"
+                        name="searchBar0"
+                        id="searchBar0"
+                        placeholder="Keresés . . ."
+                    />
+                    <div class="receptekDiv" id="receptekDiv"></div>
+                </form>
+            </div>
+
             <h2>Keressen recepteket hozzávalók alapján!</h2>
 
             <div class="formsDiv" id="formDiv">
                 <form id="formData">
-                    <label for="searchBar">Recept neve: </label>
+                    <label for="searchBar">Hozzávaló neve: </label>
                     <input
                         type="search"
                         name="searchBar"
@@ -88,9 +104,9 @@
             </div>
 
             <div id="receptek" class="receptek">
-                <h2 class="teljes" id="teljes">Ezzel megegyező receptek:</h2>
+                <h3 class="teljes" id="teljes">Ezzel megegyező receptek:</h3>
                 <div class="teljesDiv" id="teljesDiv"></div>
-                <h2 class="reszleges" id="reszleges">A továbbiak is tartalmazzák:</h2>
+                <h3 class="reszleges" id="reszleges">A továbbiak is tartalmazzák:</h3>
                 <div class="reszlegesDiv" id="reszlegesDiv"></div>
             </div>
 

@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const data = (await getAPI('/api/getallrecept')).response;
         MakeArray(data);
+        FillRecipesDiv(data);
+        document.getElementById('searchBar0').addEventListener('input', function () {
+            SearchRecipe(this, data);
+        });
 
         //? Témaválasztás a NAV-ban lévő SVG segítségével
         const themeChanger = document.getElementById('themeChanger');
@@ -74,6 +78,53 @@ const changeTheme = async (theme) => {
         // console.log(data);
     } catch (error) {
         console.error(error);
+    }
+};
+
+//! Receptes div feltöltése
+const FillRecipesDiv = (data) => {
+    const receptekDiv = document.getElementById('receptekDiv');
+    for (let item of data) {
+        const div = document.createElement('div');
+
+        receptekDiv.appendChild(div);
+        div.setAttribute('class', 'receptDivs grow hide');
+        div.addEventListener('click', () => {
+            SendRecipe(item);
+        });
+
+        const titleDiv = document.createElement('div');
+        div.appendChild(titleDiv);
+        titleDiv.setAttribute('class', 'titleDiv');
+
+        const h3 = document.createElement('h3');
+        titleDiv.appendChild(h3);
+        h3.innerHTML = item.nev;
+
+        const img = document.createElement('img');
+        div.appendChild(img);
+        img.setAttribute('src', `../images/recipes/${item.kepnev}`);
+        img.setAttribute('class', 'littleImg');
+    }
+};
+
+//! Receptre keresés
+const SearchRecipe = (elem, data) => {
+    const receptekDiv = document.getElementById('receptekDiv');
+    const value = elem.value.toLowerCase();
+
+    for (let item of receptekDiv.children) {
+        const isVisible = item.firstChild.firstChild.innerHTML.toLowerCase().includes(value);
+        item.classList.toggle('hide', !isVisible);
+        if (value == '') {
+            item.classList.add('hide');
+        }
+    }
+
+    if (value == '') {
+        for (let item of receptekDiv.children) {
+            item.classList.add('hide');
+        }
     }
 };
 
