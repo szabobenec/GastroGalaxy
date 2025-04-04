@@ -22,13 +22,6 @@
     --textColor: var(--raisinBlack);
 }
 
-[data-theme='dark'] {
-    --background-color: #121212;
-    --text-color: #fff;
-    --svg-fill: #fff;
-    --button-background: #333;
-}
-
 html {
     color-scheme: light dark;
 }
