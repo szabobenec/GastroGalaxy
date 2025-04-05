@@ -79,38 +79,43 @@ const writeFile = (file, text) => {
 //? Random sorrend generálás:
 const randomOrder = async () => {
     try {
+        let string = await readFile('rotd.txt');
         const data = JSON.parse(await readFile('receptek.json'));
+        const currentMonth = new Date().toISOString().split('T')[0].split('-')[1];
 
-        let randomIds = [];
-        let j = 0;
-        while (j < 31) {
-            let random = Math.floor(Math.random() * (data.receptek.length - 1 + 1) + 1);
-            if (!randomIds.includes(random)) {
-                randomIds.push(random);
-                j++;
+        if (string.split('.')[0] !== currentMonth) {
+            let randomIds = [];
+            let j = 0;
+            while (j < 31) {
+                let random = Math.floor(Math.random() * (data.receptek.length - 1 + 1) + 1);
+                if (!randomIds.includes(random)) {
+                    randomIds.push(random);
+                    j++;
+                }
             }
+
+            randomIds[0] = 45; //* Shrek az élet, Shrek a szeretet
+
+            string = `${currentMonth}.${randomIds.join(';')}`;
+
+            await writeFile('rotd.txt', string);
         }
-        console.log(randomIds);
-
-        let string = randomIds.join(';');
-
-        await writeFile('rotd.txt', string);
     } catch (error) {
         console.log(error);
     }
 };
-// randomOrder();
+randomOrder();
 
 //! Recipe of the Day API:
 app.get('/api/recipe-of-the-day', async (request, response) => {
     try {
-        const string = await readFile('rotd.txt');
+        const string = (await readFile('rotd.txt')).split('.')[1];
         let randomIds = [];
         for (let item of string.split(';')) {
             randomIds.push(parseInt(item));
         }
         const currentDate = new Date().toISOString().split('T')[0];
-        const dayCounter = parseInt(currentDate.split('-')[currentDate.split('-').length - 1]);
+        const dayCounter = parseInt(currentDate.split('-')[2]);
 
         const res = await db.selectRecipeOfTheDay(randomIds[dayCounter - 1]);
 
