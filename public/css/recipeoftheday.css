@@ -14,10 +14,11 @@
     --secondaryClrs: white;
     --cardClrs: var(--mint);
     --textColor: var(--raisinBlack);
-    --rotdCardClr: var(--darkCyan);
+    --rotdCardClr: var(--vistaBlue);
     --rotdTextClr: white;
-    --rotdCardflip: var(--mint);
-    --rotdCardfliptxt: var(--plum);
+    --rotdCardflip: var(--gunmetal);
+    --rotdCardflipborder: var(--darkCyan);
+    --rotdCardfliptxt:white;
 }
 
 [data-theme='dark'] {
@@ -79,8 +80,9 @@ body.dark-theme {
     --textColor: white;
     --rotdCardClr: var(--nonPhotoBlue);
     --rotdTextClr: var(--raisinBlack);
-    --rotdCardflip: var(--vistaBlue);
-    --rotdCardfliptxt: var(--nonPhotoBlue);
+    --rotdCardflip:  white;
+    --rotdCardflipborder: var(--plum);
+    --rotdCardfliptxt: var(--plum);
 }
 
 /* From Uiverse.io by Galahhad */
@@ -503,7 +505,7 @@ footer {
 
 .button:focus {
     transition: ease-in 200ms;
-    border: 4px solid var(--rotdCardfliptxt);
+    border: 4px solid var(--rotdCardflipborder);
     background-color: var(--rotdCardflip);
 }
 
