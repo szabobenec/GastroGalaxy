@@ -709,8 +709,5 @@ body.dark-theme {
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: fixed;
-        left: 0;
-        bottom: 0;
     }
 }
