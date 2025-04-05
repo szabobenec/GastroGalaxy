@@ -27,7 +27,7 @@ app.use(
 router.get('/', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/main.html'));
 });
-//? Receptek:
+//? Receptkereső:
 router.get('/recipes/', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/recipes.html'));
 });
@@ -35,26 +35,26 @@ router.get('/recipes/', (request, response) => {
 router.get('/recipeoftheday/', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/recipeoftheday.html'));
 });
-//? Kapcsolat:
-router.get('/connection/', (request, response) => {
-    response.sendFile(path.join(__dirname + '/public/html/connection.html'));
-});
-//? Recept minden adattal együtt:
-router.get('/recipefullview/:recept', (request, response) => {
-    response.sendFile(path.join(__dirname + '/public/html/recipefullview.html'));
-});
 //? Összes recept:
 router.get('/allrecipes/', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/allrecipes.html'));
+});
+//? Spcifikus recept minden adattal:
+router.get('/recipefullview/:recept', (request, response) => {
+    response.sendFile(path.join(__dirname + '/public/html/recipefullview.html'));
 });
 //? Recept feltöltése:
 router.get('/uploadrecipe', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/uploadrecipe.html'));
 });
+//? Kapcsolat:
+router.get('/connection/', (request, response) => {
+    response.sendFile(path.join(__dirname + '/public/html/connection.html'));
+});
 
 app.use(express.json());
 //! API végpontok
-//? fájl olvasás és írás
+//? Fájlolvasás és -írás
 const readFile = (file) => {
     return new Promise((resolve, reject) => {
         fs.readFile(file, 'utf-8', (error, data) => {
@@ -137,13 +137,13 @@ app.get('/api/getallrecept', async (request, response) => {
 });
 
 //! Light-Dark Theme - Témaválasztó, ami elmenti még oldalváltáskor is a témát
-let theme = true;
-//? GET - Elküldi az előzőleg beállított témát
+let theme = true; //* Az alapértelmezett téma a sötét téma
+//? GET - Elküldi az elmentett témát
 app.get('/api/gettheme', async (request, response) => {
     try {
         response.status(200).json({ theme: theme });
     } catch (error) {
-        response.status(500).json({ message: error });
+        response.status(500).json({ message: 'Hiba', response: error });
     }
 });
 //? POST - Átállítja a témát, ha az oldalon megváltoztattuk
@@ -151,23 +151,11 @@ app.post('/api/savetheme', async (request, response) => {
     try {
         const body = request.body;
         theme = body.theme;
-        response.status(200).json({ message: theme });
+        response.status(200).json({ message: 'Sikeres mentés', theme: theme });
     } catch (error) {
-        response.status(500).json({ message: error });
+        response.status(500).json({ message: 'Hiba', response: error });
     }
 });
-
-// //! Random recept API:
-// app.get('/api/getrandomrecipe', async (request, response) => {
-//     try {
-//         // const data = JSON.parse(await readFile('receptek.json'));
-//         const data = await db.selectAll();
-//         const random = Math.floor(Math.random() * (data.receptek.length - 1 - 0 + 1) + 0);
-//         response.status(200).json(data.response[random]);
-//     } catch (error) {
-//         console.log(error.message);
-//     }
-// });
 
 //! Specifikus recept GET:
 app.get('/api/fullview/:recept', async (request, response) => {
@@ -175,7 +163,10 @@ app.get('/api/fullview/:recept', async (request, response) => {
         const recept = request.params.recept + '.%';
         const res = await db.selectSpecificRecipe(recept);
 
-        response.status(200).json({ message: 'nem hiba', response: res[0] });
+        response.status(200).json({
+            message: 'Sikeres lekérdezés',
+            response: res[0]
+        });
     } catch (error) {
         response.status(500).json({ message: 'Hiba', response: error });
     }
@@ -232,7 +223,11 @@ app.post('/api/feltoltes', async (request, response) => {
         data.receptek.push(recept);
         const data2 = await writeFile('receptek.json', JSON.stringify(data));
 
-        response.status(200).json({ message: data2, data: recept, response: res });
+        response.status(200).json({
+            message: data2,
+            data: recept,
+            response: res
+        });
     } catch (error) {
         response.status(500).json({ message: 'Hiba', response: error });
     }

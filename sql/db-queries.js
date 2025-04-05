@@ -48,7 +48,8 @@ function selectSpecificRecipe(nev) {
         });
     });
 }
-//! tábla tórlése és újra létrehozása, annak érdekében, hogy mindenkinél egyezők legyenek az adatbázis adatai
+
+//! Tábla tórlése és újra létrehozása, annak érdekében, hogy mindenkinél egyezők legyenek az adatbázis adatai
 function dropTable() {
     return new Promise((resolve, reject) => {
         pool.query('DROP TABLE recept;', (error, result, fields) => {
