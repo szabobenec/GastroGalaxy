@@ -1,3 +1,4 @@
+//! GET metódus
 const getAPI = (url) => {
     return new Promise((resolve, reject) => {
         fetch(url)
@@ -12,6 +13,7 @@ const getAPI = (url) => {
     });
 };
 
+//! POST metódus
 const postAPI = (url, postObject) => {
     return new Promise((resolve, reject) => {
         fetch(url, {
@@ -34,16 +36,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log('Welcome to Gastro Galaxy!');
     try {
         const data = (await getAPI('/api/getallrecept')).response;
-        const receptNev = await getAPI('/api/getrecept');
         let random = Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0);
         let recept = data[random];
-        for (let item of data) {
-            if (item.nev == receptNev.recept) {
-                recept = item;
-            }
-        }
         RandomRecipes(data, recept);
 
+        //? Témaválasztás a NAV-ban lévő SVG segítségével
         const themeChanger = document.getElementById('themeChanger');
         const theme = (await getAPI('/api/gettheme')).theme;
         if (theme) {
@@ -62,6 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+//! Témaváltásért felelő függvény
 const changeTheme = async (theme) => {
     let saveTheme;
     if (theme.checked) {
@@ -82,11 +80,13 @@ const changeTheme = async (theme) => {
     }
 };
 
+//! Pár darab random recept megjelenítése a lap alján
 const RandomRecipes = (data, recept) => {
     const randomReceptek = document.getElementById('randomReceptek');
     let indexek = [];
     let index = 0;
 
+    //? random, különböző indexek létrehozása
     for (let i = 0; i < data.length; i++) {
         if (data[i].nev === recept.nev) {
             index = i;
@@ -100,12 +100,14 @@ const RandomRecipes = (data, recept) => {
         }
     }
 
+    //? létrehozott indexekhez tartozó receptek megjelenítése
     for (let item of indexek) {
         const div = document.createElement('div');
         randomReceptek.appendChild(div);
         div.setAttribute('class', 'randomRecipes grow');
+        //? Rákattintott recept oldalára való továbbküldés
         div.addEventListener('click', () => {
-            SendRecipe(data[item]);
+            document.location.href = `recipefullview/${data[item].kepnev.split('.')[0]}`;
         });
 
         const titleDiv = document.createElement('div');
@@ -120,16 +122,5 @@ const RandomRecipes = (data, recept) => {
         div.appendChild(img);
         img.setAttribute('src', `../images/recipes/${data[item].kepnev}`);
         img.setAttribute('class', 'littleImg');
-    }
-};
-
-const SendRecipe = async (data) => {
-    try {
-        const postObject = { recept: data.nev };
-        const message = await postAPI('/api/postrecept', postObject);
-        console.log(message);
-        document.location.href = `recipefullview/${data.kepnev.split('.')[0]}`;
-    } catch (error) {
-        console.error(error);
     }
 };

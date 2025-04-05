@@ -34,9 +34,10 @@ const postAPI = (url, postObject) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
+        //? Receptek lekérése, azok sorbarendezése; illetve hozzávalók neveinek összegyűjtése, elrendezése
         const data = (await getAPI('/api/getallrecept')).response;
         MakeArray(data);
-        FillRecipesDiv(data);
+        OrderRecipes(data);
         document.getElementById('searchBar0').addEventListener('input', function () {
             SearchRecipe(this, data);
         });
@@ -74,11 +75,31 @@ const changeTheme = async (theme) => {
     const postObject = { theme: saveTheme };
 
     try {
-        const data = await postAPI('/api/savetheme', postObject);
-        // console.log(data);
+        await postAPI('/api/savetheme', postObject);
     } catch (error) {
         console.error(error);
     }
+};
+
+//! Receptek abc sorrendbe rendezése, az egyszerűbb megtalálás érdekében
+const OrderRecipes = (data) => {
+    let names = [];
+    for (let item of data) {
+        names.push(item.nev);
+    }
+    names.sort((a, b) => a.localeCompare(b));
+
+    let newData = [];
+    let i = 0;
+    while (newData.length < data.length) {
+        let j = 0;
+        while (j < data.length && data[j].nev !== names[i]) {
+            j++;
+        }
+        i++;
+        newData.push(data[j]);
+    }
+    FillRecipesDiv(newData);
 };
 
 //! Receptes div feltöltése
@@ -89,8 +110,9 @@ const FillRecipesDiv = (data) => {
 
         receptekDiv.appendChild(div);
         div.setAttribute('class', 'receptDivs grow hide');
+        //? Rákattintott recept oldalára való továbbküldés
         div.addEventListener('click', () => {
-            SendRecipe(item);
+            document.location.href = `/recipefullview/${item.kepnev.split('.')[0]}`;
         });
 
         const titleDiv = document.createElement('div');
@@ -311,8 +333,9 @@ const fillDivs = (array1, array2) => {
         const div = document.createElement('div');
         div1.appendChild(div);
         div.setAttribute('class', 'receptDivs grow');
+        //? Rákattintott recept oldalára való továbbküldés
         div.addEventListener('click', () => {
-            SendRecipe(item);
+            document.location.href = `/recipefullview/${item.kepnev.split('.')[0]}`;
         });
 
         const titleDiv = document.createElement('div');
@@ -336,8 +359,9 @@ const fillDivs = (array1, array2) => {
         const div = document.createElement('div');
         div2.appendChild(div);
         div.setAttribute('class', 'receptDivs grow');
+        //? Rákattintott recept oldalára való továbbküldés
         div.addEventListener('click', () => {
-            SendRecipe(item);
+            document.location.href = `/recipefullview/${item.kepnev.split('.')[0]}`;
         });
 
         const titleDiv = document.createElement('div');
@@ -353,17 +377,5 @@ const fillDivs = (array1, array2) => {
         div.appendChild(img);
         img.setAttribute('src', `../images/recipes/${item.kepnev}`);
         img.setAttribute('class', 'littleImg');
-    }
-};
-
-//! Rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
-const SendRecipe = async (data) => {
-    try {
-        const postObject = { recept: data.nev };
-        const message = await postAPI('/api/postrecept', postObject);
-        console.log(message);
-        document.location.href = `/recipefullview/${data.kepnev.split('.')[0]}`;
-    } catch (error) {
-        console.error(error);
     }
 };

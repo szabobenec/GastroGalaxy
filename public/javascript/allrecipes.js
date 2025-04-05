@@ -34,6 +34,7 @@ const postAPI = (url, postObject) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
+        //? Receptek lekérése, azok továbbküldése rendezésre
         const data = (await getAPI('/api/getallrecept')).response;
         OrderRecipes(data);
 
@@ -131,8 +132,9 @@ const MakeCards = (data, receptDiv) => {
         const div = document.createElement('div');
         receptDiv.appendChild(div);
         div.setAttribute('class', 'receptDiv grow');
+        //? Rákattintott recept oldalára való továbbküldés
         div.addEventListener('click', () => {
-            SendRecipe(item);
+            document.location.href = `recipefullview/${item.kepnev.split('.')[0]}`;
         });
 
         const titleDiv = document.createElement('div');
@@ -147,17 +149,5 @@ const MakeCards = (data, receptDiv) => {
         div.appendChild(img);
         img.setAttribute('src', `../images/recipes/${item.kepnev}`);
         img.setAttribute('class', 'littleImg');
-    }
-};
-
-//! Rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
-const SendRecipe = async (data) => {
-    try {
-        const postObject = { recept: data.nev };
-        const message = await postAPI('/api/postrecept', postObject);
-        console.log(message);
-        document.location.href = `recipefullview/${data.kepnev.split('.')[0]}`;
-    } catch (error) {
-        console.error(error);
     }
 };

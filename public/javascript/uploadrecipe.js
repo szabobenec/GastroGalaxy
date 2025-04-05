@@ -1,3 +1,4 @@
+//! GET metódus
 const getAPI = (url) => {
     return new Promise((resolve, reject) => {
         fetch(url)
@@ -12,6 +13,7 @@ const getAPI = (url) => {
     });
 };
 
+//! POST metódus
 const postAPI = (url, postObject) => {
     return new Promise((resolve, reject) => {
         fetch(url, {
@@ -32,6 +34,7 @@ const postAPI = (url, postObject) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('Welcome to Recipe Uploader!');
+    //? Új hozzávaló- illetve lépésfülek hozzáadásáért felelős gombok
     document.getElementById('hozzavaloPlus').addEventListener('click', AddHozzavalo);
     document.getElementById('elkeszitesPlus').addEventListener('click', AddLepes);
     document.getElementById('tipus').addEventListener('change', function removeFirstOption() {
@@ -45,6 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             SendData(data);
         });
 
+        //? Témaválasztás a NAV-ban lévő SVG segítségével
         const themeChanger = document.getElementById('themeChanger');
         const theme = (await getAPI('/api/gettheme')).theme;
         if (theme) {
@@ -63,6 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+//! Témaváltáshoz használt függvény
 const changeTheme = async (theme) => {
     let saveTheme;
     if (theme.checked) {
@@ -83,6 +88,7 @@ const changeTheme = async (theme) => {
     }
 };
 
+//! Új hozzávalófül hozzáadása
 const AddHozzavalo = () => {
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
     const hozzavalok = Array.from(document.getElementsByClassName('hozzavalo'));
@@ -142,10 +148,12 @@ const AddHozzavalo = () => {
     }
 };
 
+//! Hozzávalófül visszavonása
 const RemoveHozzavalo = (div) => {
     div.removeChild(div.lastChild);
 };
 
+//! Új lépésfül hozzáadása
 const AddLepes = () => {
     const elkeszitesDiv = document.getElementById('elkeszitesDiv');
     const lepesek = Array.from(document.getElementsByClassName('lepes'));
@@ -189,11 +197,14 @@ const AddLepes = () => {
     }
 };
 
+//! Lépésfül visszavonása
 const RemoveLepes = (div) => {
     div.removeChild(div.lastChild);
 };
 
+//! Összes adat egy PosObject-be való mentése, amit aztán továbbküld a BackEnd számára
 const SendData = (length) => {
+    //? Adatok lekérése
     let checker = true;
     const nev = document.getElementById('nev').value;
     const tipus = document.getElementById('tipus').value;
@@ -241,6 +252,7 @@ const SendData = (length) => {
         lepesSzam++;
     }
 
+    //? Adatok ürességének ellenőrzése
     if (checker) {
         let elkeszites = lepesek.join('\n');
         let hozzavalo = [];
@@ -266,6 +278,7 @@ const SendData = (length) => {
 
         SendRecept(recept);
     } else {
+        //? Üres adatok esetén megjelenő SweetAlert
         Swal.fire({
             title: 'Sikertelen feltöltés!',
             text: 'Üres mező(k)!',
@@ -274,11 +287,10 @@ const SendData = (length) => {
     }
 };
 
+//! Recept adatainak feltöltése
 const SendRecept = async (recept) => {
-    console.log(recept);
-    // const uploadForm = document.getElementById('uploadForm');
-
     try {
+        //? Adatok feltöltése
         const data = await postAPI('/api/feltoltes', recept);
         console.log(data);
 
@@ -291,6 +303,7 @@ const SendRecept = async (recept) => {
 
             document.location.href = `/recipefullview/${recept.kepnev}`;
         } else {
+            //? Hibás adatok esetén megjelenő SweetAlert
             Swal.fire({
                 title: 'Sikertelen feltöltés!',
                 text: `Hibás adatok! (${data.message})`,

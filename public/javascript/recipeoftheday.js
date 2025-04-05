@@ -1,3 +1,4 @@
+//! GET metódus
 const getAPI = (url) => {
     return new Promise((resolve, reject) => {
         fetch(url)
@@ -12,6 +13,7 @@ const getAPI = (url) => {
     });
 };
 
+//! POST metódus
 const postAPI = (url, postObject) => {
     return new Promise((resolve, reject) => {
         fetch(url, {
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         console.log('Welcome to Recipe of the Day!');
 
+        //? Témaválasztás a NAV-ban lévő SVG segítségével
         const themeChanger = document.getElementById('themeChanger');
         const theme = (await getAPI('/api/gettheme')).theme;
         if (theme) {
@@ -48,6 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             changeTheme(themeChanger);
         });
 
+        //! Nap receptje adatainak betöltése
         console.log('kártyaadatok feltoltése');
         const apiData = await getAPI('/api/recipe-of-the-day');
 
@@ -78,8 +82,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('cardDivBtn').addEventListener('click', () => {
             teljes.innerHTML = `<input type="button" class="sendRecipeBtn" id="sendRecipeBtn" value="Teljes recept megtekintése" />`;
 
+            //? Rákattintott recept oldalára való továbbküldés
             document.getElementById('sendRecipeBtn').addEventListener('click', () => {
-                SendRecipe(apiData.response[0]);
+                document.location.href = `/recipefullview/${
+                    apiData.response[0].kepnev.split('.')[0]
+                }`;
             });
         });
     } catch (error) {
@@ -90,6 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+//! Témaváltásért felelő függvény
 const changeTheme = async (theme) => {
     let saveTheme;
     if (theme.checked) {
@@ -105,19 +113,6 @@ const changeTheme = async (theme) => {
     try {
         const data = await postAPI('/api/savetheme', postObject);
         console.log(data);
-    } catch (error) {
-        console.error(error);
-    }
-};
-
-//! Rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
-const SendRecipe = async (data) => {
-    try {
-        console.log(data);
-        const postObject = { recept: data.nev };
-        const message = await postAPI('/api/postrecept', postObject);
-        console.log(message);
-        document.location.href = `/recipefullview/${data.kepnev.split('.')[0]}`;
     } catch (error) {
         console.error(error);
     }

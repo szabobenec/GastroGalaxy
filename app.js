@@ -123,42 +123,6 @@ app.get('/api/recipe-of-the-day', async (request, response) => {
     }
 });
 
-//! Nap recepje apik; Dátum visszaigazolása
-// app.post('/check-date', (req, res) => {
-//     const datumPath = path.join(__dirname, '/public/assets/datum.txt');
-//     const idPath = path.join(__dirname, '/public/assets/azonosito.txt');
-
-//     let az = null;
-//     fs.readFile(datumPath, 'utf8', (err, fileDate) => {
-//         if (err) {
-//             console.error('Error reading file:', err); // Log the error
-//         }
-
-//         // Get the current date in YYYY-MM-DD format
-//         const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
-
-//         // Check if the date in the file matches the current date
-//         if (fileDate.trim() === currentDate) {
-//             fs.readFile(idPath, 'utf8', (err, fileId) => {
-//                 if (err) {
-//                     console.error('Error reading file:', err); // Log the error
-//                     return res.status(500).json({ error: 'Error reading file' });
-//                 }
-//                 return res.json({ message: currentDate + ' id: ' + fileId });
-//             });
-//         } else {
-//             fs.writeFile(datumPath, currentDate, (err) => {
-//                 if (err) console.log(err);
-//             });
-//             let newID = '' + (Math.floor(Math.random() * 10) + 1);
-//             fs.writeFile(idPath, newID, (err) => {
-//                 if (err) console.log(err);
-//             });
-//             res.json({ message: 'Updated date to today: ' + currentDate + ' id: ' + newID });
-//         }
-//     });
-// });
-
 //! Összes recept API:
 app.get('/api/getallrecept', async (request, response) => {
     try {
@@ -193,40 +157,25 @@ app.post('/api/savetheme', async (request, response) => {
     }
 });
 
-//! Random recept API:
-app.get('/api/getrandomrecipe', async (request, response) => {
-    try {
-        // const data = JSON.parse(await readFile('receptek.json'));
-        const data = await db.selectAll();
-        const random = Math.floor(Math.random() * (data.receptek.length - 1 - 0 + 1) + 0);
-        response.status(200).json(data.response[random]);
-    } catch (error) {
-        console.log(error.message);
-    }
-});
+// //! Random recept API:
+// app.get('/api/getrandomrecipe', async (request, response) => {
+//     try {
+//         // const data = JSON.parse(await readFile('receptek.json'));
+//         const data = await db.selectAll();
+//         const random = Math.floor(Math.random() * (data.receptek.length - 1 - 0 + 1) + 0);
+//         response.status(200).json(data.response[random]);
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// });
 
-//! Specifikus recept POST - GET:
-let recept = '';
-app.post('/api/postrecept', (request, response) => {
-    recept = request.body.recept;
-    console.log(recept);
-    response.status(200).json({ message: 'Sikeres mentés' });
-});
-app.get('/api/getrecept', (request, response) => {
-    response.status(200).json({ recept: recept });
-});
-
-//! Specifikus recept új GET:
+//! Specifikus recept GET:
 app.get('/api/fullview/:recept', async (request, response) => {
     try {
-        const recept = request.params.recept;
-        const data = await db.selectAll();
-        let j = 0;
-        while (j < data.length && data[j].kepnev.split('.')[0] !== recept) {
-            j++;
-        }
+        const recept = request.params.recept + '.%';
+        const res = await db.selectSpecificRecipe(recept);
 
-        response.status(200).json({ message: 'nem hiba', response: data[j] });
+        response.status(200).json({ message: 'nem hiba', response: res[0] });
     } catch (error) {
         response.status(500).json({ message: 'Hiba', response: error });
     }
@@ -289,7 +238,7 @@ app.post('/api/feltoltes', async (request, response) => {
     }
 });
 
-//! Setup
+//! Setup - Adatbázis frissítése a jelenlegi adatokkal
 //? Összes recept beillesztéséhez szükséges függvény:
 const DBSetup = async () => {
     try {

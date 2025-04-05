@@ -39,6 +39,15 @@ function selectRecipeOfTheDay(id) {
         });
     });
 }
+//! Specifikus recept SELECT
+function selectSpecificRecipe(nev) {
+    return new Promise((resolve, reject) => {
+        pool.query('SELECT * FROM recept WHERE kepnev LIKE ?;', [nev], (error, result) => {
+            if (error) return reject(error);
+            resolve(result);
+        });
+    });
+}
 //! tábla tórlése és újra létrehozása, annak érdekében, hogy mindenkinél egyezők legyenek az adatbázis adatai
 function dropTable() {
     return new Promise((resolve, reject) => {
@@ -64,6 +73,7 @@ module.exports = {
     selectAll,
     insertRecept,
     selectRecipeOfTheDay,
+    selectSpecificRecipe,
     dropTable,
     createTable
 };

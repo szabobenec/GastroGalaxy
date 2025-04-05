@@ -1,3 +1,4 @@
+//! GET metódus
 const getAPI = (url) => {
     return new Promise((resolve, reject) => {
         fetch(url)
@@ -12,6 +13,7 @@ const getAPI = (url) => {
     });
 };
 
+//! POST metódus
 const postAPI = (url, postObject) => {
     return new Promise((resolve, reject) => {
         fetch(url, {
@@ -31,24 +33,17 @@ const postAPI = (url, postObject) => {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
-    //! backend-en lementett recept név megkeresése az összes receptben
     try {
+        //? Link alapján megfelelő recept rekérése, és adatainak betöltése
         const data = (await getAPI('/api/getallrecept')).response;
-        // const receptNev = await getAPI('/api/getrecept');
 
         const recept = window.location.href.split('/')[window.location.href.split('/').length - 1];
 
-        if (recept !== null) {
-            const res = (await getAPI(`/api/fullview/${recept}`)).response;
-            FillData(res);
-            RandomRecipes(data, res);
-        } else {
-            let random = Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0);
-            let res = data[random];
-            FillData(res);
-            RandomRecipes(data, res);
-        }
+        const res = (await getAPI(`/api/fullview/${recept}`)).response;
+        FillData(res);
+        RandomRecipes(data, res);
 
+        //? Témaválasztás a NAV-ban lévő SVG segítségével
         const themeChanger = document.getElementById('themeChanger');
         const theme = (await getAPI('/api/gettheme')).theme;
         if (theme) {
@@ -67,6 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+//! Témaváltásért felelő függvény
 const changeTheme = async (theme) => {
     let saveTheme;
     if (theme.checked) {
@@ -87,8 +83,8 @@ const changeTheme = async (theme) => {
     }
 };
 
+//! Megtalált recept adatainak megjelenítése
 const FillData = (data) => {
-    //! megtalált recept adatainak megjelenítése
     //? recept neve, elkészítési ideje, alkészített adag, tipusa, tag-jei
     const receptNev = document.getElementById('receptNev');
     receptNev.innerHTML = data.nev;
@@ -146,8 +142,8 @@ const FillData = (data) => {
     receptKep.setAttribute('src', `../images/recipes/${data.kepnev}`);
 };
 
+//! Hozzávalók lista elemeinek kifejlölése esetén való áthúzása
 const CrossWords = () => {
-    //! hozzávalók lista elemeinek kifejlölése esetén való áthúzása
     const receptLista = Array.from(document.getElementsByClassName('receptList'));
     for (let item of receptLista) {
         if (item.firstChild.checked) {
@@ -158,8 +154,8 @@ const CrossWords = () => {
     }
 };
 
+//! Pár darab random recept megjelenítése a lap alján
 const RandomRecipes = (data, recept) => {
-    //! pár darab random recept megjelenítése a lap alján
     const randomReceptek = document.getElementById('randomReceptek');
     let indexek = [];
     let index = 0;
@@ -183,8 +179,9 @@ const RandomRecipes = (data, recept) => {
         const div = document.createElement('div');
         randomReceptek.appendChild(div);
         div.setAttribute('class', 'randomRecipes grow');
+        //? Rákattintott recept oldalára való továbbküldés
         div.addEventListener('click', () => {
-            SendRecipe(data[item]);
+            document.location.href = `${data[item].kepnev.split('.')[0]}`;
         });
 
         const titleDiv = document.createElement('div');
@@ -199,17 +196,5 @@ const RandomRecipes = (data, recept) => {
         div.appendChild(img);
         img.setAttribute('src', `../images/recipes/${data[item].kepnev}`);
         img.setAttribute('class', 'littleImg');
-    }
-};
-
-const SendRecipe = async (data) => {
-    //! rákattintott recept nevének lementése backend-re, átirányítás a receptmegtekintő oldalra
-    try {
-        const postObject = { recept: data.nev };
-        const message = await postAPI('/api/postrecept', postObject);
-        console.log(message);
-        document.location.href = `${data.kepnev.split('.')[0]}`;
-    } catch (error) {
-        console.error(error);
     }
 };
