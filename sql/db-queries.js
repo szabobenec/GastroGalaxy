@@ -8,7 +8,7 @@ const pool = mysql.createPool({
     database: 'receptek'
 });
 
-//! összes recept lekérése
+//! Összes recept lekérése
 function selectAll() {
     return new Promise((resolve, reject) => {
         pool.query('SELECT * FROM recept;', (error, result, fields) => {
