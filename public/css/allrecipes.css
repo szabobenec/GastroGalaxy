@@ -10,12 +10,6 @@
     --darkCyan: #3c887e;
     --nonPhotoBlue: #a6e1fa;
 
-    /* --bgColor: light-dark(var(--nonPhotoBlue), var(--raisinBlack));
-    --secondaryClrs: light-dark(white, var(--iris));
-    --scndClrs: light-dark();
-    --cardClrs: light-dark(var(--mint), var(--iris));
-    --textColor: light-dark(var(--raisinBlack), white); */
-
     --bgColor: var(--nonPhotoBlue);
     --secondaryClrs: white;
     --cardClrs: var(--mint);

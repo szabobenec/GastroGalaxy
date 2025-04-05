@@ -10,12 +10,6 @@
     --darkCyan: #3c887e;
     --nonPhotoBlue: #a6e1fa;
 
-    /* --bgColor: light-dark(var(--nonPhotoBlue), var(--raisinBlack));
-    --secondaryClrs: light-dark(white, var(--iris));
-    --scndClrs: light-dark();
-    --cardClrs: light-dark(var(--mint), var(--iris));
-    --textColor: light-dark(var(--raisinBlack), white); */
-
     --bgColor: var(--nonPhotoBlue);
     --secondaryClrs: white;
     --cardClrs: var(--mint);
@@ -572,7 +566,6 @@ textarea {
     .hozzavalokDiv,
     .hozzavalok {
         display: flex;
-        /* justify-content: space-between; */
         flex-wrap: wrap;
         gap: 10px;
         margin-top: 25px;
@@ -584,7 +577,6 @@ textarea {
         border-radius: 5px;
         padding: 5px;
         font-size: larger;
-        /* width: 100px; */
     }
 
     .grow2 {

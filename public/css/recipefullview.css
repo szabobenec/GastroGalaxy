@@ -10,12 +10,6 @@
     --darkCyan: #3c887e;
     --nonPhotoBlue: #a6e1fa;
 
-    /* --bgColor: light-dark(var(--nonPhotoBlue), var(--raisinBlack));
-    --secondaryClrs: light-dark(white, var(--iris));
-    --scndClrs: light-dark();
-    --cardClrs: light-dark(var(--mint), var(--iris));
-    --textColor: light-dark(var(--raisinBlack), white); */
-
     --bgColor: var(--nonPhotoBlue);
     --secondaryClrs: white;
     --cardClrs: var(--mint);
@@ -448,24 +442,20 @@ body.dark-theme {
         font-size: 150%;
     }
 
-    .tovabbiReceptek {
-        margin: 25px;
-    }
-
     .randomReceptek {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         width: 100%;
-        gap: 25px;
+        gap: 10px;
     }
 
     .randomRecipes {
         background-color: var(--cardClrs);
         color: var(--textColor);
-        width: 300px;
-        height: 350px;
+        width: 190px;
+        height: 275px;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
@@ -482,8 +472,8 @@ body.dark-theme {
     }
 
     .littleImg {
-        width: 250px;
-        height: 250px;
+        width: 160px;
+        height: 160px;
         object-fit: cover;
         border-radius: 10px;
         border: 1px solid var(--textColor);

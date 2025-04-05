@@ -10,12 +10,6 @@
     --darkCyan: #3c887e;
     --nonPhotoBlue: #a6e1fa;
 
-    /* --bgColor: light-dark(var(--nonPhotoBlue), var(--raisinBlack));
-    --secondaryClrs: light-dark(white, var(--iris));
-    --scndClrs: light-dark();
-    --cardClrs: light-dark(var(--mint), var(--iris));
-    --textColor: light-dark(var(--raisinBlack), white); */
-
     --bgColor: var(--nonPhotoBlue);
     --secondaryClrs: white;
     --cardClrs: var(--mint);
@@ -470,9 +464,6 @@ body.dark-theme {
     }
 
     .introImg3 {
-        /* width: 80%;
-        height: auto;
-        border-radius: 20px; */
         display: none;
     }
 
@@ -501,7 +492,7 @@ body.dark-theme {
 
     .cardsDiv {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
         margin-top: 50px;
@@ -533,7 +524,6 @@ body.dark-theme {
     }
 
     .tovabbiReceptek {
-        margin: 25px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -546,15 +536,15 @@ body.dark-theme {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        max-width: 645px;
-        gap: 25px;
+        width: 100%;
+        gap: 10px;
     }
 
     .randomRecipes {
         background-color: var(--cardClrs);
         color: var(--textColor);
-        width: 200px;
-        height: 250px;
+        width: 190px;
+        height: 275px;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
@@ -571,8 +561,8 @@ body.dark-theme {
     }
 
     .littleImg {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
         object-fit: cover;
         border-radius: 10px;
         border: 1px solid var(--textColor);
@@ -724,9 +714,11 @@ body.dark-theme {
 
     .cardsDiv {
         display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
         justify-content: space-evenly;
         margin-top: 50px;
-        height: 400px;
+        height: 100%;
         color: var(--textColor);
     }
 
@@ -751,17 +743,12 @@ body.dark-theme {
         border: 1px solid white;
     }
 
-    .tovabbiReceptek {
-        margin: 25px;
-    }
-
     .randomReceptek {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        min-width: 1070px;
-        max-width: 100%;
+        width: 100%;
         gap: 25px;
     }
 
