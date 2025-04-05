@@ -359,6 +359,32 @@ header {
 .mainDiv {
     margin-left: 10px;
     margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    height: 100%;
+    color: var(--textColor);
+}
+
+.cards {
+    width: 255px;
+    height: 300px;
+    background-color: var(--cardClrs);
+    color: var(--textColor);
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
 }
 
 .grow {
@@ -368,6 +394,9 @@ header {
 .grow:hover {
     transform: scale(1.1);
 }
+
+/* .cardImg {
+} */
 
 footer {
     background-color: var(--bgColor);
@@ -406,18 +435,6 @@ footer {
         display: flex;
         flex-direction: row-reverse;
         padding-right: 10px;
-    }
-
-    footer {
-        background-color: var(--bgColor);
-        color: var(--textColor);
-        height: 108px;
-        width: 100%;
-        margin-top: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 }
 

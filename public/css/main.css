@@ -561,13 +561,6 @@ body.dark-theme {
         border: 1px solid var(--textColor);
     }
 
-    .titleDiv {
-        display: flex;
-        align-items: center;
-        width: 90%;
-        height: 20%;
-    }
-
     .titleLink {
         text-decoration: none;
     }
@@ -771,13 +764,6 @@ body.dark-theme {
         object-fit: cover;
         border-radius: 10px;
         border: 1px solid var(--textColor);
-    }
-
-    .titleDiv {
-        display: flex;
-        align-items: center;
-        width: 90%;
-        height: 20%;
     }
 
     .titleLink {
