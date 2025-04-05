@@ -48,8 +48,8 @@ router.get('/uploadrecipe', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/uploadrecipe.html'));
 });
 //? Kapcsolat:
-router.get('/connection/', (request, response) => {
-    response.sendFile(path.join(__dirname + '/public/html/connection.html'));
+router.get('/about/', (request, response) => {
+    response.sendFile(path.join(__dirname + '/public/html/about.html'));
 });
 
 app.use(express.json());
