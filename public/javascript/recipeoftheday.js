@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         //! Nap receptje adatainak betöltése
-        console.log('kártyaadatok feltoltése');
+        console.log('kártyaadatok feltöltése');
         const apiData = await getAPI('/api/recipe-of-the-day');
 
         // Extract ONLY the fields you need from the first recipe

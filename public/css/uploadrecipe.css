@@ -15,7 +15,8 @@
     --cardClrs: var(--mint);
     --textColor: var(--raisinBlack);
     --inpColor: var(--darkPurple);
-    --inpBg: var(--mint);
+    --inpBg: white;
+    --inpButton: var(--mint);
 }
 
 html {
@@ -69,6 +70,7 @@ body.dark-theme {
     --textColor: white;
     --inpColor: var(--nonPhotoBlue);
     --inpBg: var(--gunmetal);
+    --inpButton: var(--darkCyan);
 }
 
 input,
@@ -76,6 +78,11 @@ select,
 textarea {
     color: var(--inpColor);
     background-color: var(--inpBg);
+}
+
+input[type="button"]
+{
+    background-color: var(--inpButton);
 }
 
 .mainDiv {
