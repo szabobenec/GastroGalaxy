@@ -88,7 +88,7 @@ const randomOrder = async () => {
             let j = 0;
             while (j < 31) {
                 let random = Math.floor(Math.random() * (data.receptek.length - 1 + 1) + 1);
-                if (!randomIds.includes(random)) {
+                if (!randomIds.includes(random) && random !== 45) {
                     randomIds.push(random);
                     j++;
                 }
