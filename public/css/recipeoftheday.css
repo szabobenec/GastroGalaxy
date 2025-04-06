@@ -55,6 +55,8 @@ html {
 body {
     margin: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     --dot-bg: var(--bgColor);
     --dot-color: var(--secondaryClrs);
@@ -383,10 +385,7 @@ body.dark-theme {
 
 /*? Kis képernyős eszközök */
 @media only screen and (max-width: 992px) {
-    body {
-        justify-content: center;
-        align-items: center;
-    }
+   
 
     header {
         background-color: var(--bgColor);
