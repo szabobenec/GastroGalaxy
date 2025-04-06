@@ -266,7 +266,7 @@ const RemoveHozzavalo = (div, hozzavalok) => {
     UpdateHozzavaloRecipes();
 };
 
-//! Hozzávalük alapján talált, megjelenített receptek frissítése
+//! Hozzávalók alapján talált, megjelenített receptek frissítése
 const UpdateHozzavaloRecipes = async () => {
     try {
         const div = document.getElementById('hozzavalok');
@@ -372,6 +372,7 @@ const FillDivsHozzavalo = (array1, array2) => {
 
 //TODO Tagek
 
+//! Tagek lista létrehozása - ismétlődés nélkül, abc sorban
 const MakeTagArray = (data) => {
     let tagek = [];
     for (let item of data) {
@@ -392,6 +393,7 @@ const MakeTagArray = (data) => {
     });
 };
 
+//! Két div feltöltése a tagek neveivel - kártyákon való megjelenítés
 const FillTagDiv = (data) => {
     //? Kereséshez használt kártyák - alapértelmezetten rejtve
     const tagsDiv = document.getElementById('tagsDiv');
@@ -418,6 +420,7 @@ const FillTagDiv = (data) => {
     }
 };
 
+//! Keresés frissítése - bármely bevitel esetén
 const UpdateTagSearch = (elem, data) => {
     const tagsDiv = document.getElementById('tagsDiv');
     const value = elem.value.toLowerCase();
@@ -438,6 +441,7 @@ const UpdateTagSearch = (elem, data) => {
     }
 };
 
+//! Kiválasztott tag hozzáadása a keresett hozzávalókhoz
 const AddTag = (div, tagsDiv) => {
     const tags = document.getElementById('tags');
 
@@ -473,11 +477,13 @@ const AddTag = (div, tagsDiv) => {
     }
 };
 
+//! Kiválasztott tagek közül való eltávolítás
 const RemoveTag = (div, hozzavalok) => {
     hozzavalok.removeChild(div);
     UpdateTagRecipes();
 };
 
+//! Tagek alapján talált, megjelenített receptek frissítése
 const UpdateTagRecipes = async () => {
     try {
         const div = document.getElementById('tags');
@@ -494,7 +500,7 @@ const UpdateTagRecipes = async () => {
 
         const data = (await getAPI('/api/getallrecept')).response;
 
-        //? Recept tagei egyezésének ellenőrzése
+        //? Recept tagjei egyezésének ellenőrzése
         let keresett = [];
         let keresett2 = [];
         if (tagek.length > 0) {
@@ -525,6 +531,7 @@ const UpdateTagRecipes = async () => {
     }
 };
 
+//! Receptek megjelenítése - dizájnolva
 const FillDivsTag = (array1, array2) => {
     //? Amennyiben az összes kiválasztott hozzávalót tartalmazza, úgy a 'teljes' div-ben kerül megjelenítésre
     const div1 = document.getElementById('teljesTagsDiv');
