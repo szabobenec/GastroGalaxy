@@ -82,7 +82,8 @@ textarea {
 
 input[type="button"]
 {
-    background-color: var(--inpButton);
+    background-color: var(--cardClrs);
+    color: var(--textColor);
 }
 
 .mainDiv {
