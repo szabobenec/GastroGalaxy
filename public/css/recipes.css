@@ -337,6 +337,10 @@ textarea {
     background-color: var(--inpBg);
 }
 
+.newPart {
+    margin-top: 100px;
+}
+
 /*? Kis képernyős eszközök */
 @media only screen and (max-width: 992px) {
     .headerStart {
@@ -380,7 +384,9 @@ textarea {
     }
 
     .hozzavalokDiv,
-    .hozzavalok {
+    .hozzavalok,
+    .tagsDiv,
+    .tags {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -564,7 +570,9 @@ textarea {
     }
 
     .hozzavalokDiv,
-    .hozzavalok {
+    .hozzavalok,
+    .tagsDiv,
+    .tags {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;

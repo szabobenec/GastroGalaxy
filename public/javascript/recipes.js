@@ -36,9 +36,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         //? Receptek lekérése, azok sorbarendezése; illetve hozzávalók neveinek összegyűjtése, elrendezése
         const data = (await getAPI('/api/getallrecept')).response;
-        MakeArray(data);
+        MakeHozzavalokArray(data);
         OrderRecipes(data);
-        document.getElementById('searchBar0').addEventListener('input', function () {
+        MakeTagArray(data);
+        document.getElementById('recipeSearchBar').addEventListener('input', function () {
             SearchRecipe(this, data);
         });
 
@@ -80,6 +81,8 @@ const changeTheme = async (theme) => {
         console.error(error);
     }
 };
+
+//TODO Receptek
 
 //! Receptek abc sorrendbe rendezése, az egyszerűbb megtalálás érdekében
 const OrderRecipes = (data) => {
@@ -150,19 +153,15 @@ const SearchRecipe = (elem, data) => {
     }
 };
 
+//TODO Hozzávalók
+
 //! Hozzávalók lista létrehozása - ismétlődés nélkül, abc sorban
-const MakeArray = (data) => {
+const MakeHozzavalokArray = (data) => {
     let hozzavalok = [];
     for (let item of data) {
         let tempHozzavalok = JSON.parse(item.hozzavalok);
         for (let element in tempHozzavalok) {
-            let contains = false;
-            for (let temp of hozzavalok) {
-                if (temp == element) {
-                    contains = true;
-                }
-            }
-            if (!contains) {
+            if (!hozzavalok.includes(element)) {
                 hozzavalok.push(element);
             }
         }
@@ -171,14 +170,14 @@ const MakeArray = (data) => {
     hozzavalok.sort((a, b) => a.localeCompare(b));
     // hozzavalok.sort(Intl.Collator().compare);
 
-    FillDiv(hozzavalok);
+    FillHozzavaloDiv(hozzavalok);
     document.getElementById('searchBar').addEventListener('input', function () {
-        UpdateSearch(this, hozzavalok);
+        UpdateHozzavaloSearch(this, hozzavalok);
     });
 };
 
 //! Két div feltöltése a hozzávalók neveikkel - kártyákon való megjelenítés
-const FillDiv = (data) => {
+const FillHozzavaloDiv = (data) => {
     //? Kereséshez használt kártyák - alapértelmezetten rejtve
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
     for (let item of data) {
@@ -187,7 +186,7 @@ const FillDiv = (data) => {
         div.innerHTML = item;
         div.setAttribute('class', 'card grow2 hide');
         div.addEventListener('click', () => {
-            AddHozzavalo(div);
+            AddHozzavalo(div, hozzavalokDiv);
         });
     }
 
@@ -199,13 +198,13 @@ const FillDiv = (data) => {
         div.innerHTML = item;
         div.setAttribute('class', 'card grow2');
         div.addEventListener('click', () => {
-            AddHozzavalo(div);
+            AddHozzavalo(div, hozzavalokDiv);
         });
     }
 };
 
 //! Keresés frissítése - bármely bevitel esetén
-const UpdateSearch = (elem, data) => {
+const UpdateHozzavaloSearch = (elem, data) => {
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
     const value = elem.value.toLowerCase();
 
@@ -226,7 +225,7 @@ const UpdateSearch = (elem, data) => {
 };
 
 //! Kiválasztott hozzávaló hozzáadása a keresett hozzávalókhoz
-const AddHozzavalo = (div) => {
+const AddHozzavalo = (div, hozzavalokDiv) => {
     const hozzavalok = document.getElementById('hozzavalok');
 
     //? Annak ellenőrzése, hogy már szerepel-e a kiválasztottak között
@@ -254,7 +253,7 @@ const AddHozzavalo = (div) => {
             RemoveHozzavalo(newDiv, hozzavalok);
         });
     }
-    UpdateRecipes();
+    UpdateHozzavaloRecipes();
     document.getElementById('searchBar').value = '';
     for (let item of hozzavalokDiv.children) {
         item.classList.add('hide');
@@ -264,11 +263,11 @@ const AddHozzavalo = (div) => {
 //! Kiválasztott hozzávalók közül való eltávolítás
 const RemoveHozzavalo = (div, hozzavalok) => {
     hozzavalok.removeChild(div);
-    UpdateRecipes();
+    UpdateHozzavaloRecipes();
 };
 
 //! Hozzávalük alapján talált, megjelenített receptek frissítése
-const UpdateRecipes = async () => {
+const UpdateHozzavaloRecipes = async () => {
     try {
         const div = document.getElementById('hozzavalok');
         let hozzavalok = [];
@@ -308,7 +307,7 @@ const UpdateRecipes = async () => {
 
             // console.log(keresett);
             // console.log(keresett2);
-            fillDivs(keresett, keresett2);
+            FillDivsHozzavalo(keresett, keresett2);
         }
     } catch (error) {
         console.error(error);
@@ -316,16 +315,7 @@ const UpdateRecipes = async () => {
 };
 
 //! Receptek megjelenítése - dizájnolva
-const fillDivs = (array1, array2) => {
-    const teljes = document.getElementById('teljes');
-    if (array1.length > 0) {
-        teljes.setAttribute('class', '');
-    }
-    const reszleges = document.getElementById('reszleges');
-    if (array2.length > 0) {
-        reszleges.setAttribute('class', '');
-    }
-
+const FillDivsHozzavalo = (array1, array2) => {
     //? Amennyiben az összes kiválasztott hozzávalót tartalmazza, úgy a 'teljes' div-ben kerül megjelenítésre
     const div1 = document.getElementById('teljesDiv');
     div1.innerHTML = '';
@@ -354,6 +344,216 @@ const fillDivs = (array1, array2) => {
 
     //? Amennyiben nem az összes, de több, mint egy hozzávalót tartalmaz, úgy a 'reszleges' div-ben kerül megjelenítésre
     const div2 = document.getElementById('reszlegesDiv');
+    div2.innerHTML = '';
+    for (let item of array2) {
+        const div = document.createElement('div');
+        div2.appendChild(div);
+        div.setAttribute('class', 'receptDivs grow');
+        //? Rákattintott recept oldalára való továbbküldés
+        div.addEventListener('click', () => {
+            document.location.href = `/recipefullview/${item.kepnev.split('.')[0]}`;
+        });
+
+        const titleDiv = document.createElement('div');
+        div.appendChild(titleDiv);
+        titleDiv.setAttribute('class', 'titleDiv');
+
+        const h3 = document.createElement('h3');
+        titleDiv.appendChild(h3);
+        h3.style.width = '90%';
+        h3.innerHTML = item.nev;
+
+        const img = document.createElement('img');
+        div.appendChild(img);
+        img.setAttribute('src', `../images/recipes/${item.kepnev}`);
+        img.setAttribute('class', 'littleImg');
+    }
+};
+
+//TODO Tagek
+
+const MakeTagArray = (data) => {
+    let tagek = [];
+    for (let item of data) {
+        for (let element of item.tagek.split(';')) {
+            if (!tagek.includes(element) && element !== '') {
+                tagek.push(element);
+            }
+        }
+    }
+    //? Sorbarendezés
+    tagek.sort((a, b) => a.localeCompare(b));
+
+    console.log(tagek);
+    FillTagDiv(tagek);
+
+    document.getElementById('tagSearchBar').addEventListener('input', function () {
+        UpdateTagSearch(this, tagek);
+    });
+};
+
+const FillTagDiv = (data) => {
+    //? Kereséshez használt kártyák - alapértelmezetten rejtve
+    const tagsDiv = document.getElementById('tagsDiv');
+    for (let item of data) {
+        const div = document.createElement('div');
+        tagsDiv.appendChild(div);
+        div.innerHTML = item;
+        div.setAttribute('class', 'card grow2 hide');
+        div.addEventListener('click', () => {
+            AddTag(div, tagsDiv);
+        });
+    }
+
+    //? Lap alján látható összes tag rész
+    const osszesTag = document.getElementById('osszesTag');
+    for (let item of data) {
+        const div = document.createElement('div');
+        osszesTag.appendChild(div);
+        div.innerHTML = item;
+        div.setAttribute('class', 'card grow2');
+        div.addEventListener('click', () => {
+            AddTag(div, tagsDiv);
+        });
+    }
+};
+
+const UpdateTagSearch = (elem, data) => {
+    const tagsDiv = document.getElementById('tagsDiv');
+    const value = elem.value.toLowerCase();
+
+    for (let item of tagsDiv.children) {
+        const isVisible = item.innerHTML.includes(value);
+        item.classList.toggle('hide', !isVisible);
+        if (value == '') {
+            item.classList.add('hide');
+        }
+    }
+
+    //? Nem keresett tagek elrejtése
+    if (value == '') {
+        for (let item of tagsDiv.children) {
+            item.classList.add('hide');
+        }
+    }
+};
+
+const AddTag = (div, tagsDiv) => {
+    const tags = document.getElementById('tags');
+
+    //? Annak ellenőrzése, hogy már szerepel-e a kiválasztottak között
+    let contains = false;
+    for (let item of tags.children) {
+        let temp = [];
+        for (let item2 of item.innerHTML.split(' ')) {
+            temp.push(item2);
+        }
+        temp.pop();
+        let name = temp.join(' ');
+
+        if (name == div.innerHTML) {
+            contains = true;
+        }
+    }
+
+    if (!contains) {
+        const newDiv = document.createElement('div');
+        tags.appendChild(newDiv);
+        newDiv.innerHTML = div.innerHTML + ' X';
+        newDiv.setAttribute('class', 'card grow2');
+
+        newDiv.addEventListener('click', () => {
+            RemoveTag(newDiv, tags);
+        });
+    }
+    UpdateTagRecipes();
+    document.getElementById('tagSearchBar').value = '';
+    for (let item of tagsDiv.children) {
+        item.classList.add('hide');
+    }
+};
+
+const RemoveTag = (div, hozzavalok) => {
+    hozzavalok.removeChild(div);
+    UpdateTagRecipes();
+};
+
+const UpdateTagRecipes = async () => {
+    try {
+        const div = document.getElementById('tags');
+        let tagek = [];
+        for (let item of div.children) {
+            let temp = [];
+            for (let item2 of item.innerHTML.split(' ')) {
+                temp.push(item2);
+            }
+            temp.pop();
+            tagek.push(temp.join(' '));
+        }
+        console.log(tagek);
+
+        const data = (await getAPI('/api/getallrecept')).response;
+
+        //? Recept tagei egyezésének ellenőrzése
+        let keresett = [];
+        let keresett2 = [];
+        if (tagek.length > 0) {
+            for (let item of data) {
+                let counter = 0;
+                for (let item2 of item.tagek.split(';')) {
+                    for (let item3 of tagek) {
+                        if (!keresett.includes(item) && item2 === item3) {
+                            counter++;
+                        }
+                    }
+                }
+                console.log(counter);
+
+                if (counter == tagek.length) {
+                    keresett.push(item);
+                } else if (tagek.length > 1 && counter == tagek.length - 1) {
+                    keresett2.push(item);
+                }
+            }
+
+            console.log(keresett);
+            console.log(keresett2);
+            FillDivsTag(keresett, keresett2);
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const FillDivsTag = (array1, array2) => {
+    //? Amennyiben az összes kiválasztott hozzávalót tartalmazza, úgy a 'teljes' div-ben kerül megjelenítésre
+    const div1 = document.getElementById('teljesTagsDiv');
+    div1.innerHTML = '';
+    for (let item of array1) {
+        const div = document.createElement('div');
+        div1.appendChild(div);
+        div.setAttribute('class', 'receptDivs grow');
+        //? Rákattintott recept oldalára való továbbküldés
+        div.addEventListener('click', () => {
+            document.location.href = `/recipefullview/${item.kepnev.split('.')[0]}`;
+        });
+
+        const titleDiv = document.createElement('div');
+        div.appendChild(titleDiv);
+        titleDiv.setAttribute('class', 'titleDiv');
+
+        const h3 = document.createElement('h3');
+        titleDiv.appendChild(h3);
+        h3.innerHTML = item.nev;
+
+        const img = document.createElement('img');
+        div.appendChild(img);
+        img.setAttribute('src', `../images/recipes/${item.kepnev}`);
+        img.setAttribute('class', 'littleImg');
+    }
+
+    //? Amennyiben nem az összes, de több, mint egy hozzávalót tartalmaz, úgy a 'reszleges' div-ben kerül megjelenítésre
+    const div2 = document.getElementById('reszlegesTagsDiv');
     div2.innerHTML = '';
     for (let item of array2) {
         const div = document.createElement('div');

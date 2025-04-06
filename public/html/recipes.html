@@ -72,18 +72,19 @@
         </header>
 
         <div class="mainDiv">
-            <h1>Receptek</h1>
+            <h1>Receptkereső</h1>
 
+            <!--! Receptek -->
             <h2>Keressen recepteket név alapján!</h2>
 
             <div class="formsDiv" id="SearchDiv">
                 <form id="formData0">
                     <div class="innerFormData0">
-                        <label for="searchBar0">Recept neve: </label>
+                        <label for="recipeSearchBar">Recept neve: </label>
                         <input
                             type="search"
-                            name="searchBar0"
-                            id="searchBar0"
+                            name="recipeSearchBar"
+                            id="recipeSearchBar"
                             placeholder="Keresés . . ."
                         />
                     </div>
@@ -91,7 +92,8 @@
                 </form>
             </div>
 
-            <h2>Keressen recepteket hozzávalók alapján!</h2>
+            <!--! Hozzávalók -->
+            <h2 class="newPart">Keressen recepteket hozzávalók alapján!</h2>
 
             <div class="formsDiv" id="formDiv">
                 <form id="formData">
@@ -118,12 +120,48 @@
                 <div class="reszlegesDiv" id="reszlegesDiv"></div>
             </div>
 
-            <div class="osszesHozzavalo">
+            <!--! Tagek -->
+            <h2 class="newPart">Keressen recepteket tagek alapján!</h2>
+
+            <div class="formsDiv" id="formDiv">
+                <form id="formData">
+                    <label for="tagSearchBar">Tag-szó: </label>
+                    <input
+                        type="search"
+                        name="tagSearchBar"
+                        id="tagSearchBar"
+                        placeholder="Keresés . . ."
+                    />
+                    <div class="tagsDiv" id="tagsDiv"></div>
+                </form>
+            </div>
+
+            <div class="selectedTags" id="selectedTags">
+                <h2>Kiválasztott tagek:</h2>
+                <div class="tags" id="tags"></div>
+            </div>
+
+            <div id="receptek" class="receptek">
+                <h3 class="teljes" id="teljes">Ezzel megegyező receptek:</h3>
+                <div class="teljesDiv" id="teljesTagsDiv"></div>
+                <h3 class="reszleges" id="reszleges">A továbbiak is tartalmazzák:</h3>
+                <div class="reszlegesDiv" id="reszlegesTagsDiv"></div>
+            </div>
+
+            <!--? Ôsszes tag -->
+            <div class="osszesTag newPart">
+                <h2>Összes elérhető tag:</h2>
+                <div class="tags" id="osszesTag"></div>
+            </div>
+
+            <!--? Összes hozzávaló -->
+            <div class="osszesHozzavalo newPart">
                 <h2>Összes elérhető hozzávaló:</h2>
                 <div class="hozzavalok" id="osszesHozzavalo"></div>
             </div>
 
-            <div class="osszesRecept" id="osszesRecept">
+            <!--! Összes receptes oldalra átirányító link  -->
+            <div class="osszesRecept newPart" id="osszesRecept">
                 <a class="titleLink" href="http://127.0.0.1:3000/allrecipes">
                     <div class="linkTitle">
                         <h2>Összes recept megtekintése</h2>
