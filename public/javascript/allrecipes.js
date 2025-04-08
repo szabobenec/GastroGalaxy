@@ -101,7 +101,7 @@ const OrderRecipes = (data) => {
 
 //! Típusonként való elosztás/elrendezés
 const SelectType = (data) => {
-    let tipusok = { reggeli: [], leves: [], foetel: [], vacsora: [], desszert: [] };
+    let tipusok = { reggeli: [], leves: [], foetel: [], egyeb: [], desszert: [] };
     for (let item of data) {
         if (item.tipus === 'reggeli') {
             tipusok.reggeli.push(item);
@@ -109,8 +109,8 @@ const SelectType = (data) => {
             tipusok.leves.push(item);
         } else if (item.tipus === 'főétel') {
             tipusok.foetel.push(item);
-        } else if (item.tipus === 'vacsora') {
-            tipusok.vacsora.push(item);
+        } else if (item.tipus === 'egyéb') {
+            tipusok.egyeb.push(item);
         } else if (item.tipus === 'desszert') {
             tipusok.desszert.push(item);
         }
