@@ -8,7 +8,7 @@ CREATE TABLE recept (
     id INT PRIMARY KEY AUTO_INCREMENT,
     tipus VARCHAR(25) NOT NULL,
     nev VARCHAR(100) NOT NULL,
-    tagek TEXT,
+    tagek VARCHAR(75),
     ido INT,
     adag INT NOT NULL,
     hozzavalok TEXT NOT NULL,
