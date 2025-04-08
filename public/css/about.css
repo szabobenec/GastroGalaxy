@@ -412,7 +412,8 @@ header {
 }
 
 .description {
-    margin-top: 100px;
+    margin-top: 120px;
+    max-width: 955px;
     width: 80%;
     height: 100%;
     background-color: var(--cardClrs);
@@ -421,7 +422,7 @@ header {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    text-align: center;
     border: 1px solid white;
 }
 
@@ -462,5 +463,9 @@ footer {
         display: flex;
         flex-direction: row-reverse;
         padding-right: 10px;
+    }
+
+    .cardsDiv {
+        gap: 120px;
     }
 }

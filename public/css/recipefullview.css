@@ -447,8 +447,10 @@ body.dark-theme {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        max-width: 400px;
         width: 100%;
         gap: 10px;
+        margin: auto;
     }
 
     .randomRecipes {
