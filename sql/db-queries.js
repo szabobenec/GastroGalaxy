@@ -61,7 +61,7 @@ function dropTable() {
 function createTable() {
     return new Promise((resolve, reject) => {
         pool.query(
-            'CREATE TABLE recept (id INT PRIMARY KEY AUTO_INCREMENT, tipus VARCHAR(25) NOT NULL, nev VARCHAR(100) NOT NULL, tagek TEXT, ido INT, adag INT NOT NULL, hozzavalok TEXT NOT NULL, elkeszites TEXT NOT NULL, kepnev VARCHAR(100), forras VARCHAR(255));',
+            'CREATE TABLE recept (id INT PRIMARY KEY AUTO_INCREMENT, tipus VARCHAR(25) NOT NULL, nev VARCHAR(100) NOT NULL, tagek VARCHAR(75), ido INT, adag INT NOT NULL, hozzavalok TEXT NOT NULL, elkeszites TEXT NOT NULL, kepnev VARCHAR(100), forras VARCHAR(255));',
             (error, result, fields) => {
                 if (error) return reject(error);
                 resolve(result);
