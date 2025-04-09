@@ -396,8 +396,9 @@ header {
 }
 
 .cardLink {
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--textColor);
+    margin-bottom: 25px;
 }
 
 .imgDiv {
@@ -412,7 +413,7 @@ header {
 }
 
 .description {
-    margin-top: 120px;
+    margin-top: 200px;
     max-width: 955px;
     width: 80%;
     height: 100%;
@@ -424,6 +425,18 @@ header {
     flex-direction: column;
     text-align: center;
     border: 1px solid white;
+}
+
+.imagesDiv {
+    /* border: 1px solid white; */
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    gap: 50px;
+}
+.imagesDiv img {
+    width: 100%;
+    height: auto;
 }
 
 footer {
@@ -466,6 +479,10 @@ footer {
     }
 
     .cardsDiv {
-        gap: 120px;
+        gap: 150px;
+    }
+
+    .imagesDiv {
+        width: 90%;
     }
 }
