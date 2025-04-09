@@ -385,7 +385,7 @@ const MakeTagArray = (data) => {
     //? Sorbarendezés
     tagek.sort((a, b) => a.localeCompare(b));
 
-    console.log(tagek);
+    // console.log(tagek);
     FillTagDiv(tagek);
 
     document.getElementById('tagSearchBar').addEventListener('input', function () {
@@ -513,7 +513,7 @@ const UpdateTagRecipes = async () => {
                         }
                     }
                 }
-                console.log(counter);
+                // console.log(counter);
 
                 if (counter == tagek.length) {
                     keresett.push(item);
