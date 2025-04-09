@@ -307,8 +307,8 @@ const UpdateHozzavaloRecipes = async () => {
 
             // console.log(keresett);
             // console.log(keresett2);
-            FillDivsHozzavalo(keresett, keresett2);
         }
+        FillDivsHozzavalo(keresett, keresett2);
     } catch (error) {
         console.error(error);
     }
@@ -496,7 +496,7 @@ const UpdateTagRecipes = async () => {
             temp.pop();
             tagek.push(temp.join(' '));
         }
-        console.log(tagek);
+        // console.log(tagek);
 
         const data = (await getAPI('/api/getallrecept')).response;
 
@@ -522,10 +522,10 @@ const UpdateTagRecipes = async () => {
                 }
             }
 
-            console.log(keresett);
-            console.log(keresett2);
-            FillDivsTag(keresett, keresett2);
+            // console.log(keresett);
+            // console.log(keresett2);
         }
+        FillDivsTag(keresett, keresett2);
     } catch (error) {
         console.error(error);
     }
