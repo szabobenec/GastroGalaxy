@@ -61,20 +61,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 //! Témaváltásért felelő függvény
 const changeTheme = async (theme) => {
-    let saveTheme;
-    if (theme.checked) {
-        document.body.classList.add('dark-theme');
-        saveTheme = true;
-        document.getElementById('introImg3').src = '../images/logoTitle.png';
-    } else {
-        document.body.classList.remove('dark-theme');
-        saveTheme = false;
-        document.getElementById('introImg3').src = '../images/invert.png';
-    }
-
-    const postObject = { theme: saveTheme };
-
     try {
+        let saveTheme;
+        if (theme.checked) {
+            document.body.classList.add('dark-theme');
+            saveTheme = true;
+            document.getElementById('introImg3').src = '../images/logoTitle.png';
+        } else {
+            document.body.classList.remove('dark-theme');
+            saveTheme = false;
+            document.getElementById('introImg3').src = '../images/invert.png';
+        }
+
+        const postObject = { theme: saveTheme };
+
         await postAPI('/api/savetheme', postObject);
     } catch (error) {
         console.error(error);

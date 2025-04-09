@@ -193,9 +193,9 @@ app.post('/upload', upload.single('uploaded_file'), (request, response) => {
 });
 //? Adatok feltöltése:
 app.post('/api/feltoltes', async (request, response) => {
-    const recept = request.body;
-    console.log(recept);
     try {
+        const recept = request.body;
+
         let hozzavalok = JSON.stringify(recept.hozzavalok);
 
         hozzavalok =
