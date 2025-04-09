@@ -1700,6 +1700,18 @@
             "elkeszites": "1. Az uborkákat alaposan mossuk meg, de ne hámozzuk meg. A végeit vágjuk le egy kicsit.\n2. Készítsük ki az alaposan kimosott 5 literes befőttes üvegünket, majd a rakjuk bele az uborkákat, közéteve a megtisztított fokhagymát, tormát és kaport.\n3. Forraljunk fel vizet, adjuk hozzá a sót, és keverjük, amíg teljesen fel nem oldódik. Hagyjuk langyosra hűlni.\n4. Öntsük a langyos sós vizet az uborkákra úgy, hogy teljesen ellepje őket.\n5. Fedjük le egy tányérral vagy törlőkendővel, és hagyjuk szobahőmérsékleten fermentálódni 3-4 napig. A fermentálás ideje függ a hőmérséklettől - minél melegebb van, annál gyorsabban kész.\n6. Amikor az uborkák megfelelően savanyúak (de még ropogósak), tegyük őket a hűtőbe, ahol tovább lassan fermentálódnak, de hosszabb ideig elállnak.",
             "kepnev": "koviubi.jpg",
             "forras": "https://www.nosalty.hu/recept/kovaszos-uborka-klasszikus"
+        },
+        {
+            "id": 81,
+            "tipus": "reggeli",
+            "nev": "teszt",
+            "tagek": "teszt;teszt",
+            "ido": "45",
+            "adag": "4",
+            "hozzavalok": [{ "teszt": "teszt" }, { "teszt": "teszt" }, { "teszt": "teszt" }],
+            "elkeszites": "1. teszt\n2. teszt\n3. teszt",
+            "kepnev": "poskota.png",
+            "forras": "teszt"
         }
     ]
 }

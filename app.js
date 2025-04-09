@@ -183,13 +183,23 @@ const storage = multer.diskStorage({
         callback(null, path.join(__dirname + '/public/images/recipes'));
     },
     filename: (request, file, callback) => {
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+        // const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
         callback(null, file.originalname);
     }
 });
 const upload = multer({ storage: storage });
-app.post('/upload', upload.single('uploaded_file'), (request, response) => {
-    response.status(200).json({ message: 'Sikeres feltöltés!' });
+app.post('/upload', upload.single('kepSrc'), async (request, response) => {
+    try {
+        const file = request.file;
+
+        if (!file) {
+            return res.status(400).json({ message: 'Nincs feltöltött fájl' });
+        }
+
+        response.status(200).json({ message: 'Sikeres feltöltés!' });
+    } catch (error) {
+        response.status(500).json({ message: 'Hiba', response: error });
+    }
 });
 //? Adatok feltöltése:
 app.post('/api/feltoltes', async (request, response) => {

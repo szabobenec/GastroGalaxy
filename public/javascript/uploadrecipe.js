@@ -32,6 +32,24 @@ const postAPI = (url, postObject) => {
     });
 };
 
+//! POST - FormData metódus
+const postAPIFormData = (url, formData) => {
+    return new Promise((resolve, reject) => {
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    reject(`Hiba: ${response.statusText} (${response.status})`);
+                }
+                return response.json();
+            })
+            .then((data) => resolve(data))
+            .catch((error) => reject(`Hiba: ${error}`));
+    });
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('Welcome to Recipe Uploader!');
     //? Új hozzávaló- illetve lépésfülek hozzáadásáért felelős gombok
@@ -213,14 +231,7 @@ const SendData = (length) => {
     const tagek = document.getElementById('tagek').value;
     const kepSrc = document.getElementById('kepSrc');
     const forras = document.getElementById('forras').value;
-    if (
-        nev === '' ||
-        tipus === 'null' ||
-        ido === '' ||
-        adag === '' ||
-        kepSrc === '' ||
-        forras === ''
-    ) {
+    if (!nev || !tipus || !ido || !adag || !kepSrc || !forras) {
         checker = false;
     }
 
@@ -261,22 +272,23 @@ const SendData = (length) => {
                 [hozzavalok[i]]: mennyisegek[i]
             });
         }
-        let source = kepSrc.value.split('\\')[kepSrc.value.split('\\').length - 1];
+        // let source = kepSrc.value.split('\\')[kepSrc.value.split('\\').length - 1];
+        let source = kepSrc.value.split('\\').pop();
 
         const recept = {
-            id: (length + 1) * 1,
+            id: length + 1,
             tipus: tipus,
             nev: nev,
             tagek: tagek,
-            ido: ido * 1,
-            adag: adag * 1,
+            ido: ido,
+            adag: adag,
             hozzavalok: hozzavalo,
             elkeszites: elkeszites,
             kepnev: source,
             forras: forras
         };
 
-        SendRecept(recept);
+        SendRecept(recept, source, kepSrc);
     } else {
         //? Üres adatok esetén megjelenő SweetAlert
         Swal.fire({
@@ -288,29 +300,43 @@ const SendData = (length) => {
 };
 
 //! Recept adatainak feltöltése
-const SendRecept = async (recept) => {
+const SendRecept = async (recept, source, file) => {
     try {
-        //? Adatok feltöltése
         const data = await postAPI('/api/feltoltes', recept);
         console.log(data);
 
         if (data.message !== 'Hiba') {
-            await Swal.fire({
-                title: 'Sikeres feltöltés!',
-                text: `Recept sikeresen feltöltve! (${data.message})`,
-                icon: 'success'
-            });
+            const formData = new FormData();
+            formData.append('kepSrc', file.files[0]);
 
-            document.location.href = `/recipefullview/${recept.kepnev}`;
+            const data2 = await postAPIFormData('/upload', formData);
+            console.log(data2);
+
+            if (data2.message !== 'Hiba') {
+                await Swal.fire({
+                    title: 'Sikeres feltöltés!',
+                    text: `Recept adatai sikeresen feltöltve! (${data2.message})`,
+                    icon: 'success'
+                });
+
+                setTimeout(() => {
+                    document.location.href = `/recipefullview/${source.split('.')[0]}`;
+                }, 1000);
+            }
         } else {
-            //? Hibás adatok esetén megjelenő SweetAlert
-            Swal.fire({
+            await Swal.fire({
                 title: 'Sikertelen feltöltés!',
-                text: `Hibás adatok! (${data.message})`,
+                text: `Hibás receptadatok!`,
                 icon: 'error'
             });
         }
     } catch (error) {
         console.error(error);
+        //? Hibás adatok esetén megjelenő SweetAlert
+        await Swal.fire({
+            title: 'Sikertelen feltöltés!',
+            text: `Hiba történt!`,
+            icon: 'error'
+        });
     }
 };

@@ -9,7 +9,7 @@ CREATE TABLE recept (
     tipus VARCHAR(25) NOT NULL,
     nev VARCHAR(100) NOT NULL,
     tagek VARCHAR(75),
-    ido INT,
+    ido INT NOT NULL,
     adag INT NOT NULL,
     hozzavalok TEXT NOT NULL,
     elkeszites TEXT NOT NULL,
