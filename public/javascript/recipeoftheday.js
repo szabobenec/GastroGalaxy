@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const hova = document.getElementById('hova');
         hova.innerHTML = `
             <div class="recipe-card">
-                <img src="../images/recipes/${kepnev}" alt="${nev}" class="recipe-image">
+                <img src="../images/recipes/${kepnev}" alt="${nev}" class="recipe-image unselectable">
                 <div class="recipe-details">
                     <h2>${nev}</h2>
                     <p><strong>Típus:</strong> ${tipus}</p>

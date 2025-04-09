@@ -8,16 +8,36 @@
             "ido": 35,
             "adag": 3,
             "hozzavalok": [
-                { "olivaolaj": "2 teáskanál" },
-                { "fokhagyma": "4 gerezd, apróra vágva" },
-                { "vaj": "2 evőkanál" },
-                { "víz": "~750 ml" },
-                { "bors": "0.5 teáskanál (fekete őrölt)" },
-                { "só": "0.25 teáskanál" },
-                { "tészta": "250 g" },
-                { "parmezán sajt": "100 g" },
-                { "tejszín": "200 ml" },
-                { "petrezselyem": "1.5 evőkanál" }
+                {
+                    "olivaolaj": "2 teáskanál"
+                },
+                {
+                    "fokhagyma": "4 gerezd, apróra vágva"
+                },
+                {
+                    "vaj": "2 evőkanál"
+                },
+                {
+                    "víz": "~750 ml"
+                },
+                {
+                    "bors": "0.5 teáskanál (fekete őrölt)"
+                },
+                {
+                    "só": "0.25 teáskanál"
+                },
+                {
+                    "tészta": "250 g"
+                },
+                {
+                    "parmezán sajt": "100 g"
+                },
+                {
+                    "tejszín": "200 ml"
+                },
+                {
+                    "petrezselyem": "1.5 evőkanál"
+                }
             ],
             "elkeszites": "1. Melegítsünk olívaolajat egy közepes serpenyőben közepes lángon. Adjuk hozzá a fokhagymát, és keverjük, amíg illatos nem lesz, 1-2 percig. Adjuk hozzá a vajat, és folyamatosan kevergetve olvasszuk meg.\n2. Öntsük hozzá a vizet; adjunk hozzá borsot és sót. Forraljuk fel. Adjuk hozzá a spagettit (vagy a választott tésztát), és időnként megkeverve főzzük, amíg puha, de harapható nem lesz, kb. 12 percig. Adjunk hozzá még vizet, ha a tészta elkezd ragadni a serpenyőhöz.\n3. Adjuk hozzá a parmezán sajtot, a tejszínt és a petrezselymet, és keverjük össze, amíg alaposan össze nem áll. Azonnal tálaljuk.",
             "kepnev": "kremesFokhagymasTeszta.jpg",
@@ -31,15 +51,33 @@
             "ido": 40,
             "adag": 4,
             "hozzavalok": [
-                { "tészta": "350 g" },
-                { "víz": "~700 ml" },
-                { "feta sajt": "1 tömb (~250 g)" },
-                { "paradicsom": "0.5l db (cseresznyeparadicsom)" },
-                { "olivaolaj": "1 evőkanál" },
-                { "só": "0.5 teáskanál" },
-                { "bors": "0.25 teáskanál (fekete őrölt)" },
-                { "fokhagyma": "2 gerezd, apróra vágva" },
-                { "bazsalikom": "25 g" }
+                {
+                    "tészta": "350 g"
+                },
+                {
+                    "víz": "~700 ml"
+                },
+                {
+                    "feta sajt": "1 tömb (~250 g)"
+                },
+                {
+                    "paradicsom": "0.5l db (cseresznyeparadicsom)"
+                },
+                {
+                    "olivaolaj": "1 evőkanál"
+                },
+                {
+                    "só": "0.5 teáskanál"
+                },
+                {
+                    "bors": "0.25 teáskanál (fekete őrölt)"
+                },
+                {
+                    "fokhagyma": "2 gerezd, apróra vágva"
+                },
+                {
+                    "bazsalikom": "25 g"
+                }
             ],
             "elkeszites": "A folyamat egyszerű, és ez az, ami szerintünk ezt a receptet olyan nagyszerűvé teszi! A következőkre lesz szükségünk:\n1. Melegítsük elő a sütőt 200 °C-ra.\n2. Tegyük a fetatömböt a tepsibe. - helyezzük a feta sajtblokkot a tál közepére.\n3. Adjuk hozzá a tésztát és a vizet - tegyük a száraztésztát a sütőtálba (a feta tömb körül), öntsük rá a vizet a nyers tésztára, és óvatosan keverjük össze a tésztát és a vizet (ügyelve arra, hogy a tészta ne kerüljön a feta alá vagy tetejére), hogy az összes tészta elmerüljön a folyadékban.\n4. Adjuk hozzá a cseresznyeparadicsomot, az EVOO-t, sót és borsot - szórjuk a cseresznyeparadicsomot a tészta tetejére, és locsoljunk meg mindent az EVOO-val, sóval és borssal.\n5. Szorosan lefedjük + sütjük - a tepsit a lehető legszorosabban lefedjük fóliával, és 200 fokon 40 percig sütjük.\n6. Adjuk hozzá a fokhagymát és a bazsalikomot + keverjük össze - miután befejeztük a sütést, vegyük le a fóliát, adjuk hozzá a felaprított fokhagymát és a friss bazsalikomot, és keverjünk össze mindent, amíg jól össze nem keveredik.\nTálalja és élvezze!",
             "kepnev": "sultFetaTeszta.jpeg",
@@ -53,16 +91,36 @@
             "ido": 25,
             "adag": 4,
             "hozzavalok": [
-                { "tészta": "200 g" },
-                { "vöröshagyma": "1 fej(~120g)" },
-                { "fokhagyma": "3 gerezd" },
-                { "csirkemell": "400g" },
-                { "paradicsom": "1 teáskanál (sürítettparadicsom)" },
-                { "só": "csipet" },
-                { "bors": "csipet" },
-                { "tejszín": "300ml (habt)" },
-                { "zöldborsó": "200 g (mirelit)" },
-                { "vaj": "30 g" }
+                {
+                    "tészta": "200 g"
+                },
+                {
+                    "vöröshagyma": "1 fej(~120g)"
+                },
+                {
+                    "fokhagyma": "3 gerezd"
+                },
+                {
+                    "csirkemell": "400g"
+                },
+                {
+                    "paradicsom": "1 teáskanál (sürítettparadicsom)"
+                },
+                {
+                    "só": "csipet"
+                },
+                {
+                    "bors": "csipet"
+                },
+                {
+                    "tejszín": "300ml (habt)"
+                },
+                {
+                    "zöldborsó": "200 g (mirelit)"
+                },
+                {
+                    "vaj": "30 g"
+                }
             ],
             "elkeszites": "A borsós csirketokány elkészítéséhez a zsírt melegítünk egy serpenyőben. Hozzáadjuk a finomra vágott vöröshagymát és fokhagymát, és közepes hőfokon 5 percig dinszteljük. Hozzáadjuk a kb. 2 cm-es csíkokra vágott csirkemellet. Sózzuk, borsozzuk, és erős hőfokon 2 perc alatt jól lepirítjuk. Mehet hozzá a sűrített paradicsom is, és újabb 1-2 percig pirítjuk. Felöntjük a tejszínnel, hozzáadjuk a borsót, a vajat, és további 6 perc alatt készre főzzük.\nA szarvacskatésztát kifőzzük a csomagoláson írtak szerint, és ezzel tálaljuk a ragut. ",
             "kepnev": "borsosCsirketokany.jpg",
@@ -76,16 +134,36 @@
             "ido": 65,
             "adag": 8,
             "hozzavalok": [
-                { "liszt": "60 dkg" },
-                { "cukor": "30 dkg" },
-                { "sütőpor": "1 csomag" },
-                { "vaj": "30 dkg" },
-                { "tejföl": "1 pohár" },
-                { "tojás": "5db" },
-                { "túró": "50dkg" },
-                { "vaníliás cukor": "1 csomag" },
-                { "citrom": "1db (reszelt héj)" },
-                { "zöldborsó": "200 g (mirelit)" }
+                {
+                    "liszt": "60 dkg"
+                },
+                {
+                    "cukor": "30 dkg"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "vaj": "30 dkg"
+                },
+                {
+                    "tejföl": "1 pohár"
+                },
+                {
+                    "tojás": "5db"
+                },
+                {
+                    "túró": "50dkg"
+                },
+                {
+                    "vaníliás cukor": "1 csomag"
+                },
+                {
+                    "citrom": "1db (reszelt héj)"
+                },
+                {
+                    "zöldborsó": "200 g (mirelit)"
+                }
             ],
             "elkeszites": "1. A túrós pite elkészítéséhez összekeverjük a lisztet, a cukrot és a sütőport, majd belemorzsoljuk a hideg vajat.\n2. Hozzáadjuk a tejfölt és a tojássárgákat, és gyors mozdulatokkal összekeverjük, összegyúrjuk a tésztát, majd folpackba csomagolva a hűtőbe tesszük, és hagyjuk pihenni. Ez idő alatt elkészítjük a túrós tölteléket.\n3. A töltelékhez összekeverjük a túrót, a tojássárgáját, a cukrot, a vaníliás cukrot, a lisztet és a citrom lereszelt héját és a mazsolát. A tojásfehérjét kemény habbá verjük, és a túrós masszába keverjük.\n4. Tepsibe terítjük a tészta 2/3-ad részét kinyújtva (nem kell túl vastagon), ezen elegyengetjük a túrós tölteléket. A tetejét négyzetrácsosan befedjük a maradék tésztával (vagy ráborítjuk vékonyra van nyújtva).\n5. Megszurkáljuk, és 170 fokra előmelegített sütőben 35-40 percig sütjük. Még forrón megszórjuk porcukorral.",
             "kepnev": "turosPite.jpg",
@@ -99,24 +177,60 @@
             "ido": 45,
             "adag": 5,
             "hozzavalok": [
-                { "olivaolaj": "2 evőkanál" },
-                { "vöröshagyma": "1 fej(~120g)" },
-                { "fokhagyma": "4 gerezd" },
-                { "kömény": "0.25-0.5 teáskanál (őrölt római)" },
-                { "chilipor": "2-3 teáskanál" },
-                { "sárgarépa": "1 db, felkarikázva" },
-                { "burgonya": "1 db, felkockázva" },
-                { "paradicsom": "35 dkg, kockákra vágva" },
-                { "cukkini": "1 db, felkockázva" },
-                { "káposzta": "0.25 fej, csíkokra szelve" },
-                { "víz": "1 l" },
-                { "kukorica": "1 db" },
-                { "zöldbab": "10 db" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "korianderzöld": "4-6 evőkanál" },
-                { "salsa": "ízlésre" },
-                { "tortillachips": "ízlésre" }
+                {
+                    "olivaolaj": "2 evőkanál"
+                },
+                {
+                    "vöröshagyma": "1 fej(~120g)"
+                },
+                {
+                    "fokhagyma": "4 gerezd"
+                },
+                {
+                    "kömény": "0.25-0.5 teáskanál (őrölt római)"
+                },
+                {
+                    "chilipor": "2-3 teáskanál"
+                },
+                {
+                    "sárgarépa": "1 db, felkarikázva"
+                },
+                {
+                    "burgonya": "1 db, felkockázva"
+                },
+                {
+                    "paradicsom": "35 dkg, kockákra vágva"
+                },
+                {
+                    "cukkini": "1 db, felkockázva"
+                },
+                {
+                    "káposzta": "0.25 fej, csíkokra szelve"
+                },
+                {
+                    "víz": "1 l"
+                },
+                {
+                    "kukorica": "1 db"
+                },
+                {
+                    "zöldbab": "10 db"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "korianderzöld": "4-6 evőkanál"
+                },
+                {
+                    "salsa": "ízlésre"
+                },
+                {
+                    "tortillachips": "ízlésre"
+                }
             ],
             "elkeszites": "1. Az olajat vastag aljú serpenyőben vagy fazékban felforrósítjuk.\n2. Beledobjuk a vöröshagymát a fokhagymával együtt, és néhány perc alatt üvegesre pároljuk. Meghintjük a római köménnyel és chiliporral. Hozzákeverjük a felaprított sárgarépát, burgonyát, paradicsomot, cukkinit meg káposztát, és időnként megkeverve 2 percig pirítjuk.\n3. Felöntjük vízzel. Fedő alatt, közepes lángon, 20 perc alatt puhára főzzük a zöldségeket.\n4. Ha szükségesnek látjuk, kevés vizet öntünk hozzá, belekeverjük a kukoricát és a zöldbabot, majd további 5-10 perc alatt a babot is puhára pároljuk. Sóval, borssal ízesítjük, nem feledkezve meg arról, hogy a tortillachips is sós.\n5. Mélytányérba merjük, és apróra vágott friss korianderzöldet hintünk a tetejére. Kevés salsát kanalazunk a tetejére, és egy marék tortillachipset kínálunk mellé.",
             "kepnev": "zoldseglevesTortillachipsszel.jpg",
@@ -130,17 +244,39 @@
             "ido": 50,
             "adag": 1,
             "hozzavalok": [
-                { "liszt": "30 dkg" },
-                { "cukor": "2 evőkanál" },
-                { "alma": "1 db" },
-                { "élesztő": "1 csomag(7g)" },
-                { "tej": "2,5 dl" },
-                { "tojás": "1db" },
-                { "só": "1 csipet" },
-                { "narancs": "1 db (reszelt héj)" },
-                { "mazsola": "10 dkg" },
-                { "porcukor": "tálaláshoz" },
-                { "olaj": "a sütéshez" }
+                {
+                    "liszt": "30 dkg"
+                },
+                {
+                    "cukor": "2 evőkanál"
+                },
+                {
+                    "alma": "1 db"
+                },
+                {
+                    "élesztő": "1 csomag(7g)"
+                },
+                {
+                    "tej": "2,5 dl"
+                },
+                {
+                    "tojás": "1db"
+                },
+                {
+                    "só": "1 csipet"
+                },
+                {
+                    "narancs": "1 db (reszelt héj)"
+                },
+                {
+                    "mazsola": "10 dkg"
+                },
+                {
+                    "porcukor": "tálaláshoz"
+                },
+                {
+                    "olaj": "a sütéshez"
+                }
             ],
             "elkeszites": "1. Meglangyosítjuk a tejet. Beletesszük a két evőkanál cukrot, beleszórjuk az élesztőt, elkeverjük, és langyos helyen hagyjuk tíz percig állni.\n2. Közben az almát meghámozzuk és apróra vágjuk.\n3. Keverőtálba tesszük a lisztet, hozzáöntjük a felhabosodott élesztős tejet, a villával felvert tojást, a csipet sót, és habverővel összedolgozzuk. Végül beleforgatjuk az apróra vágott almát, a narancs reszelt héját és a mazsolát. Letakarva egy órán át hagyjuk kelni. \n4. Egy serpenyőben bő olajat forrósítunk. Két evőkanalat belemártunk, majd a tésztából kiveszünk egy kanálnyit, megformázzuk a két kanállal, beletesszük a forró olajba. Ha pirulni kezd, megfordítjuk. Konyhai kéztörlőre szedve hagyjuk lecsepegni, végül megforgatjuk porcukorban.",
             "kepnev": "HollandFank.png",
@@ -154,11 +290,21 @@
             "ido": 45,
             "adag": 4,
             "hozzavalok": [
-                { "káposzta": "1kg (fejeskáposzta)" },
-                { "étolaj": "7 dl" },
-                { "só": "ízlésre" },
-                { "bors": "1 teáskanál" },
-                { "tészta": "50 dkg (fodros kockatészta)" }
+                {
+                    "káposzta": "1kg (fejeskáposzta)"
+                },
+                {
+                    "étolaj": "7 dl"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "1 teáskanál"
+                },
+                {
+                    "tészta": "50 dkg (fodros kockatészta)"
+                }
             ],
             "elkeszites": "1. A káposzta külső leveleit eltávolítjuk, majd negyedeljük. A torzsáját kivágjuk és a leveleit felkockázzuk.\n2. Egy nagyobb fazékban olajat hevítünk, erre dobjuk rá a kockázott káposztát, alaposan sózzuk, és folyamatos kevergetés mellett pirítjuk, amíg a káposzta kb. a felére esik össze, közben frissen őrölt borssal megszórjuk.\n3. Amíg pirul a káposzta egy lábasban vizet forralunk kevés olajjal, majd ha felforrt, sózzuk a főzővizet, és puhára főzzük a tésztát. Leszűrjük, és a pirított káposztához keverjük. Frissen tálaljuk.",
             "kepnev": "hagyomanyosKaposztasTeszta.jpg",
@@ -172,10 +318,18 @@
             "ido": 10,
             "adag": 1,
             "hozzavalok": [
-                { "olaj": "0.5 teáskanál" },
-                { "vaj": "1 teáskanál" },
-                { "tojás": "3 db" },
-                { "só": "1 csipet" }
+                {
+                    "olaj": "0.5 teáskanál"
+                },
+                {
+                    "vaj": "1 teáskanál"
+                },
+                {
+                    "tojás": "3 db"
+                },
+                {
+                    "só": "1 csipet"
+                }
             ],
             "elkeszites": "1. Egy serpenyőt közepes lángon melegíteni kezdünk. Beleöntjük az olajat, majd hozzáadjuk a vajat. Amíg a vaj felhabzik, a tojásokat egy keverőtálba öntjük, sózzuk, villával kissé felverjük (nem kell, hogy teljesen elkeveredjen a sárgája a fehérjével).\n2. A keveréket a habzó vajra öntjük, és körkörös mozdulatokkal keverve megsütjük. Ügyeljünk arra, hogy ne süssük szárazra (3 db tojás esetén nagyjából 1-2 perc a sütési idő).\n3. Végül ízlés szerint megszórhatjuk egy kevés őrölt pirospaprikával vagy akár sajttal. Pirítóssal, vagy friss kenyérrel tálaljuk.",
             "kepnev": "rantotta.jpg",
@@ -189,15 +343,33 @@
             "ido": 45,
             "adag": 4,
             "hozzavalok": [
-                { "vaj": "2 evőkanál" },
-                { "póréhagyma": "2 db" },
-                { "víz": "1 liter" },
-                { "burgonya": "2 db" },
-                { "babérlevél": "1 db" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "tejszín": "4 evőkanál" },
-                { "snidling": "ízlésre" }
+                {
+                    "vaj": "2 evőkanál"
+                },
+                {
+                    "póréhagyma": "2 db"
+                },
+                {
+                    "víz": "1 liter"
+                },
+                {
+                    "burgonya": "2 db"
+                },
+                {
+                    "babérlevél": "1 db"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "tejszín": "4 evőkanál"
+                },
+                {
+                    "snidling": "ízlésre"
+                }
             ],
             "elkeszites": "1. A vajat egy lábasban megolvasztjuk, és megfuttatjuk benne a megtisztított, apróra vágott póréhagymát. Addig főzzük, míg megpuhul (ez kb. 10 perc).\n2. Felöntjük az alaplével, hozzáadjuk a meghámozott, felkockázott burgonyát és a babérlevelet. Sózzuk, borsozzuk, és felforraljuk, majd közepes lángon kb. 15 percig főzzük, vagy amíg a burgonya teljesen megpuhul.\n3. Lehúzzuk a levest a tűzről, hagyjuk kissé hűlni, majd eltávolítjuk belőle a babérlevelet.\n4. A levest simára turmixoljuk, majd visszatesszük a tűzre. Folyamatos kevergetés mellett hozzáadjuk a tejszínt, és felforraljuk. Ha szükséges, ismét sózzuk, borsozzuk. Ezután lehúzzuk a tűzről, és tányérokba vagy kis tálkákba merve kínáljuk.\n5. Megszórjuk az apróra vágott snidlinggel, és pirított kenyérszeleteket kínálunk mellé.",
             "kepnev": "porehagymaKremlevesPiritossal.jpg",
@@ -211,20 +383,48 @@
             "ido": 90,
             "adag": 6,
             "hozzavalok": [
-                { "csirkemell": "1.2 kg" },
-                { "sonka": "40 dkg" },
-                { "sajt": "30 dkg" },
-                { "finomliszt": "12 dkg" },
-                { "tojás": "5 db" },
-                { "zsemlemorzsa": "20 dkg" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "olaj": "3 dl (napraforgó olaj)" },
-                { "rizs": "30 dkg" },
-                { "sonka": "10 dkg" },
-                { "vöröshagyma": "1 db (közepes)" },
-                { "vaj": "5 dkg" },
-                { "víz": "3 dl" }
+                {
+                    "csirkemell": "1.2 kg"
+                },
+                {
+                    "sonka": "40 dkg"
+                },
+                {
+                    "sajt": "30 dkg"
+                },
+                {
+                    "finomliszt": "12 dkg"
+                },
+                {
+                    "tojás": "5 db"
+                },
+                {
+                    "zsemlemorzsa": "20 dkg"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "olaj": "3 dl (napraforgó olaj)"
+                },
+                {
+                    "rizs": "30 dkg"
+                },
+                {
+                    "sonka": "10 dkg"
+                },
+                {
+                    "vöröshagyma": "1 db (közepes)"
+                },
+                {
+                    "vaj": "5 dkg"
+                },
+                {
+                    "víz": "3 dl"
+                }
             ],
             "elkeszites": "1. Megtisztítjuk, megmossuk, vékony szeletekre vágjuk, majd folpackban kiklopfoljuk a húst. Mindkét oldalát ízlés szerint sózzuk, borsozzuk.\n2. Előkészítjük a (30 dkg) sonkát, lereszeljük a sajtot, majd a hússzeletekre helyezünk 2 szelet sonkát és egy maréknyi sajtot, és szorosan feltekerjük (ha kisebbek a szeletek, akkor érdemes fogpiszkálóval összetűzni, hogy ne nyíljanak szét). Ha kész vagyunk, akkor tálcára helyezzük a roládokat, folpackkal fedjük, majd hűtőben pihentetjük, közben elkészítjük a köreteket.\n3. Kb. 30-40 perc pihentetés után (duplán) bepanírozzuk a húsokat a következőképpen: először lisztben forgatjuk meg, majd sóval felvert tojásba, zsemlemorzsába, majd ismét tojásba, és végül zsemlemorzsában hempergetjük meg a húsokat.\n4. Felhevítjük az olajat egy serpenyőben, és minden oldalát aranybarnára sütjük közepes hőfokozaton (kb. 20 perc).\n5. Átmossuk a rizst, szűrőn lecsepegtetjük. Megtisztítjuk, megmossuk a vöröshagymát felaprítjuk, a (10 dkg) sonkát 1x1 cm-es kockákra vágjuk.\n6. A vajat felhevítjük egy lábasban, majd beletesszük a hagymát, és üvegesre pároljuk. Utána hozzáadjuk a sonkát, majd a rizst, és pár percig pirítjuk.\n7. Sózzuk, borsozzuk, felöntjük vízzel, és az egészet puhára főzzük (rizsfajtától függ, de kb. 10-15 perc). Tálalás előtt még fedő alatt pár percig pihentetjük.",
             "kepnev": "csirkeCordonBleuSonkasRizzsel.jpg",
@@ -237,7 +437,14 @@
             "tagek": "",
             "ido": 5,
             "adag": 2,
-            "hozzavalok": [{ "tojás": "2 db" }, { "olaj": "2 evőkanál (napraforgó olaj)" }],
+            "hozzavalok": [
+                {
+                    "tojás": "2 db"
+                },
+                {
+                    "olaj": "2 evőkanál (napraforgó olaj)"
+                }
+            ],
             "elkeszites": "1. Az olajat egy serpenyőben kellőképp felforrósítjuk és óvatosan beleütjük a tojásokat.\n2. Keverés nélkül készre sütjük, míg a tojásfehérje megsül, de a sárgája folyós marad.\n3. Hogy jobban átsüljön, a tojásfehérjét egy villa segítségével óvatosan megmozgathatjuk.",
             "kepnev": "tukortojas.jpg",
             "forras": "https://www.nosalty.hu/recept/tukortojas?adag=2#ingredients ; https://streetkitchen.hu/basic/tukortojas-sutese/"
@@ -250,14 +457,30 @@
             "ido": 45,
             "adag": 12,
             "hozzavalok": [
-                { "vaj": "15 dkg (puha)" },
-                { "cukor": "12 dkg + 2 evőkanál" },
-                { "tojás": "3 db" },
-                { "liszt": "15 dkg" },
-                { "sütőpor": "1.5 teáskanál" },
-                { "kakaópor": "3 evőkanál (púpos)" },
-                { "tejszín": "2 dl" },
-                { "étcsokoládé": "20 dkg" }
+                {
+                    "vaj": "15 dkg (puha)"
+                },
+                {
+                    "cukor": "12 dkg + 2 evőkanál"
+                },
+                {
+                    "tojás": "3 db"
+                },
+                {
+                    "liszt": "15 dkg"
+                },
+                {
+                    "sütőpor": "1.5 teáskanál"
+                },
+                {
+                    "kakaópor": "3 evőkanál (púpos)"
+                },
+                {
+                    "tejszín": "2 dl"
+                },
+                {
+                    "étcsokoládé": "20 dkg"
+                }
             ],
             "elkeszites": "1. A vajat habosra keverjük a cukorral, és egyenként beledolgozzuk a tojásokat. A lisztet elvegyítjük a sütőporral és a kakaóval, majd a vajas keverékbe forgatjuk.\n2. A sütőt előmelegítjük 180 fokra. A tészta masszját egy 12 részes muffintepsi papírkapszlikkal kibélelt mélyedéseibe kanalazzuk, majd kb. 20 perc alatt megsütjük. A muffinokat kiemeljük a tepsiből, és a rácson hűlni hagyjuk.\n3. A krémhez felverjük a tejszínt a cukorral, majd hozzákeverjük a gőz felett felolvasztott csokoládét. A krémet lehűtjük, majd habzsákba töltjük, és a muffinok tetejére nyomjuk. Végül mindet megszórjuk csokoládédarabokkal.",
             "kepnev": "csokisCupcake.jpg",
@@ -271,14 +494,30 @@
             "ido": 7,
             "adag": 4,
             "hozzavalok": [
-                { "finomliszt": "225 g" },
-                { "tojás": "1 db" },
-                { "tej": "3 dl" },
-                { "sütőpor": "1 csomag" },
-                { "cukor": "3 evőkanál" },
-                { "vaníliás cukor": "1 csomag" },
-                { "fahéj": "1 késhegynyi" },
-                { "olaj": "1 evőkanál (napraforgó olaj)" }
+                {
+                    "finomliszt": "225 g"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "tej": "3 dl"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "cukor": "3 evőkanál"
+                },
+                {
+                    "vaníliás cukor": "1 csomag"
+                },
+                {
+                    "fahéj": "1 késhegynyi"
+                },
+                {
+                    "olaj": "1 evőkanál (napraforgó olaj)"
+                }
             ],
             "elkeszites": "1. Az összes hozzávalót beletesszük a turmixba, és alaposan összemixeljük. Érdemes 2 részletben hozzáadni a tejet és a lisztet, így egyszerűbb, hatékonyabb.\n2. Felforrósítunk és beolajozunk egy teflon serpenyőt. A tésztakeverékből 2-3 korongot csorgatunk bele. A turmix kiöntője segítségével egyszerű adagolni. Aranybarnára sütjük mindkét oldalát.\n3. Ízlés szerint fogyaszthatjuk mézzel, mogyorókrémmel, olvasztott csokival, lekvárral, juharsziruppal.",
             "kepnev": "amerikaiPalacsinta.jpg",
@@ -292,13 +531,27 @@
             "ido": 40,
             "adag": 4,
             "hozzavalok": [
-                { "hagyma": "2 fej" },
-                { "olaj": "főzéshez" },
-                { "kolbász": "20 dkg" },
-                { "pirospaprika": "2 evőkanál" },
-                { "burgonya": "1 kg" },
-                { "só": "ízlésre" },
-                { "paradicsompüré": "1 evőkanál" }
+                {
+                    "hagyma": "2 fej"
+                },
+                {
+                    "olaj": "főzéshez"
+                },
+                {
+                    "kolbász": "20 dkg"
+                },
+                {
+                    "pirospaprika": "2 evőkanál"
+                },
+                {
+                    "burgonya": "1 kg"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "paradicsompüré": "1 evőkanál"
+                }
             ],
             "elkeszites": "1. A hagyományos paprikás krumpli elkészítéséhez a hagymát megtisztítjuk, apró kockára vágjuk.\n2. Tűzálló tálban egy kevés olajat forrósítunk, beletesszük a felaprított hagymát, és üvegesre pirítjuk, majd hozzáadjuk a felkarikázott kolbászt, és megpirítjuk.\n3. Lehúzzuk a lábast a tűzhelyről, megszórjuk a kolbászos pirított hagymát a pirospaprikával.\n4. Átkeverjük, majd hozzáadjuk az alaposan megmosott, megtisztított, kockákra vágott burgonyát.\n5. Felöntjük annyi vízzel, ami majdnem ellepi. Megsózzuk, hozzáadjuk a paradicsompürét, és addig főzzük, amíg a burgonya megpuhul.\n6. Friss kenyérrel, savanyú uborkával tálaljuk.",
             "kepnev": "paprikasKrumpli.jpg",
@@ -312,19 +565,45 @@
             "ido": 45,
             "adag": 4,
             "hozzavalok": [
-                { "karalábé": "4 db (200 g/db)" },
-                { "vaj": "100 g" },
-                { "vöröshagyma": "2 fej" },
-                { "fokhagyma": "6 gerezd" },
-                { "cukor": "2 teáskanál (kristálycukor)" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "bazsalikom": "0.5 csokor" },
-                { "finomliszt": "35 g" },
-                { "tej": "500 ml" },
-                { "szerecsendió": "0.5 teáskanál (őrölt)" },
-                { "edami sajt": "150 g" },
-                { "petrezselyem": "0.5 csokor" }
+                {
+                    "karalábé": "4 db (200 g/db)"
+                },
+                {
+                    "vaj": "100 g"
+                },
+                {
+                    "vöröshagyma": "2 fej"
+                },
+                {
+                    "fokhagyma": "6 gerezd"
+                },
+                {
+                    "cukor": "2 teáskanál (kristálycukor)"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "bazsalikom": "0.5 csokor"
+                },
+                {
+                    "finomliszt": "35 g"
+                },
+                {
+                    "tej": "500 ml"
+                },
+                {
+                    "szerecsendió": "0.5 teáskanál (őrölt)"
+                },
+                {
+                    "edami sajt": "150 g"
+                },
+                {
+                    "petrezselyem": "0.5 csokor"
+                }
             ],
             "elkeszites": "1. A karalábékat megpucoljuk és 1 cm-es szeletekre vágjuk, majd bő, enyhén sós vízben előfőzzük őket kb. 10 perc alatt. Akkor jó, ha marad egy kis roppanása a zöldségnek. Leszűrjük és félretesszük. \n2. Egy serpenyőben, közepesen magas hőfokon megkaramellizáljuk a vajon (50 g) a félfőre vágott vöröshagymát és a szeletelt fokhagymát a cukorral kb. 10 perc alatt, közben sózzuk és borsozzuk, majd ha elkészültünk, belekeverjük a finomra vágott bazsalikomot és félrerakjuk. \n3. A besamelhez közepesen magas hőfokon, egy lábasban habzásig melegítjük a vajat (50 g), majd ráöntjük a lisztet és 1 percig pirítjuk. Felöntjük a hideg tejjel, amit egy habverővel folyamatosan keverünk, közben sózzuk, borsozzuk és ízesítjük a szerecsendióval. Forrástól számítva 2-3 percig főzzük a besamelt, majd lehúzzuk a tűzről. \n4. Egy tepsibe rétegezzük félig fedve a karalábészeleteket, az egészet beborítjuk a pirított vajas, bazsalikomos hagymával, és leöntjük a besamellel. A tetejére szórjuk a reszelt edami sajtot, és betesszük grill funkción a 230 fokra előmelegített sütőbe kb. 15 percre, míg a sajt szépen rápirul. Utána már szedhetjük is tányérra a csőben sült karalábét, amit megszórunk finomra vágott petrezselyemmel. ",
             "kepnev": "csobenSultKaralabe.jpg",
@@ -338,17 +617,39 @@
             "ido": 110,
             "adag": 1,
             "hozzavalok": [
-                { "finomliszt": "300 g" },
-                { "vaj": "150 g (fagyasztott)" },
-                { "só": "1 csipet" },
-                { "sütőpor": "1 teáskanál" },
-                { "cukor": "180 g (porcukor)" },
-                { "citrom": "1 db" },
-                { "tojás": "2 db" },
-                { "körte": "4 db" },
-                { "mandulaszirom": "50 g" },
-                { "vaníliás pudingpor": "1 csomag" },
-                { "tej": "500 ml" }
+                {
+                    "finomliszt": "300 g"
+                },
+                {
+                    "vaj": "150 g (fagyasztott)"
+                },
+                {
+                    "só": "1 csipet"
+                },
+                {
+                    "sütőpor": "1 teáskanál"
+                },
+                {
+                    "cukor": "180 g (porcukor)"
+                },
+                {
+                    "citrom": "1 db"
+                },
+                {
+                    "tojás": "2 db"
+                },
+                {
+                    "körte": "4 db"
+                },
+                {
+                    "mandulaszirom": "50 g"
+                },
+                {
+                    "vaníliás pudingpor": "1 csomag"
+                },
+                {
+                    "tej": "500 ml"
+                }
             ],
             "elkeszites": "1. A körtés pite elkészítését a tésztával kezdjük. Ehhez a lisztbe belereszeljük a vajat úgy, hogy közben néha belemártjuk a lisztbe. Ezzel a technikával nem fog összeállni egy csomóba a vaj. Beleszórjuk a sót és a sütőport, és hozzáadunk 130 g porcukrot, valamint a citrom lereszelt héját. Jöhet a tálba egy egész tojás és egy tojássárgája, majd az egész tésztát alaposan összegyúrjuk és folpackba csomagolva hűtőben pihentetjük legalább 30 percet. \n2. A citrom levét kifacsarjuk, a körtéket pedig megtisztítjuk és felcikkezzük. A körtecikkeket összekeverjük a citromlével és lefedve 200 fokra előmelegített sütőben 35 percig sütjük, majd félretesszük kihűlni. \n3. A pihentetett tésztát lisztezett felületen kb. 5 mm vastagon kinyújtjuk a piteformánál nagyobbra és belefektetjük a kivajazott formába úgy, hogy a széleinél a túllógó részt levágjuk. A leeső darabokat újra összegyúrjuk és félretesszük. A megmaradt tojásfehérjét lazán felverjük 1 evőkanál porcukorral, és beleforgatjuk a mandulaszirmot és a kihűlt körtecikkeket. Ezt a keveréket belesimítjuk a tésztával kibélelt piteformába. \n4. A pudingport kikeverjük kb. 100 ml tejjel, majd a maradék tejhez adjuk és folyamatosan kevergetve közepes lángon felforraljuk. A még meleg pudingot is a pitére simítjuk. Az újra összegyúrt tésztát kinyújtjuk, 2 cm-es csíkokra vágjuk és berácsozzuk vele a pite tetejét. 180 fokra előmelegített sütőben 35-40 perc alatt készre sütjük, majd szeletelés előtt legalább langyosra hűtjük és megszórjuk porcukorral. ",
             "kepnev": "kortesPite.jpg",
@@ -362,14 +663,30 @@
             "ido": 60,
             "adag": 3,
             "hozzavalok": [
-                { "liszt": "1 kg" },
-                { "só": "1.2dkg" },
-                { "cukor": "12dkg" },
-                { "tojássárgája": "3 db" },
-                { "tejszín": "400 ml" },
-                { "friss élesztő": "4 dk" },
-                { "mazsola": "8 dkg" },
-                { "vanília kivonat": "2 kiskanál" }
+                {
+                    "liszt": "1 kg"
+                },
+                {
+                    "só": "1.2dkg"
+                },
+                {
+                    "cukor": "12dkg"
+                },
+                {
+                    "tojássárgája": "3 db"
+                },
+                {
+                    "tejszín": "400 ml"
+                },
+                {
+                    "friss élesztő": "4 dk"
+                },
+                {
+                    "mazsola": "8 dkg"
+                },
+                {
+                    "vanília kivonat": "2 kiskanál"
+                }
             ],
             "elkeszites": "1. A tejet, a tejszínt, az elmorzsolt élesztőt és a tojássárgákat elkevertetjük, majd hozzáadjuk az átszitált lisztet, a cukrot, a sót és a vaníliát és közepes fokozaton kidagasztatjuk a géppel.\n2. Ha erős a liszt, adhatunk még hozzá tejet. Ne legyen túl kemény, de túl lágy sem a tészta. Öt perc után adjuk hozzá a mazsolát és további két percet dagasszuk, majd meleg helyen, letakarva 45 percet érleljük a tésztát.\n3. Miután a kalácstészta megpihent, kilenc részre osztjuk, mert három, háromszálas kalácsot fogunk belőle készíteni. Ha elkészültünk a felosztással, felgömbölyítjük őket, aztán letakarva tovább pihentetjük a tésztát.\n4. Kivajazzuk a sütőformákat, a tésztákból a pihentetés után kalácsot fonunk. Ha ezzel is elkészültünk, betesszük a kalácsokat a sütőformába, majd a felvert tojásokkal megkenjük őket.\n5. Meleg helyen tovább kelesztjük a tésztákat (kb. 45 perc), közben pedig a sütőt alsó és felső sütési fokozatban 190 fok környékére melegítjük. Mielőtt bepakolnánk a kalácsokat a sütőbe, újra megkenjük vékonyan a tojások sárgájával, majd ezután 10 percig 190 fokon, majd lejjebb véve 170 fokra a hőmérsékletet, további 15-20 percig sütjük.",
             "kepnev": "a.jpeg",
@@ -383,28 +700,72 @@
             "ido": 60,
             "adag": 4,
             "hozzavalok": [
-                { "joghurt": "200 g" },
-                { "mustárolaj": "40  ml" },
-                { "őrölt deggi csili": "20 g" },
-                { "gyömbér-fokhagyma paszta": "80 g" },
-                { "só": "8 g " },
-                { "őrölt kömény": "20 g" },
-                { "őrölt koriander": "20 g" },
-                { "csirkemell": "800 g" },
-                { "víz": "2 dl" },
-                { "paradicsom": "1 kg" },
-                { "vöröshagyma": "400 g" },
-                { "kesudió": "320 g" },
-                { "zöld kardamom": "4 g" },
-                { "babérlevél": "4 g" },
-                { "dinnyemag": "120 g" },
-                { "fahéjrúd": "8 g" },
-                { "olaj": "80 ml" },
-                { "garam masala": "4 g" },
-                { "fokhagymapaszta": "8 g" },
-                { "méz": "40 g" },
-                { "tejszín": "40 g" },
-                { "vaj": "60 g" }
+                {
+                    "joghurt": "200 g"
+                },
+                {
+                    "mustárolaj": "40  ml"
+                },
+                {
+                    "őrölt deggi csili": "20 g"
+                },
+                {
+                    "gyömbér-fokhagyma paszta": "80 g"
+                },
+                {
+                    "só": "8 g "
+                },
+                {
+                    "őrölt kömény": "20 g"
+                },
+                {
+                    "őrölt koriander": "20 g"
+                },
+                {
+                    "csirkemell": "800 g"
+                },
+                {
+                    "víz": "2 dl"
+                },
+                {
+                    "paradicsom": "1 kg"
+                },
+                {
+                    "vöröshagyma": "400 g"
+                },
+                {
+                    "kesudió": "320 g"
+                },
+                {
+                    "zöld kardamom": "4 g"
+                },
+                {
+                    "babérlevél": "4 g"
+                },
+                {
+                    "dinnyemag": "120 g"
+                },
+                {
+                    "fahéjrúd": "8 g"
+                },
+                {
+                    "olaj": "80 ml"
+                },
+                {
+                    "garam masala": "4 g"
+                },
+                {
+                    "fokhagymapaszta": "8 g"
+                },
+                {
+                    "méz": "40 g"
+                },
+                {
+                    "tejszín": "40 g"
+                },
+                {
+                    "vaj": "60 g"
+                }
             ],
             "elkeszites": "1. Pácolás\n\nEgy tálba tegyük bele a felkockázott csirkemelleket. Keverjük össze a joghurtot, a mustárolajat, az őrölt deggi csilit, a sót, a gyömbéres fokhagymapasztát, az őrölt köményt és az őrölt koriandert. Alaposan dolgozzuk el a csirkén, és hűtőben lefedve, hagyjuk pihenni egy éjszakán át, hogy a fűszerek jól átjárják a húst.\n2. Mártás\n\nEgy edényben forrósítsunk fel 2 liter vizet. Adjuk hozzá az apróra vágott vöröshagymát, a friss paradicsomot, a kesudiót, a zöld kardamomot, a babérlevelet, a dinnyemagot és a fahéjrudat. Forraljuk a mártást 2 órán keresztül, majd turmixoljuk össze a hozzávalókat. Turmixolás előtt a babérleveleket vegyük ki a mártásból, vagy használjuk őrölt formában.\n\n\n3. Befejezés\n\nEgy másik serpenyőben hevítsünk olajat, majd adjunk hozzá gyömbéres fokhagymapasztát. Melegítsük fel, majd hagyjuk kihűlni. Következő lépésként adjunk hozzá őrölt köményt, őrölt koriandert, garam masalát, sót, kasoori methit, zöld kardamomport és mézet, majd keverjük össze mindezt a korábban elkészített mártással. Főzzük a mártást, amíg sűrű lesz, majd adjuk hozzá a sült csirkét, és hagyjuk forrni. Végül keverjünk tejszínt és vajat a mártásba.\n4. Tálalás\n\nSzedjük a vajas csirkét a már­tással egy tálba, köretként kínáljunk hozzá rizst vagy indiai lepénykenyeret. Csirkemell helyett paneert is használhatunk, így vegetáriánus változatban is elkészíthetjük ezt az ételt.",
             "kepnev": "indiaivajas.png",
@@ -418,15 +779,33 @@
             "ido": 135,
             "adag": 8,
             "hozzavalok": [
-                { "liszt": "300 g" },
-                { "vaj": "200 g" },
-                { "porcukor": "100 g" },
-                { "vaníliás cukor": "1 tasak" },
-                { "citromhéj": "1 citromnyi" },
-                { "tojás sárgája": "1 darab" },
-                { "baracklekvár": "200 g" },
-                { "só": "1 kiskanálnyi" },
-                { "porcukor": "6 ek (szóráshoz)" }
+                {
+                    "liszt": "300 g"
+                },
+                {
+                    "vaj": "200 g"
+                },
+                {
+                    "porcukor": "100 g"
+                },
+                {
+                    "vaníliás cukor": "1 tasak"
+                },
+                {
+                    "citromhéj": "1 citromnyi"
+                },
+                {
+                    "tojás sárgája": "1 darab"
+                },
+                {
+                    "baracklekvár": "200 g"
+                },
+                {
+                    "só": "1 kiskanálnyi"
+                },
+                {
+                    "porcukor": "6 ek (szóráshoz)"
+                }
             ],
             "elkeszites": "1. A tésztához egy keverőtálban összekeverjük a lisztet, sót és a porcukrot. Kockázzuk bele a hideg vajat (vagy le is reszelhetjük), és morzsoljuk össze. Mehet hozzá a tojássárgája, vaníliás cukor és citromhéj is, ezekkel együtt gyors mozdulatokkal dolgozzuk össze, majd formázzunk belőle egy lapos cipót, és csomagoljuk be folpackba. Hűtőben pihentessük 30-40 percet (de akár egy egész éjszakát is hagyhatjuk).\n2. A sütőt előmelegítjük 180 fokra. Addig a tésztát kivesszük a hűtőből, és hagyjuk kicsit állni szobahőmérsékleten.\n3. Lisztezett gyúródeszkán 2-3 mm vékonyra kinyújtjuk, majd a klasszikus virág alakú formával kiszúrjuk. Kb. 50-60 darab jön ki. Ne feledjük a virágok tetejét, azoknak habcsővel szúrjuk ki a közepüket.\n4. A linzervirágokat tegyük sütőpapíros tepsire, és 12-15 perc alatt világos színűre sütjük. Világos színűnek kell maradnia, így lesz szép a végeredmény. Mialatt kihűl, még úgyis \"tovább sül\", úgyhogy nem lesz semmiképp sem nyers.\n5. Miután teljesen kihűltek, az aljakra nyomunk egy kávéskanálnyi lekvárt (habzsákból a leggyorsabb és legegyszerűbb). A tetejüket porcukrozzuk le, majd illesszük össze a lekváros aljakkal. Akkor lesz igazán jó ha egy napot áll, így kelően összepuhul.",
             "kepnev": "Linzer.jpg",
@@ -440,14 +819,30 @@
             "ido": 90,
             "adag": 6,
             "hozzavalok": [
-                { "burgonya": "1.5 kg" },
-                { "kolbász": "40 dkg" },
-                { "tojás": "6 db" },
-                { "tejföl": "3 dl" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "vaj": "2 evőkanál" },
-                { "füstölt szalonna": "15 dkg" }
+                {
+                    "burgonya": "1.5 kg"
+                },
+                {
+                    "kolbász": "40 dkg"
+                },
+                {
+                    "tojás": "6 db"
+                },
+                {
+                    "tejföl": "3 dl"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "vaj": "2 evőkanál"
+                },
+                {
+                    "füstölt szalonna": "15 dkg"
+                }
             ],
             "elkeszites": "1. A burgonyát meghámozzuk, és kb. 5 mm vastag szeletekre vágjuk. A kolbászt karikákra vágjuk, a tojásokat keményre főzzük, majd karikákra vágjuk.\n2. Egy tepsit kivajazunk, és rétegezzük: burgonya, só, bors, kolbász, tojás, tejföl. Ismételjük a rétegezést, amíg elfogynak a hozzávalók. A legfelső réteg legyen burgonya, amit tejföllel lekenünk.\n3. A szalonnát apró kockákra vágjuk, és serpenyőben ropogósra sütjük, majd a rakott krumpli tetejére szórjuk.\n4. 180°C-ra előmelegített sütőben 1 órán át sütjük, amíg a burgonya megpuhul és a teteje aranybarna lesz.",
             "kepnev": "rakottKrumpli.jpg",
@@ -461,18 +856,42 @@
             "ido": 120,
             "adag": 8,
             "hozzavalok": [
-                { "marhalábszár": "1 kg" },
-                { "vöröshagyma": "2 fej" },
-                { "fokhagyma": "3 gerezd" },
-                { "pirospaprika": "2 evőkanál" },
-                { "őrölt kömény": "1 teáskanál" },
-                { "burgonya": "50 dkg" },
-                { "sárgarépa": "2 db" },
-                { "paradicsompüré": "2 evőkanál" },
-                { "zsír": "2 evőkanál" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "csipetke": "20 dkg" }
+                {
+                    "marhalábszár": "1 kg"
+                },
+                {
+                    "vöröshagyma": "2 fej"
+                },
+                {
+                    "fokhagyma": "3 gerezd"
+                },
+                {
+                    "pirospaprika": "2 evőkanál"
+                },
+                {
+                    "őrölt kömény": "1 teáskanál"
+                },
+                {
+                    "burgonya": "50 dkg"
+                },
+                {
+                    "sárgarépa": "2 db"
+                },
+                {
+                    "paradicsompüré": "2 evőkanál"
+                },
+                {
+                    "zsír": "2 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "csipetke": "20 dkg"
+                }
             ],
             "elkeszites": "1. A hagymát apróra vágjuk, a zsíron üvegesre pirítjuk. Hozzáadjuk a fokhagymát, majd lehúzzuk a tűzről és belekeverjük a pirospaprikát.\n2. Hozzáadjuk a kockára vágott húst, és addig pirítjuk, amíg minden oldala fehér lesz. Felöntjük 2 liter vízzel, hozzáadjuk a köményt, sót, borsot és paradicsompürét.\n3. Fedő alatt lassú tűzön 1 órán át főzzük. Ezután hozzáadjuk a kockára vágott sárgarépát és burgonyát, majd további 30 percig főzzük.\n4. Közben elkészítjük a csipetkét: lisztből, tojásból és sóból gyúrunk kemény tésztát, majd csipkedjük a levesbe. 5 percig főzzük, majd tálaljuk.",
             "kepnev": "gulyasleves.jpg",
@@ -486,16 +905,36 @@
             "ido": 60,
             "adag": 6,
             "hozzavalok": [
-                { "liszt": "25 dkg" },
-                { "tojás": "4 db" },
-                { "cukor": "20 dkg" },
-                { "sütőpor": "1 csomag" },
-                { "tej": "2.5 dl" },
-                { "rum": "2 evőkanál" },
-                { "csokoládémáz": "15 dkg" },
-                { "tejszín": "3 dl" },
-                { "dió": "10 dkg" },
-                { "vanília puding": "1 csomag" }
+                {
+                    "liszt": "25 dkg"
+                },
+                {
+                    "tojás": "4 db"
+                },
+                {
+                    "cukor": "20 dkg"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "tej": "2.5 dl"
+                },
+                {
+                    "rum": "2 evőkanál"
+                },
+                {
+                    "csokoládémáz": "15 dkg"
+                },
+                {
+                    "tejszín": "3 dl"
+                },
+                {
+                    "dió": "10 dkg"
+                },
+                {
+                    "vanília puding": "1 csomag"
+                }
             ],
             "elkeszites": "1. A tojások sárgáját a cukorral habosra keverjük. Hozzáadjuk a lisztet és sütőport, majd a tejet. A tojásfehérjéből kemény habot verünk, és óvatosan beleforgatjuk.\n2. A tésztát 3 részre osztjuk. Az egyik részbe kakaóporral, a másikba rummal ízesítünk. Mindhárom részt külön sütőpapírral bélelt tepsiben megsütjük 180°C-on 15 percig.\n3. A kihűlt piskótákat kockákra vágjuk. A vanília pudingot elkészítjük a tejjel és cukorral.\n4. Rétegezzük: piskóta, rumos szirup, puding, csokoládémáz, tejszínhab. Ismételjük a rétegeket, a tetejére diót szórunk.",
             "kepnev": "somloiGaluska.jpg",
@@ -509,15 +948,33 @@
             "ido": 90,
             "adag": 4,
             "hozzavalok": [
-                { "liszt": "50 dkg" },
-                { "élesztő": "2 dkg" },
-                { "tej": "2.5 dl" },
-                { "só": "1 teáskanál" },
-                { "cukor": "1 kávéskanál" },
-                { "olaj": "a sütéshez" },
-                { "tejföl": "tálaláshoz" },
-                { "reszelt sajt": "tálaláshoz" },
-                { "fokhagymás víz": "tálaláshoz" }
+                {
+                    "liszt": "50 dkg"
+                },
+                {
+                    "élesztő": "2 dkg"
+                },
+                {
+                    "tej": "2.5 dl"
+                },
+                {
+                    "só": "1 teáskanál"
+                },
+                {
+                    "cukor": "1 kávéskanál"
+                },
+                {
+                    "olaj": "a sütéshez"
+                },
+                {
+                    "tejföl": "tálaláshoz"
+                },
+                {
+                    "reszelt sajt": "tálaláshoz"
+                },
+                {
+                    "fokhagymás víz": "tálaláshoz"
+                }
             ],
             "elkeszites": "1. A tejben feloldjuk az élesztőt és a cukrot, majd hagyjuk 10 percet állni. A lisztbe keverjük a sót, majd hozzáadjuk az élesztős tejet és gyúrunk lágy tésztát.\n2. Letakarva meleg helyen 1 órán át kelesztjük.\n3. A tésztát kézzel kinyújtjuk, majd olajban bőven, mindkét oldalát aranybarnára sütjük.\n4. Melegen tálaljuk tejföllel, reszelt sajttal és fokhagymás vízzel.",
             "kepnev": "langos.jpg",
@@ -531,16 +988,36 @@
             "ido": 90,
             "adag": 6,
             "hozzavalok": [
-                { "paprika": "12 db (töltő)" },
-                { "darált hús": "50 dkg" },
-                { "rizs": "15 dkg" },
-                { "vöröshagyma": "2 fej" },
-                { "fokhagyma": "3 gerezd" },
-                { "pirospaprika": "1 evőkanál" },
-                { "paradicsom": "1 kg" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "olaj": "2 evőkanál" }
+                {
+                    "paprika": "12 db (töltő)"
+                },
+                {
+                    "darált hús": "50 dkg"
+                },
+                {
+                    "rizs": "15 dkg"
+                },
+                {
+                    "vöröshagyma": "2 fej"
+                },
+                {
+                    "fokhagyma": "3 gerezd"
+                },
+                {
+                    "pirospaprika": "1 evőkanál"
+                },
+                {
+                    "paradicsom": "1 kg"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "olaj": "2 evőkanál"
+                }
             ],
             "elkeszites": "1. A rizst félig megfőzzük. A hagymát apróra vágjuk, és az olajon üvegesre pirítjuk. Hozzáadjuk a fokhagymát és a pirospaprikát.\n2. A darált húst összekeverjük a rizzsel, hagymás keverékkel, sóval és borssal.\n3. A paprikák tetejét levágjuk, magházukat kitisztítjuk, majd megtöltjük a húsos keverékkel.\n4. Egy lábas aljára paradicsomszeleteket teszünk, ráhelyezzük a töltött paprikákat, és felöntjük vízzel. Fedő alatt 45 percig főzzük.",
             "kepnev": "toltottPaprika.jpg",
@@ -554,16 +1031,36 @@
             "ido": 30,
             "adag": 4,
             "hozzavalok": [
-                { "csirkemell": "60 dkg" },
-                { "szójaszósz": "5 evőkanál" },
-                { "méz": "2 evőkanál" },
-                { "fokhagyma": "3 gerezd" },
-                { "gyömbér": "2 cm" },
-                { "szezámolaj": "1 evőkanál" },
-                { "kukoricaliszt": "2 evőkanál" },
-                { "szezámmag": "2 evőkanál" },
-                { "olaj": "sütéshez" },
-                { "rizs": "körethez" }
+                {
+                    "csirkemell": "60 dkg"
+                },
+                {
+                    "szójaszósz": "5 evőkanál"
+                },
+                {
+                    "méz": "2 evőkanál"
+                },
+                {
+                    "fokhagyma": "3 gerezd"
+                },
+                {
+                    "gyömbér": "2 cm"
+                },
+                {
+                    "szezámolaj": "1 evőkanál"
+                },
+                {
+                    "kukoricaliszt": "2 evőkanál"
+                },
+                {
+                    "szezámmag": "2 evőkanál"
+                },
+                {
+                    "olaj": "sütéshez"
+                },
+                {
+                    "rizs": "körethez"
+                }
             ],
             "elkeszites": "1. A csirkemellet kockára vágjuk. A szójaszószt, mézet, összezúzott fokhagymát és reszelt gyömbért összekeverjük, majd a húst belemártjuk és 30 percre beáztatjuk.\n2. A kukoricalisztbe forgatjuk a csirkedarabokat, majd bő forró olajban aranybarnára sütjük.\n3. A maradék mártást felmelegítjük, és a sült csirkére öntjük. Szezámmaggal megszórva tálaljuk, rizzsel.",
             "kepnev": "kinaiSzezammagosCsirke.jpg",
@@ -577,16 +1074,36 @@
             "ido": 40,
             "adag": 6,
             "hozzavalok": [
-                { "paradicsom": "1.5 kg" },
-                { "vöröshagyma": "1 fej" },
-                { "fokhagyma": "2 gerezd" },
-                { "olivaolaj": "2 evőkanál" },
-                { "bazsalikom": "1 csokor" },
-                { "cukor": "1 teáskanál" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "tejszín": "2 dl" },
-                { "zsemlemorzsa": "tálaláshoz" }
+                {
+                    "paradicsom": "1.5 kg"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "fokhagyma": "2 gerezd"
+                },
+                {
+                    "olivaolaj": "2 evőkanál"
+                },
+                {
+                    "bazsalikom": "1 csokor"
+                },
+                {
+                    "cukor": "1 teáskanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "tejszín": "2 dl"
+                },
+                {
+                    "zsemlemorzsa": "tálaláshoz"
+                }
             ],
             "elkeszites": "1. A paradicsomokat megmossuk, negyedeljük. A hagymát és fokhagymát apróra vágjuk.\n2. Az olajon megdinszteljük a hagymát, hozzáadjuk a paradicsomot és a fűszereket. 20 percig főzzük.\n3. Turmixoljuk, majd szitán áttörjük. Hozzáadjuk a tejszínt, a megfőzött tésztát, és újra felmelegítjük. Petrezselyemmel tálaljuk.",
             "kepnev": "paradicsomleves.jpg",
@@ -600,14 +1117,30 @@
             "ido": 25,
             "adag": 4,
             "hozzavalok": [
-                { "liszt": "25 dkg" },
-                { "tojás": "2 db" },
-                { "tej": "3 dl" },
-                { "vaj": "5 dkg" },
-                { "sütőpor": "1 csomag" },
-                { "cukor": "2 evőkanál" },
-                { "só": "1 csipet" },
-                { "vanília": "1 csomag" }
+                {
+                    "liszt": "25 dkg"
+                },
+                {
+                    "tojás": "2 db"
+                },
+                {
+                    "tej": "3 dl"
+                },
+                {
+                    "vaj": "5 dkg"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "cukor": "2 evőkanál"
+                },
+                {
+                    "só": "1 csipet"
+                },
+                {
+                    "vanília": "1 csomag"
+                }
             ],
             "elkeszites": "1. A lisztet elkeverjük a sütőporral, cukorral és sóval.\n2. A tojásokat, olvasztott vajat és tejet hozzáadjuk, simára keverjük.\n3. A gofrisütőt felmelegítjük, vékonyan kiolajozzuk, és a tésztából adagonként sütjük a gofrit 3-4 percig. Tetszés szerint lekvárosan, csokival vagy gyümölccsel tálaljuk.",
             "kepnev": "gofri.jpg",
@@ -621,15 +1154,33 @@
             "ido": 90,
             "adag": 12,
             "hozzavalok": [
-                { "liszt": "50 dkg" },
-                { "élesztő": "2 dkg" },
-                { "tej": "2 dl" },
-                { "tojás": "1 db" },
-                { "vaj": "10 dkg" },
-                { "cukor": "10 dkg" },
-                { "só": "1 csipet" },
-                { "baracklekvár": "40 dkg" },
-                { "porcukor": "díszítéshez" }
+                {
+                    "liszt": "50 dkg"
+                },
+                {
+                    "élesztő": "2 dkg"
+                },
+                {
+                    "tej": "2 dl"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "vaj": "10 dkg"
+                },
+                {
+                    "cukor": "10 dkg"
+                },
+                {
+                    "só": "1 csipet"
+                },
+                {
+                    "baracklekvár": "40 dkg"
+                },
+                {
+                    "porcukor": "díszítéshez"
+                }
             ],
             "elkeszites": "1. A meleg tejbe belemorzsoljuk az élesztőt, cukrot és egy csipet lisztet, majd kelni hagyjuk.\n2. A lisztbe keverjük a tojást, olvasztott vajat, sót és a felfuttatott élesztőt. Lágy tésztát gyúrunk, és kelni hagyjuk.\n3. A tésztát kinyújtjuk, négyzet alakúra vágjuk, mindegyikbe teszünk egy kis lekvárt, és összehajtjuk.\n4. 180°C-ra előmelegített sütőben 25 percig sütjük. Porcukorral megszórva tálaljuk.",
             "kepnev": "lekvarosBukta.jpg",
@@ -643,10 +1194,18 @@
             "ido": 20,
             "adag": 4,
             "hozzavalok": [
-                { "virsli": "8 db" },
-                { "bacon": "16 szelet" },
-                { "mustár": "ízlésre" },
-                { "ketchup": "ízlésre" }
+                {
+                    "virsli": "8 db"
+                },
+                {
+                    "bacon": "16 szelet"
+                },
+                {
+                    "mustár": "ízlésre"
+                },
+                {
+                    "ketchup": "ízlésre"
+                }
             ],
             "elkeszites": "1. Minden virslit 2 szelet baconbe csavarunk.\n2. Serpenyőben vagy grillen mindkét oldalát aranybarnára sütjük.\n3. Mustárral és ketchuppal tálaljuk friss kenyérrel vagy zsemlével.",
             "kepnev": "baconbeTekertVirsli.jpg",
@@ -660,14 +1219,30 @@
             "ido": 45,
             "adag": 4,
             "hozzavalok": [
-                { "zöldborsó": "80 dkg (friss vagy fagyasztott)" },
-                { "vöröshagyma": "1 fej" },
-                { "liszt": "2 evőkanál" },
-                { "pirospaprika": "1 evőkanál" },
-                { "só": "ízlésre" },
-                { "cukor": "1 kávéskanál" },
-                { "tejföl": "2 dl" },
-                { "olaj": "2 evőkanál" }
+                {
+                    "zöldborsó": "80 dkg (friss vagy fagyasztott)"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "liszt": "2 evőkanál"
+                },
+                {
+                    "pirospaprika": "1 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "cukor": "1 kávéskanál"
+                },
+                {
+                    "tejföl": "2 dl"
+                },
+                {
+                    "olaj": "2 evőkanál"
+                }
             ],
             "elkeszites": "1. A hagymát apróra vágjuk, az olajon üvegesre pirítjuk. Hozzáadjuk a pirospaprikát és a lisztet, és rántást készítünk.\n2. Felöntjük vízzel, hozzáadjuk a borsót, és puhára főzzük.\n3. Sóval, cukorral ízesítjük, végül a tejföllel behabarjuk. Tojással vagy sült kolbásszal tálaljuk.",
             "kepnev": "pirosrantasosBorsoFozelek.jpg",
@@ -681,15 +1256,33 @@
             "ido": 60,
             "adag": 12,
             "hozzavalok": [
-                { "liszt": "30 dkg" },
-                { "vaj": "20 dkg" },
-                { "tojás": "1 db" },
-                { "cukor": "10 dkg" },
-                { "sütőpor": "1 csomag" },
-                { "túró": "40 dkg" },
-                { "vaníliás cukor": "1 csomag" },
-                { "baracklekvár": "20 dkg" },
-                { "tejföl": "2 dl" }
+                {
+                    "liszt": "30 dkg"
+                },
+                {
+                    "vaj": "20 dkg"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "cukor": "10 dkg"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "túró": "40 dkg"
+                },
+                {
+                    "vaníliás cukor": "1 csomag"
+                },
+                {
+                    "baracklekvár": "20 dkg"
+                },
+                {
+                    "tejföl": "2 dl"
+                }
             ],
             "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással, 5 dkg cukorral és sütőporral. Kinyújtjuk, és tepsibe helyezzük.\n2. A túrót összekeverjük a tejföllel, maradék cukorral és vaníliás cukorral, rákenjük a tésztára.\n3. 180°C-ra előmelegített sütőben 30 percig sütjük. Kihűlés után lekváros csíkokat rácsot formálva kenünk rá.",
             "kepnev": "rakocziTuros.jpg",
@@ -703,14 +1296,30 @@
             "ido": 60,
             "adag": 6,
             "hozzavalok": [
-                { "darált sertéshús": "50 dkg" },
-                { "vöröshagyma": "1 fej" },
-                { "pirospaprika": "1 evőkanál" },
-                { "liszt": "20 dkg" },
-                { "tojás": "2 db" },
-                { "tej": "5 dl" },
-                { "só": "ízlésre" },
-                { "tejföl": "3 dl" }
+                {
+                    "darált sertéshús": "50 dkg"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "pirospaprika": "1 evőkanál"
+                },
+                {
+                    "liszt": "20 dkg"
+                },
+                {
+                    "tojás": "2 db"
+                },
+                {
+                    "tej": "5 dl"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "tejföl": "3 dl"
+                }
             ],
             "elkeszites": "1. A hagymát apróra vágjuk, a hússal együtt megpirítjuk. Piros paprikával ízesítjük.\n2. A palacsintatésztát elkészítjük, és vékony palacsintákat sütünk.\n3. A húsos tölteléket a palacsintákba tekerve, tepsibe helyezzük, tejföllel leöntjük, és 180°C-on 20 percig sütjük.",
             "kepnev": "hortobagyiHusosPalacsinta.jpg",
@@ -724,16 +1333,36 @@
             "ido": 180,
             "adag": 8,
             "hozzavalok": [
-                { "bab": "40 dkg (száraz)" },
-                { "füstölt csülök": "1 kg" },
-                { "vöröshagyma": "2 fej" },
-                { "sárgarépa": "2 db" },
-                { "zeller": "1 db" },
-                { "paradicsompüré": "2 evőkanál" },
-                { "fokhagyma": "3 gerezd" },
-                { "pirospaprika": "1 evőkanál" },
-                { "liszt": "1 evőkanál" },
-                { "só": "ízlésre" }
+                {
+                    "bab": "40 dkg (száraz)"
+                },
+                {
+                    "füstölt csülök": "1 kg"
+                },
+                {
+                    "vöröshagyma": "2 fej"
+                },
+                {
+                    "sárgarépa": "2 db"
+                },
+                {
+                    "zeller": "1 db"
+                },
+                {
+                    "paradicsompüré": "2 evőkanál"
+                },
+                {
+                    "fokhagyma": "3 gerezd"
+                },
+                {
+                    "pirospaprika": "1 evőkanál"
+                },
+                {
+                    "liszt": "1 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                }
             ],
             "elkeszites": "1. A babot előző este beáztatjuk. Másnap a csülköt és a babot puhára főzzük.\n2. A zöldségeket apróra vágjuk, a hagymát megpirítjuk, hozzáadjuk a paprikát és paradicsompürét.\n3. A főzőléből egy keveset kiveszünk, a liszttel elkeverjük, majd visszaöntjük a levesbe. Főzzük még 10 percig.",
             "kepnev": "jokaiBableves.jpg",
@@ -747,12 +1376,24 @@
             "ido": 30,
             "adag": 6,
             "hozzavalok": [
-                { "gesztenye": "50 dkg (főtt)" },
-                { "tejszín": "2 dl" },
-                { "rum": "2 evőkanál" },
-                { "vaníliás cukor": "1 csomag" },
-                { "cukor": "ízlésre" },
-                { "tej": "1 dl" }
+                {
+                    "gesztenye": "50 dkg (főtt)"
+                },
+                {
+                    "tejszín": "2 dl"
+                },
+                {
+                    "rum": "2 evőkanál"
+                },
+                {
+                    "vaníliás cukor": "1 csomag"
+                },
+                {
+                    "cukor": "ízlésre"
+                },
+                {
+                    "tej": "1 dl"
+                }
             ],
             "elkeszites": "1. A főtt gesztenyét áttörjük, majd a tejjel simára keverjük.\n2. Hozzáadjuk a felmelegített tejszínt, rumot, vaníliás cukrot, és ízlés szerint édesítjük.\n3. Habverővel simára keverjük, és hidegen tálaljuk tejszínhabbal.",
             "kepnev": "gesztenyepure.jpg",
@@ -766,14 +1407,30 @@
             "ido": 180,
             "adag": 8,
             "hozzavalok": [
-                { "savanyú káposzta": "2 kg" },
-                { "darált hús": "80 dkg" },
-                { "rizs": "15 dkg" },
-                { "füstölt szalonna": "20 dkg" },
-                { "tejföl": "3 dl" },
-                { "pirospaprika": "1 evőkanál" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" }
+                {
+                    "savanyú káposzta": "2 kg"
+                },
+                {
+                    "darált hús": "80 dkg"
+                },
+                {
+                    "rizs": "15 dkg"
+                },
+                {
+                    "füstölt szalonna": "20 dkg"
+                },
+                {
+                    "tejföl": "3 dl"
+                },
+                {
+                    "pirospaprika": "1 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                }
             ],
             "elkeszites": "1. A rizst félig megfőzzük, és összekeverjük a darált hússal, sóval, borssal.\n2. A káposztaleveleket megtöltjük a húsos keverékkel, és szorosan feltekerjük.\n3. Egy lábas aljára káposztát teszünk, rá a töltelékeket, és rétegezve végig. Felöntjük vízzel, és lassú tűzön 2 órán át főzzük.\n4. Tejföllel és pirospaprikával tálaljuk.",
             "kepnev": "toltottKaposzta.jpg",
@@ -787,13 +1444,27 @@
             "ido": 15,
             "adag": 2,
             "hozzavalok": [
-                { "kenyér": "4 szelet" },
-                { "tojás": "2 db" },
-                { "tej": "1 dl" },
-                { "cukor": "2 evőkanál" },
-                { "vanília": "1 csomag" },
-                { "vaj": "sütéshez" },
-                { "porcukor": "díszítéshez" }
+                {
+                    "kenyér": "4 szelet"
+                },
+                {
+                    "tojás": "2 db"
+                },
+                {
+                    "tej": "1 dl"
+                },
+                {
+                    "cukor": "2 evőkanál"
+                },
+                {
+                    "vanília": "1 csomag"
+                },
+                {
+                    "vaj": "sütéshez"
+                },
+                {
+                    "porcukor": "díszítéshez"
+                }
             ],
             "elkeszites": "1. A tojásokat felverjük a tejjel, cukorral és vaníliával.\n2. A kenyérszeleteket belemártjuk a keverékbe, majd vajon mindkét oldalát aranybarnára sütjük.\n3. Porcukorral megszórva, gyümölccsel vagy mézzel tálaljuk.",
             "kepnev": "franciaPiritos.jpg",
@@ -807,13 +1478,27 @@
             "ido": 120,
             "adag": 12,
             "hozzavalok": [
-                { "tojás": "6 db" },
-                { "cukor": "30 dkg" },
-                { "liszt": "15 dkg" },
-                { "kakaópor": "3 evőkanál" },
-                { "csokoládé": "30 dkg" },
-                { "tejszín": "4 dl" },
-                { "vanília": "1 rúd" }
+                {
+                    "tojás": "6 db"
+                },
+                {
+                    "cukor": "30 dkg"
+                },
+                {
+                    "liszt": "15 dkg"
+                },
+                {
+                    "kakaópor": "3 evőkanál"
+                },
+                {
+                    "csokoládé": "30 dkg"
+                },
+                {
+                    "tejszín": "4 dl"
+                },
+                {
+                    "vanília": "1 rúd"
+                }
             ],
             "elkeszites": "1. A tojások sárgáját a cukor felével habosra keverjük, hozzáadjuk a lisztet és kakaóport.\n2. A fehérjéből kemény habot verünk a maradék cukorral, és óvatosan a masszába keverjük.\n3. Tepsiben 180°C-on 15 percig sütjük. Kihűtjük, majd két részre vágjuk.\n4. A csokoládét a tejszínnel és a vaníliával gőz felett olvasztjuk, majd a piskóta rétegek közé kenjük. Hűtőben dermesztjük.",
             "kepnev": "rigoJancsi.jpg",
@@ -827,13 +1512,27 @@
             "ido": 90,
             "adag": 6,
             "hozzavalok": [
-                { "sertéslapocka": "1.5 kg" },
-                { "burgonya": "1 kg" },
-                { "fokhagyma": "6 gerezd" },
-                { "zsír": "sütéshez" },
-                { "majoránna": "1 evőkanál" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" }
+                {
+                    "sertéslapocka": "1.5 kg"
+                },
+                {
+                    "burgonya": "1 kg"
+                },
+                {
+                    "fokhagyma": "6 gerezd"
+                },
+                {
+                    "zsír": "sütéshez"
+                },
+                {
+                    "majoránna": "1 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                }
             ],
             "elkeszites": "1. A húst kockára vágjuk, sózzuk, borsozzuk, majoránnával megszórjuk.\n2. A burgonyát meghámozzuk, és nagyobb kockákra vágjuk.\n3. Forró zsírban először a húst pirítjuk meg, majd hozzáadjuk a burgonyát és a fokhagymát. Addig sütjük, amíg minden aranybarna és ropogós lesz.",
             "kepnev": "brassoiaAropecsenye.jpg",
@@ -847,12 +1546,24 @@
             "ido": 120,
             "adag": 8,
             "hozzavalok": [
-                { "ponty": "2 kg" },
-                { "vöröshagyma": "3 fej" },
-                { "pirospaprika": "5 evőkanál" },
-                { "só": "ízlésre" },
-                { "erős paprika": "ízlésre" },
-                { "víz": "3 l" }
+                {
+                    "ponty": "2 kg"
+                },
+                {
+                    "vöröshagyma": "3 fej"
+                },
+                {
+                    "pirospaprika": "5 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "erős paprika": "ízlésre"
+                },
+                {
+                    "víz": "3 l"
+                }
             ],
             "elkeszites": "1. A halat megtisztítjuk, a fejét és a csontját vízbe tesszük, és 1 órán át főzzük.\n2. A hagymát apróra vágjuk, a paprikával együtt a lébe tesszük, és további 30 percig főzzük.\n3. A halhúst nagyobb darabokban visszatesszük a levesbe, és 5 percig főzzük. Erős paprikával ízesítjük.",
             "kepnev": "halaszle.jpg",
@@ -866,14 +1577,30 @@
             "ido": 180,
             "adag": 12,
             "hozzavalok": [
-                { "liszt": "40 dkg" },
-                { "vaj": "25 dkg" },
-                { "tojás": "1 db" },
-                { "sütőpor": "1 csomag" },
-                { "tej": "1 l" },
-                { "vanília puding": "2 csomag" },
-                { "cukor": "30 dkg" },
-                { "csokoládé": "20 dkg" }
+                {
+                    "liszt": "40 dkg"
+                },
+                {
+                    "vaj": "25 dkg"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "tej": "1 l"
+                },
+                {
+                    "vanília puding": "2 csomag"
+                },
+                {
+                    "cukor": "30 dkg"
+                },
+                {
+                    "csokoládé": "20 dkg"
+                }
             ],
             "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással és sütőporral. Kinyújtjuk, és tepsiben 180°C-on 15 percig sütjük.\n2. A pudingot a tejjel és cukorral főzzük, majd kihűtjük.\n3. A piskóta tetejére kenjük a pudingot, majd a felolvasztott csokoládét öntjük rá. Hűtőben dermesztjük.",
             "kepnev": "kremes.jpg",
@@ -887,12 +1614,24 @@
             "ido": 20,
             "adag": 4,
             "hozzavalok": [
-                { "trapista sajt": "40 dkg" },
-                { "liszt": "10 dkg" },
-                { "tojás": "2 db" },
-                { "zsemlemorzsa": "20 dkg" },
-                { "olaj": "sütéshez" },
-                { "só": "ízlésre" }
+                {
+                    "trapista sajt": "40 dkg"
+                },
+                {
+                    "liszt": "10 dkg"
+                },
+                {
+                    "tojás": "2 db"
+                },
+                {
+                    "zsemlemorzsa": "20 dkg"
+                },
+                {
+                    "olaj": "sütéshez"
+                },
+                {
+                    "só": "ízlésre"
+                }
             ],
             "elkeszites": "1. A sajtot ujjnyi vastag szeletekre vágjuk.\n2. A lisztbe, felvert tojásba, majd zsemlemorzsába forgatjuk.\n3. Forró olajban mindkét oldalát aranybarnára sütjük. Salátával és tartármártással tálaljuk.",
             "kepnev": "rantottSajt.jpg",
@@ -906,14 +1645,30 @@
             "ido": 180,
             "adag": 8,
             "hozzavalok": [
-                { "tyúk": "1 db" },
-                { "sárgarépa": "3 db" },
-                { "zeller": "1 db" },
-                { "petrezselyemgyökér": "1 db" },
-                { "vöröshagyma": "1 fej" },
-                { "zöldborsó": "20 dkg" },
-                { "só": "ízlésre" },
-                { "tészta": "leveshez" }
+                {
+                    "tyúk": "1 db"
+                },
+                {
+                    "sárgarépa": "3 db"
+                },
+                {
+                    "zeller": "1 db"
+                },
+                {
+                    "petrezselyemgyökér": "1 db"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "zöldborsó": "20 dkg"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "tészta": "leveshez"
+                }
             ],
             "elkeszites": "1. A tyúkot nagy fazékban feltétlen vízzel lefedjük, és lassú tűzön főzzük.\n2. Hozzáadjuk a megtisztított, nagyobb darabokra vágott zöldségeket, és további 2 órát főzzük.\n3. A zöldségeket és a húst kivesszük, a levét leszűrjük. Tésztát főzünk bele, és a visszaaprított hússal és zöldségekkel tálaljuk.",
             "kepnev": "ujhaziTyukhusleves.jpg",
@@ -927,13 +1682,27 @@
             "ido": 90,
             "adag": 24,
             "hozzavalok": [
-                { "liszt": "40 dkg" },
-                { "vaj": "25 dkg" },
-                { "tojás": "1 db" },
-                { "cukor": "15 dkg" },
-                { "lekvár": "20 dkg" },
-                { "csokoládé": "20 dkg" },
-                { "tej": "2 dl" }
+                {
+                    "liszt": "40 dkg"
+                },
+                {
+                    "vaj": "25 dkg"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "cukor": "15 dkg"
+                },
+                {
+                    "lekvár": "20 dkg"
+                },
+                {
+                    "csokoládé": "20 dkg"
+                },
+                {
+                    "tej": "2 dl"
+                }
             ],
             "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással és cukorral. 30 percig hűtőben pihentetjük.\n2. Kinyújtjuk, kiszúrjuk, és 180°C-on 10 percig sütjük.\n3. Kihűlés után lekvárosan összeragasztjuk, és csokoládémázzal leöntjük.",
             "kepnev": "isler.jpg",
@@ -947,12 +1716,24 @@
             "ido": 30,
             "adag": 6,
             "hozzavalok": [
-                { "tészta": "50 dkg" },
-                { "mák": "20 dkg" },
-                { "cukor": "15 dkg" },
-                { "tej": "3 dl" },
-                { "vanília": "1 rúd" },
-                { "vaj": "5 dkg" }
+                {
+                    "tészta": "50 dkg"
+                },
+                {
+                    "mák": "20 dkg"
+                },
+                {
+                    "cukor": "15 dkg"
+                },
+                {
+                    "tej": "3 dl"
+                },
+                {
+                    "vanília": "1 rúd"
+                },
+                {
+                    "vaj": "5 dkg"
+                }
             ],
             "elkeszites": "1. A tésztát sós vízben kifőzzük.\n2. A mákot a tejjel és a vaníliával felforraljuk, majd hozzáadjuk a cukrot.\n3. A leszűrt tésztát a mákos keverékkel összeragasztjuk, és vajjal ízesítjük.",
             "kepnev": "makosTeszta.jpg",
@@ -966,15 +1747,33 @@
             "ido": 60,
             "adag": 12,
             "hozzavalok": [
-                { "liszt": "30 dkg" },
-                { "cukor": "20 dkg" },
-                { "tojás": "4 db" },
-                { "zsír": "20 dkg" },
-                { "kakaó": "2 evőkanál" },
-                { "sütőpor": "1 csomag" },
-                { "tej": "2 dl" },
-                { "zöld ételfesték": "1 csomag" },
-                { "vanília": "1 rúd" }
+                {
+                    "liszt": "30 dkg"
+                },
+                {
+                    "cukor": "20 dkg"
+                },
+                {
+                    "tojás": "4 db"
+                },
+                {
+                    "zsír": "20 dkg"
+                },
+                {
+                    "kakaó": "2 evőkanál"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "tej": "2 dl"
+                },
+                {
+                    "zöld ételfesték": "1 csomag"
+                },
+                {
+                    "vanília": "1 rúd"
+                }
             ],
             "elkeszites": "1. A tojásokat a cukorral habosra keverjük. Hozzáadjuk az olvasztott zsírt, majd a lisztet, kakaót és sütőport.\n2. A tésztát zöldre festjük, majd sütőpapírral bélelt tepsiben 180°C-on 25 percig sütjük.\n3. Kihűtés után kockákra vágjuk. Tálalás előtt porcukorral megszórjuk.",
             "kepnev": "shrekszelet.jpg",
@@ -988,15 +1787,33 @@
             "ido": 45,
             "adag": 8,
             "hozzavalok": [
-                { "liszt": "40 dkg" },
-                { "tejföl": "2 dl" },
-                { "vaj": "15 dkg" },
-                { "só": "1 kávéskanál" },
-                { "sütőpor": "1/2 csomag" },
-                { "túró": "40 dkg" },
-                { "tojás": "1 db" },
-                { "fokhagyma": "2 gerezd" },
-                { "snidling": "1 csokor" }
+                {
+                    "liszt": "40 dkg"
+                },
+                {
+                    "tejföl": "2 dl"
+                },
+                {
+                    "vaj": "15 dkg"
+                },
+                {
+                    "só": "1 kávéskanál"
+                },
+                {
+                    "sütőpor": "1/2 csomag"
+                },
+                {
+                    "túró": "40 dkg"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "fokhagyma": "2 gerezd"
+                },
+                {
+                    "snidling": "1 csokor"
+                }
             ],
             "elkeszites": "1. A lisztet összegyúrjuk a tejföllel, vajjal, sóval és sütőporral.\n2. A túrót összekeverjük a tojással, zúzott fokhagymával és finomra vágott snidlinggel.\n3. A tésztát kinyújtjuk, rákenjük a túrós tölteléket, feltekerjük.\n4. 180°C-ra előmelegített sütőben 30 percig sütjük. Melegen szeleteljük.",
             "kepnev": "piskotaTekercs.jpg",
@@ -1010,15 +1827,33 @@
             "ido": 120,
             "adag": 30,
             "hozzavalok": [
-                { "liszt": "50 dkg" },
-                { "méz": "20 dkg" },
-                { "cukor": "10 dkg" },
-                { "vaj": "10 dkg" },
-                { "tojás": "1 db" },
-                { "szódabikarbóna": "1 kávéskanál" },
-                { "fahéj": "1 teáskanál" },
-                { "szegfűszeg": "1/2 teáskanál" },
-                { "gyömbér": "1/2 teáskanál" }
+                {
+                    "liszt": "50 dkg"
+                },
+                {
+                    "méz": "20 dkg"
+                },
+                {
+                    "cukor": "10 dkg"
+                },
+                {
+                    "vaj": "10 dkg"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "szódabikarbóna": "1 kávéskanál"
+                },
+                {
+                    "fahéj": "1 teáskanál"
+                },
+                {
+                    "szegfűszeg": "1/2 teáskanál"
+                },
+                {
+                    "gyömbér": "1/2 teáskanál"
+                }
             ],
             "elkeszites": "1. A mézet, cukrot és vajat felmelegítjük, majd hozzáadjuk a fűszereket.\n2. Kihűlés után hozzáadjuk a tojást és a lisztet szódabikarbónával.\n3. A tésztát fóliába csomagolva 1 éjszakára hűtőbe tesszük.\n4. Kinyújtjuk, kiszúrjuk, és 180°C-on 8-10 percig sütjük.",
             "kepnev": "mezeskalacs.jpg",
@@ -1032,15 +1867,33 @@
             "ido": 60,
             "adag": 4,
             "hozzavalok": [
-                { "lencse": "40 dkg" },
-                { "vöröshagyma": "1 fej" },
-                { "fokhagyma": "2 gerezd" },
-                { "pirospaprika": "1 evőkanál" },
-                { "liszt": "1 evőkanál" },
-                { "olaj": "2 evőkanál" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "ecet": "1 evőkanál" }
+                {
+                    "lencse": "40 dkg"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "fokhagyma": "2 gerezd"
+                },
+                {
+                    "pirospaprika": "1 evőkanál"
+                },
+                {
+                    "liszt": "1 evőkanál"
+                },
+                {
+                    "olaj": "2 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "ecet": "1 evőkanál"
+                }
             ],
             "elkeszites": "1. A lencsét megmossuk, és puhára főzzük.\n2. A hagymát apróra vágjuk, az olajon megpirítjuk, hozzáadjuk a pirospaprikát és lisztet, rántást készítünk.\n3. A lencséhez adjuk a rántást, és pár percig együtt főzzük. Ecettel ízesítjük. Tojással tálaljuk.",
             "kepnev": "lencsefozelek.jpg",
@@ -1054,14 +1907,30 @@
             "ido": 90,
             "adag": 12,
             "hozzavalok": [
-                { "liszt": "50 dkg" },
-                { "tej": "2.5 dl" },
-                { "élesztő": "2 dkg" },
-                { "cukor": "10 dkg" },
-                { "só": "1 csipet" },
-                { "vaj": "5 dkg" },
-                { "kakaópor": "10 dkg" },
-                { "porcukor": "10 dkg" }
+                {
+                    "liszt": "50 dkg"
+                },
+                {
+                    "tej": "2.5 dl"
+                },
+                {
+                    "élesztő": "2 dkg"
+                },
+                {
+                    "cukor": "10 dkg"
+                },
+                {
+                    "só": "1 csipet"
+                },
+                {
+                    "vaj": "5 dkg"
+                },
+                {
+                    "kakaópor": "10 dkg"
+                },
+                {
+                    "porcukor": "10 dkg"
+                }
             ],
             "elkeszites": "1. Az élesztőt a meleg tejben felfuttatjuk.\n2. A lisztet összegyúrjuk a cukorral, sóval, vajjal és az élesztős tejjel. Kelni hagyjuk.\n3. A tésztát kinyújtjuk, megszórjuk kakaóval és cukorral, feltekerjük.\n4. Szeletekre vágva, 180°C-on 20 percig sütjük.",
             "kepnev": "kakaosCsiga.jpg",
@@ -1075,13 +1944,27 @@
             "ido": 120,
             "adag": 8,
             "hozzavalok": [
-                { "savanyú káposzta": "1.5 kg" },
-                { "darált hús": "50 dkg" },
-                { "rizs": "15 dkg" },
-                { "tejföl": "3 dl" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "füstölt szalonna": "15 dkg" }
+                {
+                    "savanyú káposzta": "1.5 kg"
+                },
+                {
+                    "darált hús": "50 dkg"
+                },
+                {
+                    "rizs": "15 dkg"
+                },
+                {
+                    "tejföl": "3 dl"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "füstölt szalonna": "15 dkg"
+                }
             ],
             "elkeszites": "1. A rizst félig megfőzzük, és összekeverjük a darált hússal, sóval és borssal.\n2. Tepsibe rétegezzük a káposztát, a húsos rizst és a tejfölt. Ismételjük a rétegezést.\n3. A szalonnát kockára vágjuk, és a tetejére szórjuk.\n4. 180°C-on 1 órán át sütjük.",
             "kepnev": "rakottKaposzta.jpg",
@@ -1095,14 +1978,30 @@
             "ido": 60,
             "adag": 6,
             "hozzavalok": [
-                { "liszt": "50 dkg" },
-                { "cukor": "15 dkg" },
-                { "tojás": "2 db" },
-                { "vaj": "10 dkg" },
-                { "tej": "1.5 dl" },
-                { "élesztő": "2 dkg" },
-                { "só": "1 csipet" },
-                { "fahéj": "2 evőkanál" }
+                {
+                    "liszt": "50 dkg"
+                },
+                {
+                    "cukor": "15 dkg"
+                },
+                {
+                    "tojás": "2 db"
+                },
+                {
+                    "vaj": "10 dkg"
+                },
+                {
+                    "tej": "1.5 dl"
+                },
+                {
+                    "élesztő": "2 dkg"
+                },
+                {
+                    "só": "1 csipet"
+                },
+                {
+                    "fahéj": "2 evőkanál"
+                }
             ],
             "elkeszites": "1. Az élesztőt a meleg tejben felfuttatjuk.\n2. A lisztet összegyúrjuk a tojással, olvasztott vajjal, cukorral és az élesztős tejjel.\n3. A tésztát fél órára kelni hagyjuk.\n4. Kürtőskalács formára tekerve, forró sütőben vagy nyílt tűzön sütjük. Forrón fahéjas cukorba forgatjuk.",
             "kepnev": "kurtoskalacs.jpg",
@@ -1116,13 +2015,27 @@
             "ido": 60,
             "adag": 6,
             "hozzavalok": [
-                { "karfiol": "1 kg" },
-                { "tejföl": "3 dl" },
-                { "tojás": "3 db" },
-                { "reszelt sajt": "20 dkg" },
-                { "vaj": "2 evőkanál" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" }
+                {
+                    "karfiol": "1 kg"
+                },
+                {
+                    "tejföl": "3 dl"
+                },
+                {
+                    "tojás": "3 db"
+                },
+                {
+                    "reszelt sajt": "20 dkg"
+                },
+                {
+                    "vaj": "2 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                }
             ],
             "elkeszites": "1. A karfiolt rózsáira szedjük, és sós vízben puhára főzzük.\n2. A tojásokat keményre főzzük, és karikákra vágjuk.\n3. Tepsibe rétegezzük a karfiolt, tojást, tejfölt, megszórjuk sajttal. Ismételjük a rétegezést.\n4. 180°C-on 25 percig sütjük, amíg a teteje megpirul.",
             "kepnev": "rakottKarfiol.jpg",
@@ -1136,13 +2049,27 @@
             "ido": 45,
             "adag": 8,
             "hozzavalok": [
-                { "túró": "50 dkg" },
-                { "tojás": "1 db" },
-                { "semmelknödel": "10 dkg" },
-                { "só": "1 csipet" },
-                { "vaj": "2 evőkanál" },
-                { "zsemlemorzsa": "10 dkg" },
-                { "porcukor": "tálaláshoz" }
+                {
+                    "túró": "50 dkg"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "semmelknödel": "10 dkg"
+                },
+                {
+                    "só": "1 csipet"
+                },
+                {
+                    "vaj": "2 evőkanál"
+                },
+                {
+                    "zsemlemorzsa": "10 dkg"
+                },
+                {
+                    "porcukor": "tálaláshoz"
+                }
             ],
             "elkeszites": "1. A túrót áttörjük, összekeverjük a tojással, sóval és a felaprított knödellel.\n2. Gombócokat formázunk, és forró vízben kb. 8 percig főzzük, amíg feljönnek a víz tetejére.\n3. A vajon megpirítjuk a zsemlemorzsát, és a kész gombócokat megforgatjuk benne. Porcukorral megszórva tálaljuk.",
             "kepnev": "turogomboc.jpg",
@@ -1156,11 +2083,21 @@
             "ido": 20,
             "adag": 4,
             "hozzavalok": [
-                { "zsemlemorzsa": "30 dkg" },
-                { "vaj": "10 dkg" },
-                { "cukor": "10 dkg" },
-                { "vaníliás cukor": "1 csomag" },
-                { "tej": "tálaláshoz" }
+                {
+                    "zsemlemorzsa": "30 dkg"
+                },
+                {
+                    "vaj": "10 dkg"
+                },
+                {
+                    "cukor": "10 dkg"
+                },
+                {
+                    "vaníliás cukor": "1 csomag"
+                },
+                {
+                    "tej": "tálaláshoz"
+                }
             ],
             "elkeszites": "1. A vajat serpenyőben felolvasztjuk, hozzáadjuk a zsemlemorzsát, és állandó keverés közben aranybarnára pirítjuk.\n2. Hozzáadjuk a cukrot és vaníliás cukrot, és még 1-2 percig pirítjuk.\n3. Melegen tálaljuk, tejjel öntve vagy gyümölccsel.",
             "kepnev": "csaszarmorzsa.jpg",
@@ -1174,14 +2111,30 @@
             "ido": 180,
             "adag": 2,
             "hozzavalok": [
-                { "liszt": "50 dkg" },
-                { "vaj": "25 dkg" },
-                { "tojás": "2 db" },
-                { "élesztő": "2 dkg" },
-                { "tej": "1 dl" },
-                { "cukor": "5 dkg" },
-                { "dió vagy mák": "40 dkg" },
-                { "méz": "2 evőkanál" }
+                {
+                    "liszt": "50 dkg"
+                },
+                {
+                    "vaj": "25 dkg"
+                },
+                {
+                    "tojás": "2 db"
+                },
+                {
+                    "élesztő": "2 dkg"
+                },
+                {
+                    "tej": "1 dl"
+                },
+                {
+                    "cukor": "5 dkg"
+                },
+                {
+                    "dió vagy mák": "40 dkg"
+                },
+                {
+                    "méz": "2 evőkanál"
+                }
             ],
             "elkeszites": "1. Az élesztőt a meleg tejben felfuttatjuk.\n2. A lisztet összegyúrjuk a vajjal, tojással, cukorral és az élesztős tejjel. Pihentetjük.\n3. A diót/mákot összekeverjük a mézzel és kevés tejjel.\n4. A tésztát kinyújtjuk, rákenjük a tölteléket, feltekerjük. 180°C-on 40 percig sütjük.",
             "kepnev": "bejgli.jpg",
@@ -1195,13 +2148,27 @@
             "ido": 90,
             "adag": 6,
             "hozzavalok": [
-                { "kelkáposzta": "1 kg" },
-                { "tejföl": "3 dl" },
-                { "tojás": "3 db" },
-                { "füstölt szalonna": "15 dkg" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "olaj": "2 evőkanál" }
+                {
+                    "kelkáposzta": "1 kg"
+                },
+                {
+                    "tejföl": "3 dl"
+                },
+                {
+                    "tojás": "3 db"
+                },
+                {
+                    "füstölt szalonna": "15 dkg"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "olaj": "2 evőkanál"
+                }
             ],
             "elkeszites": "1. A kelkáposztát megtisztítjuk, és sós vízben puhára főzzük.\n2. A szalonnát kockára vágjuk, és ropogósra sütjük.\n3. Tepsibe rétegezzük a káposztát, tejfölt, tojást és szalonnát. Ismételjük a rétegezést.\n4. 180°C-on 30 percig sütjük, amíg a teteje megpirul.",
             "kepnev": "rakottKelkaposzta.jpg",
@@ -1215,12 +2182,24 @@
             "ido": 30,
             "adag": 12,
             "hozzavalok": [
-                { "liszt": "30 dkg" },
-                { "tojás": "3 db" },
-                { "tej": "6 dl" },
-                { "szénsavas víz": "2 dl" },
-                { "só": "1 csipet" },
-                { "olaj": "sütéshez" }
+                {
+                    "liszt": "30 dkg"
+                },
+                {
+                    "tojás": "3 db"
+                },
+                {
+                    "tej": "6 dl"
+                },
+                {
+                    "szénsavas víz": "2 dl"
+                },
+                {
+                    "só": "1 csipet"
+                },
+                {
+                    "olaj": "sütéshez"
+                }
             ],
             "elkeszites": "1. A lisztet a tojásokkal és egy kevés tejjel simára keverjük.\n2. Folyamatos keverés mellett hozzáadjuk a maradék tejet és a szénsavas vizet.\n3. Forró serpenyőben vékony palacsintákat sütünk mindkét oldalukon. Tetszés szerinti töltelékkel tálaljuk.",
             "kepnev": "palacsinta.jpg",
@@ -1234,13 +2213,27 @@
             "ido": 20,
             "adag": 2,
             "hozzavalok": [
-                { "csirkemáj": "50 dkg" },
-                { "tej": "5 dl " },
-                { "fokhagyma": "2 gerezd" },
-                { "babérlevél": "1 db" },
-                { "rozmaring": "1 ág " },
-                { "bacon": "15 dkg " },
-                { "fehér bors": "1 tk" }
+                {
+                    "csirkemáj": "50 dkg"
+                },
+                {
+                    "tej": "5 dl "
+                },
+                {
+                    "fokhagyma": "2 gerezd"
+                },
+                {
+                    "babérlevél": "1 db"
+                },
+                {
+                    "rozmaring": "1 ág "
+                },
+                {
+                    "bacon": "15 dkg "
+                },
+                {
+                    "fehér bors": "1 tk"
+                }
             ],
             "elkeszites": "1. A májat hártyázzuk le, az ereket távolítsuk el, majd mossuk át folyó víz alatt.\n2. A tejet öntsük keverőtálba, majd adjuk hozzá a reszelt fokhagymát, borsot, babérlevelet és a rozmaringot. Ebbe pácoljuk bele a májakat, fedjük le, és egy éjszakára tegyük hűtőbe.\n3. Másnap a májakról itassuk fel a felesleges nedvességet, majd baconnel tekerjük körbe.\n4. A baconnel körbetekert májakat sorakoztassuk sütőpapírral bélelt tepsire, majd toljuk 180 fokosra előmelegített sütőbe, és 15-20 perc alatt süssük készre. (A sütési idő a máj méretétől és a sütőtől is függ, épp ezért előfordulhat, hogy picit tovább kell sütni.)\n5. Az elkészült baconnel körbetekert csirkemáj mellé kínálj krumplipürét vagy salátát.",
             "kepnev": "mJ.jpg",
@@ -1254,14 +2247,30 @@
             "ido": 75,
             "adag": 8,
             "hozzavalok": [
-                { "liszt": "30 dkg" },
-                { "vaj": "20 dkg" },
-                { "cukor": "15 dkg" },
-                { "tojás": "1 db" },
-                { "sütőpor": "1 csomag" },
-                { "alma": "1 kg" },
-                { "fahéj": "1 teáskanál" },
-                { "citromlé": "1 evőkanál" }
+                {
+                    "liszt": "30 dkg"
+                },
+                {
+                    "vaj": "20 dkg"
+                },
+                {
+                    "cukor": "15 dkg"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "alma": "1 kg"
+                },
+                {
+                    "fahéj": "1 teáskanál"
+                },
+                {
+                    "citromlé": "1 evőkanál"
+                }
             ],
             "elkeszites": "1. A lisztet összegyúrjuk a vajjal, cukorral, tojással és sütőporral.\n2. Az almát meghámozzuk, felkockázzuk, és a fahéjjal és citromlével összekeverjük.\n3. A tésztát két részre osztjuk, kinyújtjuk. Az egyik részt a tepsibe tesszük, rá az almát, majd a másik tésztarésszel lefedjük.\n4. 180°C-on 40 percig sütjük. Langyosra hűtve tálaljuk.",
             "kepnev": "almasPite.jpg",
@@ -1275,12 +2284,24 @@
             "ido": 30,
             "adag": 4,
             "hozzavalok": [
-                { "tészta": "40 dkg" },
-                { "túró": "40 dkg" },
-                { "tejföl": "2 dl" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "füstölt szalonna": "15 dkg" }
+                {
+                    "tészta": "40 dkg"
+                },
+                {
+                    "túró": "40 dkg"
+                },
+                {
+                    "tejföl": "2 dl"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "füstölt szalonna": "15 dkg"
+                }
             ],
             "elkeszites": "1. A tésztát sós vízben kifőzzük, leszűrjük.\n2. A szalonnát kockára vágjuk, és ropogósra sütjük.\n3. A tésztát összekeverjük a túróval, tejföllel, sóval és borssal.\n4. Tálaláskor a pirított szalonnával megszórjuk.",
             "kepnev": "turosCsusza.jpg",
@@ -1294,14 +2315,30 @@
             "ido": 180,
             "adag": 12,
             "hozzavalok": [
-                { "liszt": "30 dkg" },
-                { "vaj": "20 dkg" },
-                { "tojás": "1 db" },
-                { "sütőpor": "1 csomag" },
-                { "tej": "1 l" },
-                { "kávé": "5 evőkanál" },
-                { "cukor": "30 dkg" },
-                { "vanília puding": "2 csomag" }
+                {
+                    "liszt": "30 dkg"
+                },
+                {
+                    "vaj": "20 dkg"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "tej": "1 l"
+                },
+                {
+                    "kávé": "5 evőkanál"
+                },
+                {
+                    "cukor": "30 dkg"
+                },
+                {
+                    "vanília puding": "2 csomag"
+                }
             ],
             "elkeszites": "1. A lisztet összegyúrjuk a vajjal, tojással és sütőporral. Kinyújtjuk, és tepsiben 180°C-on 15 percig sütjük.\n2. A pudingot a tejjel, cukorral és kávéval főzzük, majd kihűtjük.\n3. A piskóta tetejére kenjük a kávés pudingot, majd hűtőben dermesztjük.",
             "kepnev": "kavesKremes.jpg",
@@ -1315,14 +2352,30 @@
             "ido": 60,
             "adag": 4,
             "hozzavalok": [
-                { "bab": "40 dkg" },
-                { "vöröshagyma": "1 fej" },
-                { "fokhagyma": "2 gerezd" },
-                { "pirospaprika": "1 evőkanál" },
-                { "liszt": "1 evőkanál" },
-                { "olaj": "2 evőkanál" },
-                { "só": "ízlésre" },
-                { "ecet": "1 evőkanál" }
+                {
+                    "bab": "40 dkg"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "fokhagyma": "2 gerezd"
+                },
+                {
+                    "pirospaprika": "1 evőkanál"
+                },
+                {
+                    "liszt": "1 evőkanál"
+                },
+                {
+                    "olaj": "2 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "ecet": "1 evőkanál"
+                }
             ],
             "elkeszites": "1. A babot megmossuk, és puhára főzzük.\n2. A hagymát apróra vágjuk, az olajon megpirítjuk, hozzáadjuk a pirospaprikát és lisztet, rántást készítünk.\n3. A babhoz adjuk a rántást, és pár percig együtt főzzük. Ecettel ízesítjük. Tojással tálaljuk.",
             "kepnev": "babfozelek.jpg",
@@ -1336,12 +2389,24 @@
             "ido": 60,
             "adag": 6,
             "hozzavalok": [
-                { "zsemle": "6 db" },
-                { "tej": "1 l" },
-                { "mák": "20 dkg" },
-                { "cukor": "15 dkg" },
-                { "vanília": "1 rúd" },
-                { "vaj": "5 dkg" }
+                {
+                    "zsemle": "6 db"
+                },
+                {
+                    "tej": "1 l"
+                },
+                {
+                    "mák": "20 dkg"
+                },
+                {
+                    "cukor": "15 dkg"
+                },
+                {
+                    "vanília": "1 rúd"
+                },
+                {
+                    "vaj": "5 dkg"
+                }
             ],
             "elkeszites": "1. A zsemléket kockára vágjuk, és a forró tejbe áztatjuk.\n2. A mákot a cukorral és a vaníliával összekeverjük.\n3. A zsemlekockákat összekeverjük a mákos keverékkel, és vajjal meglocsoljuk.\n4. 180°C-os sütőben 20 percig melegítjük.",
             "kepnev": "makosGuba.jpg",
@@ -1355,13 +2420,27 @@
             "ido": 60,
             "adag": 6,
             "hozzavalok": [
-                { "tészta": "50 dkg" },
-                { "tejföl": "3 dl" },
-                { "tojás": "4 db" },
-                { "sajt": "30 dkg" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "vaj": "2 evőkanál" }
+                {
+                    "tészta": "50 dkg"
+                },
+                {
+                    "tejföl": "3 dl"
+                },
+                {
+                    "tojás": "4 db"
+                },
+                {
+                    "sajt": "30 dkg"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "vaj": "2 evőkanál"
+                }
             ],
             "elkeszites": "1. A tésztát sós vízben kifőzzük, leszűrjük.\n2. A tojásokat keményre főzzük, és karikákra vágjuk.\n3. Tepsibe rétegezzük a tésztát, tejfölt, tojást és reszelt sajtot. Ismételjük a rétegezést.\n4. 180°C-on 25 percig sütjük, amíg a teteje megpirul.",
             "kepnev": "rakottTeszta.jpg",
@@ -1375,13 +2454,27 @@
             "ido": 60,
             "adag": 8,
             "hozzavalok": [
-                { "liszt": "30 dkg" },
-                { "vaj": "20 dkg" },
-                { "cukor": "15 dkg" },
-                { "tojás": "1 db" },
-                { "sütőpor": "1 csomag" },
-                { "meggy": "50 dkg" },
-                { "porcukor": "díszítéshez" }
+                {
+                    "liszt": "30 dkg"
+                },
+                {
+                    "vaj": "20 dkg"
+                },
+                {
+                    "cukor": "15 dkg"
+                },
+                {
+                    "tojás": "1 db"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "meggy": "50 dkg"
+                },
+                {
+                    "porcukor": "díszítéshez"
+                }
             ],
             "elkeszites": "1. A lisztet összegyúrjuk a vajjal, cukorral, tojással és sütőporral.\n2. A tésztát kinyújtjuk, és tepsibe helyezzük.\n3. A meggyet a tésztára helyezzük, és 180°C-on 30 percig sütjük.\n4. Kihűlés után porcukorral megszórjuk.",
             "kepnev": "meggyesLepeny.jpg",
@@ -1395,13 +2488,27 @@
             "ido": 45,
             "adag": 4,
             "hozzavalok": [
-                { "spenót": "1 kg" },
-                { "vöröshagyma": "1 fej" },
-                { "liszt": "1 evőkanál" },
-                { "tejföl": "2 dl" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "olaj": "2 evőkanál" }
+                {
+                    "spenót": "1 kg"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "liszt": "1 evőkanál"
+                },
+                {
+                    "tejföl": "2 dl"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "olaj": "2 evőkanál"
+                }
             ],
             "elkeszites": "1. A spenótot megmossuk, és sós vízben puhára főzzük.\n2. A hagymát apróra vágjuk, az olajon megpirítjuk, hozzáadjuk a lisztet, rántást készítünk.\n3. A spenóthoz adjuk a rántást és a tejfölt, és pár percig együtt főzzük. Tojással tálaljuk.",
             "kepnev": "spenotfozelek.jpg",
@@ -1415,12 +2522,24 @@
             "ido": 30,
             "adag": 20,
             "hozzavalok": [
-                { "keksz": "40 dkg" },
-                { "vaj": "10 dkg" },
-                { "cukor": "10 dkg" },
-                { "kakaó": "2 evőkanál" },
-                { "kókuszreszelék": "10 dkg" },
-                { "tej": "1 dl" }
+                {
+                    "keksz": "40 dkg"
+                },
+                {
+                    "vaj": "10 dkg"
+                },
+                {
+                    "cukor": "10 dkg"
+                },
+                {
+                    "kakaó": "2 evőkanál"
+                },
+                {
+                    "kókuszreszelék": "10 dkg"
+                },
+                {
+                    "tej": "1 dl"
+                }
             ],
             "elkeszites": "1. A kekszet összetörjük, és összekeverjük a puha vajjal, cukorral, kakaóval és tejjel.\n2. Golyókat formázunk a masszából, és kókuszreszelékben meghempergetjük.\n3. Hűtőben dermesztjük.",
             "kepnev": "kokuszgolyo.jpg",
@@ -1434,15 +2553,33 @@
             "ido": 50,
             "adag": 4,
             "hozzavalok": [
-                { "tök": "1 kg" },
-                { "tejföl": "2 dl" },
-                { "liszt": "1 evőkanál" },
-                { "vöröshagyma": "1 fej" },
-                { "fokhagyma": "2 gerezd" },
-                { "só": "ízlésre" },
-                { "cukor": "1 evőkanál" },
-                { "olaj": "2 evőkanál" },
-                { "pirospaprika": "1 teáskanál" }
+                {
+                    "tök": "1 kg"
+                },
+                {
+                    "tejföl": "2 dl"
+                },
+                {
+                    "liszt": "1 evőkanál"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "fokhagyma": "2 gerezd"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "cukor": "1 evőkanál"
+                },
+                {
+                    "olaj": "2 evőkanál"
+                },
+                {
+                    "pirospaprika": "1 teáskanál"
+                }
             ],
             "elkeszites": "1. A tököt meghámozzuk, magját eltávolítjuk, és kockára vágjuk.\n2. A hagymát apróra vágjuk, az olajon megpirítjuk, hozzáadjuk a pirospaprikát.\n3. Hozzáadjuk a tököt, kevés vizet öntünk alá, és puhára pároljuk.\n4. A lisztet a tejföllel elkeverjük, hozzáadjuk a főzelékhez, és összeforraljuk. Fokhagymával ízesítjük.",
             "kepnev": "tokfozelek.jpg",
@@ -1456,16 +2593,36 @@
             "ido": 60,
             "adag": 30,
             "hozzavalok": [
-                { "liszt": "50 dkg" },
-                { "tojás": "3 db" },
-                { "vaj": "10 dkg" },
-                { "cukor": "10 dkg" },
-                { "élesztő": "2 dkg" },
-                { "tej": "2 dl" },
-                { "só": "1 csipet" },
-                { "citromhéj": "1 db" },
-                { "olaj": "sütéshez" },
-                { "porcukor": "díszítéshez" }
+                {
+                    "liszt": "50 dkg"
+                },
+                {
+                    "tojás": "3 db"
+                },
+                {
+                    "vaj": "10 dkg"
+                },
+                {
+                    "cukor": "10 dkg"
+                },
+                {
+                    "élesztő": "2 dkg"
+                },
+                {
+                    "tej": "2 dl"
+                },
+                {
+                    "só": "1 csipet"
+                },
+                {
+                    "citromhéj": "1 db"
+                },
+                {
+                    "olaj": "sütéshez"
+                },
+                {
+                    "porcukor": "díszítéshez"
+                }
             ],
             "elkeszites": "1. Az élesztőt a meleg tejben felfuttatjuk.\n2. A lisztet összegyúrjuk a tojásokkal, vajjal, cukorral, sóval, citromhéjjal és az élesztős tejjel.\n3. Kelni hagyjuk 1 órát.\n4. A tésztát kinyújtjuk, csíkokra vágjuk, és csavarod formát adunk.\n5. Forró olajban aranybarnára sütjük. Melegen porcukorral megszórjuk.",
             "kepnev": "csorogefank.jpg",
@@ -1479,14 +2636,30 @@
             "ido": 45,
             "adag": 4,
             "hozzavalok": [
-                { "zöldborsó": "50 dkg (friss vagy fagyasztott)" },
-                { "vöröshagyma": "1 fej" },
-                { "liszt": "1 evőkanál" },
-                { "tejföl": "2 dl" },
-                { "só": "ízlésre" },
-                { "cukor": "1 kávéskanál" },
-                { "olaj": "2 evőkanál" },
-                { "petrezselyem": "1 csokor" }
+                {
+                    "zöldborsó": "50 dkg (friss vagy fagyasztott)"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "liszt": "1 evőkanál"
+                },
+                {
+                    "tejföl": "2 dl"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "cukor": "1 kávéskanál"
+                },
+                {
+                    "olaj": "2 evőkanál"
+                },
+                {
+                    "petrezselyem": "1 csokor"
+                }
             ],
             "elkeszites": "1. A hagymát apróra vágjuk, az olajon megpirítjuk.\n2. Hozzáadjuk a lisztet, majd a zöldborsót és kevés vizet.\n3. Puhára főzzük, majd hozzáadjuk a tejfölt, sót és cukrot.\n4. Finomra vágott petrezselyemmel megszórva tálaljuk, tojással vagy sült kolbásszal.",
             "kepnev": "zoldborsoFozelek.jpg",
@@ -1500,13 +2673,27 @@
             "ido": 60,
             "adag": 6,
             "hozzavalok": [
-                { "tészta": "50 dkg" },
-                { "fejes káposzta": "1 kg" },
-                { "vaj": "10 dkg" },
-                { "cukor": "10 dkg" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" },
-                { "mák": "tálaláshoz" }
+                {
+                    "tészta": "50 dkg"
+                },
+                {
+                    "fejes káposzta": "1 kg"
+                },
+                {
+                    "vaj": "10 dkg"
+                },
+                {
+                    "cukor": "10 dkg"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                },
+                {
+                    "mák": "tálaláshoz"
+                }
             ],
             "elkeszites": "1. A káposztát vékonyra metéljük, és a vajon megpároljuk.\n2. Sóval, borssal és cukorral ízesítjük.\n3. A tésztát kifőzzük, és a káposztával összekeverjük.\n4. Tálaláskor mákkal megszórjuk.",
             "kepnev": "kaposztasTeszta.jpg",
@@ -1520,13 +2707,27 @@
             "ido": 90,
             "adag": 8,
             "hozzavalok": [
-                { "liszt": "50 dkg" },
-                { "túró": "40 dkg" },
-                { "tejföl": "2 dl" },
-                { "tojás": "2 db" },
-                { "élesztő": "2 dkg" },
-                { "só": "1 teáskanál" },
-                { "vaj": "sütéshez" }
+                {
+                    "liszt": "50 dkg"
+                },
+                {
+                    "túró": "40 dkg"
+                },
+                {
+                    "tejföl": "2 dl"
+                },
+                {
+                    "tojás": "2 db"
+                },
+                {
+                    "élesztő": "2 dkg"
+                },
+                {
+                    "só": "1 teáskanál"
+                },
+                {
+                    "vaj": "sütéshez"
+                }
             ],
             "elkeszites": "1. Az élesztőt felfuttatjuk a meleg tejfölben.\n2. A lisztet összegyúrjuk a túróval, tojással, sóval és az élesztős tejföllel.\n3. Kelni hagyjuk 1 órát.\n4. A tésztát kinyújtjuk, feltekerjük, és csigákat formázunk.\n5. Vajazott tepsiben 180°C-on 25 percig sütjük.",
             "kepnev": "turosCsiga.jpg",
@@ -1540,13 +2741,27 @@
             "ido": 45,
             "adag": 8,
             "hozzavalok": [
-                { "tojás": "4 db" },
-                { "cukor": "20 dkg" },
-                { "liszt": "20 dkg" },
-                { "sütőpor": "1 csomag" },
-                { "málna": "30 dkg" },
-                { "tejszín": "3 dl" },
-                { "porcukor": "díszítéshez" }
+                {
+                    "tojás": "4 db"
+                },
+                {
+                    "cukor": "20 dkg"
+                },
+                {
+                    "liszt": "20 dkg"
+                },
+                {
+                    "sütőpor": "1 csomag"
+                },
+                {
+                    "málna": "30 dkg"
+                },
+                {
+                    "tejszín": "3 dl"
+                },
+                {
+                    "porcukor": "díszítéshez"
+                }
             ],
             "elkeszites": "1. A tojásokat a cukorral habosra keverjük.\n2. Hozzáadjuk a lisztet és sütőport.\n3. Tepsiben 180°C-on 20 percig sütjük.\n4. Kihűtés után a piskótát tetejére helyezzük a málnát és a felvert tejszínhabot.\n5. Porcukorral megszórva tálaljuk.",
             "kepnev": "malnasPiskota.jpg",
@@ -1560,14 +2775,30 @@
             "ido": 50,
             "adag": 4,
             "hozzavalok": [
-                { "sárgarépa": "80 dkg" },
-                { "vöröshagyma": "1 fej" },
-                { "liszt": "1 evőkanál" },
-                { "tejföl": "2 dl" },
-                { "só": "ízlésre" },
-                { "cukor": "1 evőkanál" },
-                { "olaj": "2 evőkanál" },
-                { "kömény": "1 teáskanál" }
+                {
+                    "sárgarépa": "80 dkg"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "liszt": "1 evőkanál"
+                },
+                {
+                    "tejföl": "2 dl"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "cukor": "1 evőkanál"
+                },
+                {
+                    "olaj": "2 evőkanál"
+                },
+                {
+                    "kömény": "1 teáskanál"
+                }
             ],
             "elkeszites": "1. A sárgarépát meghámozzuk, és karikákra vágjuk.\n2. A hagymát apróra vágjuk, az olajon megpirítjuk, hozzáadjuk a köményt és lisztet.\n3. Hozzáadjuk a répát, és kevés vízzel puhára főzzük.\n4. A tejfölt hozzáadjuk, és összeforraljuk. Tojással tálaljuk.",
             "kepnev": "sargarepaFozelek.jpg",
@@ -1581,14 +2812,30 @@
             "ido": 20,
             "adag": 4,
             "hozzavalok": [
-                { "paradicsom": "4 db" },
-                { "uborka": "1 db" },
-                { "lilahagyma": "1 fej" },
-                { "sajt": "20 dkg" },
-                { "olívabogyó": "15 dkg" },
-                { "olívaolaj": "3 evőkanál" },
-                { "oregano": "1 teáskanál" },
-                { "citromlé": "1 evőkanál" }
+                {
+                    "paradicsom": "4 db"
+                },
+                {
+                    "uborka": "1 db"
+                },
+                {
+                    "lilahagyma": "1 fej"
+                },
+                {
+                    "sajt": "20 dkg"
+                },
+                {
+                    "olívabogyó": "15 dkg"
+                },
+                {
+                    "olívaolaj": "3 evőkanál"
+                },
+                {
+                    "oregano": "1 teáskanál"
+                },
+                {
+                    "citromlé": "1 evőkanál"
+                }
             ],
             "elkeszites": "1. A paradicsomot és uborkát kockára vágjuk.\n2. A hagymát vékony karikákra metéljük.\n3. A sajtot kockára vágjuk.\n4. Összekeverjük az olívabogyóval, olívaolajjal, citromlével és oreganóval.\n5. Hűtőben 1 órát érleljük a tálalás előtt.",
             "kepnev": "gorogSalata.jpg",
@@ -1602,13 +2849,27 @@
             "ido": 120,
             "adag": 8,
             "hozzavalok": [
-                { "mascarponé": "50 dkg" },
-                { "tojás": "4 db" },
-                { "cukor": "15 dkg" },
-                { "kávé": "3 dl" },
-                { "babapiskóta": "30 dkg" },
-                { "kakaópor": "díszítéshez" },
-                { "rum": "2 evőkanál" }
+                {
+                    "mascarponé": "50 dkg"
+                },
+                {
+                    "tojás": "4 db"
+                },
+                {
+                    "cukor": "15 dkg"
+                },
+                {
+                    "kávé": "3 dl"
+                },
+                {
+                    "babapiskóta": "30 dkg"
+                },
+                {
+                    "kakaópor": "díszítéshez"
+                },
+                {
+                    "rum": "2 evőkanál"
+                }
             ],
             "elkeszites": "1. A tojások sárgáját a cukorral habosra keverjük, hozzáadjuk a mascarponét.\n2. A fehérjékből kemény habot verünk, és óvatosan a masszába keverjük.\n3. A babapiskótát a rumos kávéba mártjuk.\n4. Tálba rétegezzük a piskótát és a krémet. 4 órára hűtőbe tesszük.\n5. Tálalás előtt kakaóporral meghintjük.",
             "kepnev": "tiramisu.jpg",
@@ -1622,14 +2883,30 @@
             "ido": 60,
             "adag": 4,
             "hozzavalok": [
-                { "csirkemell": "60 dkg" },
-                { "rizs": "30 dkg" },
-                { "zöldbab": "40 dkg" },
-                { "vöröshagyma": "1 fej" },
-                { "fokhagyma": "3 gerezd" },
-                { "olaj": "3 evőkanál" },
-                { "só": "ízlésre" },
-                { "bors": "ízlésre" }
+                {
+                    "csirkemell": "60 dkg"
+                },
+                {
+                    "rizs": "30 dkg"
+                },
+                {
+                    "zöldbab": "40 dkg"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "fokhagyma": "3 gerezd"
+                },
+                {
+                    "olaj": "3 evőkanál"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "bors": "ízlésre"
+                }
             ],
             "elkeszites": "1. A csirkét kockára vágjuk, sózzuk, borsozzuk.\n2. Az olajon megpirítjuk a hagymát, hozzáadjuk a húst, és átsütjük.\n3. Hozzáadjuk a rizst, felöntjük vízzel, és puhára főzzük.\n4. Az utolsó 10 percben hozzáadjuk a zöldbabot.",
             "kepnev": "zoldbabosRizsesHus.jpg",
@@ -1643,14 +2920,30 @@
             "ido": 180,
             "adag": 12,
             "hozzavalok": [
-                { "liszt": "30 dkg" },
-                { "cukor": "20 dkg" },
-                { "tojás": "4 db" },
-                { "vaj": "20 dkg" },
-                { "tej": "2 dl" },
-                { "rum": "2 evőkanál" },
-                { "kakaó": "2 evőkanál" },
-                { "vanília": "1 rúd" }
+                {
+                    "liszt": "30 dkg"
+                },
+                {
+                    "cukor": "20 dkg"
+                },
+                {
+                    "tojás": "4 db"
+                },
+                {
+                    "vaj": "20 dkg"
+                },
+                {
+                    "tej": "2 dl"
+                },
+                {
+                    "rum": "2 evőkanál"
+                },
+                {
+                    "kakaó": "2 evőkanál"
+                },
+                {
+                    "vanília": "1 rúd"
+                }
             ],
             "elkeszites": "1. A tojások sárgáját a cukorral habosra keverjük.\n2. Hozzáadjuk az olvasztott vajat, rumot, vaníliát és a lisztet.\n3. A fehérjékből kemény habot verünk, és óvatosan a masszába keverjük.\n4. Tepsiben 180°C-on 25 percig sütjük. Kihűtés után kockákra vágjuk.",
             "kepnev": "puncsSzelet.jpg",
@@ -1664,19 +2957,45 @@
             "ido": 25,
             "adag": 4,
             "hozzavalok": [
-                { "sertészsír": "0.5 evőkanál" },
-                { "vöröshagyma": "1 fej" },
-                { "fokhagyma": "2 gerezd" },
-                { "babérlevél": "2 db" },
-                { "burgonya": "1 kg" },
-                { "só": "ízlésre" },
-                { "fűszerpaprika": "0.5 teáskanál" },
-                { "tej": "250 ml" },
-                { "víz": "800 ml" },
-                { "ételecet": "1 evőkanál (10%-os)" },
-                { "koriander": "1 csokor, friss" },
-                { "tejföl": "175 g" },
-                { "finomliszt": "50 g" }
+                {
+                    "sertészsír": "0.5 evőkanál"
+                },
+                {
+                    "vöröshagyma": "1 fej"
+                },
+                {
+                    "fokhagyma": "2 gerezd"
+                },
+                {
+                    "babérlevél": "2 db"
+                },
+                {
+                    "burgonya": "1 kg"
+                },
+                {
+                    "só": "ízlésre"
+                },
+                {
+                    "fűszerpaprika": "0.5 teáskanál"
+                },
+                {
+                    "tej": "250 ml"
+                },
+                {
+                    "víz": "800 ml"
+                },
+                {
+                    "ételecet": "1 evőkanál (10%-os)"
+                },
+                {
+                    "koriander": "1 csokor, friss"
+                },
+                {
+                    "tejföl": "175 g"
+                },
+                {
+                    "finomliszt": "50 g"
+                }
             ],
             "elkeszites": "1. Zsírt melegítünk egy lábasban, és a finomra vágott vörös- és fokhagymát a babérral együtt közepes hőfokon 5 percig dinszteljük rajta.\n2. Hozzáadjuk a kb. 2 cm-es kockákra vágott krumplit. Sózzuk és megszórjuk a fűszerpaprikával, majd felöntjük a tej és víz keverékével.\n3. Közepes hőfokon puhára főzzük a krumplit.\n4. A habaráshoz a tejfölben elkeverjük a lisztet, hőkiegyenlítünk (azaz merünk hozzá pár kanállal a krumpli főzőlevéből és elkeverjük), majd besűrítjük vele a főzeléket, végül az ecettel és a frissen aprított korianderrel beállítjuk a végleges ízeket. Tálaljuk a főzeléket, ízlés szerint akár feltéttel.",
             "kepnev": "korianderesKrumplifozelek.jpg",
@@ -1690,12 +3009,24 @@
             "ido": 30,
             "adag": 4,
             "hozzavalok": [
-                { "uborka": "3 kg" },
-                { "víz": "4 l" },
-                { "só": "3 ek" },
-                { "fokhagyma": "4 gerezd" },
-                { "kapor": "1 csokor" },
-                { "kenyér": "1 szelet" }
+                {
+                    "uborka": "3 kg"
+                },
+                {
+                    "víz": "4 l"
+                },
+                {
+                    "só": "3 ek"
+                },
+                {
+                    "fokhagyma": "4 gerezd"
+                },
+                {
+                    "kapor": "1 csokor"
+                },
+                {
+                    "kenyér": "1 szelet"
+                }
             ],
             "elkeszites": "1. Az uborkákat alaposan mossuk meg, de ne hámozzuk meg. A végeit vágjuk le egy kicsit.\n2. Készítsük ki az alaposan kimosott 5 literes befőttes üvegünket, majd a rakjuk bele az uborkákat, közéteve a megtisztított fokhagymát, tormát és kaport.\n3. Forraljunk fel vizet, adjuk hozzá a sót, és keverjük, amíg teljesen fel nem oldódik. Hagyjuk langyosra hűlni.\n4. Öntsük a langyos sós vizet az uborkákra úgy, hogy teljesen ellepje őket.\n5. Fedjük le egy tányérral vagy törlőkendővel, és hagyjuk szobahőmérsékleten fermentálódni 3-4 napig. A fermentálás ideje függ a hőmérséklettől - minél melegebb van, annál gyorsabban kész.\n6. Amikor az uborkák megfelelően savanyúak (de még ropogósak), tegyük őket a hűtőbe, ahol tovább lassan fermentálódnak, de hosszabb ideig elállnak.",
             "kepnev": "koviubi.jpg",

@@ -412,6 +412,10 @@ header {
     top: -60px;
 }
 
+.email{
+    text-decoration: underline;
+}
+
 .description {
     margin-top: 200px;
     max-width: 955px;
