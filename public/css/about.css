@@ -13,6 +13,7 @@
     --bgColor: var(--nonPhotoBlue);
     --secondaryClrs: white;
     --cardClrs: var(--mint);
+    --galaxy: var(--plum);
     --textColor: var(--raisinBlack);
 }
 
@@ -65,6 +66,7 @@ body.dark-theme {
     --secondaryClrs: var(--iris);
     --cardClrs: var(--iris);
     --textColor: white;
+    --galaxy: var(--mauve);
 }
 
 header {
@@ -414,6 +416,10 @@ header {
 
 .email{
     text-decoration: underline;
+}
+
+.galaxy{
+    color: var(--galaxy);
 }
 
 .description {
