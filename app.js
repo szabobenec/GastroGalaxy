@@ -110,14 +110,13 @@ randomOrder();
 app.get('/api/recipe-of-the-day', async (request, response) => {
     try {
         const string = (await readFile('rotd.txt')).split('.')[1];
-        let randomIds = [];
-        for (let item of string.split(';')) {
-            randomIds.push(parseInt(item));
-        }
+
         const currentDate = new Date().toISOString().split('T')[0];
         const dayCounter = parseInt(currentDate.split('-')[2]);
 
-        const res = await db.selectRecipeOfTheDay(randomIds[dayCounter - 1]);
+        const data = string.split(';')[dayCounter - 1];
+
+        const res = await db.selectRecipeOfTheDay(data);
 
         response.status(200).json({
             message: 'Sikeres lekérdezés',
