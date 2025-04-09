@@ -183,7 +183,6 @@ const storage = multer.diskStorage({
         callback(null, path.join(__dirname + '/public/images/recipes'));
     },
     filename: (request, file, callback) => {
-        // const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
         callback(null, file.originalname);
     }
 });
