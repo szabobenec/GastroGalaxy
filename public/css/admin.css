@@ -470,6 +470,7 @@ header {
 .adatokFormData {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
     width: 40%;
 }
@@ -477,10 +478,50 @@ header {
 .formDiv {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
-.adatInput {
+.formDivHozzavalo,
+.formDivLepes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.formDivButtons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.buttons {
+    width: 20%;
+    border-radius: 5px;
+}
+
+#updateBtn {
+    background-color: green;
+}
+
+#deleteBtn {
+    background-color: red;
+}
+
+.adatInput,
+.tipusSelect {
     width: 50%;
+}
+
+.hozzavaloInput {
+    width: 40%;
+}
+
+.lepes {
+    width: 80%;
+    height: 100px;
+    resize: none;
 }
 
 footer {
