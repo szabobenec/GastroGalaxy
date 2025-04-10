@@ -34,6 +34,7 @@ const postAPI = (url, postObject) => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
+        //? Nap receptjének lekérése, és az adatait használva a kártya feltöltése
         console.log('Welcome to Recipe of the Day!');
         const data = (await getAPI('/api/recipe-of-the-day')).response;
         RecipeOfTheDay(data[0]);
