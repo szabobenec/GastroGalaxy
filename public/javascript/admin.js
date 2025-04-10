@@ -123,6 +123,7 @@ const Login = async () => {
 
 //! Receptkereső rész megjelenítése
 const ShowData = async () => {
+    //! Kereső rész felépítése
     const mainDiv = document.getElementById('mainDiv');
     const loginDiv = document.getElementById('loginDiv');
     mainDiv.removeChild(loginDiv);
@@ -137,6 +138,7 @@ const ShowData = async () => {
     const h1 = document.createElement('h1');
     adminInnerDiv.appendChild(h1);
     h1.innerHTML = 'Recept kiválasztása:';
+    h1.setAttribute('class', 'kivalasztCim');
     const h2 = document.createElement('h2');
     adminInnerDiv.appendChild(h2);
     h2.innerHTML = 'Receptkereső:';
@@ -174,6 +176,67 @@ const ShowData = async () => {
     });
 
     //TODO Itt kell létrehozni a szeresztő részt
+
+    // <div class="adatokDiv">
+    //     <form id="adatokFormData" class="adatokFormData">
+    //         <div class="formDiv">
+    //             <label for="">: </label>
+    //             <input type="text" id="" name="" placeholder="" />
+    //         </div>
+
+    //         <div class="formDiv">
+    //             <label for="">: </label>
+    //             <input type="text" id="" name="" placeholder="" />
+    //         </div>
+    //     </form>
+    // </div>;
+
+    //! Szerkesztő-rész felépítése
+    const adatokDiv = document.createElement('div');
+    mainDiv.appendChild(adatokDiv);
+    adatokDiv.setAttribute('class', 'adatokDiv');
+    const h1Adatok = document.createElement('h1');
+    adatokDiv.appendChild(h1Adatok);
+    h1Adatok.innerHTML = 'Adatok szerkesztése:';
+    const adatokFormData = document.createElement('form');
+    adatokDiv.appendChild(adatokFormData);
+    adatokFormData.id = 'adatokFormData';
+    adatokFormData.setAttribute('class', 'adatokFormData');
+
+    //? nev
+    const nevDiv = document.createElement('div');
+    adatokFormData.appendChild(nevDiv);
+    nevDiv.setAttribute('class', 'formDiv');
+    const nevL = document.createElement('label');
+    nevDiv.appendChild(nevL);
+    nevL.setAttribute('for', 'nev');
+    nevL.innerHTML = 'Recept neve:';
+    const nevI = document.createElement('input');
+    nevDiv.appendChild(nevI);
+    nevI.type = 'text';
+    nevI.id = 'nev';
+    nevI.name = 'nev';
+    nevI.placeholder = 'név';
+    nevI.setAttribute('class', 'adatInput');
+
+    //! TIPUS
+    //? tipus
+
+    //? elkeszitesi ido
+    const nevDiv = document.createElement('div');
+    adatokFormData.appendChild(nevDiv);
+    nevDiv.setAttribute('class', 'formDiv');
+    const nevL = document.createElement('label');
+    nevDiv.appendChild(nevL);
+    nevL.setAttribute('for', 'nev');
+    nevL.innerHTML = 'Recept neve:';
+    const nevI = document.createElement('input');
+    nevDiv.appendChild(nevI);
+    nevI.type = 'text';
+    nevI.id = 'nev';
+    nevI.name = 'nev';
+    nevI.placeholder = 'név';
+    nevI.setAttribute('class', 'adatInput');
 };
 
 //! Receptek abc sorrendbe rendezése, az egyszerűbb megtalálás érdekében

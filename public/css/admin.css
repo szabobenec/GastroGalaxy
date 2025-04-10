@@ -460,6 +460,29 @@ header {
     display: none;
 }
 
+.adatokDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.adatokFormData {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+}
+
+.formDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adatInput {
+    width: 50%;
+}
+
 footer {
     background-color: var(--bgColor);
     color: var(--textColor);

@@ -204,10 +204,17 @@ app.post('/api/login/admin', uploadAdmin.single('file'), async (request, respons
             }
 
             if (result) {
-                response.status(200).json({
-                    message: 'Passwords match, authentication successful',
-                    response: true
-                });
+                if (formData.username === data.uname) {
+                    response.status(200).json({
+                        message: 'Passwords match, authentication successful',
+                        response: true
+                    });
+                } else {
+                    response.status(200).json({
+                        message: `Usernames don't match, authentication failed`,
+                        response: false
+                    });
+                }
             } else {
                 response.status(200).json({
                     message: `Passwords don't match, authentication failed`,
