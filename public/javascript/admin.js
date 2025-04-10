@@ -121,11 +121,134 @@ const Login = async () => {
     }
 };
 
-const ShowData = () => {
+//! Receptkereső rész megjelenítése
+const ShowData = async () => {
     const mainDiv = document.getElementById('mainDiv');
     const loginDiv = document.getElementById('loginDiv');
     mainDiv.removeChild(loginDiv);
 
-    const div = document.createElement('div');
-    mainDiv.appendChild(div);
+    const adminDiv = document.createElement('div');
+    mainDiv.appendChild(adminDiv);
+    adminDiv.setAttribute('class', 'adminDiv');
+    const adminInnerDiv = document.createElement('div');
+    adminDiv.appendChild(adminInnerDiv);
+    adminInnerDiv.setAttribute('class', 'adminInnerDiv');
+
+    const h1 = document.createElement('h1');
+    adminInnerDiv.appendChild(h1);
+    h1.innerHTML = 'Recept kiválasztása:';
+    const h2 = document.createElement('h2');
+    adminInnerDiv.appendChild(h2);
+    h2.innerHTML = 'Receptkereső:';
+    const searchDiv = document.createElement('div');
+    adminInnerDiv.appendChild(searchDiv);
+    searchDiv.id = 'searchDiv';
+    searchDiv.setAttribute('class', 'formsDiv');
+
+    const formDataSearch = document.createElement('form');
+    searchDiv.appendChild(formDataSearch);
+    formDataSearch.id = 'formDataSearch';
+    const innerFormDataSearch = document.createElement('div');
+    formDataSearch.appendChild(innerFormDataSearch);
+    innerFormDataSearch.setAttribute('class', 'innerFormDataSearch');
+    const receptekDiv = document.createElement('div');
+    formDataSearch.appendChild(receptekDiv);
+    receptekDiv.id = 'receptekDiv';
+    receptekDiv.setAttribute('class', 'receptekDiv');
+
+    const label = document.createElement('label');
+    innerFormDataSearch.appendChild(label);
+    label.setAttribute('for', 'recipeSearch');
+    label.innerHTML = 'Recept neve: ';
+    const input = document.createElement('input');
+    innerFormDataSearch.appendChild(input);
+    input.type = 'search';
+    input.name = 'recipeSearch';
+    input.id = 'recipeSearch';
+    input.placeholder = 'Keresés . . .';
+
+    const data = (await getAPI('/api/getallrecept')).response;
+    OrderRecipes(data);
+    document.getElementById('recipeSearch').addEventListener('input', function () {
+        SearchRecipe(this, data);
+    });
+
+    //TODO Itt kell létrehozni a szeresztő részt
+};
+
+//! Receptek abc sorrendbe rendezése, az egyszerűbb megtalálás érdekében
+const OrderRecipes = (data) => {
+    let names = [];
+    for (let item of data) {
+        names.push(item.nev);
+    }
+    names.sort((a, b) => a.localeCompare(b));
+
+    let newData = [];
+    let i = 0;
+    while (newData.length < data.length) {
+        let j = 0;
+        while (j < data.length && data[j].nev !== names[i]) {
+            j++;
+        }
+        i++;
+        newData.push(data[j]);
+    }
+    FillRecipesDiv(newData);
+};
+
+//! Receptes div feltöltése
+const FillRecipesDiv = (data) => {
+    const receptekDiv = document.getElementById('receptekDiv');
+    for (let item of data) {
+        const div = document.createElement('div');
+
+        receptekDiv.appendChild(div);
+        div.setAttribute('class', 'receptDivs grow hide');
+        //? Rákattintott recept oldalára való továbbküldés
+        div.addEventListener('click', () => {
+            ManageRecipe(item);
+            for (let item of receptekDiv.children) {
+                item.classList.add('hide');
+            }
+            document.getElementById('recipeSearch').value = '';
+        });
+
+        const titleDiv = document.createElement('div');
+        div.appendChild(titleDiv);
+        titleDiv.setAttribute('class', 'titleDiv');
+
+        const h3 = document.createElement('h3');
+        titleDiv.appendChild(h3);
+        h3.innerHTML = item.nev;
+
+        const img = document.createElement('img');
+        div.appendChild(img);
+        img.setAttribute('src', `../images/recipes/${item.kepnev}`);
+        img.setAttribute('class', 'littleImg');
+    }
+};
+
+//! Receptre keresés
+const SearchRecipe = (elem, data) => {
+    const receptekDiv = document.getElementById('receptekDiv');
+    const value = elem.value.toLowerCase();
+
+    for (let item of receptekDiv.children) {
+        const isVisible = item.firstChild.firstChild.innerHTML.toLowerCase().includes(value);
+        item.classList.toggle('hide', !isVisible);
+        if (value == '') {
+            item.classList.add('hide');
+        }
+    }
+
+    if (value == '') {
+        for (let item of receptekDiv.children) {
+            item.classList.add('hide');
+        }
+    }
+};
+
+const ManageRecipe = (data) => {
+    console.log(data);
 };

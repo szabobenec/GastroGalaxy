@@ -137,6 +137,7 @@ const FillRecipesDiv = (data) => {
 const SearchRecipe = (elem, data) => {
     const receptekDiv = document.getElementById('receptekDiv');
     const value = elem.value.toLowerCase();
+    console.log(value);
 
     for (let item of receptekDiv.children) {
         const isVisible = item.firstChild.firstChild.innerHTML.toLowerCase().includes(value);

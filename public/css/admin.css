@@ -404,6 +404,62 @@ header {
     border-radius: 5px;
 }
 
+.formsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.receptekDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.receptDivs {
+    background-color: var(--cardClrs);
+    color: var(--textColor);
+    width: 250px;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleDiv {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 20%;
+}
+
+.littleImg {
+    width: 215px;
+    height: 215px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--textColor);
+}
+
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+.hide {
+    display: none;
+}
+
 footer {
     background-color: var(--bgColor);
     color: var(--textColor);
@@ -435,6 +491,55 @@ footer {
 
     .headerEnd {
         width: 20%;
+    }
+
+    .formsDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .innerFormData0 {
+        display: flex;
+    }
+
+    .receptekDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .receptDivs {
+        background-color: var(--cardClrs);
+        color: var(--textColor);
+        width: 190px;
+        height: 275px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .titleDiv {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 20%;
+    }
+
+    .littleImg {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--textColor);
     }
 }
 
