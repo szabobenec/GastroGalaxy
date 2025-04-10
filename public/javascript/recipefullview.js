@@ -95,7 +95,7 @@ const FillData = (data) => {
     const receptTipus = document.getElementById('receptTipus');
     receptTipus.innerHTML = data.tipus;
     const receptTag = document.getElementById('receptTag');
-    if (data.tagek == null) {
+    if (data.tagek === '') {
         //* ha nincsenek tagek, akkor elrejti a 'tagek' bekezdést
         const receptTagek = document.getElementById('receptTagek');
         receptTagek.style.display = 'none';
