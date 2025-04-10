@@ -71,8 +71,32 @@
             </div>
         </header>
 
-        <div class="mainDiv">
-            <h1>Összes recept</h1>
+        <div class="mainDiv" id="mainDiv">
+            <div class="loginOuterDiv" id="loginDiv">
+                <div class="loginDiv">
+                    <form id="formData" class="formData">
+                        <div class="formDivs">
+                            <label for="username">Felhasználónév: </label>
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                placeholder="username"
+                            />
+                        </div>
+                        <div class="formDivs">
+                            <label for="password">Jelszó: </label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="passwords"
+                            />
+                        </div>
+                        <input type="button" id="loginBtn" class="loginBtn" value="Bejelentkezés" />
+                    </form>
+                </div>
+            </div>
         </div>
 
         <footer>

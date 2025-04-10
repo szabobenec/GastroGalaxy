@@ -144,7 +144,7 @@ app.get('/api/getallrecept', async (request, response) => {
     }
 });
 
-//! Light-Dark Theme - Témaválasztó, ami elmenti még oldalváltáskor is a témát
+//! Light-Dark Theme - Témaválasztó, ami elmenti még oldalváltáskor is a témát:
 let theme = true; //* Az alapértelmezett téma a sötét téma
 //? GET - Elküldi az elmentett témát
 app.get('/api/gettheme', async (request, response) => {
@@ -180,19 +180,57 @@ app.get('/api/fullview/:recept', async (request, response) => {
     }
 });
 
-//! Admin adatok lekérése, és bejelentkezési engedély küldése
-app.post('/api/login/admin', async (request, response) => {
+//! Admin felhasználása:
+const storageAdmin = multer.diskStorage({
+    destination: (request, file, callback) => {
+        callback(null, path.join(__dirname + '/public/images/recipes'));
+    }
+});
+const uploadAdmin = multer({ storage: storageAdmin });
+//? Admin adatok lekérése, és bejelentkezési engedély küldése:
+app.post('/api/login/admin', uploadAdmin.single('file'), async (request, response) => {
     try {
-        const u = request.body.uname;
-        const p = request.body.passw;
-        const data = await db.selectAdmin();
-        console.log(u);
-        console.log(p);
-        console.log(data);
+        const formData = request.body;
+        const data = (await db.selectAdmin())[0];
+
+        if (data.uname === formData.username && data.passw === formData.password) {
+            response.status(200).json({
+                message: 'Sikeres lekérdezés',
+                response: true
+            });
+        } else {
+            response.status(200).json({
+                message: 'Sikeres lekérdezés',
+                response: false
+            });
+        }
+    } catch (error) {
+        response.status(500).json({ message: 'Hiba', response: error });
+    }
+});
+//? Recept szerkesztő API
+app.post('/api/update-recept', uploadAdmin.single('file'), async (request, response) => {
+    try {
+        const formData = request.body;
 
         response.status(200).json({
             message: 'Sikeres lekérdezés',
             response: true
+        });
+    } catch (error) {
+        response.status(500).json({ message: 'Hiba', response: error });
+    }
+});
+//? Recept törlő API
+app.post('/api/delete-recept', uploadAdmin.single('file'), async (request, response) => {
+    try {
+        const formData = request.body;
+
+        const res = await db.deleteRecept(formData.id);
+
+        response.status(200).json({
+            message: 'Sikeres lekérdezés',
+            response: res
         });
     } catch (error) {
         response.status(500).json({ message: 'Hiba', response: error });

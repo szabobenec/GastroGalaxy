@@ -32,10 +32,29 @@ const postAPI = (url, postObject) => {
     });
 };
 
+//! POST FormData metódus
+const postAPIFormData = (url, formData) => {
+    return new Promise((resolve, reject) => {
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    reject(`Hiba: ${response.statusText} (${response.status})`);
+                }
+                return response.json();
+            })
+            .then((data) => resolve(data))
+            .catch((error) => reject(`Hiba: ${error}`));
+    });
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         console.log('Welcome to the admin page!');
-        //? Receptek lekérése, azok továbbküldése rendezésre
+        //?
+        document.getElementById('loginBtn').addEventListener('click', Login);
 
         //? Témaválasztás a NAV-ban lévő SVG segítségével
         const themeChanger = document.getElementById('themeChanger');
@@ -74,4 +93,27 @@ const changeTheme = async (theme) => {
     } catch (error) {
         console.error(error);
     }
+};
+
+const Login = async () => {
+    try {
+        const formData = new FormData(document.getElementById('formData'));
+
+        const data = await postAPIFormData('/api/login/admin', formData);
+
+        if (data.response) {
+            ShowData();
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const ShowData = () => {
+    const mainDiv = document.getElementById('mainDiv');
+    const loginDiv = document.getElementById('loginDiv');
+    mainDiv.removeChild(loginDiv);
+
+    const div = document.createElement('div');
+    mainDiv.appendChild(div);
 };

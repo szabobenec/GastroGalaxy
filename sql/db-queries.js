@@ -48,10 +48,34 @@ function selectSpecificRecipe(nev) {
         });
     });
 }
-//! Admin adatok lekérése
+
+//! Admin
+//? Admin adatok lekérése
 function selectAdmin() {
     return new Promise((resolve, reject) => {
         pool.query('SELECT uname, passw FROM admin;', (error, result) => {
+            if (error) return reject(error);
+            resolve(result);
+        });
+    });
+}
+//? UPDATE - recept szerkesztése
+function updateRecept(id, tipus, nev, tagek, ido, adag, hozzavalok, elkeszites, kepnev, forras) {
+    return new Promise((resolve, reject) => {
+        pool.query(
+            'UPDATE recept SET tipus = ?, nev = ?, tagek = ?, ido = ?, adag = ?, hozzavalok = ?, elkeszites = ?, kepnev = ?, forras = ? WHERE id = ?;',
+            [tipus, nev, tagek, ido, adag, hozzavalok, elkeszites, kepnev, forras, id],
+            (error, result) => {
+                if (error) return reject(error);
+                resolve(result);
+            }
+        );
+    });
+}
+//? DELETE - recept törlése
+function deleteRecept(id) {
+    return new Promise((resolve, reject) => {
+        pool.query('DELETE FROM recept WHERE id = ?;', [id], (error, result) => {
             if (error) return reject(error);
             resolve(result);
         });
@@ -85,6 +109,8 @@ module.exports = {
     selectRecipeOfTheDay,
     selectSpecificRecipe,
     selectAdmin,
+    deleteRecept,
+    updateRecept,
     dropTable,
     createTable
 };
