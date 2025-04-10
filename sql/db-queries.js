@@ -48,6 +48,15 @@ function selectSpecificRecipe(nev) {
         });
     });
 }
+//! Admin adatok lekérése
+function selectAdmin() {
+    return new Promise((resolve, reject) => {
+        pool.query('SELECT uname, passw FROM admin;', (error, result) => {
+            if (error) return reject(error);
+            resolve(result);
+        });
+    });
+}
 
 //! Tábla tórlése és újra létrehozása, annak érdekében, hogy mindenkinél egyezők legyenek az adatbázis adatai
 function dropTable() {
@@ -75,6 +84,7 @@ module.exports = {
     insertRecept,
     selectRecipeOfTheDay,
     selectSpecificRecipe,
+    selectAdmin,
     dropTable,
     createTable
 };

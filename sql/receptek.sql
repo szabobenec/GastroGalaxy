@@ -16,3 +16,11 @@ CREATE TABLE recept (
     kepnev VARCHAR(100),
     forras VARCHAR(255)
 );
+
+CREATE TABLE admin (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    uname VARCHAR(50),
+    passw VARCHAR(100)
+);
+
+INSERT INTO admin (uname, passw) VALUE('admin', 'shrek');

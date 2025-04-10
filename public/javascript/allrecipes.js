@@ -71,8 +71,7 @@ const changeTheme = async (theme) => {
     const postObject = { theme: saveTheme };
 
     try {
-        const data = await postAPI('/api/savetheme', postObject);
-        console.log(data);
+        await postAPI('/api/savetheme', postObject);
     } catch (error) {
         console.error(error);
     }

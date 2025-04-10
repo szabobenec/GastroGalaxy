@@ -51,16 +51,17 @@ const postAPIFormData = (url, formData) => {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('Welcome to Recipe Uploader!');
-    //? Új hozzávaló- illetve lépésfülek hozzáadásáért felelős gombok
-    document.getElementById('hozzavaloPlus').addEventListener('click', AddHozzavalo);
-    document.getElementById('elkeszitesPlus').addEventListener('click', AddLepes);
-    document.getElementById('tipus').addEventListener('change', function removeFirstOption() {
-        const option = document.getElementById('nullOption');
-        this.removeChild(option);
-        this.removeEventListener('change', removeFirstOption);
-    });
     try {
+        console.log('Welcome to Recipe Uploader!');
+        //? Új hozzávaló- illetve lépésfülek hozzáadásáért felelős gombok
+        document.getElementById('hozzavaloPlus').addEventListener('click', AddHozzavalo);
+        document.getElementById('elkeszitesPlus').addEventListener('click', AddLepes);
+        document.getElementById('tipus').addEventListener('change', function removeFirstOption() {
+            const option = document.getElementById('nullOption');
+            this.removeChild(option);
+            this.removeEventListener('change', removeFirstOption);
+        });
+
         const data = (await getAPI('/api/getallrecept')).response.length;
         document.getElementById('sendBtn').addEventListener('click', () => {
             SendData(data);

@@ -51,6 +51,10 @@ router.get('/uploadrecipe', (request, response) => {
 router.get('/about/', (request, response) => {
     response.sendFile(path.join(__dirname + '/public/html/about.html'));
 });
+//? Admin:
+router.get('/login/admin', (reuqest, response) => {
+    response.sendFile(path.join(__dirname + '/public/html/admin.html'));
+});
 
 app.use(express.json());
 //! API végpontok
@@ -170,6 +174,25 @@ app.get('/api/fullview/:recept', async (request, response) => {
         response.status(200).json({
             message: 'Sikeres lekérdezés',
             response: res[0]
+        });
+    } catch (error) {
+        response.status(500).json({ message: 'Hiba', response: error });
+    }
+});
+
+//! Admin adatok lekérése, és bejelentkezési engedély küldése
+app.post('/api/login/admin', async (request, response) => {
+    try {
+        const u = request.body.uname;
+        const p = request.body.passw;
+        const data = await db.selectAdmin();
+        console.log(u);
+        console.log(p);
+        console.log(data);
+
+        response.status(200).json({
+            message: 'Sikeres lekérdezés',
+            response: true
         });
     } catch (error) {
         response.status(500).json({ message: 'Hiba', response: error });
