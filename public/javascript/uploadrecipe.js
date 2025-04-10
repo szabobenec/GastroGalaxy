@@ -231,7 +231,7 @@ const SendData = (length) => {
     const tagek = document.getElementById('tagek').value;
     const kepSrc = document.getElementById('kepSrc');
     const forras = document.getElementById('forras').value;
-    if (!nev || !tipus || !ido || !adag || !kepSrc || !forras) {
+    if (!nev || tipus === 'null' || !ido || !adag || !kepSrc || !forras) {
         checker = false;
     }
 
@@ -272,7 +272,6 @@ const SendData = (length) => {
                 [hozzavalok[i]]: mennyisegek[i]
             });
         }
-        // let source = kepSrc.value.split('\\')[kepSrc.value.split('\\').length - 1];
         let source = kepSrc.value.split('\\').pop();
 
         const recept = {
@@ -335,7 +334,7 @@ const SendRecept = async (recept, source, file) => {
         //? Hibás adatok esetén megjelenő SweetAlert
         await Swal.fire({
             title: 'Sikertelen feltöltés!',
-            text: `Hiba történt!`,
+            text: `Hiba történt! Ellenőrizze a megadott adatokat, és próbálja újra!`,
             icon: 'error'
         });
     }
