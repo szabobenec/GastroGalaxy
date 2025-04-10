@@ -85,7 +85,7 @@ const changeTheme = async (theme) => {
 
 //! Megtalált recept adatainak megjelenítése
 const FillData = (data) => {
-    //? recept neve, elkészítési ideje, alkészített adag, tipusa, tag-jei
+    //? recept neve, elkészítési ideje, elkészített adag, tipusa, tag-jei
     const receptNev = document.getElementById('receptNev');
     receptNev.innerHTML = data.nev;
     const receptIdo = document.getElementById('receptIdo');
