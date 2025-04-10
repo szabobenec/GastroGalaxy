@@ -113,18 +113,24 @@ const RecipeOfTheDay = (data) => {
     detailsDiv.appendChild(p3);
     p3.innerHTML = `<strong>Adag:</strong> ${data.adag}`;
 
-    const teljes = document.getElementById('teljes');
     document.getElementById('cardDivBtn').addEventListener('click', () => {
-        const input = document.createElement('input');
-        teljes.appendChild(input);
-        input.type = 'button';
-        input.id = 'sendRecipeBtn';
-        input.value = 'Teljes recept megtekintése';
-        input.setAttribute('class', 'sendRecipeBtn');
+        CreateBtn(data);
+    });
+};
 
-        //? Rákattintott recept oldalára való továbbküldés
-        input.addEventListener('click', () => {
-            document.location.href = `/recipefullview/${data.kepnev.split('.')[0]}`;
-        });
+//! Rákattintás esetén a gomb létrehozása, ami továbbvisz a recept oldalára
+const CreateBtn = (data) => {
+    const teljes = document.getElementById('teljes');
+
+    const input = document.createElement('input');
+    teljes.appendChild(input);
+    input.type = 'button';
+    input.id = 'sendRecipeBtn';
+    input.value = 'Teljes recept megtekintése';
+    input.setAttribute('class', 'sendRecipeBtn');
+
+    //? Rákattintott recept oldalára való továbbküldés
+    input.addEventListener('click', () => {
+        document.location.href = `/recipefullview/${data.kepnev.split('.')[0]}`;
     });
 };
