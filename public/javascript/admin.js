@@ -100,9 +100,21 @@ const Login = async () => {
         const formData = new FormData(document.getElementById('formData'));
 
         const data = await postAPIFormData('/api/login/admin', formData);
+        console.log(data);
 
         if (data.response) {
+            Swal.fire({
+                title: 'Üdvözlégy, admin!',
+                text: 'Sikeres bejelentkezés!',
+                icon: 'success'
+            });
             ShowData();
+        } else {
+            Swal.fire({
+                title: 'Sikertelen bejelentkezés!',
+                text: 'Hibás felhasználónév vagy jelszó!',
+                icon: 'error'
+            });
         }
     } catch (error) {
         console.error(error);
