@@ -53,7 +53,7 @@ const postAPIFormData = (url, formData) => {
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         console.log('Welcome to the admin page!');
-        //?
+        //? Bejelentkezés
         document.getElementById('loginBtn').addEventListener('click', Login);
 
         //? Témaválasztás a NAV-ban lévő SVG segítségével
@@ -95,6 +95,7 @@ const changeTheme = async (theme) => {
     }
 };
 
+//! Bejelentkezésére felelős függvény - csak akkor engedi a további dolgok betöltését, ha helyes bejelentkezési adatokat adtunk meg
 const Login = async () => {
     try {
         const formData = new FormData(document.getElementById('formData'));
@@ -121,9 +122,8 @@ const Login = async () => {
     }
 };
 
-//! Receptkereső rész megjelenítése
+//! Receptkereső rész felépítése, megjelenítése
 const ShowData = async () => {
-    //! Kereső rész felépítése
     const mainDiv = document.getElementById('mainDiv');
     const loginDiv = document.getElementById('loginDiv');
     mainDiv.removeChild(loginDiv);
@@ -182,8 +182,8 @@ const ShowData = async () => {
     BuildDiv(adatokDiv);
 };
 
+//! Szerkesztő-rész felépítése
 const BuildDiv = (adatokDiv) => {
-    //! Szerkesztő-rész felépítése
     const h1Adatok = document.createElement('h1');
     adatokDiv.appendChild(h1Adatok);
     h1Adatok.innerHTML = 'Adatok szerkesztése:';
@@ -191,6 +191,23 @@ const BuildDiv = (adatokDiv) => {
     adatokDiv.appendChild(adatokFormData);
     adatokFormData.id = 'adatokFormData';
     adatokFormData.setAttribute('class', 'adatokFormData');
+
+    //? id
+    const idDiv = document.createElement('div');
+    adatokFormData.appendChild(idDiv);
+    idDiv.setAttribute('class', 'formDiv');
+    const idL = document.createElement('label');
+    idDiv.appendChild(idL);
+    idL.setAttribute('for', 'id');
+    idL.innerHTML = 'Azonosító:';
+    const idI = document.createElement('input');
+    idDiv.appendChild(idI);
+    idI.type = 'text';
+    idI.id = 'id';
+    idI.name = 'id';
+    idI.placeholder = 'azonosító';
+    idI.setAttribute('class', 'adatInput');
+    idI.setAttribute('disabled', true);
 
     //? nev
     const nevDiv = document.createElement('div');
@@ -377,7 +394,7 @@ const BuildDiv = (adatokDiv) => {
     kepnevI.placeholder = 'kép neve';
     kepnevI.setAttribute('class', 'adatInput');
 
-    //? gombok
+    //? szerkesző/törlő gombok
     const buttonDiv = document.createElement('div');
     adatokFormData.appendChild(buttonDiv);
     buttonDiv.setAttribute('class', 'formDivButtons');
@@ -398,7 +415,7 @@ const BuildDiv = (adatokDiv) => {
 };
 
 //! Hozzávaló illetve lépés divek hozzáadására és eltávolítására szolgáló függvények
-//? Új hozzávaló div hozzáadása, ha több hozzávalóra lenne szükségünk
+//? Új hozzávaló-div hozzáadása, ha több hozzávalóra lenne szükségünk
 const AddHozzavalo = () => {
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
 
@@ -407,6 +424,7 @@ const AddHozzavalo = () => {
     const hozzavaloDiv = document.createElement('div');
     hozzavalokDiv.appendChild(hozzavaloDiv);
     hozzavaloDiv.setAttribute('class', 'formDiv');
+
     const hozzavaloI = document.createElement('input');
     hozzavaloDiv.appendChild(hozzavaloI);
     hozzavaloI.type = 'text';
@@ -414,9 +432,11 @@ const AddHozzavalo = () => {
     hozzavaloI.name = `hozzavalo-${j}`;
     hozzavaloI.placeholder = 'hozzávaló';
     hozzavaloI.setAttribute('class', 'hozzavaloInput hozzavalo');
+
     const hozzavaloP = document.createElement('div');
     hozzavaloDiv.appendChild(hozzavaloP);
     hozzavaloP.innerHTML = ':';
+
     const mennyisegI = document.createElement('input');
     hozzavaloDiv.appendChild(mennyisegI);
     mennyisegI.type = 'text';
@@ -426,13 +446,13 @@ const AddHozzavalo = () => {
     mennyisegI.setAttribute('class', 'hozzavaloInput mennyiseg');
 };
 
-//? Utolsó hozzávaló div törlése, ha kevesebb hozzávalóra lenne szükségünk
+//? Utolsó hozzávaló-div törlése, ha kevesebb hozzávalóra lenne szükségünk
 const RemoveHozzavalo = () => {
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
     hozzavalokDiv.removeChild(hozzavalokDiv.lastChild);
 };
 
-//? Új lépés div hozzáadása, ha több lépés leírására lenne szükségünk
+//? Új lépés-div hozzáadása, ha több lépés leírására lenne szükségünk
 const AddLepes = () => {
     const lepesDiv = document.getElementById('lepesDiv');
 
@@ -447,13 +467,14 @@ const AddLepes = () => {
     lepes.id = `lepes-${j}`;
 };
 
-//? Utolsó lépés div törlése, ha kevesebb lépésre lenne szükségünk
+//? Utolsó lépés-div törlése, ha kevesebb lépésre lenne szükségünk
 const RemoveLepes = () => {
     const lepesDiv = document.getElementById('lepesDiv');
     lepesDiv.removeChild(lepesDiv.lastChild);
 };
 
-//! Receptek abc sorrendbe rendezése, az egyszerűbb megtalálás érdekében
+//! Receptkeresés
+//? Receptek abc sorrendbe rendezése, az egyszerűbb megtalálás érdekében
 const OrderRecipes = (data) => {
     let names = [];
     for (let item of data) {
@@ -474,7 +495,7 @@ const OrderRecipes = (data) => {
     FillRecipesDiv(newData);
 };
 
-//! Receptes div feltöltése
+//? Receptes div feltöltése
 const FillRecipesDiv = (data) => {
     const receptekDiv = document.getElementById('receptekDiv');
     for (let item of data) {
@@ -506,7 +527,7 @@ const FillRecipesDiv = (data) => {
     }
 };
 
-//! Receptre keresés
+//? A kereső működésének beállítása
 const SearchRecipe = (elem, data) => {
     const receptekDiv = document.getElementById('receptekDiv');
     const value = elem.value.toLowerCase();
@@ -526,6 +547,7 @@ const SearchRecipe = (elem, data) => {
     }
 };
 
+//! Az oldal elemeinek feltöltése a recept adataival
 const ManageRecipe = (data) => {
     const formData = new FormData(document.getElementById('adatokFormData'));
 
@@ -534,12 +556,11 @@ const ManageRecipe = (data) => {
         document.getElementById(key).value = data[key];
     }
 
+    document.getElementById('id').value = data.id;
     document.getElementById('tipus').value = data.tipus;
-    formData.append('tipus', data.tipus);
 
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
     hozzavalokDiv.innerHTML = '';
-
     const hozzavalok = JSON.parse(data.hozzavalok);
 
     let j1 = 0;
@@ -547,6 +568,7 @@ const ManageRecipe = (data) => {
         const hozzavaloDiv = document.createElement('div');
         hozzavalokDiv.appendChild(hozzavaloDiv);
         hozzavaloDiv.setAttribute('class', 'formDiv');
+
         const hozzavaloI = document.createElement('input');
         hozzavaloDiv.appendChild(hozzavaloI);
         hozzavaloI.type = 'text';
@@ -556,9 +578,11 @@ const ManageRecipe = (data) => {
         hozzavaloI.setAttribute('class', 'hozzavaloInput hozzavalo');
         hozzavaloI.value = item;
         formData.set(`hozzavalo-${j1}`, item);
+
         const hozzavaloP = document.createElement('div');
         hozzavaloDiv.appendChild(hozzavaloP);
         hozzavaloP.innerHTML = ':';
+
         const mennyisegI = document.createElement('input');
         hozzavaloDiv.appendChild(mennyisegI);
         mennyisegI.type = 'text';
@@ -573,7 +597,6 @@ const ManageRecipe = (data) => {
 
     const lepesDiv = document.getElementById('lepesDiv');
     lepesDiv.innerHTML = '';
-
     const lepesek = data.elkeszites;
 
     for (let item of lepesek.split('\n')) {
@@ -587,17 +610,18 @@ const ManageRecipe = (data) => {
     }
 
     document.getElementById('updateBtn').addEventListener('click', () => {
-        UpdateRecipe(data);
+        UpdateRecipe();
     });
     document.getElementById('deleteBtn').addEventListener('click', () => {
-        DeleteRecipe(data);
+        DeleteRecipe();
     });
 };
 
-const UpdateRecipe = async (data) => {
+//! Recept szerkesztése
+const UpdateRecipe = async () => {
     const formData = new FormData(document.getElementById('adatokFormData'));
 
-    formData.append('id', data.id);
+    formData.append('id', document.getElementById('id').value);
     formData.append('tipus', document.getElementById('tipus').value);
 
     let j1 = 0;
@@ -637,14 +661,20 @@ const UpdateRecipe = async (data) => {
     const lepesek = Array.from(document.getElementsByClassName('lepes'));
     let lepesekArray = [];
     for (let item of lepesek) {
-        lepesekArray.push(`${item.id.split('-')[1]}. ${item.innerHTML}`);
+        const text = item.value;
+        if (item.value !== '') {
+            lepesekArray.push(`${item.id.split('-')[1]}. ${text}`);
+        }
     }
+    console.log(lepesekArray);
     const elkeszites = lepesekArray.join('\n');
     formData.append('elkeszites', elkeszites);
 
+    console.log(...formData);
+
     let checker = true;
     for (let [key, value] of formData) {
-        if (!value) {
+        if (!value && key !== 'tagek') {
             checker = false;
         }
     }
@@ -680,8 +710,10 @@ const UpdateRecipe = async (data) => {
     }
 };
 
-const DeleteRecipe = async (data) => {
-    const id = data.id;
+//! Recept törlése
+const DeleteRecipe = async () => {
+    const id = document.getElementById('id').value;
+
     try {
         const postObject = { id: id };
         const data = await postAPI('/api/delete-recept', postObject);
