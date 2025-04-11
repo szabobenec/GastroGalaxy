@@ -5,7 +5,6 @@ const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
 const bcrypt = require('bcrypt');
-const { fork } = require('child_process');
 
 const app = express();
 const router = express.Router();
