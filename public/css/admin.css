@@ -490,7 +490,8 @@ header {
     gap: 5px;
 }
 
-.hozzavaloBtnsDiv {
+.hozzavaloBtnsDiv,
+.elkeszitesBtnsDiv {
     width: 100%;
     display: flex;
     justify-content: space-evenly;

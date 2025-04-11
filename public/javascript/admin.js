@@ -101,19 +101,18 @@ const Login = async () => {
         const formData = new FormData(document.getElementById('formData'));
 
         const data = await postAPIFormData('/api/login/admin', formData);
-        console.log(data);
 
         if (data.response) {
             Swal.fire({
                 title: 'Üdvözlégy, admin!',
-                text: 'Sikeres bejelentkezés!',
+                text: 'Sikeres bejelentkezés!' + data.message,
                 icon: 'success'
             });
             ShowData();
         } else {
             Swal.fire({
                 title: 'Sikertelen bejelentkezés!',
-                text: 'Hibás felhasználónév vagy jelszó!',
+                text: 'Hibás felhasználónév vagy jelszó!' + data.message,
                 icon: 'error'
             });
         }
@@ -350,7 +349,7 @@ const BuildDiv = (adatokDiv) => {
     elkeszitesAddBtn.type = 'button';
     elkeszitesAddBtn.id = 'elkeszitesAddBtn';
     elkeszitesAddBtn.name = 'elkeszitesAddBtn';
-    elkeszitesAddBtn.setAttribute('class', 'hozzavaloBtns');
+    elkeszitesAddBtn.setAttribute('class', 'elkeszitesBtns');
     elkeszitesAddBtn.value = 'Plusz lépés';
     elkeszitesAddBtn.addEventListener('click', AddLepes);
     const elkeszitesRemoveBtn = document.createElement('input');
@@ -358,7 +357,7 @@ const BuildDiv = (adatokDiv) => {
     elkeszitesRemoveBtn.type = 'button';
     elkeszitesRemoveBtn.id = 'elkeszitesRemoveBtn';
     elkeszitesRemoveBtn.name = 'elkeszitesRemoveBtn';
-    elkeszitesRemoveBtn.setAttribute('class', 'hozzavaloBtns');
+    elkeszitesRemoveBtn.setAttribute('class', 'elkeszitesBtns');
     elkeszitesRemoveBtn.value = 'Utolsó lépés törlése';
     elkeszitesRemoveBtn.addEventListener('click', RemoveLepes);
 
@@ -457,8 +456,6 @@ const AddLepes = () => {
     const lepesDiv = document.getElementById('lepesDiv');
 
     const j = lepesDiv.children.length + 1;
-
-    console.log(j);
 
     const lepes = document.createElement('textArea');
     lepesDiv.appendChild(lepes);
@@ -666,11 +663,8 @@ const UpdateRecipe = async () => {
             lepesekArray.push(`${item.id.split('-')[1]}. ${text}`);
         }
     }
-    console.log(lepesekArray);
     const elkeszites = lepesekArray.join('\n');
     formData.append('elkeszites', elkeszites);
-
-    console.log(...formData);
 
     let checker = true;
     for (let [key, value] of formData) {
@@ -717,7 +711,7 @@ const DeleteRecipe = async () => {
     try {
         const postObject = { id: id };
         const data = await postAPI('/api/delete-recept', postObject);
-        console.log(data);
+
         if (data.message !== 'Hiba') {
             Swal.fire({
                 title: 'Sikeres törlés!',
