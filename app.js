@@ -259,7 +259,24 @@ app.post('/api/update-recept', uploadAdmin.single('file'), async (request, respo
             formData.forras
         );
 
-        //TODO a receptek.json -ben is szerkeszteni kell!!!
+        const json = JSON.parse(await readFile('receptek.json'));
+
+        for (let item of json.receptek) {
+            if (item.id == formData.id) {
+                item.id = parseInt(formData.id);
+                item.tipus = formData.tipus;
+                item.nev = formData.nev;
+                item.tagek = formData.tagek;
+                item.ido = formData.ido;
+                item.adag = formData.adag;
+                item.hozzavalok = JSON.parse(formData.hozzavalok);
+                item.elkeszites = formData.elkeszites;
+                item.kepnev = formData.kepnev;
+                item.forras = formData.forras;
+            }
+        }
+
+        await writeFile('receptek.json', JSON.stringify(json));
 
         response.status(200).json({
             message: 'Sikeres lekérdezés',
@@ -276,7 +293,18 @@ app.post('/api/delete-recept', uploadAdmin.single('file'), async (request, respo
 
         const res = await db.deleteRecept(id);
 
-        //TODO a receptek.json -bol is torolni kell!!!
+        const json = JSON.parse(await readFile('receptek.json'));
+
+        for (let item of json.receptek) {
+            if (item.id == id) {
+                const index = json.receptek.indexOf(item);
+                if (index > -1) {
+                    json.receptek.splice(index, 1);
+                }
+            }
+        }
+
+        await writeFile('receptek.json', JSON.stringify(json));
 
         response.status(200).json({
             message: 'Sikeres lekérdezés',
