@@ -479,3 +479,15 @@ footer {
 /*? Nagy képernyős eszközök */
 @media only screen and (min-width: 992px) {
 }
+
+@media only screen and (max-width: 413px){
+    .receptDiv {
+        width: 165px;
+        height: 230px;
+    }
+    .littleImg
+    {
+        width: 130px;
+        height: 130px;
+    }
+}

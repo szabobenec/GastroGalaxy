@@ -377,13 +377,21 @@ header {
 
 .loginDiv {
     background-color: var(--cardClrs);
-    width: 30%;
+    width: 400px;
     height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid var(--textColor);
     border-radius: 15px;
+}
+
+.logInput {
+    max-width: 150px;
+}
+
+.logIlabel {
+    width: 111px;
 }
 
 .formData {
@@ -449,7 +457,7 @@ header {
 }
 
 .grow {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .grow:hover {
@@ -589,8 +597,8 @@ footer {
     .receptDivs {
         background-color: var(--cardClrs);
         color: var(--textColor);
-        width: 190px;
-        height: 275px;
+        width: 175px;
+        height: 260px;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
@@ -606,11 +614,30 @@ footer {
     }
 
     .littleImg {
-        width: 160px;
-        height: 160px;
+        width: 140px;
+        height: 140px;
         object-fit: cover;
         border-radius: 10px;
         border: 1px solid var(--textColor);
+    }
+
+    .adatokFormData {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 80%;
+    }
+    
+    .adatInput {
+        max-width: 200px;
+    }
+    .tipusSelect {
+        max-width: 207px;
+    }
+    
+    .lepes {
+        width: 100%;
     }
 }
 

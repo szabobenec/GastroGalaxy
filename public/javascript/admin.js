@@ -264,7 +264,7 @@ const BuildDiv = (adatokDiv) => {
     const idoL = document.createElement('label');
     idoDiv.appendChild(idoL);
     idoL.setAttribute('for', 'ido');
-    idoL.innerHTML = 'Elkészítési idő (perc):';
+    idoL.innerHTML = 'Elk. idő (perc):';
     const idoI = document.createElement('input');
     idoDiv.appendChild(idoI);
     idoI.type = 'text';
@@ -296,7 +296,7 @@ const BuildDiv = (adatokDiv) => {
     const tagL = document.createElement('label');
     tagDiv.appendChild(tagL);
     tagL.setAttribute('for', 'tagek');
-    tagL.innerHTML = `Tagek (';'-el elválasztva):`;
+    tagL.innerHTML = `Tagek:`;
     const tagI = document.createElement('input');
     tagDiv.appendChild(tagI);
     tagI.type = 'text';
