@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
 const bcrypt = require('bcrypt');
+const { fork } = require('child_process');
 
 const app = express();
 const router = express.Router();
@@ -231,9 +232,39 @@ app.post('/api/update-recept', uploadAdmin.single('file'), async (request, respo
     try {
         const formData = request.body;
 
+        let hozzavalok = formData.hozzavalok;
+
+        hozzavalok =
+            '{' +
+            hozzavalok
+                .split('[')
+                .join('')
+                .split(']')
+                .join('')
+                .split('{')
+                .join('')
+                .split('}')
+                .join('') +
+            '}';
+
+        const res = await db.updateRecept(
+            formData.id,
+            formData.tipus,
+            formData.nev,
+            formData.tagek,
+            formData.ido,
+            formData.adag,
+            hozzavalok,
+            formData.elkeszites,
+            formData.kepnev,
+            formData.forras
+        );
+
+        //TODO a receptek.json -ben is szerkeszteni kell!!!
+
         response.status(200).json({
             message: 'Sikeres lekérdezés',
-            response: true
+            response: res
         });
     } catch (error) {
         response.status(500).json({ message: 'Hiba', response: error });
@@ -242,9 +273,11 @@ app.post('/api/update-recept', uploadAdmin.single('file'), async (request, respo
 //? Recept törlő API
 app.post('/api/delete-recept', uploadAdmin.single('file'), async (request, response) => {
     try {
-        const formData = request.body;
+        const id = request.body.id;
 
-        const res = await db.deleteRecept(formData.id);
+        const res = await db.deleteRecept(id);
+
+        //TODO a receptek.json -bol is torolni kell!!!
 
         response.status(200).json({
             message: 'Sikeres lekérdezés',

@@ -175,26 +175,15 @@ const ShowData = async () => {
         SearchRecipe(this, data);
     });
 
-    //TODO Itt kell létrehozni a szeresztő részt
-
-    // <div class="adatokDiv">
-    //     <form id="adatokFormData" class="adatokFormData">
-    //         <div class="formDiv">
-    //             <label for="">: </label>
-    //             <input type="text" id="" name="" placeholder="" />
-    //         </div>
-
-    //         <div class="formDiv">
-    //             <label for="">: </label>
-    //             <input type="text" id="" name="" placeholder="" />
-    //         </div>
-    //     </form>
-    // </div>;
-
-    //! Szerkesztő-rész felépítése
     const adatokDiv = document.createElement('div');
     mainDiv.appendChild(adatokDiv);
     adatokDiv.setAttribute('class', 'adatokDiv');
+    adatokDiv.id = 'adatokDiv';
+    BuildDiv(adatokDiv);
+};
+
+const BuildDiv = (adatokDiv) => {
+    //! Szerkesztő-rész felépítése
     const h1Adatok = document.createElement('h1');
     adatokDiv.appendChild(h1Adatok);
     h1Adatok.innerHTML = 'Adatok szerkesztése:';
@@ -444,9 +433,7 @@ const SearchRecipe = (elem, data) => {
 };
 
 const ManageRecipe = (data) => {
-    console.log(data);
     const formData = new FormData(document.getElementById('adatokFormData'));
-    console.log(...formData);
 
     for (let [key, value] of formData) {
         formData.set(key, data[key]);
@@ -460,7 +447,6 @@ const ManageRecipe = (data) => {
     hozzavalokDiv.innerHTML = '';
 
     const hozzavalok = JSON.parse(data.hozzavalok);
-    console.log(hozzavalok);
 
     let j1 = 0;
     for (let item in hozzavalok) {
@@ -496,7 +482,6 @@ const ManageRecipe = (data) => {
 
     const lepesek = data.elkeszites;
 
-    let j2 = 1;
     for (let item of lepesek.split('\n')) {
         const lepes = document.createElement('textArea');
         lepesDiv.appendChild(lepes);
@@ -513,8 +498,6 @@ const ManageRecipe = (data) => {
     document.getElementById('deleteBtn').addEventListener('click', () => {
         DeleteRecipe(data);
     });
-
-    // console.log(...formData);
 };
 
 const UpdateRecipe = async (data) => {
@@ -570,11 +553,63 @@ const UpdateRecipe = async (data) => {
 
     if (checker) {
         try {
-            console.log(...formData);
+            const data = await postAPIFormData('/api/update-recept', formData);
+
+            if (data.messag !== 'Hiba') {
+                Swal.fire({
+                    title: 'Sikeres módosítás!',
+                    text: 'Recept sikeresen szerkesztve!',
+                    icon: 'success'
+                });
+
+                const adatokDiv = document.getElementById('adatokDiv');
+                adatokDiv.innerHTML = '';
+                BuildDiv(adatokDiv);
+
+                document.getElementById('receptekDiv').innerHTML = '';
+                const receptek = (await getAPI('/api/getallrecept')).response;
+                OrderRecipes(receptek);
+            } else {
+                Swal.fire({
+                    title: 'Hiba!',
+                    text: 'Valami hiba történt!',
+                    icon: 'error'
+                });
+            }
         } catch (error) {
             console.error(error);
         }
     }
 };
 
-const DeleteRecipe = (data) => {};
+const DeleteRecipe = async (data) => {
+    const id = data.id;
+    try {
+        const postObject = { id: id };
+        const data = await postAPI('/api/delete-recept', postObject);
+        console.log(data);
+        if (data.message !== 'Hiba') {
+            Swal.fire({
+                title: 'Sikeres törlés!',
+                text: 'Recept sikeresen törölve az adatbázisból!',
+                icon: 'success'
+            });
+
+            const adatokDiv = document.getElementById('adatokDiv');
+            adatokDiv.innerHTML = '';
+            BuildDiv(adatokDiv);
+
+            document.getElementById('receptekDiv').innerHTML = '';
+            const receptek = (await getAPI('/api/getallrecept')).response;
+            OrderRecipes(receptek);
+        } else {
+            Swal.fire({
+                title: 'Hiba!',
+                text: 'Valami hiba történt!',
+                icon: 'error'
+            });
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
