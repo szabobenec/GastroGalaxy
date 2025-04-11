@@ -397,13 +397,12 @@ const BuildDiv = (adatokDiv) => {
     deleteBtn.setAttribute('class', 'buttons');
 };
 
-//! Új hozzávaló div hozzáadása, ha több hozzávalóra lenne szükségünk
+//! Hozzávaló illetve lépés divek hozzáadására és eltávolítására szolgáló függvények
+//? Új hozzávaló div hozzáadása, ha több hozzávalóra lenne szükségünk
 const AddHozzavalo = () => {
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
 
-    const j = parseInt(hozzavalokDiv.lastChild.firstChild.id.split('-')[1]) + 1;
-
-    console.log(j);
+    const j = hozzavalokDiv.children.length;
 
     const hozzavaloDiv = document.createElement('div');
     hozzavalokDiv.appendChild(hozzavaloDiv);
@@ -427,20 +426,31 @@ const AddHozzavalo = () => {
     mennyisegI.setAttribute('class', 'hozzavaloInput mennyiseg');
 };
 
-const RemoveLepes = () => {};
-
-//! Utolsó hozzávaló div törlése, ha kevesebb hozzávalóra lenne szükségünk
+//? Utolsó hozzávaló div törlése, ha kevesebb hozzávalóra lenne szükségünk
 const RemoveHozzavalo = () => {
     const hozzavalokDiv = document.getElementById('hozzavalokDiv');
     hozzavalokDiv.removeChild(hozzavalokDiv.lastChild);
 };
 
+//? Új lépés div hozzáadása, ha több lépés leírására lenne szükségünk
 const AddLepes = () => {
     const lepesDiv = document.getElementById('lepesDiv');
 
-    const j = parseInt(lepesDiv.lastChild.firstChild.id.split('-')[1]) + 1;
+    const j = lepesDiv.children.length + 1;
 
     console.log(j);
+
+    const lepes = document.createElement('textArea');
+    lepesDiv.appendChild(lepes);
+    lepes.placeholder = 'Lépés leírása';
+    lepes.setAttribute('class', 'lepes');
+    lepes.id = `lepes-${j}`;
+};
+
+//? Utolsó lépés div törlése, ha kevesebb lépésre lenne szükségünk
+const RemoveLepes = () => {
+    const lepesDiv = document.getElementById('lepesDiv');
+    lepesDiv.removeChild(lepesDiv.lastChild);
 };
 
 //! Receptek abc sorrendbe rendezése, az egyszerűbb megtalálás érdekében
