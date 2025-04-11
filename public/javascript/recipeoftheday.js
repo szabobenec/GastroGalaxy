@@ -122,7 +122,7 @@ const RecipeOfTheDay = (data) => {
 //! Rákattintás esetén a gomb létrehozása, ami továbbvisz a recept oldalára
 const CreateBtn = (data) => {
     const teljes = document.getElementById('teljes');
-
+    teljes.innerHTML="";
     const input = document.createElement('input');
     teljes.appendChild(input);
     input.type = 'button';

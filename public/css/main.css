@@ -551,7 +551,7 @@ body.dark-theme {
     }
 
     .grow:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     .littleImg {
@@ -801,3 +801,16 @@ body.dark-theme {
         padding-top: 150px;
     }
 }
+
+@media only screen and (max-width: 405px){
+    .randomRecipes {
+        width: 165px;
+        height: 230px;
+    }
+    .littleImg
+    {
+        width: 130px;
+        height: 130px;
+    }
+}
+
