@@ -513,6 +513,7 @@ header {
 
 .buttons {
     width: 20%;
+    min-width: fit-content;
     border-radius: 5px;
 }
 
