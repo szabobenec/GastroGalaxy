@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         //? Új hozzávaló- illetve lépésfülek hozzáadásáért felelős gombok
         document.getElementById('hozzavaloPlus').addEventListener('click', AddHozzavalo);
         document.getElementById('elkeszitesPlus').addEventListener('click', AddLepes);
-        document.getElementById('tipus').addEventListener('change', function removeFirstOption() {
+        document.getElementById('tipus').addEventListener('change', function RemoveFirstOption() {
             const option = document.getElementById('nullOption');
             this.removeChild(option);
-            this.removeEventListener('change', removeFirstOption);
+            this.removeEventListener('change', RemoveFirstOption);
         });
 
         const data = (await getAPI('/api/getallrecept')).response.length;
