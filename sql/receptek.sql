@@ -23,4 +23,4 @@ CREATE TABLE admin (
     passw VARCHAR(100)
 );
 
-INSERT INTO admin (uname, passw) VALUE('admin', 'shrek');
+INSERT INTO admin (uname, passw) VALUE('admin', '$2b$10$GCf5FVje8RCEMkpumbaoZ.M6FZtDCxxRAdo5PmjsaBbBHLWQiAYZu');
