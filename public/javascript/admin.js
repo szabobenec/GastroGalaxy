@@ -334,6 +334,22 @@ const ShowData = async () => {
     forrasI.placeholder = 'forrás';
     forrasI.setAttribute('class', 'adatInput');
 
+    //? kepnev
+    const kepnevDiv = document.createElement('div');
+    adatokFormData.appendChild(kepnevDiv);
+    kepnevDiv.setAttribute('class', 'formDiv');
+    const kepnevL = document.createElement('label');
+    kepnevDiv.appendChild(kepnevL);
+    kepnevL.setAttribute('for', 'kepnev');
+    kepnevL.innerHTML = 'Kép neve:';
+    const kepnevI = document.createElement('input');
+    kepnevDiv.appendChild(kepnevI);
+    kepnevI.type = 'text';
+    kepnevI.id = 'kepnev';
+    kepnevI.name = 'kepnev';
+    kepnevI.placeholder = 'kép neve';
+    kepnevI.setAttribute('class', 'adatInput');
+
     //? gombok
     const buttonDiv = document.createElement('div');
     adatokFormData.appendChild(buttonDiv);
@@ -446,6 +462,7 @@ const ManageRecipe = (data) => {
     const hozzavalok = JSON.parse(data.hozzavalok);
     console.log(hozzavalok);
 
+    let j1 = 0;
     for (let item in hozzavalok) {
         const hozzavaloDiv = document.createElement('div');
         hozzavalokDiv.appendChild(hozzavaloDiv);
@@ -453,24 +470,25 @@ const ManageRecipe = (data) => {
         const hozzavaloI = document.createElement('input');
         hozzavaloDiv.appendChild(hozzavaloI);
         hozzavaloI.type = 'text';
-        hozzavaloI.id = `hozzavalo-${item}`;
-        hozzavaloI.name = `hozzavalo-${item}`;
+        hozzavaloI.id = `hozzavalo-${j1}`;
+        hozzavaloI.name = `hozzavalo-${j1}`;
         hozzavaloI.placeholder = 'hozzávaló';
         hozzavaloI.setAttribute('class', 'hozzavaloInput hozzavalo');
         hozzavaloI.value = item;
-        formData.set(`hozzavalo-${item}`, item);
+        formData.set(`hozzavalo-${j1}`, item);
         const hozzavaloP = document.createElement('div');
         hozzavaloDiv.appendChild(hozzavaloP);
         hozzavaloP.innerHTML = ':';
         const mennyisegI = document.createElement('input');
         hozzavaloDiv.appendChild(mennyisegI);
         mennyisegI.type = 'text';
-        mennyisegI.id = `mennyiseg-${item}`;
-        mennyisegI.name = `mennyiseg-${item}`;
+        mennyisegI.id = `mennyiseg-${j1}`;
+        mennyisegI.name = `mennyiseg-${j1}`;
         mennyisegI.placeholder = 'mennyiség';
         mennyisegI.setAttribute('class', 'hozzavaloInput mennyiseg');
         mennyisegI.value = hozzavalok[item];
-        formData.set(`mennyiseg-${item}`, hozzavalok[item]);
+        formData.set(`mennyiseg-${j1}`, hozzavalok[item]);
+        j1++;
     }
 
     const lepesDiv = document.getElementById('lepesDiv');
@@ -478,6 +496,7 @@ const ManageRecipe = (data) => {
 
     const lepesek = data.elkeszites;
 
+    let j2 = 1;
     for (let item of lepesek.split('\n')) {
         const lepes = document.createElement('textArea');
         lepesDiv.appendChild(lepes);
@@ -488,12 +507,74 @@ const ManageRecipe = (data) => {
         lepes.innerHTML = text;
     }
 
-    document.getElementById('updateBtn').addEventListener('click', UpdateRecipe);
-    document.getElementById('deleteBtn').addEventListener('click', DeleteRecipe);
+    document.getElementById('updateBtn').addEventListener('click', () => {
+        UpdateRecipe(data);
+    });
+    document.getElementById('deleteBtn').addEventListener('click', () => {
+        DeleteRecipe(data);
+    });
 
-    console.log(...formData);
+    // console.log(...formData);
 };
 
-const UpdateRecipe = () => {};
+const UpdateRecipe = async (data) => {
+    const formData = new FormData(document.getElementById('adatokFormData'));
 
-const DeleteRecipe = () => {};
+    formData.append('id', data.id);
+    formData.append('tipus', document.getElementById('tipus').value);
+
+    let j1 = 0;
+    let j2 = 0;
+    let hozzavalo = [];
+    let mennyiseg = [];
+    let deleted = [];
+    for (let [key, value] of formData) {
+        if (key == `hozzavalo-${j1}`) {
+            hozzavalo.push(value);
+            deleted.push(key);
+            j1++;
+        }
+        if (key == `mennyiseg-${j2}`) {
+            mennyiseg.push(value);
+            deleted.push(key);
+            j2++;
+        }
+    }
+    for (let item of deleted) {
+        formData.delete(item);
+    }
+
+    let hozzavalok = [];
+    for (let i = 0; i < hozzavalo.length; i++) {
+        hozzavalok.push({
+            [hozzavalo[i]]: mennyiseg[i]
+        });
+    }
+
+    formData.append('hozzavalok', JSON.stringify(hozzavalok));
+
+    const lepesek = Array.from(document.getElementsByClassName('lepes'));
+    let lepesekArray = [];
+    for (let item of lepesek) {
+        lepesekArray.push(`${item.id.split('-')[1]}. ${item.innerHTML}`);
+    }
+    const elkeszites = lepesekArray.join('\n');
+    formData.append('elkeszites', elkeszites);
+
+    let checker = true;
+    for (let [key, value] of formData) {
+        if (!value) {
+            checker = false;
+        }
+    }
+
+    if (checker) {
+        try {
+            console.log(...formData);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+};
+
+const DeleteRecipe = (data) => {};
