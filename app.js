@@ -267,8 +267,8 @@ app.post('/api/update-recept', uploadAdmin.single('file'), async (request, respo
                 item.tipus = formData.tipus;
                 item.nev = formData.nev;
                 item.tagek = formData.tagek;
-                item.ido = formData.ido;
-                item.adag = formData.adag;
+                item.ido = parseInt(formData.ido);
+                item.adag = parseInt(formData.adag);
                 item.hozzavalok = JSON.parse(formData.hozzavalok);
                 item.elkeszites = formData.elkeszites;
                 item.kepnev = formData.kepnev;

@@ -380,8 +380,8 @@
             "tipus": "főétel",
             "nev": "Indiai vajas csirke",
             "tagek": "indiai;exotikus",
-            "ido": "60",
-            "adag": "4",
+            "ido": 60,
+            "adag": 4,
             "hozzavalok": [
                 { "joghurt": "200 g" },
                 { "mustárolaj": "40  ml" },
