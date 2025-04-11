@@ -490,6 +490,12 @@ header {
     gap: 5px;
 }
 
+.hozzavaloBtnsDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .formDivButtons {
     display: flex;
     justify-content: space-evenly;

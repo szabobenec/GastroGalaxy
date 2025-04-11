@@ -297,6 +297,25 @@ const BuildDiv = (adatokDiv) => {
     adatokFormData.appendChild(hozzavalokDiv);
     hozzavalokDiv.setAttribute('class', 'formDivHozzavalo');
     hozzavalokDiv.id = 'hozzavalokDiv';
+    const hozzavaloBtnsDiv = document.createElement('div');
+    adatokFormData.appendChild(hozzavaloBtnsDiv);
+    hozzavaloBtnsDiv.setAttribute('class', 'hozzavaloBtnsDiv');
+    const hozzavaloAddBtn = document.createElement('input');
+    hozzavaloBtnsDiv.appendChild(hozzavaloAddBtn);
+    hozzavaloAddBtn.type = 'button';
+    hozzavaloAddBtn.id = 'hozzavaloAddBtn';
+    hozzavaloAddBtn.name = 'hozzavaloAddBtn';
+    hozzavaloAddBtn.setAttribute('class', 'hozzavaloBtns');
+    hozzavaloAddBtn.value = 'Plusz hozzávaló';
+    hozzavaloAddBtn.addEventListener('click', AddHozzavalo);
+    const hozzavaloRemoveBtn = document.createElement('input');
+    hozzavaloBtnsDiv.appendChild(hozzavaloRemoveBtn);
+    hozzavaloRemoveBtn.type = 'button';
+    hozzavaloRemoveBtn.id = 'hozzavaloRemoveBtn';
+    hozzavaloRemoveBtn.name = 'hozzavaloRemoveBtn';
+    hozzavaloRemoveBtn.setAttribute('class', 'hozzavaloBtns');
+    hozzavaloRemoveBtn.value = 'Utolsó hozzávaló törlése';
+    hozzavaloRemoveBtn.addEventListener('click', RemoveHozzavalo);
 
     //? elkeszites
     const lepesCim = document.createElement('h3');
@@ -306,6 +325,25 @@ const BuildDiv = (adatokDiv) => {
     adatokFormData.appendChild(lepesDiv);
     lepesDiv.setAttribute('class', 'formDivLepes');
     lepesDiv.id = 'lepesDiv';
+    const elkeszitesBtnsDiv = document.createElement('div');
+    adatokFormData.appendChild(elkeszitesBtnsDiv);
+    elkeszitesBtnsDiv.setAttribute('class', 'elkeszitesBtnsDiv');
+    const elkeszitesAddBtn = document.createElement('input');
+    elkeszitesBtnsDiv.appendChild(elkeszitesAddBtn);
+    elkeszitesAddBtn.type = 'button';
+    elkeszitesAddBtn.id = 'elkeszitesAddBtn';
+    elkeszitesAddBtn.name = 'elkeszitesAddBtn';
+    elkeszitesAddBtn.setAttribute('class', 'hozzavaloBtns');
+    elkeszitesAddBtn.value = 'Plusz lépés';
+    elkeszitesAddBtn.addEventListener('click', AddLepes);
+    const elkeszitesRemoveBtn = document.createElement('input');
+    elkeszitesBtnsDiv.appendChild(elkeszitesRemoveBtn);
+    elkeszitesRemoveBtn.type = 'button';
+    elkeszitesRemoveBtn.id = 'elkeszitesRemoveBtn';
+    elkeszitesRemoveBtn.name = 'elkeszitesRemoveBtn';
+    elkeszitesRemoveBtn.setAttribute('class', 'hozzavaloBtns');
+    elkeszitesRemoveBtn.value = 'Utolsó lépés törlése';
+    elkeszitesRemoveBtn.addEventListener('click', RemoveLepes);
 
     //? forras
     const forrasDiv = document.createElement('div');
@@ -357,6 +395,52 @@ const BuildDiv = (adatokDiv) => {
     deleteBtn.name = 'deleteBtn';
     deleteBtn.value = 'Törlés';
     deleteBtn.setAttribute('class', 'buttons');
+};
+
+//! Új hozzávaló div hozzáadása, ha több hozzávalóra lenne szükségünk
+const AddHozzavalo = () => {
+    const hozzavalokDiv = document.getElementById('hozzavalokDiv');
+
+    const j = parseInt(hozzavalokDiv.lastChild.firstChild.id.split('-')[1]) + 1;
+
+    console.log(j);
+
+    const hozzavaloDiv = document.createElement('div');
+    hozzavalokDiv.appendChild(hozzavaloDiv);
+    hozzavaloDiv.setAttribute('class', 'formDiv');
+    const hozzavaloI = document.createElement('input');
+    hozzavaloDiv.appendChild(hozzavaloI);
+    hozzavaloI.type = 'text';
+    hozzavaloI.id = `hozzavalo-${j}`;
+    hozzavaloI.name = `hozzavalo-${j}`;
+    hozzavaloI.placeholder = 'hozzávaló';
+    hozzavaloI.setAttribute('class', 'hozzavaloInput hozzavalo');
+    const hozzavaloP = document.createElement('div');
+    hozzavaloDiv.appendChild(hozzavaloP);
+    hozzavaloP.innerHTML = ':';
+    const mennyisegI = document.createElement('input');
+    hozzavaloDiv.appendChild(mennyisegI);
+    mennyisegI.type = 'text';
+    mennyisegI.id = `mennyiseg-${j}`;
+    mennyisegI.name = `mennyiseg-${j}`;
+    mennyisegI.placeholder = 'mennyiség';
+    mennyisegI.setAttribute('class', 'hozzavaloInput mennyiseg');
+};
+
+const RemoveLepes = () => {};
+
+//! Utolsó hozzávaló div törlése, ha kevesebb hozzávalóra lenne szükségünk
+const RemoveHozzavalo = () => {
+    const hozzavalokDiv = document.getElementById('hozzavalokDiv');
+    hozzavalokDiv.removeChild(hozzavalokDiv.lastChild);
+};
+
+const AddLepes = () => {
+    const lepesDiv = document.getElementById('lepesDiv');
+
+    const j = parseInt(lepesDiv.lastChild.firstChild.id.split('-')[1]) + 1;
+
+    console.log(j);
 };
 
 //! Receptek abc sorrendbe rendezése, az egyszerűbb megtalálás érdekében
@@ -513,12 +597,16 @@ const UpdateRecipe = async (data) => {
     let deleted = [];
     for (let [key, value] of formData) {
         if (key == `hozzavalo-${j1}`) {
-            hozzavalo.push(value);
+            if (value !== '') {
+                hozzavalo.push(value);
+            }
             deleted.push(key);
             j1++;
         }
         if (key == `mennyiseg-${j2}`) {
-            mennyiseg.push(value);
+            if (value !== '') {
+                mennyiseg.push(value);
+            }
             deleted.push(key);
             j2++;
         }
