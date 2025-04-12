@@ -184,7 +184,7 @@ app.get('/api/fullview/:recept', async (request, response) => {
 //! Admin felhasználása:
 const storageAdmin = multer.diskStorage({
     destination: (request, file, callback) => {
-        callback(null, path.join(__dirname + '/public/images/recipes'));
+        callback(null, path.join(__dirname + '/uploads'));
     }
 });
 const uploadAdmin = multer({ storage: storageAdmin });
