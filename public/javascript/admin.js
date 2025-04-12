@@ -95,7 +95,7 @@ const changeTheme = async (theme) => {
     }
 };
 
-//! Bejelentkezésére felelős függvény - csak akkor engedi a további dolgok betöltését, ha helyes bejelentkezési adatokat adtunk meg
+//! Bejelentkezésért felelős függvény - csak akkor engedi a további dolgok betöltését, ha helyes bejelentkezési adatokat adtunk meg
 const Login = async () => {
     try {
         const formData = new FormData(document.getElementById('formData'));
