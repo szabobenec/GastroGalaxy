@@ -464,10 +464,6 @@ header {
     transform: scale(1.1);
 }
 
-.hide {
-    display: none;
-}
-
 .adatokDiv {
     display: flex;
     flex-direction: column;
@@ -629,14 +625,14 @@ footer {
         gap: 15px;
         width: 80%;
     }
-    
+
     .adatInput {
         max-width: 200px;
     }
     .tipusSelect {
         max-width: 207px;
     }
-    
+
     .lepes {
         width: 100%;
     }
@@ -646,15 +642,18 @@ footer {
 @media only screen and (min-width: 992px) {
 }
 
-
-@media only screen and (max-width: 400px){
+/*? Még kisebb képernyős eszközök */
+@media only screen and (max-width: 400px) {
     .receptDivs {
         width: 155px;
         height: 220px;
     }
-    .littleImg
-    {
+    .littleImg {
         width: 120px;
         height: 120px;
     }
+}
+
+.hide {
+    display: none;
 }
