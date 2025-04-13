@@ -255,7 +255,6 @@ app.post('/api/update-recept', uploadAdmin.single('file'), async (request, respo
 
         for (let item of json.receptek) {
             if (item.id == formData.id) {
-                item.id = parseInt(formData.id);
                 item.tipus = formData.tipus;
                 item.nev = formData.nev;
                 item.tagek = formData.tagek;
