@@ -99,7 +99,7 @@ const randomOrder = async () => {
                 }
             }
 
-            randomIds[0] = 45; //* Shrek a szeretet, Shrek az élet
+            randomIds[0] = 44; //* Shrek a szeretet, Shrek az élet
 
             string = `${currentMonth}.${randomIds.join(';')}`;
 
