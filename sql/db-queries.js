@@ -11,7 +11,7 @@ const pool = mysql.createPool({
 //! Összes recept lekérése
 function selectAll() {
     return new Promise((resolve, reject) => {
-        pool.query('SELECT id FROM recept;', (error, result, fields) => {
+        pool.query('SELECT * FROM recept;', (error, result, fields) => {
             if (error) return reject(error);
             resolve(result);
         });
