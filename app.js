@@ -85,14 +85,14 @@ const writeFile = (file, text) => {
 const randomOrder = async () => {
     try {
         let string = await readFile('rotd.txt');
-        const data = JSON.parse(await readFile('receptek.json'));
+        const data = await db.selectAll();
         const currentMonth = new Date().toISOString().split('T')[0].split('-')[1];
 
         if (string.split('.')[0] !== currentMonth) {
             let randomIds = [];
             let j = 0;
             while (j < 31) {
-                let random = Math.floor(Math.random() * (data.receptek.length - 1 + 1) + 1);
+                let random = Math.floor(Math.random() * (data.length - 1 + 1) + 1);
                 if (!randomIds.includes(random) && random !== 45) {
                     randomIds.push(random);
                     j++;
@@ -102,6 +102,7 @@ const randomOrder = async () => {
             randomIds[0] = 44; //* Shrek a szeretet, Shrek az élet
 
             string = `${currentMonth}.${randomIds.join(';')}`;
+            console.log(string);
 
             await writeFile('rotd.txt', string);
         }
@@ -223,6 +224,8 @@ app.post('/api/update-recept', uploadAdmin.single('file'), async (request, respo
     try {
         const formData = request.body;
 
+        console.log(formData);
+
         let hozzavalok = formData.hozzavalok;
 
         hozzavalok =
@@ -251,24 +254,6 @@ app.post('/api/update-recept', uploadAdmin.single('file'), async (request, respo
             formData.forras
         );
 
-        const json = JSON.parse(await readFile('receptek.json'));
-
-        for (let item of json.receptek) {
-            if (item.id == formData.id) {
-                item.tipus = formData.tipus;
-                item.nev = formData.nev;
-                item.tagek = formData.tagek;
-                item.ido = parseInt(formData.ido);
-                item.adag = parseInt(formData.adag);
-                item.hozzavalok = JSON.parse(formData.hozzavalok);
-                item.elkeszites = formData.elkeszites;
-                item.kepnev = formData.kepnev;
-                item.forras = formData.forras;
-            }
-        }
-
-        await writeFile('receptek.json', JSON.stringify(json));
-
         response.status(200).json({
             message: 'Sikeres lekérdezés',
             response: res
@@ -283,24 +268,6 @@ app.post('/api/delete-recept', uploadAdmin.single('file'), async (request, respo
         const id = request.body.id;
 
         const res = await db.deleteRecept(id);
-
-        const json = JSON.parse(await readFile('receptek.json'));
-
-        const ujJson = { receptek: [] };
-
-        for (let item of json.receptek) {
-            // if (item.id == id) {
-            //     const index = json.receptek.indexOf(item);
-            //     if (index > -1) {
-            //         json.receptek.splice(index, 1);
-            //     }
-            // }
-            if (item.id !== id) {
-                ujJson.receptek.push(item);
-            }
-        }
-
-        await writeFile('receptek.json', JSON.stringify(ujJson));
 
         response.status(200).json({
             message: 'Sikeres lekérdezés',
@@ -367,10 +334,6 @@ app.post('/api/feltoltes', async (request, response) => {
             recept.forras
         );
 
-        const data = JSON.parse(await readFile('receptek.json'));
-        data.receptek.push(recept);
-        const data2 = await writeFile('receptek.json', JSON.stringify(data));
-
         response.status(200).json({
             message: data2,
             data: recept,
@@ -380,49 +343,6 @@ app.post('/api/feltoltes', async (request, response) => {
         response.status(500).json({ message: 'Hiba', response: error });
     }
 });
-
-//! Setup - Adatbázis frissítése a jelenlegi adatokkal
-//? Összes recept beillesztéséhez szükséges függvény:
-const DBSetup = async () => {
-    try {
-        const data = JSON.parse(await readFile('receptek.json')).receptek;
-
-        await db.dropTable();
-        await db.createTable();
-
-        for (let item of data) {
-            let hozzavalok = JSON.stringify(item.hozzavalok);
-            hozzavalok =
-                '{' +
-                hozzavalok
-                    .split('[')
-                    .join('')
-                    .split(']')
-                    .join('')
-                    .split('{')
-                    .join('')
-                    .split('}')
-                    .join('') +
-                '}';
-
-            await db.insertRecept(
-                item.tipus,
-                item.nev,
-                item.tagek,
-                item.ido,
-                item.adag,
-                hozzavalok,
-                item.elkeszites,
-                item.kepnev,
-                item.forras
-            );
-        }
-    } catch (error) {
-        console.log(error);
-    }
-};
-//? Ezt kell hozzá kivenni kommentből:
-DBSetup();
 
 //! Server
 app.use(express.static('public'));
