@@ -194,36 +194,28 @@ app.post('/api/login/admin', uploadAdmin.single('file'), async (request, respons
         const formData = request.body;
         const data = (await db.selectAdmin())[0];
 
-        bcrypt.compare(formData.password, data.passw, (error, result) => {
-            if (error) {
-                response.status(200).json({
-                    message: 'Error comparing passwords',
-                    response: error
-                });
-                return;
-            }
+        const result = await bcrypt.compare(formData.password, data.passw);
 
-            if (result) {
-                if (formData.username === data.uname) {
-                    response.status(200).json({
-                        message: 'Passwords match, authentication successful',
-                        response: true
-                    });
-                } else {
-                    response.status(200).json({
-                        message: `Usernames don't match, authentication failed`,
-                        response: false
-                    });
-                }
+        if (result) {
+            if (formData.username === data.uname) {
+                return response.status(200).json({
+                    message: 'Passwords match, authentication successful',
+                    response: true
+                });
             } else {
-                response.status(200).json({
-                    message: `Passwords don't match, authentication failed`,
+                return response.status(200).json({
+                    message: `Usernames don't match, authentication failed`,
                     response: false
                 });
             }
-        });
+        } else {
+            return response.status(200).json({
+                message: `Passwords don't match, authentication failed`,
+                response: false
+            });
+        }
     } catch (error) {
-        response.status(500).json({ message: 'Hiba', response: error });
+        return response.status(500).json({ message: 'Hiba', response: error });
     }
 });
 //? Recept szerkesztő API
