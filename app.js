@@ -286,16 +286,21 @@ app.post('/api/delete-recept', uploadAdmin.single('file'), async (request, respo
 
         const json = JSON.parse(await readFile('receptek.json'));
 
+        const ujJson = { receptek: [] };
+
         for (let item of json.receptek) {
-            if (item.id == id) {
-                const index = json.receptek.indexOf(item);
-                if (index > -1) {
-                    json.receptek.splice(index, 1);
-                }
+            // if (item.id == id) {
+            //     const index = json.receptek.indexOf(item);
+            //     if (index > -1) {
+            //         json.receptek.splice(index, 1);
+            //     }
+            // }
+            if (item.id !== id) {
+                ujJson.receptek.push(item);
             }
         }
 
-        await writeFile('receptek.json', JSON.stringify(json));
+        await writeFile('receptek.json', JSON.stringify(ujJson));
 
         response.status(200).json({
             message: 'Sikeres lekérdezés',
