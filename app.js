@@ -335,7 +335,7 @@ app.post('/api/feltoltes', async (request, response) => {
         );
 
         response.status(200).json({
-            message: data2,
+            message: 'Sikeres feltöltés',
             data: recept,
             response: res
         });
