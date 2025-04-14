@@ -27,6 +27,12 @@ SET time_zone = "+00:00";
 -- Tábla szerkezet ehhez a táblához `admin`
 --
 
+CREATE DATABASE IF NOT EXISTS receptek
+DEFAULT CHARACTER SET utf8
+COLLATE utf8_hungarian_ci;
+
+USE receptek;
+
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `uname` varchar(50) DEFAULT NULL,
