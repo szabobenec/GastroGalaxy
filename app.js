@@ -200,18 +200,18 @@ app.post('/api/login/admin', uploadAdmin.single('file'), async (request, respons
         if (result) {
             if (formData.username === data.uname) {
                 return response.status(200).json({
-                    message: 'Passwords match, authentication successful',
+                    message: 'Részlegesen sikeres azonosítás',
                     response: true
                 });
             } else {
                 return response.status(200).json({
-                    message: `Usernames don't match, authentication failed`,
+                    message: `Hibás azonosítás, nem egyező felhasználónév-jelszó páros`,
                     response: false
                 });
             }
         } else {
             return response.status(200).json({
-                message: `Passwords don't match, authentication failed`,
+                message: `Hibás azonosítás, nem egyező felhasználónév-jelszó páros`,
                 response: false
             });
         }
